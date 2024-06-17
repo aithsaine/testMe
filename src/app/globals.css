@@ -22,3 +22,10 @@
     text-wrap: balance;
   }
 }
+
+body{
+  background-image: url("../assets/imgs/bg.jpg")!important;
+  background-position: center;
+  background-size: cover;
+  min-height: 1000px!important;
+}

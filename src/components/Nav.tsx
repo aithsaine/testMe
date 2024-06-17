@@ -9,7 +9,7 @@ export default function Nav() {
             <div className='text-white'>
                 <Image src={logo} width={100} alt='logo' />
             </div>
-            <div className='space-x-4 backdrop-blur-sm p-4 rounded-2xl shadow-lg bg'>
+            <div className='space-x-4  p-4 rounded-2xl  bg'>
                 <Link className='text-lg w-[50px] hover:backdrop-blur-3xl hover:border-separate hover:border-cyan-400 text-white font-mono' href={"/"}>home</Link>
                 <Link className='text-lg w-[50px] hover:backdrop-blur-3xl hover:border-separate hover:border-cyan-400 text-white font-mono' href={"/"}>about</Link>
                 <Link className='text-lg w-[50px] hover:backdrop-blur-3xl hover:border-separate hover:border-cyan-400 text-white font-mono' href={"/"}>features</Link>
