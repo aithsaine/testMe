@@ -5,7 +5,7 @@ import logo from "../assets/imgs/logo.png"
 
 export default function Nav() {
     return (
-        <nav className='flex justify-between  items-center py-2 px-6 '>
+        <nav className='flex   items-center py-2 px-6 '>
             <div className='text-white'>
                 <Image src={logo} width={100} alt='logo' />
             </div>
