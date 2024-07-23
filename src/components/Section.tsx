@@ -3,6 +3,7 @@ import React from 'react'
 import { motion } from "framer-motion"
 import Lottie from 'react-lottie'
 import animationdata from "../assets/lottiefiles/studied.json"
+import { useRouter } from 'next/navigation'
 
 const containerVariants = {
     hidden: { opacity: 0 },
@@ -21,6 +22,11 @@ const itemVariants = {
 };
 
 export default function Section() {
+    const router = useRouter()
+    const handleClick = () => {
+        router.push('/register'); // Replace '/destination' with your desired route
+    };
+
 
     const defaultOptions = {
         loop: true,
@@ -51,6 +57,7 @@ export default function Section() {
                     At testme, we are dedicated to helping you master programming languages, improve your linguistic skills, and excel in math. Our online testing platform offers a wide range of practice tests designed to assess your knowledge and boost your confidence in these critical areas.
                 </p>
                 <motion.button
+                    onClick={handleClick}
                     whileTap={{ scale: 0.9 }}
                     className={"bg-gradient-to-r w-4/5 from-orange-100 text-lg py-1 px-8 rounded to-orange-700"}>Join Now</motion.button>
             </motion.div>
