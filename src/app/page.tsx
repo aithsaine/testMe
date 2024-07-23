@@ -12,7 +12,6 @@ export default function Home() {
   }, [])
   return (
     <main >
-      <Nav />
       <Section />
       <Services />
     </main>

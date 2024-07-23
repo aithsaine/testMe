@@ -1,0 +1,573 @@
+{
+  "questions": [
+    {
+      "subject": "Laravel",
+      "questions": [
+        {
+          "question": "Which command is used to create a new Laravel project?",
+          "options": ["laravel create project_name", "php artisan create project_name", "composer create-project --prefer-dist laravel/laravel project_name", "laravel new project_name"],
+          "correctAnswer": "composer create-project --prefer-dist laravel/laravel project_name"
+        },
+        {
+          "question": "Which file is the entry point for all requests in a Laravel application?",
+          "options": ["index.php", "web.php", "app.php", "routes.php"],
+          "correctAnswer": "index.php"
+        },
+        {
+          "question": "How do you define a route that responds to a GET request in Laravel?",
+          "options": ["Route::get('/example', 'ExampleController@method');", "Route::post('/example', 'ExampleController@method');", "Route::put('/example', 'ExampleController@method');", "Route::delete('/example', 'ExampleController@method');"],
+          "correctAnswer": "Route::get('/example', 'ExampleController@method');"
+        },
+        {
+          "question": "Which Laravel command is used to run database migrations?",
+          "options": ["php artisan migrate", "php artisan db:seed", "php artisan make:migration", "php artisan migrate:reset"],
+          "correctAnswer": "php artisan migrate"
+        },
+        {
+          "question": "How do you access the value of an input field named 'email' in a Laravel controller?",
+          "options": ["$request->input('email')", "$request->get('email')", "$request->email", "$request->query('email')"],
+          "correctAnswer": "$request->input('email')"
+        },
+        {
+          "question": "Which method is used to seed the database with test data in Laravel?",
+          "options": ["php artisan db:seed", "php artisan make:seed", "php artisan migrate", "php artisan db:populate"],
+          "correctAnswer": "php artisan db:seed"
+        },
+        {
+          "question": "In which directory are Laravel controllers typically stored?",
+          "options": ["app/Http/Controllers", "app/Models", "app/Providers", "resources/views"],
+          "correctAnswer": "app/Http/Controllers"
+        },
+        {
+          "question": "How do you create a new controller in Laravel using the Artisan command line?",
+          "options": ["php artisan make:controller ControllerName", "php artisan create:controller ControllerName", "php artisan new:controller ControllerName", "php artisan controller:make ControllerName"],
+          "correctAnswer": "php artisan make:controller ControllerName"
+        },
+        {
+          "question": "Which of the following is the default database connection type in Laravel?",
+          "options": ["mysql", "sqlite", "pgsql", "sqlsrv"],
+          "correctAnswer": "mysql"
+        },
+        {
+          "question": "Which command is used to create a new Laravel project?",
+          "options": ["laravel create project_name", "php artisan create project_name", "composer create-project --prefer-dist laravel/laravel project_name", "laravel new project_name"],
+          "correctAnswer": "composer create-project --prefer-dist laravel/laravel project_name"
+        },
+        {
+          "question": "Which file is the entry point for all requests in a Laravel application?",
+          "options": ["index.php", "web.php", "app.php", "routes.php"],
+          "correctAnswer": "index.php"
+        },
+        {
+          "question": "How do you define a route that responds to a GET request in Laravel?",
+          "options": ["Route::get('/example', 'ExampleController@method');", "Route::post('/example', 'ExampleController@method');", "Route::put('/example', 'ExampleController@method');", "Route::delete('/example', 'ExampleController@method');"],
+          "correctAnswer": "Route::get('/example', 'ExampleController@method');"
+        },
+        {
+          "question": "Which Laravel command is used to run database migrations?",
+          "options": ["php artisan migrate", "php artisan db:seed", "php artisan make:migration", "php artisan migrate:reset"],
+          "correctAnswer": "php artisan migrate"
+        },
+        {
+          "question": "How do you access the value of an input field named 'email' in a Laravel controller?",
+          "options": ["$request->input('email')", "$request->get('email')", "$request->email", "$request->query('email')"],
+          "correctAnswer": "$request->input('email')"
+        },
+        {
+          "question": "Which method is used to seed the database with test data in Laravel?",
+          "options": ["php artisan db:seed", "php artisan make:seed", "php artisan migrate", "php artisan db:populate"],
+          "correctAnswer": "php artisan db:seed"
+        },
+        {
+          "question": "In which directory are Laravel controllers typically stored?",
+          "options": ["app/Http/Controllers", "app/Models", "app/Providers", "resources/views"],
+          "correctAnswer": "app/Http/Controllers"
+        },
+        {
+          "question": "How do you create a new controller in Laravel using the Artisan command line?",
+          "options": ["php artisan make:controller ControllerName", "php artisan create:controller ControllerName", "php artisan new:controller ControllerName", "php artisan controller:make ControllerName"],
+          "correctAnswer": "php artisan make:controller ControllerName"
+        },
+        {
+          "question": "Which of the following is the default database connection type in Laravel?",
+          "options": ["mysql", "sqlite", "pgsql", "sqlsrv"],
+          "correctAnswer": "mysql"
+        },
+        {
+          "question": "What is the purpose of Laravel Eloquent ORM?",
+          "options": ["To manage views", "To manage routes", "To interact with the database", "To handle session management"],
+          "correctAnswer": "To interact with the database"
+        },
+        {
+          "question": "How do you define a one-to-many relationship in Laravel Eloquent?",
+          "options": ["hasMany", "belongsTo", "belongsToMany", "hasOne"],
+          "correctAnswer": "hasMany"
+        },
+        {
+          "question": "Which of the following commands is used to create a new migration file in Laravel?",
+          "options": ["php artisan make:migration create_table_name_table", "php artisan migrate:create create_table_name_table", "php artisan db:create create_table_name_table", "php artisan migrate:make create_table_name_table"],
+          "correctAnswer": "php artisan make:migration create_table_name_table"
+        },
+        {
+          "question": "What is the purpose of Laravel's Blade template engine?",
+          "options": ["To compile assets", "To manage database migrations", "To create and render views", "To handle HTTP requests"],
+          "correctAnswer": "To create and render views"
+        },
+        {
+          "question": "Which method is used to retrieve all records from a table in Laravel Eloquent?",
+          "options": ["all()", "get()", "findAll()", "retrieveAll()"],
+          "correctAnswer": "all()"
+        },
+        {
+          "question": "How do you define a route that responds to a POST request in Laravel?",
+          "options": ["Route::get('/example', 'ExampleController@method');", "Route::post('/example', 'ExampleController@method');", "Route::put('/example', 'ExampleController@method');", "Route::delete('/example', 'ExampleController@method');"],
+          "correctAnswer": "Route::post('/example', 'ExampleController@method');"
+        },
+        {
+          "question": "Which file stores the configuration for the database connection in a Laravel application?",
+          "options": ["config/database.php", "config/app.php", "config/database.yml", "config/db.php"],
+          "correctAnswer": "config/database.php"
+        },
+        {
+          "question": "What command is used to start the built-in Laravel development server?",
+          "options": ["php artisan serve", "php artisan start", "php artisan run", "php artisan launch"],
+          "correctAnswer": "php artisan serve"
+        },
+        {
+          "question": "Which method is used to create a new instance of a model and save it to the database in Laravel Eloquent?",
+          "options": ["create()", "insert()", "save()", "new()"],
+          "correctAnswer": "create()"
+        },
+        {
+          "question": "How do you specify a table name for a model in Laravel Eloquent?",
+          "options": ["protected $table = 'table_name';", "public $table = 'table_name';", "protected $tableName = 'table_name';", "public $tableName = 'table_name';"],
+          "correctAnswer": "protected $table = 'table_name';"
+        },
+        {
+          "question": "Which command is used to rollback the last database migration in Laravel?",
+          "options": ["php artisan migrate:rollback", "php artisan migrate:reset", "php artisan migrate:refresh", "php artisan migrate:undo"],
+          "correctAnswer": "php artisan migrate:rollback"
+        },
+        {
+          "question": "Which Laravel feature allows you to handle background jobs?",
+          "options": ["Events", "Notifications", "Jobs", "Migrations"],
+          "correctAnswer": "Jobs"
+        },
+        {
+          "question": "What is the purpose of Laravel's Service Container?",
+          "options": ["To manage database migrations", "To handle HTTP requests", "To manage dependency injection", "To compile assets"],
+          "correctAnswer": "To manage dependency injection"
+        },
+        {
+          "question": "Which method is used to validate request data in Laravel?",
+          "options": ["$request->validate()", "$request->check()", "$request->authorize()", "$request->filter()"],
+          "correctAnswer": "$request->validate()"
+        },
+        {
+          "question": "How do you create a new middleware in Laravel?",
+          "options": ["php artisan make:middleware MiddlewareName", "php artisan create:middleware MiddlewareName", "php artisan new:middleware MiddlewareName", "php artisan middleware:create MiddlewareName"],
+          "correctAnswer": "php artisan make:middleware MiddlewareName"
+        },
+        {
+          "question": "What is the purpose of Laravel's .env file?",
+          "options": ["To store environment-specific configuration", "To define routes", "To configure database migrations", "To manage views"],
+          "correctAnswer": "To store environment-specific configuration"
+        },
+        {
+          "question": "Which Laravel feature allows you to schedule repetitive tasks?",
+          "options": ["Events", "Notifications", "Jobs", "Task Scheduling"],
+          "correctAnswer": "Task Scheduling"
+        },
+        {
+          "question": "Which command is used to create a new model in Laravel?",
+          "options": ["php artisan make:model ModelName", "php artisan create:model ModelName", "php artisan new:model ModelName", "php artisan model:make ModelName"],
+          "correctAnswer": "php artisan make:model ModelName"
+        },
+        {
+          "question": "How do you define a belongsTo relationship in Laravel Eloquent?",
+          "options": ["belongsTo", "hasMany", "hasOne", "belongsToMany"],
+          "correctAnswer": "belongsTo"
+        },
+        {
+          "question": "Which Laravel feature allows you to send notifications across various channels?",
+          "options": ["Events", "Notifications", "Jobs", "Migrations"],
+          "correctAnswer": "Notifications"
+        },
+        {
+          "question": "Which method is used to define a custom validation rule in Laravel?",
+          "options": ["Rule::custom()", "Rule::make()", "Rule::create()", "Rule::define()"],
+          "correctAnswer": "Rule::make()"
+        },
+        {
+          "question": "How do you retrieve a specific record by its primary key in Laravel Eloquent?",
+          "options": ["find()", "get()", "fetch()", "retrieve()"],
+          "correctAnswer": "find()"
+        },
+        {
+          "question": "Which method is used to paginate results in Laravel Eloquent?",
+          "options": ["paginate()", "limit()", "offset()", "chunk()"],
+          "correctAnswer": "paginate()"
+        },
+        {
+          "question": "What is the purpose of Laravel's Route Model Binding?",
+          "options": ["To automatically inject model instances into routes", "To define routes", "To manage database migrations", "To handle HTTP requests"],
+          "correctAnswer": "To automatically inject model instances into routes"
+        },
+        {
+          "question": "Which command is used to generate a new event in Laravel?",
+          "options": ["php artisan make:event EventName", "php artisan create:event EventName", "php artisan new:event EventName", "php artisan event:make EventName"],
+          "correctAnswer": "php artisan make:event EventName"
+        },
+        {
+          "question": "How do you define a belongsToMany relationship in Laravel Eloquent?",
+          "options": ["belongsToMany", "hasMany", "hasOne", "belongsTo"],
+          "correctAnswer": "belongsToMany"
+        },
+        {
+          "question": "What is the purpose of Laravel's Event Listeners?",
+          "options": ["To handle and respond to events", "To define routes", "To manage database migrations", "To compile assets"],
+          "correctAnswer": "To handle and respond to events"
+        },
+        {
+          "question": "Which Laravel feature allows you to manage and track user sessions?",
+          "options": ["Sessions", "Cookies", "Middleware", "Routes"],
+          "correctAnswer": "Sessions"
+        },
+        {
+          "question": "How do you specify a foreign key constraint in a Laravel migration?",
+          "options": ["$table->foreign('column')->references('id')->on('other_table');", "$table->constraint('column')->references('id')->on('other_table');", "$table->key('column')->references('id')->on('other_table');", "$table->reference('column')->on('other_table');"],
+          "correctAnswer": "$table->foreign('column')->references('id')->on('other_table');"
+        },
+        {
+          "question": "Which method is used to define a custom Blade directive in Laravel?",
+          "options": ["Blade::directive()", "Blade::custom()", "Blade::make()", "Blade::define()"],
+          "correctAnswer": "Blade::directive()"
+        },
+        {
+          "question": "How do you create a new policy in Laravel?",
+          "options": ["php artisan make:policy PolicyName", "php artisan create:policy PolicyName", "php artisan new:policy PolicyName", "php artisan policy:make PolicyName"],
+          "correctAnswer": "php artisan make:policy PolicyName"
+        },
+        {
+          "question": "What is the purpose of Laravel's middleware?",
+          "options": ["To filter HTTP requests entering your application", "To manage database migrations", "To compile assets", "To define routes"],
+          "correctAnswer": "To filter HTTP requests entering your application"
+        },
+        {
+          "question": "Which method is used to create a new Artisan command in Laravel?",
+          "options": ["php artisan make:command CommandName", "php artisan create:command CommandName", "php artisan new:command CommandName", "php artisan command:make CommandName"],
+          "correctAnswer": "php artisan make:command CommandName"
+        },
+        {
+          "question": "Which Laravel feature allows you to handle HTTP requests?",
+          "options": ["Controllers", "Models", "Migrations", "Views"],
+          "correctAnswer": "Controllers"
+        },
+        {
+          "question": "How do you define a global scope in Laravel Eloquent?",
+          "options": ["addGlobalScope", "addScope", "globalScope", "scope"],
+          "correctAnswer": "addGlobalScope"
+        },
+        {
+          "question": "Which command is used to create a new seeder in Laravel?",
+          "options": ["php artisan make:seeder SeederName", "php artisan create:seeder SeederName", "php artisan new:seeder SeederName", "php artisan seeder:make SeederName"],
+          "correctAnswer": "php artisan make:seeder SeederName"
+        },
+        {
+          "question": "What is the purpose of Laravel's Service Providers?",
+          "options": ["To bootstrap application services", "To handle HTTP requests", "To compile assets", "To define routes"],
+          "correctAnswer": "To bootstrap application services"
+        },
+        {
+          "question": "Which method is used to create a custom validation rule in Laravel?",
+          "options": ["Rule::custom()", "Rule::make()", "Rule::create()", "Rule::define()"],
+          "correctAnswer": "Rule::make()"
+        },
+        {
+          "question": "How do you define a one-to-one relationship in Laravel Eloquent?",
+          "options": ["hasOne", "hasMany", "belongsTo", "belongsToMany"],
+          "correctAnswer": "hasOne"
+        },
+        {
+          "question": "Which Laravel feature allows you to handle and manage user authentication?",
+          "options": ["Auth", "Session", "Middleware", "Routing"],
+          "correctAnswer": "Auth"
+        },
+        {
+          "question": "What is the purpose of Laravel's Event Service Provider?",
+          "options": ["To register event listeners and subscribers", "To define routes", "To manage database migrations", "To compile assets"],
+          "correctAnswer": "To register event listeners and subscribers"
+        },
+        {
+          "question": "Which command is used to create a new notification in Laravel?",
+          "options": ["php artisan make:notification NotificationName", "php artisan create:notification NotificationName", "php artisan new:notification NotificationName", "php artisan notification:make NotificationName"],
+          "correctAnswer": "php artisan make:notification NotificationName"
+        },
+        {
+          "question": "How do you retrieve the currently authenticated user in Laravel?",
+          "options": ["Auth::user()", "Session::user()", "Request::user()", "User::current()"],
+          "correctAnswer": "Auth::user()"
+        },
+        {
+          "question": "Which method is used to define an accessor in Laravel Eloquent?",
+          "options": ["getAttribute", "getAttributeValue", "accessor", "accessValue"],
+          "correctAnswer": "getAttribute"
+        },
+        {
+          "question": "How do you register middleware in a Laravel application?",
+          "options": ["In the app/Http/Kernel.php file", "In the routes/web.php file", "In the config/app.php file", "In the app/Providers/EventServiceProvider.php file"],
+          "correctAnswer": "In the app/Http/Kernel.php file"
+        },
+        {
+          "question": "Which command is used to generate a new middleware in Laravel?",
+          "options": ["php artisan make:middleware MiddlewareName", "php artisan create:middleware MiddlewareName", "php artisan new:middleware MiddlewareName", "php artisan middleware:make MiddlewareName"],
+          "correctAnswer": "php artisan make:middleware MiddlewareName"
+        },
+        {
+          "question": "How do you define a route that responds to multiple HTTP verbs in Laravel?",
+          "options": ["Route::match(['GET', 'POST'], '/example', 'ExampleController@method');", "Route::all(['GET', 'POST'], '/example', 'ExampleController@method');", "Route::verbs(['GET', 'POST'], '/example', 'ExampleController@method');", "Route::methods(['GET', 'POST'], '/example', 'ExampleController@method');"],
+          "correctAnswer": "Route::match(['GET', 'POST'], '/example', 'ExampleController@method');"
+        },
+        {
+          "question": "Which Laravel feature allows you to send emails?",
+          "options": ["Mail", "Notification", "Job", "Event"],
+          "correctAnswer": "Mail"
+        },
+        {
+          "question": "What is the purpose of Laravel's Blade @yield directive?",
+          "options": ["To define a section of content", "To include a partial view", "To extend a layout", "To conditionally display content"],
+          "correctAnswer": "To define a section of content"
+        },
+        {
+          "question": "Which method is used to dispatch a job in Laravel?",
+          "options": ["dispatch", "fire", "send", "trigger"],
+          "correctAnswer": "dispatch"
+        },
+        {
+          "question": "How do you define a route group with middleware in Laravel?",
+          "options": ["Route::group(['middleware' => 'middlewareName'], function() { /* routes */ });", "Route::middlewareGroup('middlewareName', function() { /* routes */ });", "Route::applyMiddleware('middlewareName', function() { /* routes */ });", "Route::setMiddleware('middlewareName', function() { /* routes */ });"],
+          "correctAnswer": "Route::group(['middleware' => 'middlewareName'], function() { /* routes */ });"
+        },
+        {
+          "question": "Which command is used to generate a new event listener in Laravel?",
+          "options": ["php artisan make:listener ListenerName", "php artisan create:listener ListenerName", "php artisan new:listener ListenerName", "php artisan listener:make ListenerName"],
+          "correctAnswer": "php artisan make:listener ListenerName"
+        },
+        {
+          "question": "What is the purpose of Laravel's cache system?",
+          "options": ["To store frequently accessed data for faster retrieval", "To manage database migrations", "To handle HTTP requests", "To compile assets"],
+          "correctAnswer": "To store frequently accessed data for faster retrieval"
+        },
+        {
+          "question": "How do you define a named route in Laravel?",
+          "options": ["Route::get('/example', 'ExampleController@method')->name('route.name');", "Route::get('/example', 'ExampleController@method')->route('route.name');", "Route::get('/example', 'ExampleController@method')->alias('route.name');", "Route::get('/example', 'ExampleController@method')->label('route.name');"],
+          "correctAnswer": "Route::get('/example', 'ExampleController@method')->name('route.name');"
+        },
+        {
+          "question": "Which method is used to define a route with a parameter in Laravel?",
+          "options": ["Route::get('/example/{param}', 'ExampleController@method');", "Route::get('/example/:param', 'ExampleController@method');", "Route::get('/example/param', 'ExampleController@method');", "Route::get('/example?param', 'ExampleController@method');"],
+          "correctAnswer": "Route::get('/example/{param}', 'ExampleController@method');"
+        },
+        {
+          "question": "What is the purpose of Laravel's CSRF protection?",
+          "options": ["To prevent cross-site request forgery attacks", "To handle HTTP requests", "To manage database migrations", "To compile assets"],
+          "correctAnswer": "To prevent cross-site request forgery attacks"
+        },
+        {
+          "question": "Which command is used to generate a new model factory in Laravel?",
+          "options": ["php artisan make:factory FactoryName", "php artisan create:factory FactoryName", "php artisan new:factory FactoryName", "php artisan factory:make FactoryName"],
+          "correctAnswer": "php artisan make:factory FactoryName"
+        },
+        {
+          "question": "How do you define a route with an optional parameter in Laravel?",
+          "options": ["Route::get('/example/{param?}', 'ExampleController@method');", "Route::get('/example/:param?', 'ExampleController@method');", "Route::get('/example/param?', 'ExampleController@method');", "Route::get('/example?param?', 'ExampleController@method');"],
+          "correctAnswer": "Route::get('/example/{param?}', 'ExampleController@method');"
+        },
+        {
+          "question": "What is the purpose of Laravel's queue system?",
+          "options": ["To handle background tasks", "To manage database migrations", "To handle HTTP requests", "To compile assets"],
+          "correctAnswer": "To handle background tasks"
+        },
+        {
+          "question": "Which method is used to define a custom validation rule in Laravel?",
+          "options": ["Rule::custom()", "Rule::make()", "Rule::create()", "Rule::define()"],
+          "correctAnswer": "Rule::make()"
+        },
+        {
+          "question": "How do you create a new resource controller in Laravel?",
+          "options": ["php artisan make:controller ControllerName --resource", "php artisan create:controller ControllerName --resource", "php artisan new:controller ControllerName --resource", "php artisan controller:make ControllerName --resource"],
+          "correctAnswer": "php artisan make:controller ControllerName --resource"
+        },
+        {
+          "question": "Which Laravel feature allows you to manage environment-specific configuration?",
+          "options": [".env file", "config/app.php", "routes/web.php", "app/Providers"],
+          "correctAnswer": ".env file"
+        },
+        {
+          "question": "How do you define a route with a regular expression constraint in Laravel?",
+          "options": ["Route::get('/example/{param}', 'ExampleController@method')->where('param', '[0-9]+');", "Route::get('/example/{param}', 'ExampleController@method')->constraint('param', '[0-9]+');", "Route::get('/example/{param}', 'ExampleController@method')->regex('param', '[0-9]+');", "Route::get('/example/{param}', 'ExampleController@method')->pattern('param', '[0-9]+');"],
+          "correctAnswer": "Route::get('/example/{param}', 'ExampleController@method')->where('param', '[0-9]+');"
+        },
+        {
+          "question": "What is the purpose of Laravel's Service Providers?",
+          "options": ["To bootstrap application services", "To handle HTTP requests", "To compile assets", "To define routes"],
+          "correctAnswer": "To bootstrap application services"
+        },
+        {
+          "question": "Which command is used to create a new observer in Laravel?",
+          "options": ["php artisan make:observer ObserverName", "php artisan create:observer ObserverName", "php artisan new:observer ObserverName", "php artisan observer:make ObserverName"],
+          "correctAnswer": "php artisan make:observer ObserverName"
+        },
+        {
+          "question": "How do you retrieve the value of an environment variable in Laravel?",
+          "options": ["env('VARIABLE_NAME')", "config('VARIABLE_NAME')", "getenv('VARIABLE_NAME')", "App::environment('VARIABLE_NAME')"],
+          "correctAnswer": "env('VARIABLE_NAME')"
+        },
+        {
+          "question": "Which method is used to create a new pivot table in Laravel?",
+          "options": ["createPivotTable", "createTable", "newPivotTable", "pivotTable"],
+          "correctAnswer": "createPivotTable"
+        },
+        {
+          "question": "What is the purpose of Laravel's Blade @include directive?",
+          "options": ["To include a partial view", "To define a section of content", "To extend a layout", "To conditionally display content"],
+          "correctAnswer": "To include a partial view"
+        },
+        {
+          "question": "Which Laravel feature allows you to handle file uploads?",
+          "options": ["Storage", "File", "Upload", "FileSystem"],
+          "correctAnswer": "Storage"
+        },
+        {
+          "question": "How do you define a custom Blade directive in Laravel?",
+          "options": ["Blade::directive()", "Blade::custom()", "Blade::make()", "Blade::define()"],
+          "correctAnswer": "Blade::directive()"
+        },
+        {
+          "question": "What is the purpose of Laravel's .htaccess file?",
+          "options": ["To configure server settings", "To define routes", "To manage database migrations", "To compile assets"],
+          "correctAnswer": "To configure server settings"
+        },
+        {
+          "question": "Which method is used to retrieve a specific record by its primary key in Laravel Eloquent?",
+          "options": ["find()", "get()", "fetch()", "retrieve()"],
+          "correctAnswer": "find()"
+        },
+        {
+          "question": "How do you define a route that responds to a DELETE request in Laravel?",
+          "options": ["Route::delete('/example', 'ExampleController@method');", "Route::remove('/example', 'ExampleController@method');", "Route::destroy('/example', 'ExampleController@method');", "Route::drop('/example', 'ExampleController@method');"],
+          "correctAnswer": "Route::delete('/example', 'ExampleController@method');"
+        },
+        {
+          "question": "Which Laravel feature allows you to manage database migrations?",
+          "options": ["Migrations", "Schema", "Eloquent", "Blueprint"],
+          "correctAnswer": "Migrations"
+        },
+        {
+          "question": "What is the purpose of Laravel's middleware?",
+          "options": ["To filter HTTP requests entering your application", "To manage database migrations", "To compile assets", "To define routes"],
+          "correctAnswer": "To filter HTTP requests entering your application"
+        },
+        {
+          "question": "Which method is used to create a new Artisan command in Laravel?",
+          "options": ["php artisan make:command CommandName", "php artisan create:command CommandName", "php artisan new:command CommandName", "php artisan command:make CommandName"],
+          "correctAnswer": "php artisan make:command CommandName"
+        },
+        {
+          "question": "Which Laravel feature allows you to handle HTTP requests?",
+          "options": ["Controllers", "Models", "Migrations", "Views"],
+          "correctAnswer": "Controllers"
+        },
+        {
+          "question": "How do you define a global scope in Laravel Eloquent?",
+          "options": ["addGlobalScope", "addScope", "globalScope", "scope"],
+          "correctAnswer": "addGlobalScope"
+        },
+        {
+          "question": "Which command is used to create a new seeder in Laravel?",
+          "options": ["php artisan make:seeder SeederName", "php artisan create:seeder SeederName", "php artisan new:seeder SeederName", "php artisan seeder:make SeederName"],
+          "correctAnswer": "php artisan make:seeder SeederName"
+        },
+        {
+          "question": "What is the purpose of Laravel's Service Providers?",
+          "options": ["To bootstrap application services", "To handle HTTP requests", "To compile assets", "To define routes"],
+          "correctAnswer": "To bootstrap application services"
+        },
+        {
+          "question": "Which method is used to create a custom validation rule in Laravel?",
+          "options": ["Rule::custom()", "Rule::make()", "Rule::create()", "Rule::define()"],
+          "correctAnswer": "Rule::make()"
+        },
+        {
+          "question": "How do you define a one-to-one relationship in Laravel Eloquent?",
+          "options": ["hasOne", "hasMany", "belongsTo", "belongsToMany"],
+          "correctAnswer": "hasOne"
+        },
+        {
+          "question": "Which Laravel feature allows you to manage and track user sessions?",
+          "options": ["Sessions", "Cookies", "Middleware", "Routes"],
+          "correctAnswer": "Sessions"
+        },
+        {
+          "question": "What is the purpose of Laravel Eloquent ORM?",
+          "options": ["To manage views", "To manage routes", "To interact with the database", "To handle session management"],
+          "correctAnswer": "To interact with the database"
+        },
+        {
+          "question": "How do you define a one-to-many relationship in Laravel Eloquent?",
+          "options": ["hasMany", "belongsTo", "belongsToMany", "hasOne"],
+          "correctAnswer": "hasMany"
+        },
+        {
+          "question": "Which of the following commands is used to create a new migration file in Laravel?",
+          "options": ["php artisan make:migration create_table_name_table", "php artisan migrate:create create_table_name_table", "php artisan db:create create_table_name_table", "php artisan migrate:make create_table_name_table"],
+          "correctAnswer": "php artisan make:migration create_table_name_table"
+        },
+        {
+          "question": "What is the purpose of Laravel's Blade template engine?",
+          "options": ["To compile assets", "To manage database migrations", "To create and render views", "To handle HTTP requests"],
+          "correctAnswer": "To create and render views"
+        },
+        {
+          "question": "Which method is used to retrieve all records from a table in Laravel Eloquent?",
+          "options": ["all()", "get()", "findAll()", "retrieveAll()"],
+          "correctAnswer": "all()"
+        },
+        {
+          "question": "How do you define a route that responds to a POST request in Laravel?",
+          "options": ["Route::get('/example', 'ExampleController@method');", "Route::post('/example', 'ExampleController@method');", "Route::put('/example', 'ExampleController@method');", "Route::delete('/example', 'ExampleController@method');"],
+          "correctAnswer": "Route::post('/example', 'ExampleController@method');"
+        },
+        {
+          "question": "Which file stores the configuration for the database connection in a Laravel application?",
+          "options": ["config/database.php", "config/app.php", "config/database.yml", "config/db.php"],
+          "correctAnswer": "config/database.php"
+        },
+        {
+          "question": "What command is used to start the built-in Laravel development server?",
+          "options": ["php artisan serve", "php artisan start", "php artisan run", "php artisan launch"],
+          "correctAnswer": "php artisan serve"
+        },
+        {
+          "question": "Which method is used to create a new instance of a model and save it to the database in Laravel Eloquent?",
+          "options": ["create()", "insert()", "save()", "new()"],
+          "correctAnswer": "create()"
+        },
+        {
+          "question": "How do you specify a table name for a model in Laravel Eloquent?",
+          "options": ["protected $table = 'table_name';", "public $table = 'table_name';", "protected $tableName = 'table_name';", "public $tableName = 'table_name';"],
+          "correctAnswer": "protected $table = 'table_name';"
+        },
+        {
+          "question": "Which command is used to rollback the last database migration in Laravel?",
+          "options": ["php artisan migrate:rollback", "php artisan migrate:reset", "php artisan migrate:refresh", "php artisan migrate:undo"],
+          "correctAnswer": "php artisan migrate:rollback"
+        }
+      ]
+    },
+    {
+        
+    }
+
+  ]
+}
