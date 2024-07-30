@@ -11,8 +11,7 @@ export default function Home() {
     window.scrollTo(0, 0);
 
   }, [])
-  const { data } = useSession()
-  console.log(data)
+
   return (
     <main >
       <Section />

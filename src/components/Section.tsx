@@ -1,4 +1,5 @@
 "use client"
+import { useSession } from "next-auth/react"
 import React from 'react'
 import { motion } from "framer-motion"
 import Lottie from 'react-lottie'
@@ -22,9 +23,10 @@ const itemVariants = {
 };
 
 export default function Section() {
+    const { data } = useSession()
     const router = useRouter()
     const handleClick = () => {
-        router.push('/register'); // Replace '/destination' with your desired route
+        data?.user ? router.push("/dashboard") : router.push('/register'); // Replace '/destination' with your desired route
     };
 
 
@@ -59,7 +61,7 @@ export default function Section() {
                 <motion.button
                     onClick={handleClick}
                     whileTap={{ scale: 0.9 }}
-                    className={"bg-gradient-to-r w-4/5 from-orange-100 text-lg py-1 px-8 rounded to-orange-700"}>Join Now</motion.button>
+                    className={"bg-gradient-to-r w-4/5 from-orange-100 text-lg py-1 px-8 rounded to-orange-700"}>{data?.user ? "Go To Dashboard" : "Join Now"}</motion.button>
             </motion.div>
         </motion.section>
     );

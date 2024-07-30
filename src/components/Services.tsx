@@ -112,13 +112,7 @@ export default function Services() {
             <h1 className="text-xl text-teal-300">What available modules?</h1>
             <div ref={ref} className='relative w-full overflow-hidden'>
                 <div style={{ height: "300px" }} className='flex items-center justify-between p-4'>
-                    <button
-                        onClick={handlePrev}
-                        style={{ backdropFilter: "blur(60px)", boxShadow: "0px 0px 10px rgba(227,228,237,0.37)", border: "2px solid rgba(255,255,255,0.18)" }}
-                        className='h-full rounded text-white p-6 text-center font-bold text-4xl z-10'
-                    >
-                        {'<'}
-                    </button>
+
                     <div className='relative h-full flex-1 flex overflow-hidden'>
                         <div className='flex h-full transition-transform duration-500 ease-in-out' style={{ transform: `translateX(-${(currentIndex * 100) / visibleCards}%)` }}>
                             {cards.map(({ Icon, title, content }, index) => (
@@ -139,13 +133,7 @@ export default function Services() {
                             ))}
                         </div>
                     </div>
-                    <button
-                        onClick={handleNext}
-                        style={{ backdropFilter: "blur(60px)", boxShadow: "0px 0px 10px rgba(227,228,237,0.37)", border: "2px solid rgba(255,255,255,0.18)" }}
-                        className='h-full rounded text-white p-6 text-center font-bold text-4xl z-10'
-                    >
-                        {'>'}
-                    </button>
+
                 </div>
             </div>
         </section>
