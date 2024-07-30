@@ -16,9 +16,13 @@ export async function POST(request: Request) {
         }
 
         await connect();
+        const salt = await bcrypt.genSalt(10)
 
-        const hashedPassword = await bcrypt.hash(password, 10);
+        const hashedPassword = await bcrypt.hash(password, salt);
+        if (await prisma.user.findFirst({ where: { email } })) {
+            return NextResponse.json({ success: false, message: 'Email Already in use!!' }, { status: 422 });
 
+        }
         const newUser = await prisma.user.create({
             data: { firstname: String(firstname), lastname: String(lastname), email: String(email), password: hashedPassword },
         });

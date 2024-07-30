@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Nav from "@/components/Nav";
 import { Toaster } from "sonner";
+import AuthProvider from "@/components/authProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,11 +20,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className + " min-h-screen "}>
-        <Nav />
-        <Toaster richColors />
-        {
+        <AuthProvider>
 
-          children}</body>
+          <Nav />
+          <Toaster richColors />
+          {children}
+        </AuthProvider>
+      </body>
     </html>
   );
 }

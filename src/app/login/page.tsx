@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { toast } from 'sonner'
 import axios from 'axios'
 import { useRouter } from 'next/navigation'
+import { signIn } from 'next-auth/react'
 
 
 
@@ -13,23 +14,22 @@ import { useRouter } from 'next/navigation'
 export default function page() {
     const [email, setEmail] = useState()
     const [password, setPassword] = useState()
-    const navigate = useRouter()
+    const router = useRouter()
 
-    const handleSubmit = async (e: any) => {
-        try {
-            const response = await axios.post("api/auth/login", { email, password })
+    const handleSubmit = async (e: React.FormEvent) => {
+        e.preventDefault();
+        const result = await signIn('credentials', {
+            redirect: false,
+            email,
+            password
+        });
 
-            if (response.data.success) {
-                return navigate.push("/dashboard")
-            }
-            return toast.error(response.data.message)
-
-        } catch (error: any) {
-            toast.error("something went wrong")
-
+        if (result?.ok) {
+            router.push("/dashboard");
+        } else {
+            toast.error(result?.error || "Something went wrong");
         }
     };
-
     return (
         <div className='flex space-y-4 flex-col items-center justify-center'>
             <h1 className='text-white text-2xl uppercase'>Register</h1>
