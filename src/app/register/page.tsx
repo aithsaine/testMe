@@ -16,16 +16,17 @@ export default function page() {
 
     const registerHandler = async () => {
         try {
-            const response = await axios.post("/api/auth/register", { firstname, lastname, email, password: password, confirmPsd })
-            if (response.data.status === 200) {
+            const response = await axios.post("/api/register", { firstname, lastname, email, password, confirmPsd })
 
-                toast.success(response.data.message)
-                return navigate.push("/login")
-            }
+            toast.success(response.data.message)
+            return navigate.push("/login")
 
-            return toast.error(response.data.message)
+
 
         } catch (error: any) {
+            if (error.response.status == 422)
+                return toast.error(error.response.data.message)
+
             return toast.error("somethink wrong");
         }
     }
