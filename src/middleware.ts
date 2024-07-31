@@ -30,8 +30,6 @@ export async function middleware(req: NextRequest) {
             url.pathname = '/dashboard';
 
             return NextResponse.redirect(url);
-
-
         }
     }
 
