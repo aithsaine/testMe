@@ -6,6 +6,7 @@ import { toast } from 'sonner'
 import axios from 'axios'
 import { useRouter } from 'next/navigation'
 import { signIn } from 'next-auth/react'
+import Nav from '@/components/Nav'
 
 
 
@@ -30,7 +31,8 @@ export default function page() {
             toast.error(result?.error || "Something went wrong");
         }
     };
-    return (
+    return (<>
+        <Nav />
         <div className='flex space-y-4 flex-col items-center justify-center'>
             <h1 className='text-white text-2xl uppercase'>Register</h1>
 
@@ -61,5 +63,6 @@ export default function page() {
                 >create new account</Link >
             </div>
         </div>
+    </>
     )
 }
