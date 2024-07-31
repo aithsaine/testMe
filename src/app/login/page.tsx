@@ -7,29 +7,42 @@ import axios from 'axios'
 import { useRouter } from 'next/navigation'
 import { signIn } from 'next-auth/react'
 import Nav from '@/components/Nav'
+import { FcGoogle } from 'react-icons/fc'
+import { Bars } from "react-loading-icons"
 
 
 
 
 
 export default function page() {
+    const [wait, setWait] = useState(false)
     const [email, setEmail] = useState()
     const [password, setPassword] = useState()
     const router = useRouter()
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        const result = await signIn('credentials', {
-            redirect: false,
-            email,
-            password
-        });
+        setWait(true)
+        try {
+            const result = await signIn('credentials', {
+                redirect: false,
+                email,
+                password
+            });
 
-        if (result?.ok) {
-            router.push("/dashboard");
-        } else {
-            toast.error(result?.error || "Something went wrong");
+            if (result?.ok) {
+                toast.success("Successfully signed in")
+                router.push("/dashboard");
+            } else {
+                toast.error(result?.error || "Something went wrong");
+            }
+        } catch (error) {
+            console.log(error)
         }
+        finally {
+            setWait(true)
+        }
+
     };
     return (<>
         <Nav />
@@ -54,7 +67,12 @@ export default function page() {
             <motion.button
                 onClick={handleSubmit}
                 whileTap={{ scale: 0.9 }}
-                className={"bg-gradient-to-r md:w-1/4 w-1/2 from-orange-100 text-lg py-1 px-8 rounded to-orange-700"}>Login</motion.button>
+                className={"bg-gradient-to-r md:w-1/4 w-1/2 from-orange-100 flex justify-center py-1 px-8 rounded to-orange-700"}>{wait ? <Bars className='h-full w-6 text-green-900' /> : 'Login with credentials'}</motion.button>
+
+            <motion.button
+                onClick={handleSubmit}
+                whileTap={{ scale: 0.9 }}
+                className={"bg-gradient-to-r md:w-1/4 w-1/2 from-sky-800 flex justify-center via-blue-300 py-1 px-8 rounded to-red-700"}><FcGoogle className='h-full' /> Google Authentication</motion.button>
 
             <div className="flex md:w-1/4 w-1/2 text-white font-sans space-y-1 flex-col">
                 {/* <label htmlFor="last name">Lasr Name</label> */}

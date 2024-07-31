@@ -36,6 +36,7 @@ export default function page() {
             <Nav />
             <div className='flex space-y-4 flex-col items-center justify-center'>
                 <h1 className='text-white text-2xl uppercase'>Register</h1>
+
                 <div className="flex md:w-1/4 w-1/2 text-white font-sans space-y-1 flex-col">
                     {/* <label htmlFor="first name">First Name</label> */}
                     <input onChange={(e: any) => setFirstName(e.target.value)} type="text" placeholder='first name...' className='rounded p-1 bg-inherit'
