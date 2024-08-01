@@ -1,14 +1,30 @@
 "use client"
 import { signOut, useSession } from 'next-auth/react';
 import Link from 'next/link';
-import React from 'react'
+import React, { useEffect } from 'react'
+import { useDispatch } from "react-redux"
 
 import { LuActivity, LuFlaskRound, LuHome, LuLayoutDashboard, LuLogOut, LuUserCircle } from 'react-icons/lu';
+import prisma from '../../../prisma/client';
+import axios from 'axios';
+import { getAllQuestions } from '@/redux/action/actionCreator';
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
-    const { data, status } = useSession()
-    console.log(data?.user)
-    console.log(status)
+    const dispatch = useDispatch()
+    useEffect(() => {
+        const getQuestions = async () => {
+
+            try {
+                const resp = await axios.get("/api/questions")
+                dispatch(getAllQuestions(resp.data))
+
+            } catch (error) {
+                console.log(error)
+
+            }
+        }
+        getQuestions()
+    }, [])
     return (
         <div className='flex py-4 items-start mt-10 px-6 min-h-screen space-x-2 justify-center text-white '>
             <div style={{ width: "60px", backdropFilter: "blur(60px)", boxShadow: "0px 0px 10px rgba(227,228,237,0.37)", border: "2px solid rgba(255,255,255,0.18)" }} className=" flex text-4xl flex-col rounded-xl h-full py-4 space-y-6 bg-00">

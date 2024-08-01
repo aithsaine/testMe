@@ -1,0 +1,2 @@
+export const GETQUESTIONS = 'GETQUESTIONS';
+export const GETANSWERS = 'GETANSWERS';

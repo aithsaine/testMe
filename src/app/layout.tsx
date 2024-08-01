@@ -3,6 +3,8 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "sonner";
 import AuthProvider from "@/components/authProvider";
+import { Provider } from "react-redux";
+import { store } from "@/redux/store";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,11 +21,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className + " min-h-screen "}>
-        <AuthProvider>
 
-          <Toaster richColors />
-          {children}
-        </AuthProvider>
+
+          <AuthProvider>
+
+            <Toaster richColors />
+            {children}
+          </AuthProvider>
       </body>
     </html>
   );
