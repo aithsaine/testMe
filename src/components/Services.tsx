@@ -1,4 +1,3 @@
-"use client";
 import React, { useEffect, useRef, useState } from 'react';
 import { FcBiomass, FcBullish, FcFlashOn, FcPortraitMode } from "react-icons/fc";
 import { motion, useAnimation } from "framer-motion";
