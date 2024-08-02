@@ -16,7 +16,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
 
             try {
                 const resp = await axios.get("/api/questions")
-                dispatch(getAllQuestions(resp.data))
+                dispatch(getAllQuestions(resp.data.questions))
 
             } catch (error) {
                 console.log(error)

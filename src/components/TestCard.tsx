@@ -1,7 +1,8 @@
 "use client"
 import React from 'react'
 import { motion } from "framer-motion"
-const TestCard = ({ name, duration, isPassed }: { name: String, duration: Number, isPassed: Boolean }) => {
+import { fancyTimeFormat } from '../../helpers/secondsToTime'
+const TestCard = ({ name, duration, isPassed, QuestionsCount }: { name: String, duration: Number, isPassed: Boolean, QuestionsCount: Number }) => {
     return (
         <div
             style={{ minWidth: "200px", backdropFilter: "blur(60px)", boxShadow: "0px 0px 10px rgba(227,228,237,0.37)", border: "2px solid rgba(255,255,255,0.18)" }}
@@ -12,8 +13,9 @@ const TestCard = ({ name, duration, isPassed }: { name: String, duration: Number
             </div>
             <hr className='w-full text-white my-2' />
             <div className="footer-Card text-sm text-inherit flex flex-col">
-                <span>Duration:{String(duration)} min</span>
-                <span>{isPassed ? "passed" : "Passe exam"}</span>
+                <span>Duration: {fancyTimeFormat(duration)} min</span>
+                <span>Questions: {String(QuestionsCount)}</span>
+                <span>{isPassed ? "Passed" : "Passe exam"}</span>
 
             </div>
             <motion.button

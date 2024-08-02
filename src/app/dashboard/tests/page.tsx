@@ -1,18 +1,16 @@
+"use client"
 import TestCard from '@/components/TestCard'
 import React from 'react'
+import { useSelector } from 'react-redux'
 
 export default function Page() {
+    const subjects = useSelector((state: any) => state.subjects)
+    subjects && console.log(subjects)
     return (
         <div className='flex flex-wrap'>
-            <TestCard name={"PHP"} duration={25} isPassed={false} />
-            <TestCard name={"Math"} duration={25} isPassed={false} />
-            <TestCard name={"Physic"} duration={25} isPassed={true} />
-            <TestCard name={"science"} duration={25} isPassed={false} />
-            <TestCard name={"science"} duration={25} isPassed={false} />
-            <TestCard name={"science"} duration={25} isPassed={false} />
-            <TestCard name={"science"} duration={25} isPassed={false} />
-            <TestCard name={"science"} duration={25} isPassed={false} />
-            <TestCard name={"science"} duration={25} isPassed={false} />
+            {subjects && subjects.map((item: any) => <TestCard key={item.name} name={item.name} duration={item.questionsCount * 20} QuestionsCount={item.questionsCount} isPassed={false} />)}
+
+
         </div>
     )
 }

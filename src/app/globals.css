@@ -26,6 +26,6 @@
 body{
   background-image: url("../assets/imgs/bg.jpg")!important;
   background-position: center;
+  background-repeat: repeat;
   background-size: cover;
-  min-height: 1000px!important;
 }
