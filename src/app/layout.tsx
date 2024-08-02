@@ -23,11 +23,11 @@ export default function RootLayout({
       <body className={inter.className + " min-h-screen "}>
 
 
-          <AuthProvider>
+        <AuthProvider>
 
-            <Toaster richColors />
-            {children}
-          </AuthProvider>
+          <Toaster richColors />
+          {children}
+        </AuthProvider>
       </body>
     </html>
   );

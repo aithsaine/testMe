@@ -10,10 +10,10 @@ import axios from 'axios';
 import { getAllQuestions } from '@/redux/action/actionCreator';
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
+    const { data } = useSession()
     const dispatch = useDispatch()
     useEffect(() => {
         const getQuestions = async () => {
-
             try {
                 const resp = await axios.get("/api/questions")
                 dispatch(getAllQuestions(resp.data.questions))
@@ -148,7 +148,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
 
             </div>
             <div style={{ backdropFilter: "blur(60px)", boxShadow: "0px 0px 4px rgba(227,228,237)" }} className="w-full p-2 h-full rounded-xl  ">
-                <h1 className='text-white text-2xl text-center'>Welcom Mr Ismail ait hsaine</h1>
+                <h1 className='text-white text-2xl text-center'>Welcom {data?.user?.firstname} {data?.user.lastname}</h1>
                 {children}
             </div>
         </div >
