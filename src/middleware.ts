@@ -11,7 +11,7 @@ export async function middleware(req: NextRequest) {
     const token = await getToken({ req, secret });
 
     // Define protected paths
-    const protectedPaths = ['/dashboard', '/profile', '/admin'];
+    const protectedPaths = ['/dashboard', '/profile', '/admin', "/test*"];
     const AuthRoutes = ["/login", "/register"]
 
     // Check if the request URL matches any protected path
@@ -38,5 +38,5 @@ export async function middleware(req: NextRequest) {
 
 // Middleware configuration
 export const config = {
-    matcher: ['/dashboard/:path*', '/profile/:path*', '/admin/:path*', "/login", "/register", '/api/:path*']
+    matcher: ['/dashboard/:path*', '/profile/:path*', '/admin/:path*', "/login", "/register", '/api/:path*', "/test/:path*"]
 };
