@@ -5,8 +5,11 @@ import axios from 'axios'
 import { useSession } from 'next-auth/react'
 import React, { useEffect, useState } from 'react'
 import { CountdownCircleTimer } from 'react-countdown-circle-timer'
+import Swal from 'sweetalert2'
+import { useRouter } from 'next/navigation'
 export default function page({ params }: { params: { subject: String } }) {
     const [questions, setQuestions] = useState<Question[]>()
+    const router = useRouter()
     const [loading, setLoading] = useState(true)
     let [counter, setCounter] = useState<number>(60)//seconds
     let [currentQst, setCurrentQst] = useState<Number>(1)//this will know the number of question
@@ -28,13 +31,43 @@ export default function page({ params }: { params: { subject: String } }) {
         questions: []
     })
     const NextHandler = () => {
-        if (Number(currentQst) < Number(questions?.length)) {
+        // if (Number(currentQst) < Number(questions?.length)) {
 
-            setCurrentQst(currentQst + 1)
-            setCounter(60)
-            setIsPlaying(false)
-            setIsPlaying(true)
-        }
+        //     setCurrentQst(currentQst + 1)
+        //     setCounter(60)
+        //     setIsPlaying(false)
+        //     setIsPlaying(true)
+        // }
+        // else if (Number(currentQst) == Number(questions?.length)) {
+        Swal.fire({
+            title: "Do you want to save the changes?",
+            showDenyButton: true,
+            showCancelButton: true,
+            confirmButtonText: "Save",
+            denyButtonText: `Don't save`
+        }).then((result) => {
+            /* Read more about isConfirmed, isDenied below */
+            if (result.isConfirmed) {
+                Swal.fire("Saved!", "", "success");
+            } else if (result.isDenied) {
+                Swal.fire("Changes are not saved", "", "info");
+            }
+        });
+        // }
+    }
+
+    const leaveHandler = () => {
+        Swal.fire({
+            title: "If You leave You cannot repeate this test?",
+            showCancelButton: true,
+            confirmButtonText: "Leave",
+        }).then((result) => {
+            /* Read more about isConfirmed, isDenied below */
+            if (result.isConfirmed) {
+                router.push("/dashboard/tests")
+            }
+
+        });
     }
 
 
@@ -121,7 +154,7 @@ export default function page({ params }: { params: { subject: String } }) {
                 </div>
                 <div className=' fixed bottom-4  right-4 space-x-2 space-y-2'>
 
-                    <button className="bg-red-600 text-lg text-white font-bold py-2 rounded border-white shadow-sm w-24 shadow-white">Leave</button>
+                    <button onClick={leaveHandler} className="bg-red-600 text-lg text-white font-bold py-2 rounded border-white shadow-sm w-24 shadow-white">Leave</button>
                     < button className="bg-green-600 text-lg text-white font-bold py-2 rounded border-white shadow-sm w-24 shadow-white"
                         onClick={NextHandler}
                     > {currentQst == questions.length ? "finished" : "Continue"}</button>

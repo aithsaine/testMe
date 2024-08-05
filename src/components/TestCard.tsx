@@ -3,6 +3,7 @@ import React from 'react'
 import { motion } from "framer-motion"
 import { fancyTimeFormat } from '../../helpers/secondsToTime'
 import { useRouter } from 'next/navigation'
+import Swal from 'sweetalert2'
 const TestCard = ({ name, duration, isPassed, QuestionsCount }: { name: String, duration: Number, isPassed: Boolean, QuestionsCount: Number }) => {
     const router = useRouter()
     return (
@@ -22,7 +23,19 @@ const TestCard = ({ name, duration, isPassed, QuestionsCount }: { name: String, 
             </div>
             <motion.button
 
-                onClick={() => router.push(`/test/${name}`)}
+                onClick={() => {
+                    Swal.fire({
+                        timerProgressBar: true,
+                        title: "If You Start this test you cannot leave until terminate?",
+                        showCancelButton: true,
+                        confirmButtonText: "Start",
+                    }).then((result) => {
+                        if (result.isConfirmed) {
+                            router.push(`/test/${name}`)
+                        }
+                    });
+                }
+                }
                 whileTap={{ scale: isPassed ? 1 : 0.9 }}
                 className={`bg-gradient-to-r cursor-pointer w-full ${isPassed ? "bg-zinc-600 disabled text-gray-400 " : "from-sky-300 to-blue-500"} flex justify-center py-1 px-8 rounded  `}> Pass test</motion.button>
 
