@@ -11,11 +11,12 @@ export async function middleware(req: NextRequest) {
     const token = await getToken({ req, secret });
 
     // Define protected paths
-    const protectedPaths = ['/dashboard', '/profile', '/admin', "/test*"];
-    const AuthRoutes = ["/login", "/register"]
+    const protectedPaths = ['/dashboard', '/profile', '/admin', '/test/'];
+    const AuthRoutes = ['/login', '/register'];
+    const { pathname } = req.nextUrl;
 
     // Check if the request URL matches any protected path
-    if (protectedPaths.some(path => req.nextUrl.pathname.startsWith(path))) {
+    if (protectedPaths.some(path => pathname.startsWith(path))) {
         // If the token is not available, redirect to the sign-in page
         if (!token) {
             const url = req.nextUrl.clone();
@@ -24,19 +25,30 @@ export async function middleware(req: NextRequest) {
             return NextResponse.redirect(url);
         }
     }
-    if (AuthRoutes.some(path => req.nextUrl.pathname.startsWith(path))) {
+
+    // Check if the request URL matches any authentication route
+    if (AuthRoutes.some(path => pathname.startsWith(path))) {
+        // If the user is already authenticated, redirect to the dashboard
         if (token) {
             const url = req.nextUrl.clone();
             url.pathname = '/dashboard';
-
             return NextResponse.redirect(url);
         }
     }
 
+    // Allow the request to proceed if no conditions are met
     return NextResponse.next();
 }
 
 // Middleware configuration
 export const config = {
-    matcher: ['/dashboard/:path*', '/profile/:path*', '/admin/:path*', "/login", "/register", '/api/:path*', "/test/:path*"]
+    matcher: [
+        '/dashboard/:path*',
+        '/profile/:path*',
+        '/admin/:path*',
+        '/login',
+        '/register',
+        '/test/:path*',
+        '/api/:path*'
+    ]
 };

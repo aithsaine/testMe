@@ -16,6 +16,8 @@ export default function page({ params }: { params: { subject: String } }) {
     const { data } = useSession()
     let [isPlaying, setIsPlaying] = useState(true)
 
+
+
     type Answer = {
         userId: String;
         subject: String;
@@ -31,29 +33,29 @@ export default function page({ params }: { params: { subject: String } }) {
         questions: []
     })
     const NextHandler = () => {
-        // if (Number(currentQst) < Number(questions?.length)) {
+        if (Number(currentQst) < Number(questions?.length)) {
 
-        //     setCurrentQst(currentQst + 1)
-        //     setCounter(60)
-        //     setIsPlaying(false)
-        //     setIsPlaying(true)
-        // }
-        // else if (Number(currentQst) == Number(questions?.length)) {
-        Swal.fire({
-            title: "Do you want to save the changes?",
-            showDenyButton: true,
-            showCancelButton: true,
-            confirmButtonText: "Save",
-            denyButtonText: `Don't save`
-        }).then((result) => {
-            /* Read more about isConfirmed, isDenied below */
-            if (result.isConfirmed) {
-                Swal.fire("Saved!", "", "success");
-            } else if (result.isDenied) {
-                Swal.fire("Changes are not saved", "", "info");
-            }
-        });
-        // }
+            setCurrentQst(currentQst + 1)
+            setCounter(60)
+            setIsPlaying(false)
+            setIsPlaying(true)
+        }
+        else if (Number(currentQst) == Number(questions?.length)) {
+            Swal.fire({
+                title: "Do you want to save the changes?",
+                showDenyButton: true,
+                showCancelButton: true,
+                confirmButtonText: "Save",
+                denyButtonText: `Don't save`
+            }).then((result) => {
+                /* Read more about isConfirmed, isDenied below */
+                if (result.isConfirmed) {
+                    Swal.fire("Saved!", "", "success");
+                } else if (result.isDenied) {
+                    Swal.fire("Changes are not saved", "", "info");
+                }
+            });
+        }
     }
 
     const leaveHandler = () => {
