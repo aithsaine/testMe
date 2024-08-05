@@ -1,10 +1,10 @@
 import { GETQUESTIONS } from "./types"
 
 export type Question = {
-    id: String,
-    subject: String,
-    title: String,
-    choices: String[],
+    id: String
+    subject: String
+    title: String
+    choices: String[]
     answer: String[]
 }
 
