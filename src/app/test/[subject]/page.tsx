@@ -12,14 +12,13 @@ export default function page({ params }: { params: { subject: String } }) {
     const router = useRouter()
     const [loading, setLoading] = useState(true)
     let [counter, setCounter] = useState<number>(60)//seconds
-    let [currentQst, setCurrentQst] = useState<Number>(1)//this will know the number of question
+    let [currentQst, setCurrentQst] = useState<number>(1)//this will know the number of question
     const { data } = useSession()
     let [isPlaying, setIsPlaying] = useState(true)
 
 
 
     type Answer = {
-        userId: String;
         subject: String;
         questions: {
             questionId: String;
@@ -28,10 +27,23 @@ export default function page({ params }: { params: { subject: String } }) {
     };
 
     const [result, setResult] = useState<Answer>({
-        userId: data?.user?.id,
         subject: params.subject,
         questions: []
     })
+
+    const saveHandler = async () => {
+        try {
+            const save = await axios.post('/api/answer/save', { answer: result })
+            if (save?.data.success) {
+                Swal.fire("Saved!", "", "success");
+
+                router.push("/dashboard/tests")
+            }
+
+        } catch (e) {
+
+        }
+    }
     const NextHandler = () => {
         if (Number(currentQst) < Number(questions?.length)) {
 
@@ -43,16 +55,13 @@ export default function page({ params }: { params: { subject: String } }) {
         else if (Number(currentQst) == Number(questions?.length)) {
             Swal.fire({
                 title: "Do you want to save the changes?",
-                showDenyButton: true,
                 showCancelButton: true,
                 confirmButtonText: "Save",
                 denyButtonText: `Don't save`
             }).then((result) => {
                 /* Read more about isConfirmed, isDenied below */
                 if (result.isConfirmed) {
-                    Swal.fire("Saved!", "", "success");
-                } else if (result.isDenied) {
-                    Swal.fire("Changes are not saved", "", "info");
+                    saveHandler()
                 }
             });
         }
@@ -66,6 +75,7 @@ export default function page({ params }: { params: { subject: String } }) {
         }).then((result) => {
             /* Read more about isConfirmed, isDenied below */
             if (result.isConfirmed) {
+                saveHandler()
                 router.push("/dashboard/tests")
             }
 
@@ -91,7 +101,6 @@ export default function page({ params }: { params: { subject: String } }) {
 
     useEffect(() => {
         getQuestions()
-
     }, [])
 
     if (loading) {
@@ -123,7 +132,7 @@ export default function page({ params }: { params: { subject: String } }) {
                                 isPlaying={isPlaying}
                                 key={Number(currentQst)}
                                 duration={counter}
-                                colors={['#004777', '#F7B801', '#A30000', '#A30000']}
+                                colors={['#A020F0', '#F7B801', '#A30000', '#A30000']}
                                 colorsTime={[7, 5, 2, 0]}
                                 size={100}
                                 onComplete={() => {
@@ -150,8 +159,6 @@ export default function page({ params }: { params: { subject: String } }) {
                                     : elem2
                             ),
                         }));
-
-                        console.log(result.questions)
                     }} key={index} className={`w-full rounded-2xl ${result.questions.find((elem) => elem.questionId == questions[currentQst - 1].id && elem.answer == item) ? "bg-sky-600" : "bg-fuchsia-600"}  min-h-20 text-white text-2xl m-2`}>{item}</button>)}
                 </div>
                 <div className=' fixed bottom-4  right-4 space-x-2 space-y-2'>
