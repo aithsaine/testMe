@@ -86,7 +86,7 @@ export default function page({ params }: { params: { subject: String } }) {
     const getQuestions = async () => {
 
         try {
-            const response = await axios.get("/api/question", { params: { subject: params.subject } });
+            const response = await axios.get("/api/question", { params: { subject: decodeURIComponent(params.subject as string) } });
             if (response.data.success)
                 setQuestions(response.data.questions)
             setResult({ ...result, questions: response.data.questions.map((item: Question) => { return { questionId: item.id, answer: "" } }) })
@@ -110,7 +110,7 @@ export default function page({ params }: { params: { subject: String } }) {
         )
     }
 
-    return (questions &&
+    return (questions?.length &&
         <div className='flex space-x-2 items-start space-y-2'>
             <div className=" flex flex-wrap justify-between items-center  w-3/12 rounded-lg border border-sky-200 space-x-2 space-y-2 px-1 shadow-sky-500  shadow-lg min-h-screen">
                 {questions && Array.from({ length: questions.length }, (_, idx) => <div

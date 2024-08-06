@@ -8,7 +8,7 @@ export async function GET(req: NextRequest) {
         await connect()
 
         const subject: string | null = req.nextUrl.searchParams.get('subject')
-        const questions = await prisma.question.findMany({ where: { subject } })
+        const questions = await prisma.question.findMany({ where: { subject: (subject as string) } })
         return NextResponse.json({ questions, success: true }, { status: 200 })
 
     } catch (error) {
