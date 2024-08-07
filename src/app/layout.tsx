@@ -26,7 +26,10 @@ export default function RootLayout({
         <AuthProvider>
 
           <Toaster richColors />
-          {children}
+          <main className="overflow-hidden">
+
+            {children}
+          </main>
         </AuthProvider>
       </body>
     </html>

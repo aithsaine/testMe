@@ -42,7 +42,7 @@ const TestCard = ({ name, duration, isPassed, QuestionsCount, result = 0 }: { na
                 }
                 }
                 whileTap={{ scale: isPassed ? 1 : 0.9 }}
-                className={`bg-gradient-to-r cursor-pointer w-full ${isPassed ? "bg-zinc-600 disabled text-gray-400 " : "from-sky-300 to-blue-500"} flex justify-center py-1 px-8 rounded  `}>{isPassed ? "was Passed" : "Pass test"}</motion.button>
+                className={`bg-gradient-to-r  w-full ${isPassed ? "bg-zinc-600 disabled cursor-not-allowed text-gray-400 " : "from-white cursor-pointer to-blue-700"} flex justify-center py-1 px-8 rounded  `}>{isPassed ? "was Passed" : "Pass test"}</motion.button>
 
         </div>
     )

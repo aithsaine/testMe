@@ -120,10 +120,10 @@ export default function page({ params }: { params: { subject: String } }) {
         <div className='flex space-x-2 items-start space-y-2'>
             <div className=" flex flex-wrap justify-between items-center  w-3/12 rounded-lg border border-sky-200 space-x-2 space-y-2 px-1 shadow-sky-500  shadow-lg min-h-screen">
                 {questions && Array.from({ length: questions.length }, (_, idx) => <div
-                    style={{ backdropFilter: "blur(60px)", boxShadow: "0px 0px 10px rgba(227,228,237,0.37)", border: "2px solid rgba(255,255,255,0.18)" }}
+                    style={{ backdropFilter: "blur(60px)", boxShadow: "0px 0px 10pxrgba(192, 38, 211, 1,0.37)", border: "2px solid rgba(192, 38, 211, 1,0.18)" }}
 
-                    className={`w-20 h-20 flex flex-col rounded-ss-3xl  rounded-ee-3xl items-center justify-center ${Number(idx) <= Number(currentQst) - 1 ? "bg-gray-600" : ""}  border-2 border-collapse`} key={idx}>
-                    <h1 className='text-sm'>Question N°</h1>
+                    className={`w-10 lg:w-20 h-10 lg:h-20 flex flex-col rounded items-center justify-center ${Number(idx) <= Number(currentQst) - 1 ? "bg-gray-600" : ""}  border-2 border-collapse`} key={idx}>
+                    <h1 className='text-xs hidden md:inline-block'>Question N°</h1>
                     <span>{idx + 1}</span>
                 </div >)}
             </div>
