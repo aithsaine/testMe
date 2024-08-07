@@ -9,2920 +9,2155 @@ async function main() {
         data: [
             {
                 subject: "React",
-                title: "What is React?",
-                choices: [
-                    "A library for building user interfaces",
-                    "A programming language",
-                    "A database",
-                    "A server"
-                ],
-                answers: [
-                    "A library for building user interfaces"
-                ]
+                title: "What is JSX in React?",
+                choices: ["A syntax extension for JavaScript", "A JavaScript library", "A CSS preprocessor", "A database management system"],
+                correctAnswer: "A syntax extension for JavaScript"
             },
             {
                 subject: "React",
-                title: "Who developed React?",
-                choices: [
-                    "Google",
-                    "Facebook",
-                    "Microsoft",
-                    "Twitter"
-                ],
-                answers: [
-                    "Facebook"
-                ]
+                title: "Which React hook is used to perform side effects?",
+                choices: ["useState", "useEffect", "useReducer", "useContext"],
+                correctAnswer: "useEffect"
             },
             {
                 subject: "React",
-                title: "What is JSX?",
-                choices: [
-                    "JavaScript XML",
-                    "JSON XML",
-                    "JavaScript X",
-                    "Java Syntax Extension"
-                ],
-                answers: [
-                    "JavaScript XML"
-                ]
+                title: "What is the purpose of the `render()` method in a React class component?",
+                choices: ["To render HTML elements", "To update component state", "To handle events", "To fetch data"],
+                correctAnswer: "To render HTML elements"
             },
             {
                 subject: "React",
-                title: "What is a component in React?",
-                choices: [
-                    "A reusable piece of UI",
-                    "A CSS rule",
-                    "A type of data binding",
-                    "A server-side function"
-                ],
-                answers: [
-                    "A reusable piece of UI"
-                ]
+                title: "How do you pass data from a parent component to a child component in React?",
+                choices: ["Using state", "Using props", "Using context", "Using hooks"],
+                correctAnswer: "Using props"
             },
             {
                 subject: "React",
-                title: "What is the use of useState in React?",
-                choices: [
-                    "To manage local state in functional components",
-                    "To fetch data from API",
-                    "To manage global state",
-                    "To handle component lifecycle"
-                ],
-                answers: [
-                    "To manage local state in functional components"
-                ]
+                title: "What is a React fragment?",
+                choices: ["A placeholder for rendering", "A special type of component", "A way to return multiple elements without a wrapper", "A CSS class"],
+                correctAnswer: "A way to return multiple elements without a wrapper"
             },
             {
                 subject: "React",
-                title: "What is the use of useEffect in React?",
-                choices: [
-                    "To perform side effects in functional components",
-                    "To manage local state",
-                    "To create context",
-                    "To manage routes"
-                ],
-                answers: [
-                    "To perform side effects in functional components"
-                ]
+                title: "Which of the following is a valid way to create a React component?",
+                choices: ["Function component", "Class component", "Arrow function component", "All of the above"],
+                correctAnswer: "All of the above"
             },
             {
                 subject: "React",
-                title: "What is the virtual DOM?",
-                choices: [
-                    "A lightweight copy of the actual DOM",
-                    "A real DOM manipulation library",
-                    "A new HTML standard",
-                    "A server-side rendering technique"
-                ],
-                answers: [
-                    "A lightweight copy of the actual DOM"
-                ]
+                title: "What does the `useState` hook do?",
+                choices: ["Manages state in functional components", "Performs side effects", "Handles routing", "Provides context"],
+                correctAnswer: "Manages state in functional components"
             },
             {
                 subject: "React",
-                title: "What is React Router used for?",
-                choices: [
-                    "To handle routing in React applications",
-                    "To manage state",
-                    "To perform API calls",
-                    "To create animations"
-                ],
-                answers: [
-                    "To handle routing in React applications"
-                ]
+                title: "How do you handle events in React?",
+                choices: ["Using event handlers", "Using inline JavaScript", "Using Redux", "Using lifecycle methods"],
+                correctAnswer: "Using event handlers"
             },
             {
                 subject: "React",
-                title: "What is a higher-order component (HOC) in React?",
-                choices: [
-                    "A function that takes a component and returns a new component",
-                    "A method to fetch data",
-                    "A new way to write components",
-                    "A type of React hook"
-                ],
-                answers: [
-                    "A function that takes a component and returns a new component"
-                ]
+                title: "What is the purpose of React’s `key` prop?",
+                choices: ["To uniquely identify elements in a list", "To set CSS styles", "To pass data between components", "To handle events"],
+                correctAnswer: "To uniquely identify elements in a list"
             },
             {
                 subject: "React",
-                title: "What is Redux used for in React applications?",
-                choices: [
-                    "To manage global state",
-                    "To handle routing",
-                    "To perform side effects",
-                    "To manage component lifecycle"
-                ],
-                answers: [
-                    "To manage global state"
-                ]
+                title: "What is the use of `useEffect` hook?",
+                choices: ["To perform side effects", "To manage component state", "To handle user input", "To style components"],
+                correctAnswer: "To perform side effects"
             },
             {
                 subject: "React",
-                title: "What is the context API in React?",
-                choices: [
-                    "A way to pass data through the component tree without having to pass props down manually at every level",
-                    "A method to fetch data",
-                    "A way to create new components",
-                    "A technique for optimizing performance"
-                ],
-                answers: [
-                    "A way to pass data through the component tree without having to pass props down manually at every level"
-                ]
+                title: "What is React's Context API used for?",
+                choices: ["State management", "Routing", "Data fetching", "Animation"],
+                correctAnswer: "State management"
             },
             {
                 subject: "React",
-                title: "What is a controlled component in React?",
-                choices: [
-                    "An input element whose value is controlled by React",
-                    "A component that controls the state of other components",
-                    "A component that fetches data",
-                    "A component that handles routing"
-                ],
-                answers: [
-                    "An input element whose value is controlled by React"
-                ]
+                title: "How do you create a controlled component in React?",
+                choices: ["By managing form state with React", "By using local storage", "By using a third-party library", "By using the `useEffect` hook"],
+                correctAnswer: "By managing form state with React"
             },
             {
                 subject: "React",
-                title: "What is a pure component in React?",
-                choices: [
-                    "A component that renders the same output for the same props and state",
-                    "A component that fetches data",
-                    "A component that handles routing",
-                    "A component that manages state"
-                ],
-                answers: [
-                    "A component that renders the same output for the same props and state"
-                ]
+                title: "What is the `ReactDOM.render` method used for?",
+                choices: ["To render a React element into the DOM", "To manage component lifecycle", "To update state", "To handle events"],
+                correctAnswer: "To render a React element into the DOM"
             },
             {
                 subject: "React",
-                title: "What is the purpose of React.memo?",
-                choices: [
-                    "To memoize a component and prevent unnecessary re-renders",
-                    "To fetch data",
-                    "To handle routing",
-                    "To manage state"
-                ],
-                answers: [
-                    "To memoize a component and prevent unnecessary re-renders"
-                ]
+                title: "What are higher-order components (HOCs) in React?",
+                choices: ["Functions that take a component and return a new component", "Components that manage state", "Components that perform side effects", "Components that handle routing"],
+                correctAnswer: "Functions that take a component and return a new component"
             },
             {
                 subject: "React",
-                title: "What is the use of useContext in React?",
-                choices: [
-                    "To use context in functional components",
-                    "To fetch data",
-                    "To manage state",
-                    "To handle routing"
-                ],
-                answers: [
-                    "To use context in functional components"
-                ]
+                title: "What is the purpose of `useReducer` hook?",
+                choices: ["To manage more complex state logic", "To perform side effects", "To handle routing", "To fetch data"],
+                correctAnswer: "To manage more complex state logic"
             },
             {
                 subject: "React",
-                title: "What is the use of useReducer in React?",
-                choices: [
-                    "To manage complex state logic in functional components",
-                    "To fetch data",
-                    "To handle routing",
-                    "To perform side effects"
-                ],
-                answers: [
-                    "To manage complex state logic in functional components"
-                ]
+                title: "What is the purpose of `useCallback` hook?",
+                choices: ["To memoize callback functions", "To perform side effects", "To manage state", "To handle events"],
+                correctAnswer: "To memoize callback functions"
+            },
+            {
+                subject: "React",
+                title: "What is the role of `React.StrictMode`?",
+                choices: ["To highlight potential problems in an application", "To manage state", "To perform side effects", "To handle routing"],
+                correctAnswer: "To highlight potential problems in an application"
+            },
+            {
+                subject: "React",
+                title: "How do you conditionally render elements in React?",
+                choices: ["Using conditional operators", "Using `if-else` statements", "Using the ternary operator", "All of the above"],
+                correctAnswer: "All of the above"
+            },
+            {
+                subject: "React",
+                title: "What is a `React.memo`?",
+                choices: ["A higher-order component that memoizes a component", "A hook for managing state", "A method for performing side effects", "A way to handle events"],
+                correctAnswer: "A higher-order component that memoizes a component"
+            },
+            {
+                subject: "React",
+                title: "How do you handle forms in React?",
+                choices: ["Using controlled components", "Using uncontrolled components", "Using both controlled and uncontrolled components", "Using third-party libraries"],
+                correctAnswer: "Using controlled components"
+            },
+            {
+                subject: "React",
+                title: "What does the `React.StrictMode` component do?",
+                choices: ["It helps detect potential problems in the application", "It manages component state", "It performs side effects", "It handles routing"],
+                correctAnswer: "It helps detect potential problems in the application"
+            },
+            {
+                subject: "React",
+                title: "What is the purpose of `useRef` hook?",
+                choices: ["To access and interact with DOM elements", "To manage state", "To perform side effects", "To handle routing"],
+                correctAnswer: "To access and interact with DOM elements"
+            },
+            {
+                subject: "React",
+                title: "What is the purpose of `useLayoutEffect` hook?",
+                choices: ["To perform side effects synchronously after all DOM mutations", "To manage state", "To handle events", "To perform asynchronous data fetching"],
+                correctAnswer: "To perform side effects synchronously after all DOM mutations"
+            },
+            {
+                subject: "React",
+                title: "What is the role of `useImperativeHandle` hook?",
+                choices: ["To customize the instance value that is exposed when using `ref`", "To manage state", "To perform side effects", "To handle events"],
+                correctAnswer: "To customize the instance value that is exposed when using `ref`"
             },
             {
                 subject: "Laravel",
-                title: "What is Laravel?",
-                choices: ["A PHP framework", "A JavaScript library", "A database", "A web server"],
-                answers: ["A PHP framework"]
+                title: "Which command is used to create a new Laravel project?",
+                choices: ["php artisan make:project", "composer create-project", "php create:project", "laravel new"],
+                correctAnswer: "laravel new"
             },
             {
                 subject: "Laravel",
-                title: "Who created Laravel?",
-                choices: ["Taylor Otwell", "Evan You", "Rasmus Lerdorf", "Ryan Dahl"],
-                answers: ["Taylor Otwell"]
+                title: "What is Laravel’s ORM called?",
+                choices: ["Eloquent", "Doctrine", "ActiveRecord", "Hibernate"],
+                correctAnswer: "Eloquent"
             },
             {
                 subject: "Laravel",
-                title: "What is the latest version of Laravel as of 2024?",
-                choices: ["Laravel 9", "Laravel 8", "Laravel 10", "Laravel 11"],
-                answers: ["Laravel 10"]
+                title: "How do you define routes in Laravel?",
+                choices: ["In web.php file", "In routes.php file", "In config/routes.php", "In app/routes"],
+                correctAnswer: "In web.php file"
             },
             {
                 subject: "Laravel",
-                title: "What is the use of Eloquent in Laravel?",
-                choices: ["To interact with the database using an Active Record implementation", "To create routes", "To manage session data", "To handle HTTP requests"],
-                answers: ["To interact with the database using an Active Record implementation"]
+                title: "What is the purpose of Laravel’s Artisan command?",
+                choices: ["To provide a command-line interface for various tasks", "To manage database migrations", "To handle routing", "To manage user authentication"],
+                correctAnswer: "To provide a command-line interface for various tasks"
             },
             {
                 subject: "Laravel",
-                title: "What is Artisan in Laravel?",
-                choices: ["A command-line interface", "A templating engine", "A middleware", "A database"],
-                answers: ["A command-line interface"]
+                title: "What is the Laravel service container used for?",
+                choices: ["Dependency injection and service resolution", "Database management", "Routing", "Session handling"],
+                correctAnswer: "Dependency injection and service resolution"
             },
             {
                 subject: "Laravel",
-                title: "What is Blade in Laravel?",
-                choices: ["A templating engine", "A database migration tool", "A routing mechanism", "A package manager"],
-                answers: ["A templating engine"]
+                title: "What is the default database configuration file in Laravel?",
+                choices: ["config/database.php", "database/config.php", "config/db.php", "app/config/database.php"],
+                correctAnswer: "config/database.php"
             },
             {
                 subject: "Laravel",
-                title: "What is the purpose of middleware in Laravel?",
-                choices: ["To filter HTTP requests", "To manage database connections", "To create views", "To handle events"],
-                answers: ["To filter HTTP requests"]
+                title: "Which method is used to add middleware to a route in Laravel?",
+                choices: ["middleware()", "addMiddleware()", "routeMiddleware()", "middlewareAdd()"],
+                correctAnswer: "middleware()"
             },
             {
                 subject: "Laravel",
-                title: "What is CSRF protection in Laravel?",
-                choices: ["Cross-Site Request Forgery protection", "Cross-Site Scripting protection", "SQL Injection protection", "Authentication"],
-                answers: ["Cross-Site Request Forgery protection"]
+                title: "How do you run database migrations in Laravel?",
+                choices: ["php artisan migrate", "php artisan db:migrate", "php migrate:run", "php artisan migrate:run"],
+                correctAnswer: "php artisan migrate"
             },
             {
                 subject: "Laravel",
-                title: "What is a service provider in Laravel?",
-                choices: ["The central place of application bootstrapping", "A way to define routes", "A database schema", "A type of event listener"],
-                answers: ["The central place of application bootstrapping"]
+                title: "What is Laravel’s Blade?",
+                choices: ["A templating engine", "A database manager", "A routing system", "A service container"],
+                correctAnswer: "A templating engine"
             },
             {
                 subject: "Laravel",
-                title: "How do you create a new Laravel project?",
-                choices: ["Using Composer", "Using NPM", "Using Git", "Using Yarn"],
-                answers: ["Using Composer"]
+                title: "How do you define an Eloquent model in Laravel?",
+                choices: ["By extending the Model class", "By extending the Controller class", "By implementing the Model interface", "By extending the Database class"],
+                correctAnswer: "By extending the Model class"
             },
             {
                 subject: "Laravel",
-                title: "What is the default database management system used by Laravel?",
-                choices: ["MySQL", "PostgreSQL", "SQLite", "MongoDB"],
-                answers: ["MySQL"]
+                title: "What command is used to create a new controller in Laravel?",
+                choices: ["php artisan make:controller", "php artisan create:controller", "php artisan new:controller", "php artisan controller:create"],
+                correctAnswer: "php artisan make:controller"
             },
             {
                 subject: "Laravel",
-                title: "What is the purpose of the .env file in Laravel?",
-                choices: ["To store environment variables", "To define routes", "To create views", "To manage sessions"],
-                answers: ["To store environment variables"]
+                title: "What does the `artisan` command do?",
+                choices: ["Provides a command-line interface for Laravel tasks", "Manages database migrations", "Handles user authentication", "Performs HTTP requests"],
+                correctAnswer: "Provides a command-line interface for Laravel tasks"
             },
             {
                 subject: "Laravel",
-                title: "What command is used to run a Laravel development server?",
-                choices: ["php artisan serve", "npm start", "composer run", "php start"],
-                answers: ["php artisan serve"]
+                title: "How do you set up environment variables in Laravel?",
+                choices: ["In the .env file", "In the config.php file", "In the database.php file", "In the routes.php file"],
+                correctAnswer: "In the .env file"
             },
             {
                 subject: "Laravel",
-                title: "What is the purpose of Laravel Mix?",
-                choices: ["To handle asset compilation", "To manage database migrations", "To define routes", "To create middleware"],
-                answers: ["To handle asset compilation"]
+                title: "What is Laravel’s `Auth` facade used for?",
+                choices: ["User authentication", "Database queries", "Routing", "Service container"],
+                correctAnswer: "User authentication"
             },
             {
                 subject: "Laravel",
-                title: "What is the use of queues in Laravel?",
-                choices: ["To defer the processing of a time-consuming task", "To handle HTTP requests", "To manage session data", "To create views"],
-                answers: ["To defer the processing of a time-consuming task"]
+                title: "What is the purpose of Laravel’s `Request` class?",
+                choices: ["To handle HTTP requests", "To manage database migrations", "To define routes", "To provide user authentication"],
+                correctAnswer: "To handle HTTP requests"
             },
             {
-                subject: "Next.js",
-                title: "What is the primary purpose of Next.js?",
-                choices: [
-                    "Client-side routing",
-                    "Server-side rendering and static site generation",
-                    "State management",
-                    "Data visualization"
-                ],
-                answers: ["Server-side rendering and static site generation"]
+                subject: "Laravel",
+                title: "What is Laravel’s `Query Builder` used for?",
+                choices: ["To build SQL queries programmatically", "To manage database migrations", "To handle HTTP requests", "To provide user authentication"],
+                correctAnswer: "To build SQL queries programmatically"
             },
             {
-                subject: "Next.js",
-                title: "Which method in Next.js is used to fetch data on the server side for each request?",
-                choices: [
-                    "getStaticProps",
-                    "getServerSideProps",
-                    "getInitialProps",
-                    "useEffect"
-                ],
-                answers: ["getServerSideProps"]
+                subject: "Laravel",
+                title: "How do you create a new migration in Laravel?",
+                choices: ["php artisan make:migration", "php artisan create:migration", "php artisan new:migration", "php artisan migration:create"],
+                correctAnswer: "php artisan make:migration"
             },
             {
-                subject: "Next.js",
-                title: "How do you create a new page in a Next.js application?",
-                choices: [
-                    "Create a new file in the `pages` directory",
-                    "Add a new component in the `components` directory",
-                    "Modify the `index.js` file",
-                    "Create a new file in the `public` directory"
-                ],
-                answers: ["Create a new file in the `pages` directory"]
+                subject: "Laravel",
+                title: "What is the purpose of the `Seeders` in Laravel?",
+                choices: ["To populate the database with test data", "To manage HTTP requests", "To define routes", "To handle user authentication"],
+                correctAnswer: "To populate the database with test data"
             },
             {
-                subject: "Next.js",
-                title: "What is the purpose of `getStaticProps`?",
-                choices: [
-                    "Fetch data on every request",
-                    "Generate static pages at build time",
-                    "Fetch data on the client side",
-                    "Render a page on the server side"
-                ],
-                answers: ["Generate static pages at build time"]
-            },
-            {
-                subject: "Next.js",
-                title: "Where should API routes be created in a Next.js project?",
-                choices: [
-                    "In the `pages/api` directory",
-                    "In the `public` directory",
-                    "In the `components` directory",
-                    "In the `lib` directory"
-                ],
-                answers: ["In the `pages/api` directory"]
-            },
-            {
-                subject: "Next.js",
-                title: "How do you create a dynamic route in Next.js?",
-                choices: [
-                    "By using square brackets in the file name",
-                    "By using curly braces in the file name",
-                    "By using parentheses in the file name",
-                    "By using angle brackets in the file name"
-                ],
-                answers: ["By using square brackets in the file name"]
-            },
-            {
-                subject: "Next.js",
-                title: "What is `getStaticPaths` used for in Next.js?",
-                choices: [
-                    "Generating static pages for dynamic routes",
-                    "Fetching data on every request",
-                    "Handling client-side routing",
-                    "Creating API routes"
-                ],
-                answers: ["Generating static pages for dynamic routes"]
-            },
-            {
-                subject: "Next.js",
-                title: "Which of the following is a feature of Next.js?",
-                choices: [
-                    "Automatic code splitting",
-                    "Built-in state management",
-                    "Custom hooks",
-                    "Dependency injection"
-                ],
-                answers: ["Automatic code splitting"]
-            },
-            {
-                subject: "Next.js",
-                title: "How does Next.js handle CSS?",
-                choices: [
-                    "Using CSS Modules by default",
-                    "Using global stylesheets only",
-                    "Using inline styles only",
-                    "Using styled-components by default"
-                ],
-                answers: ["Using CSS Modules by default"]
-            },
-            {
-                subject: "Next.js",
-                title: "What is the purpose of the `next.config.js` file?",
-                choices: [
-                    "Configuration of the Next.js build process",
-                    "Defining routes",
-                    "Handling state management",
-                    "Creating API endpoints"
-                ],
-                answers: ["Configuration of the Next.js build process"]
-            },
-            {
-                subject: "Next.js",
-                title: "Which hook is used to manage routing in a Next.js application?",
-                choices: [
-                    "useRouter",
-                    "useLocation",
-                    "useHistory",
-                    "useNavigate"
-                ],
-                answers: ["useRouter"]
-            },
-            {
-                subject: "Next.js",
-                title: "How do you add environment variables in a Next.js project?",
-                choices: [
-                    "Using a `.env.local` file",
-                    "Defining them in `next.config.js`",
-                    "Using a `config.js` file",
-                    "Setting them in the `public` directory"
-                ],
-                answers: ["Using a `.env.local` file"]
-            },
-            {
-                subject: "Next.js",
-                title: "What is `getInitialProps` used for in Next.js?",
-                choices: [
-                    "Fetching data on server-side and client-side",
-                    "Handling static generation",
-                    "Managing client-side routing",
-                    "Defining API routes"
-                ],
-                answers: ["Fetching data on server-side and client-side"]
-            },
-            {
-                subject: "Next.js",
-                title: "Which of the following is a valid method for handling images in Next.js?",
-                choices: [
-                    "Using the `next/image` component",
-                    "Using the `img` HTML tag only",
-                    "Using `react-image` library",
-                    "Using inline CSS"
-                ],
-                answers: ["Using the `next/image` component"]
-            },
-            {
-                subject: "Next.js",
-                title: "How does Next.js optimize performance?",
-                choices: [
-                    "Automatic static optimization",
-                    "Client-side rendering only",
-                    "Manual code splitting",
-                    "No performance optimizations"
-                ],
-                answers: ["Automatic static optimization"]
-            },
-            {
-                subject: "Next.js",
-                title: "What is the default server-side rendering behavior of Next.js pages?",
-                choices: [
-                    "Server-side rendering for every page",
-                    "Static site generation by default",
-                    "Client-side rendering by default",
-                    "Dynamic import only"
-                ],
-                answers: ["Static site generation by default"]
-            },
-            {
-                subject: "Next.js",
-                title: "Which command is used to start the development server in Next.js?",
-                choices: [
-                    "npm run dev",
-                    "npm start",
-                    "next dev",
-                    "next start"
-                ],
-                answers: ["npm run dev"]
-            },
-            {
-                subject: "Next.js",
-                title: "What does the `next/link` component provide?",
-                choices: [
-                    "Client-side navigation",
-                    "Server-side rendering",
-                    "Static site generation",
-                    "Data fetching"
-                ],
-                answers: ["Client-side navigation"]
-            },
-            {
-                subject: "Next.js",
-                title: "Which hook allows you to fetch data from an API in a component?",
-                choices: [
-                    "useEffect",
-                    "useStaticProps",
-                    "useServerSideProps",
-                    "useRouter"
-                ],
-                answers: ["useEffect"]
-            },
-            {
-                subject: "Next.js",
-                title: "What is the purpose of `next/image` component?",
-                choices: [
-                    "Optimizing images",
-                    "Handling routing",
-                    "Managing state",
-                    "Fetching data"
-                ],
-                answers: ["Optimizing images"]
-            },
-            {
-                subject: "Next.js",
-                title: "How do you deploy a Next.js application?",
-                choices: [
-                    "Using Vercel",
-                    "Only using Netlify",
-                    "Using GitHub Pages",
-                    "Using Firebase Hosting"
-                ],
-                answers: ["Using Vercel"]
-            },
-            {
-                subject: "Next.js",
-                title: "Which file is used to customize the default document structure?",
-                choices: [
-                    "_document.js",
-                    "_app.js",
-                    "_error.js",
-                    "_custom.js"
-                ],
-                answers: ["_document.js"]
-            },
-            {
-                subject: "MySQL",
-                title: "What is MySQL?",
-                choices: [
-                    "A relational database management system",
-                    "A programming language",
-                    "A web server",
-                    "A JavaScript library"
-                ],
-                answers: ["A relational database management system"]
-            },
-            {
-                subject: "MySQL",
-                title: "Which SQL statement is used to create a database?",
-                choices: [
-                    "CREATE DATABASE",
-                    "MAKE DATABASE",
-                    "INIT DATABASE",
-                    "NEW DATABASE"
-                ],
-                answers: ["CREATE DATABASE"]
-            },
-            {
-                subject: "MySQL",
-                title: "How do you retrieve all columns from a table named 'employees'?",
-                choices: [
-                    "SELECT * FROM employees",
-                    "GET ALL FROM employees",
-                    "FETCH * FROM employees",
-                    "RETRIEVE * FROM employees"
-                ],
-                answers: ["SELECT * FROM employees"]
-            },
-            {
-                subject: "MySQL",
-                title: "Which statement is used to delete all records from a table without removing the table itself?",
-                choices: [
-                    "DELETE FROM table_name",
-                    "TRUNCATE table_name",
-                    "DROP table_name",
-                    "REMOVE FROM table_name"
-                ],
-                answers: ["TRUNCATE table_name"]
-            },
-            {
-                subject: "MySQL",
-                title: "What does the SQL clause `WHERE` do?",
-                choices: [
-                    "Filters records",
-                    "Sorts records",
-                    "Joins tables",
-                    "Groups records"
-                ],
-                answers: ["Filters records"]
-            },
-            {
-                subject: "MySQL",
-                title: "Which statement is used to update records in a table?",
-                choices: [
-                    "UPDATE table_name SET column_name = value",
-                    "MODIFY table_name SET column_name = value",
-                    "CHANGE table_name SET column_name = value",
-                    "ALTER table_name SET column_name = value"
-                ],
-                answers: ["UPDATE table_name SET column_name = value"]
-            },
-            {
-                subject: "MySQL",
-                title: "What is the purpose of the `JOIN` clause?",
-                choices: [
-                    "Combining rows from two or more tables",
-                    "Filtering rows from a single table",
-                    "Sorting rows in a table",
-                    "Grouping rows by a specific column"
-                ],
-                answers: ["Combining rows from two or more tables"]
-            },
-            {
-                subject: "MySQL",
-                title: "Which type of JOIN returns all rows from the left table and matching rows from the right table?",
-                choices: [
-                    "LEFT JOIN",
-                    "RIGHT JOIN",
-                    "INNER JOIN",
-                    "FULL JOIN"
-                ],
-                answers: ["LEFT JOIN"]
-            },
-            {
-                subject: "MySQL",
-                title: "How do you add a new column to an existing table?",
-                choices: [
-                    "ALTER TABLE table_name ADD column_name datatype",
-                    "MODIFY TABLE table_name ADD column_name datatype",
-                    "UPDATE TABLE table_name ADD column_name datatype",
-                    "CHANGE TABLE table_name ADD column_name datatype"
-                ],
-                answers: ["ALTER TABLE table_name ADD column_name datatype"]
-            },
-            {
-                subject: "MySQL",
-                title: "What does the `COUNT()` function do?",
-                choices: [
-                    "Counts the number of rows",
-                    "Calculates the sum of a column",
-                    "Finds the average of a column",
-                    "Finds the maximum value of a column"
-                ],
-                answers: ["Counts the number of rows"]
-            },
-            {
-                subject: "MySQL",
-                title: "Which SQL command is used to remove a table from a database?",
-                choices: [
-                    "DROP TABLE",
-                    "DELETE TABLE",
-                    "REMOVE TABLE",
-                    "CLEAR TABLE"
-                ],
-                answers: ["DROP TABLE"]
-            },
-            {
-                subject: "MySQL",
-                title: "How do you ensure that a column value is unique in a table?",
-                choices: [
-                    "Use the UNIQUE constraint",
-                    "Use the PRIMARY KEY constraint",
-                    "Use the NOT NULL constraint",
-                    "Use the INDEX constraint"
-                ],
-                answers: ["Use the UNIQUE constraint"]
-            },
-            {
-                subject: "MySQL",
-                title: "What is the default storage engine for MySQL?",
-                choices: [
-                    "InnoDB",
-                    "MyISAM",
-                    "Memory",
-                    "CSV"
-                ],
-                answers: ["InnoDB"]
-            },
-            {
-                subject: "MySQL",
-                title: "Which keyword is used to sort the result set of a query?",
-                choices: [
-                    "ORDER BY",
-                    "SORT BY",
-                    "GROUP BY",
-                    "FILTER BY"
-                ],
-                answers: ["ORDER BY"]
-            },
-            {
-                subject: "MySQL",
-                title: "How can you retrieve the current date and time in MySQL?",
-                choices: [
-                    "SELECT NOW()",
-                    "SELECT CURRENT_DATE()",
-                    "SELECT TIME()",
-                    "SELECT DATE()"
-                ],
-                answers: ["SELECT NOW()"]
-            },
-            {
-                subject: "MySQL",
-                title: "What is the purpose of the `GROUP BY` clause?",
-                choices: [
-                    "Group rows that have the same values",
-                    "Sort rows in ascending order",
-                    "Filter rows based on a condition",
-                    "Join multiple tables together"
-                ],
-                answers: ["Group rows that have the same values"]
-            },
-            {
-                subject: "MySQL",
-                title: "Which SQL function returns the average value of a numeric column?",
-                choices: [
-                    "AVG()",
-                    "SUM()",
-                    "COUNT()",
-                    "MAX()"
-                ],
-                answers: ["AVG()"]
-            },
-            {
-                subject: "MySQL",
-                title: "How do you create a table with an auto-incrementing primary key?",
-                choices: [
-                    "CREATE TABLE table_name (id INT AUTO_INCREMENT PRIMARY KEY, ...)",
-                    "CREATE TABLE table_name (id INT AUTO_INCREMENT, PRIMARY KEY(id), ...)",
-                    "CREATE TABLE table_name (id AUTO_INCREMENT PRIMARY KEY, ...)",
-                    "CREATE TABLE table_name (id INT PRIMARY KEY AUTO_INCREMENT, ...)"
-                ],
-                answers: ["CREATE TABLE table_name (id INT AUTO_INCREMENT PRIMARY KEY, ...)"]
-            },
-            {
-                subject: "MySQL",
-                title: "What does the `DISTINCT` keyword do in a query?",
-                choices: [
-                    "Removes duplicate rows",
-                    "Sorts rows in ascending order",
-                    "Filters rows based on a condition",
-                    "Joins multiple tables"
-                ],
-                answers: ["Removes duplicate rows"]
-            },
-            {
-                subject: "MySQL",
-                title: "How do you change the data type of a column in an existing table?",
-                choices: [
-                    "ALTER TABLE table_name MODIFY column_name new_datatype",
-                    "ALTER TABLE table_name CHANGE column_name new_datatype",
-                    "MODIFY TABLE table_name column_name new_datatype",
-                    "CHANGE TABLE table_name column_name new_datatype"
-                ],
-                answers: ["ALTER TABLE table_name MODIFY column_name new_datatype"]
-            },
-            {
-                subject: "MySQL",
-                title: "What is a subquery in SQL?",
-                choices: [
-                    "A query within another query",
-                    "A table within a database",
-                    "An index on a column",
-                    "A constraint on a column"
-                ],
-                answers: ["A query within another query"]
-            },
-            {
-                subject: "MySQL",
-                title: "Which clause is used to limit the number of rows returned by a query?",
-                choices: [
-                    "LIMIT",
-                    "TOP",
-                    "MAX",
-                    "FETCH"
-                ],
-                answers: ["LIMIT"]
-            },
-            {
-                subject: "MySQL",
-                title: "How do you add a comment to a SQL query?",
-                choices: [
-                    "-- comment",
-                    "# comment",
-                    "/* comment */",
-                    "// comment"
-                ],
-                answers: ["-- comment", "/* comment */"]
-            },
-            {
-                subject: "MySQL",
-                title: "What does the `HAVING` clause do?",
-                choices: [
-                    "Filters records after grouping",
-                    "Filters records before grouping",
-                    "Sorts records",
-                    "Joins multiple tables"
-                ],
-                answers: ["Filters records after grouping"]
-            }, {
-                subject: "Math",
-                title: "What is the value of π (pi) to two decimal places?",
-                choices: [
-                    "3.14",
-                    "3.15",
-                    "3.13",
-                    "3.16"
-                ],
-                answers: ["3.14"]
-            },
-            {
-                subject: "Math",
-                title: "What is the quadratic formula?",
-                choices: [
-                    "x = (-b ± √(b² - 4ac)) / 2a",
-                    "x = (-b ± √(b² + 4ac)) / 2a",
-                    "x = (-b ± √(b² - 4ac)) / a",
-                    "x = (-b ± √(4ac - b²)) / 2a"
-                ],
-                answers: ["x = (-b ± √(b² - 4ac)) / 2a"]
-            },
-            {
-                subject: "Math",
-                title: "What is the derivative of sin(x)?",
-                choices: [
-                    "cos(x)",
-                    "-cos(x)",
-                    "sin(x)",
-                    "-sin(x)"
-                ],
-                answers: ["cos(x)"]
-            },
-            {
-                subject: "Math",
-                title: "What is the integral of 1/x?",
-                choices: [
-                    "ln|x| + C",
-                    "x + C",
-                    "e^x + C",
-                    "x^2 / 2 + C"
-                ],
-                answers: ["ln|x| + C"]
-            },
-            {
-                subject: "Math",
-                title: "What is the sum of the angles in a triangle?",
-                choices: [
-                    "180 degrees",
-                    "90 degrees",
-                    "360 degrees",
-                    "270 degrees"
-                ],
-                answers: ["180 degrees"]
-            },
-            {
-                subject: "Math",
-                title: "What is the Pythagorean theorem?",
-                choices: [
-                    "a² + b² = c²",
-                    "a² - b² = c²",
-                    "a + b = c",
-                    "a² + b² + c² = 0"
-                ],
-                answers: ["a² + b² = c²"]
-            },
-            {
-                subject: "Math",
-                title: "What is the formula for the area of a circle?",
-                choices: [
-                    "πr²",
-                    "2πr",
-                    "πd",
-                    "2πr²"
-                ],
-                answers: ["πr²"]
-            },
-            {
-                subject: "Math",
-                title: "What is the square root of 144?",
-                choices: [
-                    "12",
-                    "14",
-                    "16",
-                    "10"
-                ],
-                answers: ["12"]
-            },
-            {
-                subject: "Math",
-                title: "What is the slope of the line 2x - 3y = 6?",
-                choices: [
-                    "2/3",
-                    "-2/3",
-                    "3/2",
-                    "-3/2"
-                ],
-                answers: ["2/3"]
-            },
-            {
-                subject: "Math",
-                title: "What is the value of 7 factorial (7!)?",
-                choices: [
-                    "5040",
-                    "720",
-                    "3430",
-                    "120"
-                ],
-                answers: ["5040"]
-            },
-            {
-                subject: "Math",
-                title: "What is the sum of the first 10 positive integers?",
-                choices: [
-                    "55",
-                    "45",
-                    "60",
-                    "50"
-                ],
-                answers: ["55"]
-            },
-            {
-                subject: "Math",
-                title: "What is the distance formula in a Cartesian plane?",
-                choices: [
-                    "√((x2 - x1)² + (y2 - y1)²)",
-                    "√((x1 - x2)² + (y1 - y2)²)",
-                    "|x2 - x1| + |y2 - y1|",
-                    "√((x2 + x1)² + (y2 + y1)²)"
-                ],
-                answers: ["√((x2 - x1)² + (y2 - y1)²)"]
-            },
-            {
-                subject: "Math",
-                title: "What is the volume formula for a cube?",
-                choices: [
-                    "s³",
-                    "6s²",
-                    "4/3πr³",
-                    "2πr²"
-                ],
-                answers: ["s³"]
-            },
-            {
-                subject: "Math",
-                title: "What is the formula for the perimeter of a rectangle?",
-                choices: [
-                    "2(l + w)",
-                    "l² + w²",
-                    "2lw",
-                    "l + w"
-                ],
-                answers: ["2(l + w)"]
-            },
-            {
-                subject: "Math",
-                title: "What is the value of the sine of 90 degrees?",
-                choices: [
-                    "1",
-                    "0",
-                    "-1",
-                    "π"
-                ],
-                answers: ["1"]
-            },
-            {
-                subject: "Math",
-                title: "What is the value of 2 to the power of 5?",
-                choices: [
-                    "32",
-                    "64",
-                    "16",
-                    "10"
-                ],
-                answers: ["32"]
-            },
-            {
-                subject: "Math",
-                title: "What is the area of a triangle with base 10 and height 5?",
-                choices: [
-                    "25",
-                    "50",
-                    "15",
-                    "20"
-                ],
-                answers: ["25"]
-            },
-            {
-                subject: "Math",
-                title: "What is the sum of the interior angles of a polygon with 6 sides?",
-                choices: [
-                    "720 degrees",
-                    "360 degrees",
-                    "540 degrees",
-                    "180 degrees"
-                ],
-                answers: ["720 degrees"]
-            },
-            {
-                subject: "Math",
-                title: "What is the base of the natural logarithm?",
-                choices: [
-                    "e",
-                    "π",
-                    "2",
-                    "10"
-                ],
-                answers: ["e"]
-            },
-            {
-                subject: "Math",
-                title: "What is the product of the roots of the quadratic equation ax² + bx + c = 0?",
-                choices: [
-                    "c/a",
-                    "-b/a",
-                    "b/c",
-                    "-c/b"
-                ],
-                answers: ["c/a"]
-            },
-            {
-                subject: "Math",
-                title: "What is the equation of a line in slope-intercept form?",
-                choices: [
-                    "y = mx + b",
-                    "y = ax + b",
-                    "y = mx² + c",
-                    "y = b - mx"
-                ],
-                answers: ["y = mx + b"]
-            },
-            {
-                subject: "Arabic",
-                title: "What is the Arabic word for 'peace'?",
-                choices: [
-                    "سلام",
-                    "حب",
-                    "صداقة",
-                    "حرب"
-                ],
-                answers: ["سلام"]
-            },
-            {
-                subject: "Arabic",
-                title: "Which script is used for writing Arabic?",
-                choices: [
-                    "Arabic script",
-                    "Latin script",
-                    "Cyrillic script",
-                    "Devanagari script"
-                ],
-                answers: ["Arabic script"]
-            },
-            {
-                subject: "Arabic",
-                title: "What is the Arabic word for 'book'?",
-                choices: [
-                    "كتاب",
-                    "مدرسة",
-                    "قلم",
-                    "ورقة"
-                ],
-                answers: ["كتاب"]
-            },
-            {
-                subject: "Arabic",
-                title: "Which of the following is an Arabic vowel?",
-                choices: [
-                    "فَتْحَة",
-                    "حَرْف",
-                    "سَكْن",
-                    "شَدَّة"
-                ],
-                answers: ["فَتْحَة"]
-            },
-            {
-                subject: "Arabic",
-                title: "What is the Arabic word for 'thank you'?",
-                choices: [
-                    "شكراً",
-                    "عفواً",
-                    "مرحبا",
-                    "وداعاً"
-                ],
-                answers: ["شكراً"]
-            },
-            {
-                subject: "Arabic",
-                title: "Which of the following is a greeting in Arabic?",
-                choices: [
-                    "السلام عليكم",
-                    "وداعاً",
-                    "صباح الخير",
-                    "مساء الخير"
-                ],
-                answers: ["السلام عليكم"]
-            },
-            {
-                subject: "Arabic",
-                title: "What does the Arabic word 'محبة' mean?",
-                choices: [
-                    "Love",
-                    "Friendship",
-                    "Hate",
-                    "Peace"
-                ],
-                answers: ["Love"]
-            },
-            {
-                subject: "Arabic",
-                title: "How is the Arabic word 'happy' written?",
-                choices: [
-                    "سعيد",
-                    "حزين",
-                    "غاضب",
-                    "مشتاق"
-                ],
-                answers: ["سعيد"]
-            },
-            {
-                subject: "Arabic",
-                title: "What is the Arabic word for 'family'?",
-                choices: [
-                    "عائلة",
-                    "أصدقاء",
-                    "مدرسة",
-                    "مدينة"
-                ],
-                answers: ["عائلة"]
-            },
-            {
-                subject: "Arabic",
-                title: "Which of the following letters is not in the Arabic alphabet?",
-                choices: [
-                    "P",
-                    "ب",
-                    "ج",
-                    "خ"
-                ],
-                answers: ["P"]
-            },
-            {
-                subject: "Arabic",
-                title: "What does 'صباح الخير' mean in English?",
-                choices: [
-                    "Good morning",
-                    "Good evening",
-                    "Hello",
-                    "Goodbye"
-                ],
-                answers: ["Good morning"]
-            },
-            {
-                subject: "Arabic",
-                title: "How do you say 'I am fine' in Arabic?",
-                choices: [
-                    "أنا بخير",
-                    "أنا تعبان",
-                    "أنا جائع",
-                    "أنا سعيد"
-                ],
-                answers: ["أنا بخير"]
-            },
-            {
-                subject: "Arabic",
-                title: "What is the Arabic term for 'teacher'?",
-                choices: [
-                    "معلم",
-                    "طالب",
-                    "مدير",
-                    "مربي"
-                ],
-                answers: ["معلم"]
-            },
-            {
-                subject: "Arabic",
-                title: "Which Arabic letter is pronounced 'T'?",
-                choices: [
-                    "ت",
-                    "ث",
-                    "د",
-                    "ص"
-                ],
-                answers: ["ت"]
-            },
-            {
-                subject: "Arabic",
-                title: "What is the Arabic word for 'city'?",
-                choices: [
-                    "مدينة",
-                    "قرية",
-                    "بلد",
-                    "حي"
-                ],
-                answers: ["مدينة"]
-            },
-            {
-                subject: "Arabic",
-                title: "What does 'أحبك' mean?",
-                choices: [
-                    "I love you",
-                    "I miss you",
-                    "I hate you",
-                    "I see you"
-                ],
-                answers: ["I love you"]
-            },
-            {
-                subject: "Arabic",
-                title: "How do you say 'goodbye' in Arabic?",
-                choices: [
-                    "وداعاً",
-                    "مرحبا",
-                    "شكراً",
-                    "صباح الخير"
-                ],
-                answers: ["وداعاً"]
-            },
-            {
-                subject: "Arabic",
-                title: "What does 'طبيب' mean in English?",
-                choices: [
-                    "Doctor",
-                    "Teacher",
-                    "Engineer",
-                    "Driver"
-                ],
-                answers: ["Doctor"]
-            },
-            {
-                subject: "Arabic",
-                title: "What is the Arabic word for 'school'?",
-                choices: [
-                    "مدرسة",
-                    "جامعة",
-                    "مكتبة",
-                    "فصل"
-                ],
-                answers: ["مدرسة"]
-            },
-            {
-                subject: "Arabic",
-                title: "Which of these is a common Arabic greeting?",
-                choices: [
-                    "السلام عليكم",
-                    "مرحبا",
-                    "شكراً",
-                    "إلى اللقاء"
-                ],
-                answers: ["السلام عليكم"]
-            },
-            {
-                subject: "Arabic",
-                title: "How do you write 'water' in Arabic?",
-                choices: [
-                    "ماء",
-                    "طعام",
-                    "هواء",
-                    "شاي"
-                ],
-                answers: ["ماء"]
-            },
-            {
-                subject: "Cloud Computing",
-                title: "What does SaaS stand for?",
-                choices: [
-                    "Software as a Service",
-                    "System as a Service",
-                    "Server as a Service",
-                    "Storage as a Service"
-                ],
-                answers: ["Software as a Service"]
-            },
-            {
-                subject: "Cloud Computing",
-                title: "What is IaaS?",
-                choices: [
-                    "Infrastructure as a Service",
-                    "Information as a Service",
-                    "Integration as a Service",
-                    "Interface as a Service"
-                ],
-                answers: ["Infrastructure as a Service"]
-            },
-            {
-                subject: "Cloud Computing",
-                title: "Which cloud model offers the most control over resources?",
-                choices: [
-                    "Private Cloud",
-                    "Public Cloud",
-                    "Hybrid Cloud",
-                    "Community Cloud"
-                ],
-                answers: ["Private Cloud"]
-            },
-            {
-                subject: "Cloud Computing",
-                title: "What is a key benefit of cloud computing?",
-                choices: [
-                    "Scalability",
-                    "High latency",
-                    "Limited accessibility",
-                    "Increased costs"
-                ],
-                answers: ["Scalability"]
-            },
-            {
-                subject: "Cloud Computing",
-                title: "Which cloud service provides virtualized computing resources over the internet?",
-                choices: [
-                    "IaaS",
-                    "PaaS",
-                    "SaaS",
-                    "DaaS"
-                ],
-                answers: ["IaaS"]
-            },
-            {
-                subject: "Cloud Computing",
-                title: "What does PaaS stand for?",
-                choices: [
-                    "Platform as a Service",
-                    "Process as a Service",
-                    "Product as a Service",
-                    "Programming as a Service"
-                ],
-                answers: ["Platform as a Service"]
-            },
-            {
-                subject: "Cloud Computing",
-                title: "What is the purpose of a CDN in cloud computing?",
-                choices: [
-                    "To deliver content quickly and efficiently",
-                    "To provide computing power",
-                    "To store data securely",
-                    "To manage databases"
-                ],
-                answers: ["To deliver content quickly and efficiently"]
-            },
-            {
-                subject: "Cloud Computing",
-                title: "Which type of cloud deployment model is typically used by government organizations?",
-                choices: [
-                    "Community Cloud",
-                    "Public Cloud",
-                    "Hybrid Cloud",
-                    "Private Cloud"
-                ],
-                answers: ["Community Cloud"]
-            },
-            {
-                subject: "Cloud Computing",
-                title: "What does the term 'elasticity' refer to in cloud computing?",
-                choices: [
-                    "The ability to scale resources up or down as needed",
-                    "The speed of data transfer",
-                    "The security of data",
-                    "The cost of cloud services"
-                ],
-                answers: ["The ability to scale resources up or down as needed"]
-            },
-            {
-                subject: "Cloud Computing",
-                title: "Which cloud service model provides a runtime environment for applications?",
-                choices: [
-                    "PaaS",
-                    "IaaS",
-                    "SaaS",
-                    "DaaS"
-                ],
-                answers: ["PaaS"]
-            },
-            {
-                subject: "Cloud Computing",
-                title: "What is an example of a public cloud service provider?",
-                choices: [
-                    "Amazon Web Services (AWS)",
-                    "IBM Cloud",
-                    "Microsoft Azure",
-                    "All of the above"
-                ],
-                answers: ["All of the above"]
-            },
-            {
-                subject: "Cloud Computing",
-                title: "Which cloud model combines both on-premises and cloud resources?",
-                choices: [
-                    "Hybrid Cloud",
-                    "Private Cloud",
-                    "Public Cloud",
-                    "Community Cloud"
-                ],
-                answers: ["Hybrid Cloud"]
-            },
-            {
-                subject: "Cloud Computing",
-                title: "What does 'serverless computing' mean?",
-                choices: [
-                    "Running applications without managing servers",
-                    "A type of IaaS",
-                    "A type of PaaS",
-                    "A type of SaaS"
-                ],
-                answers: ["Running applications without managing servers"]
-            },
-            {
-                subject: "Cloud Computing",
-                title: "What is the main focus of a private cloud?",
-                choices: [
-                    "Exclusive use by a single organization",
-                    "Public access",
-                    "Shared resources among multiple organizations",
-                    "Cost reduction"
-                ],
-                answers: ["Exclusive use by a single organization"]
-            },
-            {
-                subject: "Cloud Computing",
-                title: "Which type of cloud computing provides a complete environment including both hardware and software?",
-                choices: [
-                    "IaaS",
-                    "PaaS",
-                    "SaaS",
-                    "DaaS"
-                ],
-                answers: ["SaaS"]
-            },
-            {
-                subject: "Cloud Computing",
-                title: "What is a common use case for cloud storage services?",
-                choices: [
-                    "Storing and accessing files over the internet",
-                    "Running complex algorithms",
-                    "Creating virtual machines",
-                    "Developing software applications"
-                ],
-                answers: ["Storing and accessing files over the internet"]
-            },
-            {
-                subject: "Cloud Computing",
-                title: "Which cloud service model offers ready-to-use software applications over the internet?",
-                choices: [
-                    "SaaS",
-                    "PaaS",
-                    "IaaS",
-                    "DaaS"
-                ],
-                answers: ["SaaS"]
-            },
-            {
-                subject: "Cloud Computing",
-                title: "What does 'virtualization' refer to in cloud computing?",
-                choices: [
-                    "Creating virtual instances of physical resources",
-                    "Storing data securely",
-                    "Managing network traffic",
-                    "Developing cloud applications"
-                ],
-                answers: ["Creating virtual instances of physical resources"]
-            },
-            {
-                subject: "Cloud Computing",
-                title: "Which cloud computing model is generally the most cost-effective for businesses?",
-                choices: [
-                    "Public Cloud",
-                    "Private Cloud",
-                    "Hybrid Cloud",
-                    "Community Cloud"
-                ],
-                answers: ["Public Cloud"]
-            },
-            {
-                subject: "Cloud Computing",
-                title: "What is a common feature of cloud computing that differentiates it from traditional IT infrastructure?",
-                choices: [
-                    "On-demand resource availability",
-                    "Static resource allocation",
-                    "Manual scaling",
-                    "Limited accessibility"
-                ],
-                answers: ["On-demand resource availability"]
-            },
-            {
-                subject: "Cloud Computing",
-                title: "Which of the following is a key characteristic of cloud computing?",
-                choices: [
-                    "Resource pooling",
-                    "Fixed capacity",
-                    "Inflexibility",
-                    "High upfront cost"
-                ],
-                answers: ["Resource pooling"]
-            },
-            {
-                subject: "PHP",
-                title: "What does PHP stand for?",
-                choices: [
-                    "Hypertext Preprocessor",
-                    "Hypertext Processing",
-                    "Private Hypertext Preprocessor",
-                    "Public Hypertext Preprocessor"
-                ],
-                answers: ["Hypertext Preprocessor"]
-            },
-            {
-                subject: "PHP",
-                title: "Which function is used to start a session in PHP?",
-                choices: [
-                    "session_start()",
-                    "start_session()",
-                    "init_session()",
-                    "begin_session()"
-                ],
-                answers: ["session_start()"]
-            },
-            {
-                subject: "PHP",
-                title: "How do you access form data sent via the GET method in PHP?",
-                choices: [
-                    "$_GET",
-                    "$_POST",
-                    "$_REQUEST",
-                    "$_FORM"
-                ],
-                answers: ["$_GET"]
-            },
-            {
-                subject: "PHP",
-                title: "What is the correct way to include a PHP file?",
-                choices: [
-                    "include 'filename.php';",
-                    "require 'filename.php';",
-                    "import 'filename.php';",
-                    "Both include and require"
-                ],
-                answers: ["Both include and require"]
-            },
-            {
-                subject: "PHP",
-                title: "Which operator is used for concatenation in PHP?",
-                choices: [
-                    ".",
-                    "+",
-                    "&",
-                    ","
-                ],
-                answers: ["."]
-            },
-            {
-                subject: "PHP",
-                title: "How do you declare a variable in PHP?",
-                choices: [
-                    "$variableName",
-                    "var variableName",
-                    "declare variableName",
-                    "let variableName"
-                ],
-                answers: ["$variableName"]
-            },
-            {
-                subject: "PHP",
-                title: "What is the default file extension for PHP files?",
-                choices: [
-                    ".php",
-                    ".html",
-                    ".txt",
-                    ".doc"
-                ],
-                answers: [".php"]
-            },
-            {
-                subject: "PHP",
-                title: "Which PHP function is used to escape special characters in a string for use in SQL queries?",
-                choices: [
-                    "mysqli_real_escape_string()",
-                    "escape_string()",
-                    "sanitize_string()",
-                    "filter_string()"
-                ],
-                answers: ["mysqli_real_escape_string()"]
-            },
-            {
-                subject: "PHP",
-                title: "How do you comment a single line in PHP?",
-                choices: [
-                    "// comment",
-                    "# comment",
-                    "/* comment */",
-                    "comment"
-                ],
-                answers: ["// comment"]
-            },
-            {
-                subject: "PHP",
-                title: "What is the purpose of the PHP function 'isset()'?",
-                choices: [
-                    "Check if a variable is set and is not null",
-                    "Check if a variable is empty",
-                    "Check if a variable is numeric",
-                    "Check if a variable is a string"
-                ],
-                answers: ["Check if a variable is set and is not null"]
-            },
-            {
-                subject: "PHP",
-                title: "How do you create a function in PHP?",
-                choices: [
-                    "function functionName() {}",
-                    "create function functionName() {}",
-                    "def functionName() {}",
-                    "func functionName() {}"
-                ],
-                answers: ["function functionName() {}"]
-            },
-            {
-                subject: "PHP",
-                title: "Which PHP function returns the length of a string?",
-                choices: [
-                    "strlen()",
-                    "length()",
-                    "size()",
-                    "count()"
-                ],
-                answers: ["strlen()"]
-            },
-            {
-                subject: "PHP",
-                title: "What does the PHP function 'explode()' do?",
-                choices: [
-                    "Splits a string into an array",
-                    "Combines an array into a string",
-                    "Encrypts a string",
-                    "Reverses a string"
-                ],
-                answers: ["Splits a string into an array"]
-            },
-            {
-                subject: "PHP",
-                title: "How do you declare a constant in PHP?",
-                choices: [
-                    "define('CONSTANT_NAME', value);",
-                    "const CONSTANT_NAME = value;",
-                    "constant('CONSTANT_NAME', value);",
-                    "set_constant('CONSTANT_NAME', value);"
-                ],
-                answers: ["define('CONSTANT_NAME', value);"]
-            },
-            {
-                subject: "PHP",
-                title: "Which of the following functions is used to include the content of another PHP file?",
-                choices: [
-                    "include()",
-                    "require()",
-                    "both include() and require()",
-                    "open()"
-                ],
-                answers: ["both include() and require()"]
-            },
-            {
-                subject: "PHP",
-                title: "How can you access an element of an associative array in PHP?",
-                choices: [
-                    "$array['key']",
-                    "$array.key",
-                    "$array(key)",
-                    "$array.key()"
-                ],
-                answers: ["$array['key']"]
-            },
-            {
-                subject: "PHP",
-                title: "Which superglobal array in PHP is used to collect form data after submitting an HTML form?",
-                choices: [
-                    "$_POST",
-                    "$_GET",
-                    "$_SERVER",
-                    "$_SESSION"
-                ],
-                answers: ["$_POST"]
-            },
-            {
-                subject: "PHP",
-                title: "What is the result of the following PHP expression: 5 + '10'?",
-                choices: [
-                    "15",
-                    "510",
-                    "5",
-                    "10"
-                ],
-                answers: ["15"]
-            },
-            {
-                subject: "PHP",
-                title: "Which function is used to check if a file exists in PHP?",
-                choices: [
-                    "file_exists()",
-                    "is_file()",
-                    "check_file()",
-                    "exists_file()"
-                ],
-                answers: ["file_exists()"]
-            },
-            {
-                subject: "PHP",
-                title: "How do you access session variables in PHP?",
-                choices: [
-                    "$_SESSION['variable']",
-                    "$SESSION['variable']",
-                    "$_SESSION->variable",
-                    "$SESSION->variable"
-                ],
-                answers: ["$_SESSION['variable']"]
+                subject: "Laravel",
+                title: "What is the purpose of the `Factory` class in Laravel?",
+                choices: ["To generate fake data for testing", "To manage database migrations", "To handle HTTP requests", "To provide user authentication"],
+                correctAnswer: "To generate fake data for testing"
             },
             {
                 subject: "HTML",
-                title: "What does HTML stand for?",
-                choices: [
-                    "Hypertext Markup Language",
-                    "Hyperlink and Text Markup Language",
-                    "High-Level Text Markup Language",
-                    "Hypertext Multi-language"
-                ],
-                answers: ["Hypertext Markup Language"]
-            },
-            {
-                subject: "HTML",
-                title: "Which HTML element is used to define the title of a document?",
-                choices: [
-                    "<title>",
-                    "<head>",
-                    "<meta>",
-                    "<header>"
-                ],
-                answers: ["<title>"]
+                title: "Which tag is used to define an unordered list in HTML?",
+                choices: ["<ul>", "<ol>", "<li>", "<list>"],
+                correctAnswer: "<ul>"
             },
             {
                 subject: "HTML",
                 title: "What is the correct HTML element for inserting a line break?",
-                choices: [
-                    "<break>",
-                    "<br>",
-                    "<lb>",
-                    "<newline>"
-                ],
-                answers: ["<br>"]
+                choices: ["<break>", "<lb>", "<br>", "<line>"],
+                correctAnswer: "<br>"
             },
             {
                 subject: "HTML",
-                title: "Which tag is used to create an unordered list?",
-                choices: [
-                    "<ul>",
-                    "<ol>",
-                    "<list>",
-                    "<dl>"
-                ],
-                answers: ["<ul>"]
+                title: "Which attribute is used to provide alternative text for an image in HTML?",
+                choices: ["alt", "src", "title", "href"],
+                correctAnswer: "alt"
             },
             {
                 subject: "HTML",
-                title: "What attribute is used to specify the URL of an image?",
-                choices: [
-                    "src",
-                    "href",
-                    "alt",
-                    "link"
-                ],
-                answers: ["src"]
+                title: "Which HTML element is used to define important text?",
+                choices: ["<b>", "<strong>", "<important>", "<em>"],
+                correctAnswer: "<strong>"
             },
             {
                 subject: "HTML",
-                title: "How do you create a hyperlink in HTML?",
-                choices: [
-                    "<a href='url'>link text</a>",
-                    "<link href='url'>link text</link>",
-                    "<hyperlink href='url'>link text</hyperlink>",
-                    "<url href='url'>link text</url>"
-                ],
-                answers: ["<a href='url'>link text</a>"]
+                title: "Which tag is used to create a hyperlink in HTML?",
+                choices: ["<a>", "<link>", "<href>", "<url>"],
+                correctAnswer: "<a>"
             },
             {
                 subject: "HTML",
-                title: "Which tag is used to define an HTML table?",
-                choices: [
-                    "<table>",
-                    "<tab>",
-                    "<tr>",
-                    "<td>"
-                ],
-                answers: ["<table>"]
+                title: "What is the correct HTML element for a definition list?",
+                choices: ["<dl>", "<list>", "<definition>", "<de>"],
+                correctAnswer: "<dl>"
             },
             {
                 subject: "HTML",
-                title: "What does the <meta> tag provide in HTML?",
-                choices: [
-                    "Metadata about the document",
-                    "A navigation menu",
-                    "A script",
-                    "An image"
-                ],
-                answers: ["Metadata about the document"]
+                title: "Which HTML tag is used to define a table row?",
+                choices: ["<tr>", "<td>", "<th>", "<table>"],
+                correctAnswer: "<tr>"
             },
             {
                 subject: "HTML",
-                title: "Which tag is used to define the largest heading in HTML?",
-                choices: [
-                    "<h1>",
-                    "<heading>",
-                    "<h6>",
-                    "<header>"
-                ],
-                answers: ["<h1>"]
+                title: "What is the purpose of the `<meta>` tag in HTML?",
+                choices: ["To provide metadata about the HTML document", "To create links", "To define styles", "To create tables"],
+                correctAnswer: "To provide metadata about the HTML document"
             },
             {
                 subject: "HTML",
-                title: "How do you specify the language of a document in HTML?",
-                choices: [
-                    "<html lang='en'>",
-                    "<language='en'>",
-                    "<meta lang='en'>",
-                    "<document lang='en'>"
-                ],
-                answers: ["<html lang='en'>"]
+                title: "Which HTML element is used to define a paragraph?",
+                choices: ["<p>", "<paragraph>", "<text>", "<para>"],
+                correctAnswer: "<p>"
             },
             {
                 subject: "HTML",
-                title: "Which tag is used to define an input control in HTML?",
-                choices: [
-                    "<input>",
-                    "<textfield>",
-                    "<button>",
-                    "<control>"
-                ],
-                answers: ["<input>"]
+                title: "What is the purpose of the `<form>` tag in HTML?",
+                choices: ["To collect user input", "To create hyperlinks", "To define a list", "To display images"],
+                correctAnswer: "To collect user input"
             },
             {
                 subject: "HTML",
-                title: "What is the purpose of the <form> tag in HTML?",
-                choices: [
-                    "To collect user input",
-                    "To format text",
-                    "To create a link",
-                    "To display an image"
-                ],
-                answers: ["To collect user input"]
+                title: "Which attribute is used to specify the URL of a linked document in HTML?",
+                choices: ["href", "src", "link", "url"],
+                correctAnswer: "href"
             },
             {
                 subject: "HTML",
-                title: "Which attribute specifies the type of input control in an <input> element?",
-                choices: [
-                    "type",
-                    "value",
-                    "name",
-                    "id"
-                ],
-                answers: ["type"]
+                title: "What is the purpose of the `<input>` tag in HTML?",
+                choices: ["To create interactive controls in a web form", "To display images", "To define a table", "To create hyperlinks"],
+                correctAnswer: "To create interactive controls in a web form"
             },
             {
                 subject: "HTML",
-                title: "How can you make a list of items in HTML?",
-                choices: [
-                    "Use <ul> and <li> tags",
-                    "Use <ol> and <li> tags",
-                    "Use <list> and <item> tags",
-                    "Both <ul> and <ol> tags"
-                ],
-                answers: ["Both <ul> and <ol> tags"]
+                title: "Which HTML element defines the title of a document?",
+                choices: ["<title>", "<head>", "<meta>", "<header>"],
+                correctAnswer: "<title>"
             },
             {
                 subject: "HTML",
-                title: "Which element is used to define a section in an HTML document?",
-                choices: [
-                    "<section>",
-                    "<div>",
-                    "<article>",
-                    "<group>"
-                ],
-                answers: ["<section>"]
+                title: "How do you include an external JavaScript file in an HTML document?",
+                choices: ["<script src='file.js'></script>", "<js src='file.js'></js>", "<script file='file.js'></script>", "<include src='file.js'>"],
+                correctAnswer: "<script src='file.js'></script>"
             },
             {
                 subject: "HTML",
-                title: "What does the <alt> attribute in an <img> tag do?",
-                choices: [
-                    "Provides alternative text for an image",
-                    "Specifies the image source",
-                    "Sets the image height",
-                    "Defines the image width"
-                ],
-                answers: ["Provides alternative text for an image"]
-            },
-            {
-                subject: "HTML",
-                title: "Which HTML element defines navigation links?",
-                choices: [
-                    "<nav>",
-                    "<links>",
-                    "<menu>",
-                    "<navigation>"
-                ],
-                answers: ["<nav>"]
-            },
-            {
-                subject: "HTML",
-                title: "How do you specify a comment in HTML?",
-                choices: [
-                    "<!-- comment -->",
-                    "// comment",
-                    "/* comment */",
-                    "# comment"
-                ],
-                answers: ["<!-- comment -->"]
+                title: "What does the `<link>` tag do in an HTML document?",
+                choices: ["Links to an external resource", "Defines a hyperlink", "Embeds a media file", "Creates a table"],
+                correctAnswer: "Links to an external resource"
             },
             {
                 subject: "HTML",
                 title: "Which tag is used to create a drop-down list in HTML?",
-                choices: [
-                    "<select>",
-                    "<dropdown>",
-                    "<list>",
-                    "<option>"
-                ],
-                answers: ["<select>"]
+                choices: ["<select>", "<dropdown>", "<list>", "<option>"],
+                correctAnswer: "<select>"
             },
             {
                 subject: "HTML",
-                title: "What is the purpose of the <iframe> tag in HTML?",
-                choices: [
-                    "To embed another HTML page within the current page",
-                    "To create a new table",
-                    "To define an interactive form",
-                    "To style text"
-                ],
-                answers: ["To embed another HTML page within the current page"]
+                title: "Which element is used to define a header in HTML?",
+                choices: ["<header>", "<h1>", "<title>", "<head>"],
+                correctAnswer: "<header>"
             },
             {
                 subject: "HTML",
-                title: "Which tag is used to define a paragraph in HTML?",
-                choices: [
-                    "<p>",
-                    "<para>",
-                    "<text>",
-                    "<paragraph>"
-                ],
-                answers: ["<p>"]
+                title: "Which tag is used to group inline-elements in HTML?",
+                choices: ["<span>", "<div>", "<section>", "<article>"],
+                correctAnswer: "<span>"
             },
             {
                 subject: "HTML",
-                title: "How do you make a numbered list in HTML?",
-                choices: [
-                    "<ol> and <li>",
-                    "<ul> and <li>",
-                    "<list> and <item>",
-                    "<number> and <item>"
-                ],
-                answers: ["<ol> and <li>"]
+                title: "What is the purpose of the `<meta charset='UTF-8'>` tag?",
+                choices: ["Specifies the character encoding for the document", "Links to an external stylesheet", "Defines the document title", "Includes external scripts"],
+                correctAnswer: "Specifies the character encoding for the document"
+            },
+            {
+                subject: "HTML",
+                title: "How do you define a comment in HTML?",
+                choices: ["<!-- comment -->", "// comment", "/* comment */", "# comment"],
+                correctAnswer: "<!-- comment -->"
             },
             {
                 subject: "CSS",
-                title: "What does CSS stand for?",
-                choices: [
-                    "Cascading Style Sheets",
-                    "Creative Style Sheets",
-                    "Computer Style Sheets",
-                    "Colorful Style Sheets"
-                ],
-                answers: ["Cascading Style Sheets"]
+                title: "Which property is used to change the font size in CSS?",
+                choices: ["font-size", "text-size", "font-style", "text-style"],
+                correctAnswer: "font-size"
             },
             {
                 subject: "CSS",
-                title: "Which HTML tag is used to include a CSS file?",
-                choices: [
-                    "<style>",
-                    "<css>",
-                    "<link>",
-                    "<script>"
-                ],
-                answers: ["<link>"]
+                title: "How do you select an element with the class name 'example' in CSS?",
+                choices: [".example", "#example", "example", "element.example"],
+                correctAnswer: ".example"
             },
             {
                 subject: "CSS",
-                title: "What property is used to change the background color of an element?",
-                choices: [
-                    "background-color",
-                    "bgcolor",
-                    "color",
-                    "background"
-                ],
-                answers: ["background-color"]
+                title: "Which property is used to change the background color of an element?",
+                choices: ["background-color", "color", "background", "bg-color"],
+                correctAnswer: "background-color"
             },
             {
                 subject: "CSS",
-                title: "How do you apply a class to an HTML element?",
-                choices: [
-                    "class='classname'",
-                    "id='classname'",
-                    "name='classname'",
-                    "type='classname'"
-                ],
-                answers: ["class='classname'"]
+                title: "How do you apply styles to all paragraphs inside a `<div>` element?",
+                choices: ["div p { }", "div > p { }", "div + p { }", "div .p { }"],
+                correctAnswer: "div p { }"
             },
             {
                 subject: "CSS",
-                title: "What property is used to change the font of an element?",
-                choices: [
-                    "font-family",
-                    "font-style",
-                    "text-font",
-                    "font-type"
-                ],
-                answers: ["font-family"]
+                title: "Which CSS property controls the text size?",
+                choices: ["font-size", "text-size", "text-style", "font-weight"],
+                correctAnswer: "font-size"
             },
             {
                 subject: "CSS",
-                title: "How can you make text bold in CSS?",
-                choices: [
-                    "font-weight: bold;",
-                    "text-weight: bold;",
-                    "font-style: bold;",
-                    "text-style: bold;"
-                ],
-                answers: ["font-weight: bold;"]
+                title: "How do you add a border around an element in CSS?",
+                choices: ["border", "border-color", "border-style", "border-width"],
+                correctAnswer: "border"
             },
             {
                 subject: "CSS",
-                title: "Which property is used to control the spacing between lines of text?",
-                choices: [
-                    "line-height",
-                    "text-spacing",
-                    "letter-spacing",
-                    "text-line"
-                ],
-                answers: ["line-height"]
+                title: "Which property is used to set the spacing between lines of text?",
+                choices: ["line-height", "letter-spacing", "word-spacing", "text-spacing"],
+                correctAnswer: "line-height"
             },
             {
                 subject: "CSS",
-                title: "What is the default value of the 'position' property in CSS?",
-                choices: [
-                    "static",
-                    "relative",
-                    "absolute",
-                    "fixed"
-                ],
-                answers: ["static"]
+                title: "How do you create a CSS rule that applies to multiple classes?",
+                choices: [".class1, .class2 { }", ".class1 .class2 { }", ".class1.class2 { }", ".class1 + .class2 { }"],
+                correctAnswer: ".class1, .class2 { }"
             },
             {
                 subject: "CSS",
-                title: "How do you select an element with a specific ID in CSS?",
-                choices: [
-                    "#idname",
-                    ".classname",
-                    "idname",
-                    "*idname"
-                ],
-                answers: ["#idname"]
+                title: "What does the `:hover` pseudo-class do?",
+                choices: ["Applies styles when the mouse hovers over an element", "Applies styles when an element is active", "Applies styles to the first child of an element", "Applies styles to the last child of an element"],
+                correctAnswer: "Applies styles when the mouse hovers over an element"
             },
             {
                 subject: "CSS",
-                title: "Which property is used to add space inside an element, between the element's content and its border?",
-                choices: [
-                    "padding",
-                    "margin",
-                    "border",
-                    "spacing"
-                ],
-                answers: ["padding"]
+                title: "How do you center an element horizontally with CSS?",
+                choices: ["margin: 0 auto;", "text-align: center;", "float: center;", "display: center;"],
+                correctAnswer: "margin: 0 auto;"
             },
             {
                 subject: "CSS",
-                title: "How do you select all <p> elements inside a <div> element?",
-                choices: [
-                    "div p",
-                    "div > p",
-                    "div+p",
-                    "p div"
-                ],
-                answers: ["div p"]
+                title: "What is the default value of the `position` property?",
+                choices: ["static", "relative", "absolute", "fixed"],
+                correctAnswer: "static"
             },
             {
                 subject: "CSS",
-                title: "What property is used to set the width of an element?",
-                choices: [
-                    "width",
-                    "height",
-                    "size",
-                    "dimension"
-                ],
-                answers: ["width"]
+                title: "Which property is used to control the visibility of an element?",
+                choices: ["visibility", "display", "opacity", "overflow"],
+                correctAnswer: "visibility"
             },
             {
                 subject: "CSS",
-                title: "Which property controls the text color of an element?",
-                choices: [
-                    "color",
-                    "text-color",
-                    "font-color",
-                    "background-color"
-                ],
-                answers: ["color"]
+                title: "How do you apply a style to all `<a>` elements inside a `<nav>`?",
+                choices: ["nav a { }", "nav > a { }", "nav + a { }", "nav .a { }"],
+                correctAnswer: "nav a { }"
             },
             {
                 subject: "CSS",
-                title: "How do you create a CSS class?",
-                choices: [
-                    ".classname { }",
-                    "#classname { }",
-                    "classname { }",
-                    "class classname { }"
-                ],
-                answers: [".classname { }"]
+                title: "What does the `z-index` property do?",
+                choices: ["Controls the stacking order of positioned elements", "Sets the size of an element", "Defines the border of an element", "Controls the text alignment"],
+                correctAnswer: "Controls the stacking order of positioned elements"
             },
             {
                 subject: "CSS",
-                title: "What property is used to align text to the center?",
-                choices: [
-                    "text-align: center;",
-                    "align: center;",
-                    "text-center;",
-                    "center-align;"
-                ],
-                answers: ["text-align: center;"]
+                title: "How do you apply a style to the first child element of a parent?",
+                choices: ["parent:first-child { }", "parent > :first-child { }", "parent:first { }", "parent :first { }"],
+                correctAnswer: "parent > :first-child { }"
             },
             {
                 subject: "CSS",
-                title: "Which property is used to make an element's background color semi-transparent?",
-                choices: [
-                    "background-color: rgba();",
-                    "color: rgba();",
-                    "background-opacity;",
-                    "opacity:"
-                ],
-                answers: ["background-color: rgba();"]
+                title: "What does the `flex` property do in CSS Flexbox?",
+                choices: ["Defines how a flex item will grow or shrink", "Aligns flex items", "Sets the direction of flex items", "Sets the size of the flex container"],
+                correctAnswer: "Defines how a flex item will grow or shrink"
             },
             {
                 subject: "CSS",
-                title: "How do you specify multiple CSS properties in a single rule?",
-                choices: [
-                    "Separate properties with semicolons",
-                    "Separate properties with commas",
-                    "Use colons between properties",
-                    "Use hyphens between properties"
-                ],
-                answers: ["Separate properties with semicolons"]
+                title: "How do you create a responsive layout using CSS Grid?",
+                choices: ["By using grid-template-columns and grid-template-rows", "By using flex-direction", "By using media queries", "By using position"],
+                correctAnswer: "By using grid-template-columns and grid-template-rows"
             },
             {
                 subject: "CSS",
-                title: "Which property is used to set the font size?",
-                choices: [
-                    "font-size",
-                    "text-size",
-                    "size",
-                    "font"
-                ],
-                answers: ["font-size"]
+                title: "Which property is used to set the color of text in CSS?",
+                choices: ["color", "text-color", "font-color", "background-color"],
+                correctAnswer: "color"
             },
             {
-                subject: "CSS",
-                title: "How do you make a list item display as a block element?",
-                choices: [
-                    "display: block;",
-                    "display: list-item;",
-                    "block-display;",
-                    "list-display;"
-                ],
-                answers: ["display: block;"]
+                subject: "Cybersecurity",
+                title: "What is the term for the process of testing a system for vulnerabilities?",
+                choices: ["Penetration Testing", "Security Auditing", "Vulnerability Assessment", "Risk Management"],
+                correctAnswer: "Penetration Testing"
             },
             {
-                subject: "CSS",
-                title: "What does the 'float' property do?",
-                choices: [
-                    "Specifies how an element should float within its container",
-                    "Controls the size of an element",
-                    "Sets the position of an element",
-                    "Defines the background color"
-                ],
-                answers: ["Specifies how an element should float within its container"]
+                subject: "Cybersecurity",
+                title: "Which type of attack involves intercepting and altering communications between two parties?",
+                choices: ["Man-in-the-Middle Attack", "Phishing Attack", "SQL Injection", "Cross-Site Scripting"],
+                correctAnswer: "Man-in-the-Middle Attack"
             },
             {
-                subject: "CSS",
-                title: "Which CSS property is used to change the border style of an element?",
-                choices: [
-                    "border-style",
-                    "border-color",
-                    "border-width",
-                    "border-type"
-                ],
-                answers: ["border-style"]
+                subject: "Cybersecurity",
+                title: "What does the acronym DDoS stand for?",
+                choices: ["Distributed Denial of Service", "Direct Denial of Service", "Distributed Data of Service", "Direct Data of Service"],
+                correctAnswer: "Distributed Denial of Service"
             },
             {
-                subject: "CSS",
-                title: "How can you add a comment in CSS?",
-                choices: [
-                    "/* comment */",
-                    "// comment",
-                    "<!-- comment -->",
-                    "# comment"
-                ],
-                answers: ["/* comment */"]
+                subject: "Cybersecurity",
+                title: "What is a firewall used for in cybersecurity?",
+                choices: ["To control network traffic and protect systems", "To encrypt data", "To perform vulnerability scans", "To manage user authentication"],
+                correctAnswer: "To control network traffic and protect systems"
             },
             {
-                subject: "JavaScript",
-                title: "What is the correct syntax for referring to an external script called 'script.js'?",
-                choices: [
-                    "<script src='script.js'>",
-                    "<script href='script.js'>",
-                    "<script name='script.js'>",
-                    "<script file='script.js'>"
-                ],
-                answers: ["<script src='script.js'>"]
+                subject: "Cybersecurity",
+                title: "What is social engineering in the context of cybersecurity?",
+                choices: ["Manipulating people into divulging confidential information", "Breaking into systems using technical means", "Creating malware to infect systems", "Scanning for vulnerabilities"],
+                correctAnswer: "Manipulating people into divulging confidential information"
             },
             {
-                subject: "JavaScript",
-                title: "Which of the following is a valid JavaScript variable name?",
-                choices: [
-                    "2variable",
-                    "variable-name",
-                    "variable_name",
-                    "variable name"
-                ],
-                answers: ["variable_name"]
+                subject: "Cybersecurity",
+                title: "Which security measure involves converting data into a format that is unreadable without a decryption key?",
+                choices: ["Encryption", "Hashing", "Tokenization", "Obfuscation"],
+                correctAnswer: "Encryption"
             },
             {
-                subject: "JavaScript",
-                title: "How do you create a function in JavaScript?",
-                choices: [
-                    "function myFunction() { }",
-                    "create function myFunction() { }",
-                    "function:myFunction() { }",
-                    "function = myFunction() { }"
-                ],
-                answers: ["function myFunction() { }"]
+                subject: "Cybersecurity",
+                title: "What is a VPN used for?",
+                choices: ["To create a secure connection over a public network", "To scan for vulnerabilities", "To manage passwords", "To provide a backup solution"],
+                correctAnswer: "To create a secure connection over a public network"
             },
             {
-                subject: "JavaScript",
-                title: "What is the result of the expression 5 + '5' in JavaScript?",
-                choices: [
-                    "10",
-                    "'55'",
-                    "NaN",
-                    "Error"
-                ],
-                answers: ["'55'"]
+                subject: "Cybersecurity",
+                title: "What is an SQL injection attack?",
+                choices: ["An attack that exploits vulnerabilities in a web application's SQL database", "An attack that involves sending malicious emails", "An attack that manipulates network traffic", "An attack that involves unauthorized access to physical systems"],
+                correctAnswer: "An attack that exploits vulnerabilities in a web application's SQL database"
             },
             {
-                subject: "JavaScript",
-                title: "How do you declare a variable in JavaScript?",
-                choices: [
-                    "var variableName;",
-                    "variable variableName;",
-                    "declare variableName;",
-                    "dim variableName;"
-                ],
-                answers: ["var variableName;"]
+                subject: "Cybersecurity",
+                title: "What is multi-factor authentication?",
+                choices: ["A security process that requires multiple forms of verification", "A method to encrypt data", "A technique to hide data", "A process to scan for vulnerabilities"],
+                correctAnswer: "A security process that requires multiple forms of verification"
             },
             {
-                subject: "JavaScript",
-                title: "What does the 'typeof' operator do in JavaScript?",
-                choices: [
-                    "Returns the type of a variable",
-                    "Converts a variable to a string",
-                    "Checks if a variable is defined",
-                    "Declares a new variable"
-                ],
-                answers: ["Returns the type of a variable"]
+                subject: "Cybersecurity",
+                title: "What is a zero-day vulnerability?",
+                choices: ["A vulnerability that is unknown to the vendor and has no patch", "A vulnerability that has been patched", "A vulnerability that is publicly disclosed", "A vulnerability that is fixed on the same day it is discovered"],
+                correctAnswer: "A vulnerability that is unknown to the vendor and has no patch"
             },
             {
-                subject: "JavaScript",
-                title: "Which method is used to add a new element to the end of an array?",
-                choices: [
-                    "push()",
-                    "pop()",
-                    "shift()",
-                    "unshift()"
-                ],
-                answers: ["push()"]
+                subject: "Cybersecurity",
+                title: "What is a DDoS attack?",
+                choices: ["An attack that floods a server with traffic to overwhelm it", "An attack that involves intercepting communications", "An attack that manipulates user behavior", "An attack that exploits software vulnerabilities"],
+                correctAnswer: "An attack that floods a server with traffic to overwhelm it"
             },
             {
-                subject: "JavaScript",
-                title: "What is the correct syntax to create an object in JavaScript?",
-                choices: [
-                    "const obj = {};",
-                    "const obj = () => {};",
-                    "const obj = [];",
-                    "const obj = new Object();"
-                ],
-                answers: ["const obj = {};"]
+                subject: "Cybersecurity",
+                title: "What is a brute force attack?",
+                choices: ["An attack that tries all possible passwords until the correct one is found", "An attack that exploits software vulnerabilities", "An attack that involves phishing emails", "An attack that intercepts network traffic"],
+                correctAnswer: "An attack that tries all possible passwords until the correct one is found"
             },
             {
-                subject: "JavaScript",
-                title: "How do you access the first element of an array named 'arr'?",
-                choices: [
-                    "arr[0]",
-                    "arr.first()",
-                    "arr(0)",
-                    "arr.begin()"
-                ],
-                answers: ["arr[0]"]
+                subject: "Cybersecurity",
+                title: "Which protocol is commonly used to encrypt communications over the internet?",
+                choices: ["HTTPS", "HTTP", "FTP", "SMTP"],
+                correctAnswer: "HTTPS"
             },
             {
-                subject: "JavaScript",
-                title: "What will the following code output: console.log(!!true)?",
-                choices: [
-                    "true",
-                    "false",
-                    "undefined",
-                    "null"
-                ],
-                answers: ["true"]
+                subject: "Next.js",
+                title: "What is the primary function of Next.js?",
+                choices: ["Server-side rendering and static site generation", "Client-side routing only", "Database management", "State management"],
+                correctAnswer: "Server-side rendering and static site generation"
             },
             {
-                subject: "JavaScript",
-                title: "Which event occurs when the user clicks on an HTML element?",
-                choices: [
-                    "onclick",
-                    "onmouseover",
-                    "onchange",
-                    "onfocus"
-                ],
-                answers: ["onclick"]
+                subject: "Next.js",
+                title: "How do you create a new page in a Next.js application?",
+                choices: ["Create a new file in the `pages` directory", "Use the `next create page` command", "Add a new route in the `routes` directory", "Create a component in the `components` directory"],
+                correctAnswer: "Create a new file in the `pages` directory"
             },
             {
-                subject: "JavaScript",
-                title: "How do you write a comment in JavaScript?",
-                choices: [
-                    "// comment",
-                    "# comment",
-                    "<!-- comment -->",
-                    "/* comment */"
-                ],
-                answers: ["// comment"]
+                subject: "Next.js",
+                title: "What is `getServerSideProps` used for in Next.js?",
+                choices: ["Fetching data server-side for each request", "Fetching data client-side after the page loads", "Generating static pages at build time", "Handling API requests"],
+                correctAnswer: "Fetching data server-side for each request"
             },
             {
-                subject: "JavaScript",
-                title: "What does the 'this' keyword refer to in JavaScript?",
-                choices: [
-                    "The current object",
-                    "The global object",
-                    "The previous object",
-                    "The function itself"
-                ],
-                answers: ["The current object"]
+                subject: "Next.js",
+                title: "What is `getStaticProps` used for in Next.js?",
+                choices: ["Generating static pages at build time", "Fetching data server-side for each request", "Handling client-side routing", "Managing state in components"],
+                correctAnswer: "Generating static pages at build time"
             },
             {
-                subject: "JavaScript",
-                title: "How do you create a promise in JavaScript?",
-                choices: [
-                    "new Promise((resolve, reject) => { });",
-                    "Promise.create((resolve, reject) => { });",
-                    "Promise((resolve, reject) => { });",
-                    "new Promise.create((resolve, reject) => { });"
-                ],
-                answers: ["new Promise((resolve, reject) => { });"]
+                subject: "Next.js",
+                title: "How do you add custom routes in Next.js?",
+                choices: ["By modifying the `next.config.js` file", "By adding a `routes` directory", "By using the `next/router` module", "By creating dynamic routes in the `pages` directory"],
+                correctAnswer: "By creating dynamic routes in the `pages` directory"
             },
             {
-                subject: "JavaScript",
-                title: "Which operator is used to compare both value and type in JavaScript?",
-                choices: [
-                    "===",
-                    "==",
-                    "!=",
-                    "!=="
-                ],
-                answers: ["==="]
+                subject: "Next.js",
+                title: "What is the purpose of the `Link` component in Next.js?",
+                choices: ["To enable client-side navigation between pages", "To link external resources", "To manage application state", "To handle form submissions"],
+                correctAnswer: "To enable client-side navigation between pages"
             },
             {
-                subject: "JavaScript",
-                title: "How do you prevent a form from submitting when a button is clicked?",
-                choices: [
-                    "event.preventDefault();",
-                    "form.preventSubmit();",
-                    "button.cancel();",
-                    "return false;"
-                ],
-                answers: ["event.preventDefault();"]
+                subject: "Next.js",
+                title: "How do you enable API routes in Next.js?",
+                choices: ["By creating files in the `pages/api` directory", "By configuring the `api` property in `next.config.js`", "By using the `next/api` module", "By defining routes in `api.js`"],
+                correctAnswer: "By creating files in the `pages/api` directory"
             },
             {
-                subject: "JavaScript",
-                title: "What method is used to remove the last element from an array?",
-                choices: [
-                    "pop()",
-                    "push()",
-                    "shift()",
-                    "unshift()"
-                ],
-                answers: ["pop()"]
+                subject: "Next.js",
+                title: "What is the purpose of the `useRouter` hook in Next.js?",
+                choices: ["To access the router object and manage navigation", "To handle server-side rendering", "To fetch data from an API", "To manage global state"],
+                correctAnswer: "To access the router object and manage navigation"
             },
             {
-                subject: "JavaScript",
-                title: "Which statement is used to stop the execution of a loop in JavaScript?",
-                choices: [
-                    "break",
-                    "continue",
-                    "exit",
-                    "stop"
-                ],
-                answers: ["break"]
+                subject: "Next.js",
+                title: "How do you handle CSS in Next.js?",
+                choices: ["By importing CSS files in components", "By using CSS-in-JS libraries only", "By configuring a global CSS file in `next.config.js`", "By adding CSS files in the `public` directory"],
+                correctAnswer: "By importing CSS files in components"
             },
             {
-                subject: "JavaScript",
-                title: "What does the 'Array.isArray()' method do?",
-                choices: [
-                    "Checks if the value is an array",
-                    "Converts an array to a string",
-                    "Sorts the array",
-                    "Finds the length of an array"
-                ],
-                answers: ["Checks if the value is an array"]
+                subject: "Next.js",
+                title: "What is `getStaticPaths` used for in Next.js?",
+                choices: ["Generating dynamic routes at build time", "Fetching data server-side", "Handling client-side routing", "Managing global state"],
+                correctAnswer: "Generating dynamic routes at build time"
             },
             {
-                subject: "JavaScript",
-                title: "How do you handle errors in JavaScript code?",
-                choices: [
-                    "try...catch",
-                    "throw...catch",
-                    "error...handle",
-                    "try...except"
-                ],
-                answers: ["try...catch"]
+                subject: "Next.js",
+                title: "How do you configure environment variables in Next.js?",
+                choices: ["By adding them to the `.env.local` file", "By defining them in `next.config.js`", "By using the `process.env` object in code", "By setting them in the `public` directory"],
+                correctAnswer: "By adding them to the `.env.local` file"
             },
             {
-                subject: "JavaScript",
-                title: "What is the purpose of the 'async' keyword in JavaScript?",
-                choices: [
-                    "Defines an asynchronous function",
-                    "Makes a function synchronous",
-                    "Delays the execution of code",
-                    "Handles errors in promises"
-                ],
-                answers: ["Defines an asynchronous function"]
+                subject: "Next.js",
+                title: "What is the default port for running a Next.js development server?",
+                choices: ["3000", "8080", "5000", "4000"],
+                correctAnswer: "3000"
             },
             {
-                subject: "JavaScript",
-                title: "How do you define a constant in JavaScript?",
-                choices: [
-                    "const name = value;",
-                    "var name = value;",
-                    "let name = value;",
-                    "define name = value;"
-                ],
-                answers: ["const name = value;"]
+                subject: "Next.js",
+                title: "How do you enable TypeScript support in Next.js?",
+                choices: ["By installing `typescript` and creating a `tsconfig.json` file", "By using a TypeScript template during project creation", "By configuring `next.config.js`", "By adding TypeScript dependencies in `package.json`"],
+                correctAnswer: "By installing `typescript` and creating a `tsconfig.json` file"
+            },
+            {
+                subject: "Next.js",
+                title: "What does the `Image` component from `next/image` provide?",
+                choices: ["Optimized image loading and handling", "Image cropping tools", "Image editing features", "Image format conversion"],
+                correctAnswer: "Optimized image loading and handling"
+            },
+            {
+                subject: "Next.js",
+                title: "How do you manage metadata in Next.js?",
+                choices: ["By using the `Head` component from `next/head`", "By configuring the `next.config.js` file", "By using a third-party library", "By adding meta tags in `pages/_document.js`"],
+                correctAnswer: "By using the `Head` component from `next/head`"
+            },
+            {
+                subject: "Next.js",
+                title: "What is the purpose of `next/link`?",
+                choices: ["To create client-side navigation links", "To handle server-side rendering", "To fetch data from an API", "To manage state"],
+                correctAnswer: "To create client-side navigation links"
+            },
+            {
+                subject: "Next.js",
+                title: "How can you handle authentication in Next.js?",
+                choices: ["By using third-party authentication providers", "By configuring middleware", "By implementing session management", "By using custom server-side logic"],
+                correctAnswer: "By using third-party authentication providers"
+            },
+            {
+                subject: "Next.js",
+                title: "What is the purpose of `next/image`?",
+                choices: ["To optimize image loading", "To handle image uploads", "To manage image formats", "To create image galleries"],
+                correctAnswer: "To optimize image loading"
+            },
+            {
+                subject: "MySQL",
+                title: "What is the primary function of MySQL?",
+                choices: ["Relational database management", "NoSQL database management", "In-memory data storage", "File system management"],
+                correctAnswer: "Relational database management"
+            },
+            {
+                subject: "MySQL",
+                title: "Which command is used to create a new database in MySQL?",
+                choices: ["NEW DATABASE", "ADD DATABASE", "CREATE DATABASE", "MAKE DATABASE"],
+                correctAnswer: "CREATE DATABASE"
+            },
+            {
+                subject: "MySQL",
+                title: "How do you retrieve all records from a table named 'users' in MySQL?",
+                choices: ["GET ALL FROM users", "SELECT * FROM users", "FETCH * FROM users", "READ ALL FROM users"],
+                correctAnswer: "SELECT * FROM users"
+            },
+            {
+                subject: "MySQL",
+                title: "What is the purpose of the `JOIN` clause in MySQL?",
+                choices: ["To combine rows from two or more tables", "To filter rows based on conditions", "To sort rows in a table", "To aggregate data"],
+                correctAnswer: "To combine rows from two or more tables"
+            },
+            {
+                subject: "MySQL",
+                title: "Which command is used to delete a table in MySQL?",
+                choices: ["DROP TABLE", "DELETE TABLE", "REMOVE TABLE", "ERASE TABLE"],
+                correctAnswer: "DROP TABLE"
+            },
+            {
+                subject: "MySQL",
+                title: "How do you add a new column to an existing table in MySQL?",
+                choices: ["ALTER TABLE table_name ADD column_name data_type", "MODIFY TABLE table_name ADD column_name data_type", "UPDATE TABLE table_name ADD column_name data_type", "CHANGE TABLE table_name ADD column_name data_type"],
+                correctAnswer: "ALTER TABLE table_name ADD column_name data_type"
+            },
+            {
+                subject: "MySQL",
+                title: "What does the `GROUP BY` clause do in MySQL?",
+                choices: ["Groups rows that have the same values into summary rows", "Filters rows based on conditions", "Sorts rows in a table", "Joins multiple tables"],
+                correctAnswer: "Groups rows that have the same values into summary rows"
+            },
+            {
+                subject: "MySQL",
+                title: "Which command is used to update existing records in a table?",
+                choices: ["UPDATE", "MODIFY", "CHANGE", "EDIT"],
+                correctAnswer: "UPDATE"
+            },
+            {
+                subject: "MySQL",
+                title: "How do you add an index to a table column in MySQL?",
+                choices: ["ALTER TABLE table_name ADD INDEX index_name (column_name)", "CREATE INDEX index_name ON table_name (column_name)", "ADD INDEX index_name TO table_name (column_name)", "INDEX column_name TO table_name"],
+                correctAnswer: "CREATE INDEX index_name ON table_name (column_name)"
+            },
+            {
+                subject: "MySQL",
+                title: "What is the default storage engine for MySQL tables?",
+                choices: ["InnoDB", "MyISAM", "MEMORY", "CSV"],
+                correctAnswer: "InnoDB"
+            },
+            {
+                subject: "MySQL",
+                title: "Which command is used to create a new user in MySQL?",
+                choices: ["CREATE USER", "NEW USER", "ADD USER", "REGISTER USER"],
+                correctAnswer: "CREATE USER"
+            },
+            {
+                subject: "MySQL",
+                title: "What does the `HAVING` clause do in MySQL?",
+                choices: ["Filters records after the `GROUP BY` clause", "Filters records before the `GROUP BY` clause", "Sorts records", "Joins tables"],
+                correctAnswer: "Filters records after the `GROUP BY` clause"
+            },
+            {
+                subject: "MySQL",
+                title: "How do you find the number of rows in a table?",
+                choices: ["SELECT COUNT(*) FROM table_name", "SELECT NUM_ROWS FROM table_name", "SHOW COUNT FROM table_name", "GET ROW_COUNT FROM table_name"],
+                correctAnswer: "SELECT COUNT(*) FROM table_name"
+            },
+            {
+                subject: "MySQL",
+                title: "Which function is used to get the current date and time in MySQL?",
+                choices: ["NOW()", "CURRENT_DATE()", "GET_DATE()", "SYSDATE()"],
+                correctAnswer: "NOW()"
+            },
+            {
+                subject: "MySQL",
+                title: "What does the `DISTINCT` keyword do in MySQL?",
+                choices: ["Removes duplicate values from results", "Sorts results in ascending order", "Joins multiple tables", "Groups results based on conditions"],
+                correctAnswer: "Removes duplicate values from results"
+            },
+            {
+                subject: "MySQL",
+                title: "How do you create a foreign key relationship between two tables?",
+                choices: ["By using the `FOREIGN KEY` constraint", "By using the `JOIN` clause", "By adding a unique index", "By defining a primary key"],
+                correctAnswer: "By using the `FOREIGN KEY` constraint"
+            },
+            {
+                subject: "MySQL",
+                title: "Which command is used to view all databases in MySQL?",
+                choices: ["SHOW DATABASES", "LIST DATABASES", "VIEW DATABASES", "SHOW ALL DATABASES"],
+                correctAnswer: "SHOW DATABASES"
+            },
+            {
+                subject: "MySQL",
+                title: "How do you perform a case-insensitive search in MySQL?",
+                choices: ["By using the `LIKE` operator with a case-insensitive collation", "By using the `ILIKE` operator", "By converting the column to lower case", "By using `CASE_INSENSITIVE` keyword"],
+                correctAnswer: "By using the `LIKE` operator with a case-insensitive collation"
+            },
+            {
+                subject: "MySQL",
+                title: "What is the purpose of the `AUTO_INCREMENT` attribute in MySQL?",
+                choices: ["To automatically increment the value of a column", "To set a default value for a column", "To ensure uniqueness of a column value", "To generate random values"],
+                correctAnswer: "To automatically increment the value of a column"
             },
             {
                 subject: "MongoDB",
-                title: "What type of database is MongoDB?",
-                choices: [
-                    "NoSQL",
-                    "SQL",
-                    "Graph",
-                    "Object-oriented"
-                ],
-                answers: ["NoSQL"]
+                title: "What is the primary function of MongoDB?",
+                choices: ["NoSQL database management", "Relational database management", "In-memory data storage", "File system management"],
+                correctAnswer: "NoSQL database management"
             },
             {
                 subject: "MongoDB",
-                title: "Which method is used to insert a document into a collection?",
-                choices: [
-                    "insertOne()",
-                    "add()",
-                    "create()",
-                    "save()"
-                ],
-                answers: ["insertOne()"]
+                title: "How do you insert a new document into a collection in MongoDB?",
+                choices: ["db.collection.insertOne()", "db.collection.add()", "db.collection.create()", "db.collection.put()"],
+                correctAnswer: "db.collection.insertOne()"
             },
             {
                 subject: "MongoDB",
-                title: "How do you find all documents in a collection?",
-                choices: [
-                    "find({})",
-                    "findAll()",
-                    "getAll()",
-                    "list()"
-                ],
-                answers: ["find({})"]
+                title: "What is the command to find all documents in a collection?",
+                choices: ["db.collection.find()", "db.collection.get()", "db.collection.query()", "db.collection.select()"],
+                correctAnswer: "db.collection.find()"
             },
             {
                 subject: "MongoDB",
-                title: "Which operator is used to update fields in a document?",
-                choices: [
-                    "$set",
-                    "$update",
-                    "$modify",
-                    "$change"
-                ],
-                answers: ["$set"]
+                title: "How do you update an existing document in MongoDB?",
+                choices: ["db.collection.updateOne()", "db.collection.modify()", "db.collection.change()", "db.collection.replace()"],
+                correctAnswer: "db.collection.updateOne()"
             },
             {
                 subject: "MongoDB",
-                title: "How do you delete a document from a collection?",
-                choices: [
-                    "deleteOne()",
-                    "remove()",
-                    "drop()",
-                    "erase()"
-                ],
-                answers: ["deleteOne()"]
+                title: "What is the purpose of the `_id` field in MongoDB?",
+                choices: ["To uniquely identify each document", "To store metadata about the document", "To define the schema of the document", "To index the document"],
+                correctAnswer: "To uniquely identify each document"
             },
             {
                 subject: "MongoDB",
-                title: "What command is used to create a new collection?",
-                choices: [
-                    "db.createCollection()",
-                    "db.newCollection()",
-                    "db.create()",
-                    "db.addCollection()"
-                ],
-                answers: ["db.createCollection()"]
-            },
-            {
-                subject: "MongoDB",
-                title: "Which method is used to retrieve a single document from a collection?",
-                choices: [
-                    "findOne()",
-                    "findSingle()",
-                    "getOne()",
-                    "fetchOne()"
-                ],
-                answers: ["findOne()"]
-            },
-            {
-                subject: "MongoDB",
-                title: "How do you add a field to a document?",
-                choices: [
-                    "db.collection.update({query}, {$set: {field: value}})",
-                    "db.collection.addField({query}, {field: value})",
-                    "db.collection.insert({query}, {field: value})",
-                    "db.collection.modify({query}, {field: value})"
-                ],
-                answers: ["db.collection.update({query}, {$set: {field: value}})"]
-            },
-            {
-                subject: "MongoDB",
-                title: "What method is used to sort documents in a collection?",
-                choices: [
-                    "sort()",
-                    "orderBy()",
-                    "arrange()",
-                    "rank()"
-                ],
-                answers: ["sort()"]
-            },
-            {
-                subject: "MongoDB",
-                title: "Which command is used to count the number of documents in a collection?",
-                choices: [
-                    "countDocuments()",
-                    "size()",
-                    "count()",
-                    "length()"
-                ],
-                answers: ["countDocuments()"]
-            },
-            {
-                subject: "MongoDB",
-                title: "How do you connect to a MongoDB server using the Mongo shell?",
-                choices: [
-                    "mongo <connection-string>",
-                    "connect <connection-string>",
-                    "mongo-connect <connection-string>",
-                    "db-connect <connection-string>"
-                ],
-                answers: ["mongo <connection-string>"]
-            },
-            {
-                subject: "MongoDB",
-                title: "Which method is used to aggregate data in MongoDB?",
-                choices: [
-                    "aggregate()",
-                    "groupBy()",
-                    "collect()",
-                    "merge()"
-                ],
-                answers: ["aggregate()"]
-            },
-            {
-                subject: "MongoDB",
-                title: "What is the purpose of an index in MongoDB?",
-                choices: [
-                    "To improve query performance",
-                    "To enforce data integrity",
-                    "To encrypt data",
-                    "To limit data size"
-                ],
-                answers: ["To improve query performance"]
-            },
-            {
-                subject: "MongoDB",
-                title: "Which operator is used to perform a text search in MongoDB?",
-                choices: [
-                    "$text",
-                    "$search",
-                    "$find",
-                    "$query"
-                ],
-                answers: ["$text"]
-            },
-            {
-                subject: "MongoDB",
-                title: "How do you ensure uniqueness for a field in MongoDB?",
-                choices: [
-                    "Use a unique index",
-                    "Apply a unique constraint",
-                    "Use the unique() method",
-                    "Set the field as unique"
-                ],
-                answers: ["Use a unique index"]
+                title: "How do you delete a document from a collection in MongoDB?",
+                choices: ["db.collection.deleteOne()", "db.collection.remove()", "db.collection.drop()", "db.collection.erase()"],
+                correctAnswer: "db.collection.deleteOne()"
             },
             {
                 subject: "MongoDB",
                 title: "What is a replica set in MongoDB?",
-                choices: [
-                    "A group of MongoDB servers that maintain the same data",
-                    "A collection of databases",
-                    "A type of data partitioning",
-                    "A backup of the database"
-                ],
-                answers: ["A group of MongoDB servers that maintain the same data"]
+                choices: ["A group of MongoDB servers that maintain the same data set", "A method to partition data across multiple servers", "A type of backup system", "A technique for caching data"],
+                correctAnswer: "A group of MongoDB servers that maintain the same data set"
             },
             {
                 subject: "MongoDB",
-                title: "Which method is used to update multiple documents in MongoDB?",
-                choices: [
-                    "updateMany()",
-                    "updateAll()",
-                    "bulkUpdate()",
-                    "modify()"
-                ],
-                answers: ["updateMany()"]
+                title: "How do you create an index on a collection in MongoDB?",
+                choices: ["db.collection.createIndex()", "db.collection.addIndex()", "db.collection.defineIndex()", "db.collection.index()"],
+                correctAnswer: "db.collection.createIndex()"
             },
             {
                 subject: "MongoDB",
-                title: "What does the 'db.collection.drop()' command do?",
-                choices: [
-                    "Deletes the entire collection",
-                    "Removes all documents in the collection",
-                    "Drops indexes from the collection",
-                    "Deletes a single document from the collection"
-                ],
-                answers: ["Deletes the entire collection"]
+                title: "What is a BSON format in MongoDB?",
+                choices: ["A binary representation of JSON-like documents", "A text-based format for data exchange", "A method for encrypting data", "A protocol for data compression"],
+                correctAnswer: "A binary representation of JSON-like documents"
             },
             {
                 subject: "MongoDB",
-                title: "How do you create an index on a field in MongoDB?",
-                choices: [
-                    "db.collection.createIndex({field: 1})",
-                    "db.collection.addIndex({field: 1})",
-                    "db.collection.index({field: 1})",
-                    "db.collection.create({field: 1})"
-                ],
-                answers: ["db.collection.createIndex({field: 1})"]
+                title: "What is the purpose of the `aggregate` function in MongoDB?",
+                choices: ["To process and analyze data in stages", "To create indexes", "To delete documents", "To find documents"],
+                correctAnswer: "To process and analyze data in stages"
             },
             {
                 subject: "MongoDB",
-                title: "Which method is used to remove all documents from a collection without deleting the collection?",
-                choices: [
-                    "deleteMany()",
-                    "remove()",
-                    "clear()",
-                    "drop()"
-                ],
-                answers: ["deleteMany()"]
+                title: "What is sharding in MongoDB?",
+                choices: ["Distributing data across multiple servers", "Creating replicas of data", "Backing up data", "Encrypting data"],
+                correctAnswer: "Distributing data across multiple servers"
             },
             {
                 subject: "MongoDB",
-                title: "What is the purpose of the 'ObjectId' type in MongoDB?",
-                choices: [
-                    "To provide a unique identifier for documents",
-                    "To store binary data",
-                    "To create indexes",
-                    "To store array data"
-                ],
-                answers: ["To provide a unique identifier for documents"]
+                title: "How do you sort documents in a collection in MongoDB?",
+                choices: ["db.collection.find().sort()", "db.collection.orderBy()", "db.collection.arrange()", "db.collection.sort()"],
+                correctAnswer: "db.collection.find().sort()"
             },
             {
                 subject: "MongoDB",
-                title: "How do you perform a lookup operation in MongoDB to join data from two collections?",
-                choices: [
-                    "Use the $lookup stage in aggregation",
-                    "Use the join() method",
-                    "Use the $merge stage in aggregation",
-                    "Use the $union stage"
-                ],
-                answers: ["Use the $lookup stage in aggregation"]
+                title: "What is the command to create a new collection in MongoDB?",
+                choices: ["db.createCollection()", "db.collection.create()", "db.collection.add()", "db.collection.new()"],
+                correctAnswer: "db.createCollection()"
             },
             {
-                subject: "Excel",
-                title: "What is the default file extension for an Excel workbook?",
-                choices: [
-                    ".xls",
-                    ".xlsx",
-                    ".xlsm",
-                    ".csv"
-                ],
-                answers: [".xlsx"]
+                subject: "MongoDB",
+                title: "What does the `findOneAndUpdate` method do in MongoDB?",
+                choices: ["Finds a single document and updates it", "Finds and deletes a document", "Finds a document and replaces it", "Updates multiple documents"],
+                correctAnswer: "Finds a single document and updates it"
             },
             {
-                subject: "Excel",
-                title: "Which function would you use to find the average of a range of cells?",
-                choices: [
-                    "SUM()",
-                    "AVERAGE()",
-                    "MEDIAN()",
-                    "MODE()"
-                ],
-                answers: ["AVERAGE()"]
+                subject: "MongoDB",
+                title: "What is a document in MongoDB?",
+                choices: ["A JSON-like data structure", "A relational table", "A data type", "A database schema"],
+                correctAnswer: "A JSON-like data structure"
             },
             {
-                subject: "Excel",
-                title: "What does the 'VLOOKUP' function do?",
-                choices: [
-                    "Looks up a value in a table and returns a corresponding value",
-                    "Counts the number of cells that meet a condition",
-                    "Calculates the standard deviation of a set of values",
-                    "Sorts data in ascending order"
-                ],
-                answers: ["Looks up a value in a table and returns a corresponding value"]
+                subject: "MongoDB",
+                title: "How do you perform a text search in MongoDB?",
+                choices: ["By using the `$text` operator", "By using the `$search` operator", "By using regular expressions", "By using the `find()` method"],
+                correctAnswer: "By using the `$text` operator"
             },
             {
-                subject: "Excel",
-                title: "How do you create a chart from a selected range of data?",
-                choices: [
-                    "Insert > Chart",
-                    "Data > Chart",
-                    "Home > Chart",
-                    "View > Chart"
-                ],
-                answers: ["Insert > Chart"]
+                subject: "MongoDB",
+                title: "How do you enable text search indexing in MongoDB?",
+                choices: ["By creating a text index", "By enabling text search in the configuration file", "By using a third-party search engine", "By converting documents to a text format"],
+                correctAnswer: "By creating a text index"
             },
             {
-                subject: "Excel",
-                title: "Which of the following functions is used to count the number of cells that contain numbers?",
-                choices: [
-                    "COUNT()",
-                    "COUNTA()",
-                    "COUNTIF()",
-                    "SUM()"
-                ],
-                answers: ["COUNT()"]
+                subject: "JavaScript",
+                title: "What is the purpose of the `this` keyword in JavaScript?",
+                choices: ["To refer to the current object", "To create new objects", "To define global variables", "To handle asynchronous code"],
+                correctAnswer: "To refer to the current object"
             },
             {
-                subject: "Excel",
-                title: "What does the 'CONCATENATE' function do?",
-                choices: [
-                    "Joins several text strings into one",
-                    "Splits text into separate columns",
-                    "Calculates the product of numbers",
-                    "Formats numbers as text"
-                ],
-                answers: ["Joins several text strings into one"]
+                subject: "JavaScript",
+                title: "How do you declare a variable with block scope in JavaScript?",
+                choices: ["Using `let` or `const`", "Using `var`", "Using `static`", "Using `global`"],
+                correctAnswer: "Using `let` or `const`"
             },
             {
-                subject: "Excel",
-                title: "How can you freeze the top row in Excel?",
-                choices: [
-                    "View > Freeze Panes > Freeze Top Row",
-                    "Home > Freeze Panes > Freeze Top Row",
-                    "Insert > Freeze Panes > Top Row",
-                    "Data > Freeze Panes > Top Row"
-                ],
-                answers: ["View > Freeze Panes > Freeze Top Row"]
+                subject: "JavaScript",
+                title: "What is the output of `console.log(typeof null)` in JavaScript?",
+                choices: ["object", "null", "undefined", "function"],
+                correctAnswer: "object"
             },
             {
-                subject: "Excel",
-                title: "Which formula would you use to calculate the sum of a range of cells?",
-                choices: [
-                    "SUM()",
-                    "TOTAL()",
-                    "ADD()",
-                    "SUMIF()"
-                ],
-                answers: ["SUM()"]
+                subject: "JavaScript",
+                title: "How do you create a new object in JavaScript?",
+                choices: ["Using the `new Object()` syntax", "Using the `{}` syntax", "Using the `Object.create()` method", "All of the above"],
+                correctAnswer: "All of the above"
             },
             {
-                subject: "Excel",
-                title: "What is the purpose of the 'IF' function in Excel?",
-                choices: [
-                    "Performs a logical test and returns one value for TRUE and another for FALSE",
-                    "Calculates the average of a range",
-                    "Sorts a list of data",
-                    "Counts the number of cells in a range"
-                ],
-                answers: ["Performs a logical test and returns one value for TRUE and another for FALSE"]
+                subject: "JavaScript",
+                title: "What is the purpose of the `bind` method in JavaScript?",
+                choices: ["To create a new function with a specific `this` value", "To combine multiple functions", "To call a function immediately", "To defer the execution of a function"],
+                correctAnswer: "To create a new function with a specific `this` value"
             },
             {
-                subject: "Excel",
-                title: "How do you apply conditional formatting to a cell?",
-                choices: [
-                    "Home > Conditional Formatting",
-                    "Insert > Conditional Formatting",
-                    "Data > Conditional Formatting",
-                    "View > Conditional Formatting"
-                ],
-                answers: ["Home > Conditional Formatting"]
+                subject: "JavaScript",
+                title: "What is a closure in JavaScript?",
+                choices: ["A function with access to its own scope, the outer function's scope, and the global scope", "A method for creating classes", "A way to handle asynchronous code", "A data type"],
+                correctAnswer: "A function with access to its own scope, the outer function's scope, and the global scope"
             },
             {
-                subject: "Excel",
-                title: "What does the 'PMT' function calculate?",
-                choices: [
-                    "The payment for a loan based on constant payments and a constant interest rate",
-                    "The present value of an investment",
-                    "The future value of an investment",
-                    "The average interest rate"
-                ],
-                answers: ["The payment for a loan based on constant payments and a constant interest rate"]
+                subject: "JavaScript",
+                title: "What does the `Array.prototype.map` method do in JavaScript?",
+                choices: ["Creates a new array with the results of calling a function on every element", "Filters elements from an array based on a condition", "Reduces an array to a single value", "Sorts the elements of an array"],
+                correctAnswer: "Creates a new array with the results of calling a function on every element"
             },
             {
-                subject: "Excel",
-                title: "How do you sort data in ascending order?",
-                choices: [
-                    "Data > Sort A to Z",
-                    "Home > Sort Ascending",
-                    "View > Sort",
-                    "Insert > Sort"
-                ],
-                answers: ["Data > Sort A to Z"]
+                subject: "JavaScript",
+                title: "How do you handle asynchronous code in JavaScript?",
+                choices: ["Using callbacks, promises, or async/await", "Using synchronous functions", "By blocking the main thread", "By using the `setTimeout` function"],
+                correctAnswer: "Using callbacks, promises, or async/await"
             },
             {
-                subject: "Excel",
-                title: "Which function would you use to find the maximum value in a range of cells?",
-                choices: [
-                    "MAX()",
-                    "MIN()",
-                    "LARGE()",
-                    "HIGHEST()"
-                ],
-                answers: ["MAX()"]
+                subject: "JavaScript",
+                title: "What is the purpose of the `try...catch` statement in JavaScript?",
+                choices: ["To handle exceptions and errors", "To create loops", "To define functions", "To manage variable scope"],
+                correctAnswer: "To handle exceptions and errors"
             },
             {
-                subject: "Excel",
-                title: "What is a pivot table used for?",
-                choices: [
-                    "Summarizing and analyzing data",
-                    "Creating charts",
-                    "Formatting cells",
-                    "Entering data"
-                ],
-                answers: ["Summarizing and analyzing data"]
+                subject: "JavaScript",
+                title: "What is event delegation in JavaScript?",
+                choices: ["A technique to handle events at a higher level in the DOM", "A method to delay event handling", "A way to prevent event propagation", "A technique to create custom events"],
+                correctAnswer: "A technique to handle events at a higher level in the DOM"
             },
             {
-                subject: "Excel",
-                title: "How do you insert a new worksheet in Excel?",
-                choices: [
-                    "Click the '+' button next to existing sheet tabs",
-                    "File > New Worksheet",
-                    "Home > Insert Worksheet",
-                    "Data > New Worksheet"
-                ],
-                answers: ["Click the '+' button next to existing sheet tabs"]
+                subject: "JavaScript",
+                title: "How do you check if a variable is an array in JavaScript?",
+                choices: ["Using `Array.isArray()`", "Using `typeof`", "Using `instanceof Array`", "Both A and C"],
+                correctAnswer: "Both A and C"
             },
             {
-                subject: "Excel",
-                title: "Which function would you use to find the minimum value in a range of cells?",
-                choices: [
-                    "MIN()",
-                    "MAX()",
-                    "SMALL()",
-                    "LOWEST()"
-                ],
-                answers: ["MIN()"]
+                subject: "JavaScript",
+                title: "What is the purpose of the `JSON.stringify()` method?",
+                choices: ["To convert a JavaScript object to a JSON string", "To parse a JSON string into a JavaScript object", "To clone a JavaScript object", "To validate a JSON string"],
+                correctAnswer: "To convert a JavaScript object to a JSON string"
             },
             {
-                subject: "Excel",
-                title: "What is the shortcut key for copying selected cells?",
-                choices: [
-                    "Ctrl + C",
-                    "Ctrl + X",
-                    "Ctrl + V",
-                    "Ctrl + Z"
-                ],
-                answers: ["Ctrl + C"]
+                subject: "JavaScript",
+                title: "What is the difference between `==` and `===` in JavaScript?",
+                choices: ["`==` performs type coercion, `===` does not", "`==` checks for strict equality, `===` checks for loose equality", "`==` is used for object comparison, `===` is used for primitive comparison", "There is no difference"],
+                correctAnswer: "`==` performs type coercion, `===` does not"
             },
             {
-                subject: "Excel",
-                title: "Which function calculates the standard deviation of a range of cells?",
-                choices: [
-                    "STDEV()",
-                    "STD()",
-                    "DEV()",
-                    "VAR()"
-                ],
-                answers: ["STDEV()"]
+                subject: "JavaScript",
+                title: "How do you create a new promise in JavaScript?",
+                choices: ["Using the `Promise` constructor", "Using the `new Promise()` syntax", "By calling `Promise.create()`", "Using `async` functions"],
+                correctAnswer: "Using the `Promise` constructor"
             },
             {
-                subject: "Excel",
-                title: "How can you quickly adjust the width of a column to fit its contents?",
-                choices: [
-                    "Double-click the column boundary",
-                    "Right-click and select 'AutoFit'",
-                    "Use the 'Resize' option in the Home tab",
-                    "Drag the column boundary to the desired width"
-                ],
-                answers: ["Double-click the column boundary"]
+                subject: "JavaScript",
+                title: "What is the output of `console.log(0.1 + 0.2 === 0.3)`?",
+                choices: ["false", "true", "undefined", "NaN"],
+                correctAnswer: "false"
             },
             {
-                subject: "Excel",
-                title: "What is the purpose of the 'HLOOKUP' function?",
-                choices: [
-                    "Looks up a value in the top row and returns a value in the same column from a specified row",
-                    "Looks up a value in the leftmost column and returns a value in the same row from a specified column",
-                    "Counts the number of cells that contain numbers",
-                    "Calculates the sum of a range of values"
-                ],
-                answers: ["Looks up a value in the top row and returns a value in the same column from a specified row"]
+                subject: "JavaScript",
+                title: "What is the purpose of the `forEach` method in JavaScript?",
+                choices: ["To execute a function on each element of an array", "To create a new array", "To filter elements in an array", "To sort elements in an array"],
+                correctAnswer: "To execute a function on each element of an array"
             },
             {
-                subject: "Excel",
-                title: "How do you concatenate text from multiple cells into one cell?",
-                choices: [
-                    "Use the CONCATENATE() function",
-                    "Use the JOIN() function",
-                    "Use the TEXTJOIN() function",
-                    "Use the MERGE() function"
-                ],
-                answers: ["Use the CONCATENATE() function"]
+                subject: "JavaScript",
+                title: "How do you define a function in JavaScript?",
+                choices: ["Using the `function` keyword", "Using arrow function syntax", "Using the `Function` constructor", "All of the above"],
+                correctAnswer: "All of the above"
+            },
+            {
+                subject: "JavaScript",
+                title: "What is the `spread` operator used for in JavaScript?",
+                choices: ["To expand elements of an array or object", "To merge multiple arrays or objects", "To copy objects", "All of the above"],
+                correctAnswer: "All of the above"
+            },
+            {
+                subject: "TypeScript",
+                title: "What is TypeScript?",
+                choices: ["A typed superset of JavaScript", "A JavaScript library", "A runtime environment", "A database management system"],
+                correctAnswer: "A typed superset of JavaScript"
+            },
+            {
+                subject: "TypeScript",
+                title: "How do you declare a variable with a specific type in TypeScript?",
+                choices: ["Using type annotations", "Using `typeof`", "Using `instanceof`", "Using `new` keyword"],
+                correctAnswer: "Using type annotations"
+            },
+            {
+                subject: "TypeScript",
+                title: "What is the purpose of `interface` in TypeScript?",
+                choices: ["To define the structure of an object", "To declare functions", "To create classes", "To manage modules"],
+                correctAnswer: "To define the structure of an object"
+            },
+            {
+                subject: "TypeScript",
+                title: "How do you define a function with optional parameters in TypeScript?",
+                choices: ["By appending `?` to the parameter name", "By using `null` values", "By defining default values", "By using `undefined`"],
+                correctAnswer: "By appending `?` to the parameter name"
+            },
+            {
+                subject: "TypeScript",
+                title: "What is the purpose of `type` in TypeScript?",
+                choices: ["To create custom types", "To define classes", "To handle modules", "To declare variables"],
+                correctAnswer: "To create custom types"
+            },
+            {
+                subject: "TypeScript",
+                title: "What is type inference in TypeScript?",
+                choices: ["Automatically determining the type of a variable", "Specifying types explicitly", "Casting types manually", "Using `any` type"],
+                correctAnswer: "Automatically determining the type of a variable"
+            },
+            {
+                subject: "TypeScript",
+                title: "How do you create a union type in TypeScript?",
+                choices: ["By using the `|` operator", "By using the `&` operator", "By using parentheses", "By using arrays"],
+                correctAnswer: "By using the `|` operator"
+            },
+            {
+                subject: "TypeScript",
+                title: "What is the difference between `type` and `interface` in TypeScript?",
+                choices: ["`type` can define unions and intersections; `interface` is mainly for object shapes", "`interface` can define unions and intersections; `type` is mainly for object shapes", "`type` is used for classes; `interface` is used for functions", "There is no difference"],
+                correctAnswer: "`type` can define unions and intersections; `interface` is mainly for object shapes"
+            },
+            {
+                subject: "TypeScript",
+                title: "How do you define a class in TypeScript?",
+                choices: ["Using the `class` keyword", "Using the `define` keyword", "Using a function", "Using a constructor"],
+                correctAnswer: "Using the `class` keyword"
+            },
+            {
+                subject: "TypeScript",
+                title: "What is a tuple in TypeScript?",
+                choices: ["An array with fixed size and known types", "A special type of object", "A collection of different objects", "A list of functions"],
+                correctAnswer: "An array with fixed size and known types"
+            },
+            {
+                subject: "TypeScript",
+                title: "How do you extend an interface in TypeScript?",
+                choices: ["By using the `extends` keyword", "By using `interface` keyword", "By using `inherit` keyword", "By using `implements` keyword"],
+                correctAnswer: "By using the `extends` keyword"
+            },
+            {
+                subject: "العربية",
+                title: "ما هو الاسم الكامل للغة العربية؟",
+                choices: ["اللغة العربية الفصحى", "اللغة العربية الشائعة", "اللغة العربية القديمة", "اللغة العربية المعاصرة"],
+                correctAnswer: "اللغة العربية الفصحى"
+            },
+            {
+                subject: "العربية",
+                title: "ما هو الأصل الجذري لكلمة 'مكتبة'؟",
+                choices: ["كتب", "مكتب", "مكتوب", "مكتبات"],
+                correctAnswer: "كتب"
+            },
+            {
+                subject: "العربية",
+                title: "ما هي الحروف التي تشكل كلمة 'ماء'؟",
+                choices: ["م، ء، ا", "م، ا، ء", "م، ء، ل", "م، ل، ء"],
+                correctAnswer: "م، ء، ا"
+            },
+            {
+                subject: "العربية",
+                title: "ما هو الفعل المجرد في اللغة العربية؟",
+                choices: ["الفعل الذي لا يتغير", "الفعل الذي يحتوي على مزيد من الأوزان", "الفعل الذي يحتوي على جذر ثلاثي", "الفعل الذي يضاف إليه مسببات"],
+                correctAnswer: "الفعل الذي يحتوي على جذر ثلاثي"
+            },
+            {
+                subject: "العربية",
+                title: "ما هي أدوات الاستفهام في اللغة العربية؟",
+                choices: ["ما، أين، متى، كيف، لماذا", "هل، من، الذي، كيف، متى", "متى، لماذا، من، ما، أين", "من، أين، متى، كيف، هل"],
+                correctAnswer: "ما، أين، متى، كيف، لماذا"
+            },
+            {
+                subject: "العربية",
+                title: "ما هو معنى كلمة 'عمر' في اللغة العربية؟",
+                choices: ["حياة أو مدة", "مكان سكن", "عمل أو شغل", "شيء ثمين"],
+                correctAnswer: "حياة أو مدة"
+            },
+            {
+                subject: "العربية",
+                title: "ما هي صيغة جمع كلمة 'كتاب'؟",
+                choices: ["كتب", "كُتب", "كُتباء", "كتبون"],
+                correctAnswer: "كتب"
+            },
+            {
+                subject: "العربية",
+                title: "ما هي الحالة التي يتم فيها استخدام الأسماء الموصولة في اللغة العربية؟",
+                choices: ["للإشارة إلى الأشخاص أو الأشياء", "لإضافة التوكيد", "لإضافة الصفة", "للتفصيل"],
+                correctAnswer: "للإشارة إلى الأشخاص أو الأشياء"
+            },
+            {
+                subject: "العربية",
+                title: "كيف يتم استخدام الفعل المضارع في الجملة العربية؟",
+                choices: ["للدلالة على الفعل الحالي أو المستقبلي", "للدلالة على الفعل الماضي", "للدلالة على الحالة", "للدلالة على الأمر"],
+                correctAnswer: "للدلالة على الفعل الحالي أو المستقبلي"
+            },
+            {
+                subject: "العربية",
+                title: "ما هي الفروق بين الفعل المبني والفعل المعرب؟",
+                choices: ["المبني لا يتغير في آخره، المعرب يتغير حسب موقعه", "المبني يتغير حسب الموقع، المعرب لا يتغير", "المبني يأتي فقط في الأسماء، المعرب يأتي في الأفعال", "لا يوجد فرق"],
+                correctAnswer: "المبني لا يتغير في آخره، المعرب يتغير حسب موقعه"
+            },
+            {
+                subject: "العربية",
+                title: "ما هو المصدر في اللغة العربية؟",
+                choices: ["اسم يدل على الفعل نفسه", "اسم يدل على مكان الفعل", "اسم يدل على زمان الفعل", "اسم يدل على كيفية الفعل"],
+                correctAnswer: "اسم يدل على الفعل نفسه"
+            },
+            {
+                subject: "العربية",
+                title: "ما هي أساليب التعبير عن الزمان في اللغة العربية؟",
+                choices: ["أدوات الزمان مثل 'في' و'خلال' و'منذ'", "أدوات المكان مثل 'في' و'على' و'تحت'", "أدوات التعجب مثل 'ما' و'ألا'", "أدوات الشرط مثل 'إذا' و'عندما'"],
+                correctAnswer: "أدوات الزمان مثل 'في' و'خلال' و'منذ'"
+            },
+            {
+                subject: "العربية",
+                title: "ما هي الأسماء التي تتطلب التنوين في اللغة العربية؟",
+                choices: ["الأسماء التي لا تنتهي بألف", "الأسماء التي تنتهي بألف", "الأسماء التي تبدأ بلام", "الأسماء التي تبدأ بحرف مخصص"],
+                correctAnswer: "الأسماء التي لا تنتهي بألف"
+            },
+            {
+                subject: "العربية",
+                title: "ما هو نوع الجملة التي تبدأ بأداة شرط؟",
+                choices: ["جملة شرطية", "جملة استفهامية", "جملة خبرية", "جملة تعجبية"],
+                correctAnswer: "جملة شرطية"
+            },
+            {
+                subject: "العربية",
+                title: "ما هو نوع الجملة التي تتضمن فعل ماضٍ وفعل مضارع؟",
+                choices: ["جملة فعلية", "جملة اسمية", "جملة شرطية", "جملة استفهامية"],
+                correctAnswer: "جملة فعلية"
+            },
+            {
+                subject: "العربية",
+                title: "ما هي القواعد الأساسية لتشكيل الجملة الاسمية في اللغة العربية؟",
+                choices: ["تبدأ باسم وتكون بدون فعل", "تبدأ بفعل وتكون بدون اسم", "تبدأ بحرف جر وتكون بدون فعل", "تبدأ بفعل مضارع وتكون بدون اسم"],
+                correctAnswer: "تبدأ باسم وتكون بدون فعل"
+            },
+            {
+                subject: "العربية",
+                title: "ما هي الطريقة الصحيحة لاستخدام علامات الترقيم في اللغة العربية؟",
+                choices: ["تستخدم علامات الترقيم بشكل مشابه للغات الأخرى", "تستخدم علامات الترقيم بشكل مميز مثل وضع الفاصلة في كل جملة", "تستخدم علامات الترقيم في نهاية الفقرات فقط", "تستخدم علامات الترقيم بشكل عشوائي"],
+                correctAnswer: "تستخدم علامات الترقيم بشكل مشابه للغات الأخرى"
+            },
+            {
+                subject: "العربية",
+                title: "ما هو الفرق بين التنوين والتشكيل في اللغة العربية؟",
+                choices: ["التنوين هو إضافة نهاية للكلمة، والتشكيل هو تعديل الأحرف", "التنوين هو تعديل الأحرف، والتشكيل هو إضافة نهاية للكلمة", "التنوين هو في الأسماء فقط، والتشكيل هو في الأفعال فقط", "التنوين والتشكيل هما نفس الشيء"],
+                correctAnswer: "التنوين هو إضافة نهاية للكلمة، والتشكيل هو تعديل الأحرف"
+            },
+            {
+                subject: "العربية",
+                title: "ما هي أدوات النفي في اللغة العربية؟",
+                choices: ["ليس، ما، لا، لم، لن", "أن، لكن، حتى، لأن", "إذا، رغم، لذلك، ثم", "و، أو، أوّلاً، أخيراً"],
+                correctAnswer: "ليس، ما، لا، لم، لن"
+            },
+            {
+                subject: "العربية",
+                title: "ما هي الأمثلة على الأسماء الموصولة في اللغة العربية؟",
+                choices: ["الذي، التي، الذين، اللواتي", "الذي، التي، هم، هي", "من، ما، أي، كل", "هذا، تلك، هؤلاء، أولئك"],
+                correctAnswer: "الذي، التي، الذين، اللواتي"
+            },
+            {
+                subject: "العربية",
+                title: "ما هو النعت في اللغة العربية؟",
+                choices: ["صفة تابعة تضاف إلى الاسم وتوافقه في الإعراب", "فعل يصف كيفية حدوث شيء", "أداة تعبير عن التوقيت", "اسم يدل على المكان"],
+                correctAnswer: "صفة تابعة تضاف إلى الاسم وتوافقه في الإعراب"
+            },
+            {
+                subject: "العربية",
+                title: "كيف يتم تصريف الأفعال في اللغة العربية؟",
+                choices: ["بناءً على الجذر والوزن", "بناءً على الزمن فقط", "بناءً على عدد الحروف", "بناءً على السياق"],
+                correctAnswer: "بناءً على الجذر والوزن"
+            },
+            {
+                subject: "العربية",
+                title: "ما هو الاستخدام الصحيح للأحرف المشددة في اللغة العربية؟",
+                choices: ["لتأكيد الصوت وتكراره", "لتغيير معنى الكلمة", "لتعديل زمن الفعل", "لإضافة التنوين"],
+                correctAnswer: "لتأكيد الصوت وتكراره"
+            }, {
+                subject: "Tamazight",
+                title: "ⵉⵙ ⵜⴰⵎⴰⵣⵉⵖⵜ ⵜⵉⵎⴰⵣⵉⵖⵜ ⵜⴰⵏⴰⵢ ⵔⵓⴽ⩙",
+                choices: ["ⵜⴰⵥⴰⵔⵜ", "ⵜⴰⴼⵙⵓⵜ", "ⵜⴰⵥⵔⴰⵔⵜ", "ⵜⴰⵡⴰⵇⵓⵍⵜ"],
+                correctAnswer: "ⵜⴰ⥵ⴰⵔⵜ"
+            },
+            {
+                subject: "Tamazight",
+                title: "ⵣⵉⵡⵓⵏ ⵣⴰⵍⵓⵏ ⵢⴰⵏⴰ ⵓⵏⵉⵣⵓⵏⵏⵉ",
+                choices: ["ⵜⵉⴼⵉⵏⴰⵃ", "ⵍⴰⵜⵉⵏ", "ⵔⵓⵍⵉⵇ", "ⵃⵉⵔⵉⵍⵉⵏ"],
+                correctAnswer: "ⵜⵉⴼⵉⵏⴰⵃ"
+            },
+            {
+                subject: "Tamazight",
+                title: "ⴰⵎⴰⵣⵉⵖ ⵉⵙⵉ ⴰⵎⴰⵥⵍⵉⵃ",
+                choices: ["ⴰⵎⴰⵣⵉⵖ", "ⴰⵎⴷⴰⵏ", "ⴰⵎⴰⵣⵏ", "ⴰⵙⵉⵏ"],
+                correctAnswer: "ⴰⵎⴰⵣⵉⵖ"
+            },
+            {
+                subject: "Tamazight",
+                title: "ⵉⵙ ⵜⴰ⎦ⴰⵣⵉⵖⵜ ⵍⵉⵏⴰⵍ ⵎⴰⵣⵉⵖ",
+                choices: ["ⴳⵡⴰⵣⵓⵅ", "ⴰⵎⴰⵣⵉⵖ", "ⴰⵎⴷⴰⵏ", "ⴳⵡⴰⵣⵉⵖ"],
+                correctAnswer: "ⴰⵎⴰⵣⵉⵖ"
+            },
+            {
+                subject: "Tamazight",
+                title: "ⴰⵎⴰⵣⵉⵖ ⵉⵙⵉ ⴰⵎⴰⵣⵉⵖⵜ",
+                choices: ["ⴰⵎⴰⵣⵉⵖ", "ⴰⵎⴷⴰⵏ", "ⴰⵎⴰⵣⵏ", "ⴰⵙⵉⵏ"],
+                correctAnswer: "ⴰⵎⴰⵣⵉⵖ"
+            },
+            {
+                subject: "Tamazight",
+                title: "ⴰⵎⴰⵣⵉⵖ ⵉⵙⵉ ⴰⵎⴰⵣⵉⵖⵜ",
+                choices: ["ⴰⵎⴰⵣⵉⵖ", "ⴰⵎⴷⴰⵏ", "ⴰⵎⴰⵣⵏ", "ⴰⵙⵉⵏ"],
+                correctAnswer: "ⴰⵎⴰⵣⵉⵖ"
+            },
+            {
+                subject: "Tamazight",
+                title: "ⴰⵎⴰⵣⵉⵖ ⵉⵙⵉ ⴰⵎⴰⵣⵉⵖⵜ",
+                choices: ["ⴰⵎⴰⵣⵉⵖ", "ⴰⵎⴷⴰⵏ", "ⴰⵎⴰⵣⵏ", "ⴰⵙⵉⵏ"],
+                correctAnswer: "ⴰⵎⴰⵣⵉⵖ"
+            },
+            {
+                subject: "Tamazight",
+                title: "ⴰⵎⴰⵣⵉⵖ ⵉⵙⵉ ⴰⵎⴰⵣⵉⵖⵜ",
+                choices: ["ⴰⵎⴰⵣⵉⵖ", "ⴰⵎⴷⴰⵏ", "ⴰⵎⴰⵣⵏ", "ⴰⵙⵉⵏ"],
+                correctAnswer: "ⴰⵎⴰⵣⵉⵖ"
+            },
+            {
+                subject: "Tamazight",
+                title: "ⴰⵎⴰⵣⵉⵖ ⵉⵙⵉ ⴰⵎⴰⵣⵉⵖⵜ",
+                choices: ["ⴰⵎⴰⵣⵉⵖ", "ⴰⵎⴷⴰⵏ", "ⴰⵎⴰⵣⵏ", "ⴰⵙⵉⵏ"],
+                correctAnswer: "ⴰⵎⴰⵣⵉⵖ"
+            },
+            {
+                subject: "Tamazight",
+                title: "ⴰⵎⴰⵣⵉⵖ ⵉⵙⵉ ⴰⵎⴰⵣⵉⵖⵜ",
+                choices: ["ⴰⵎⴰⵣⵉⵖ", "ⴰⵎⴷⴰⵏ", "ⴰⵎⴰⵣⵏ", "ⴰⵙⵉⵏ"],
+                correctAnswer: "ⴰⵎⴰⵣⵉⵖ"
+            },
+            {
+                subject: "Tamazight",
+                title: "ⴰⵎⴰⵣⵉⵖ ⵉⵙⵉ ⴰⵎⴰⵣⵉⵖⵜ",
+                choices: ["ⴰⵎⴰⵣⵉⵖ", "ⴰⵎⴷⴰⵏ", "ⴰⵎⴰⵣⵏ", "ⴰⵙⵉⵏ"],
+                correctAnswer: "ⴰⵎⴰⵣⵉⵖ"
+            },
+            {
+                subject: "Tamazight",
+                title: "ⴰⵎⴰⵣⵉⵖ ⵉⵙⵉ ⴰⵎⴰⵣⵉⵖⵜ",
+                choices: ["ⴰⵎⴰⵣⵉⵖ", "ⴰⵎⴷⴰⵏ", "ⴰⵎⴰⵣⵏ", "ⴰⵙⵉⵏ"],
+                correctAnswer: "ⴰⵎⴰⵣⵉⵖ"
+            },
+            {
+                subject: "Tamazight",
+                title: "ⴰⵎⴰⵣⵉⵖ ⵉⵙⵉ ⴰⵎⴰⵣⵉⵖⵜ",
+                choices: ["ⴰⵎⴰⵣⵉⵖ", "ⴰⵎⴷⴰⵏ", "ⴰⵎⴰⵣⵏ", "ⴰⵙⵉⵏ"],
+                correctAnswer: "ⴰⵎⴰⵣⵉⵖ"
+            },
+            {
+                subject: "Tamazight",
+                title: "ⴰⵎⴰⵣⵉⵖ ⵉⵙⵉ ⴰⵎⴰⵣⵉⵖⵜ",
+                choices: ["ⴰⵎⴰⵣⵉⵖ", "ⴰⵎⴷⴰⵏ", "ⴰⵎⴰⵣⵏ", "ⴰⵙⵉⵏ"],
+                correctAnswer: "ⴰⵎⴰⵣⵉⵖ"
+            },
+            {
+                subject: "Tamazight",
+                title: "ⴰⵎⴰⵣⵉⵖ ⵉⵙⵉ ⴰⵎⴰⵣⵉⵖⵜ",
+                choices: ["ⴰⵎⴰⵣⵉⵖ", "ⴰⵎⴷⴰⵏ", "ⴰⵎⴰⵣⵏ", "ⴰⵙⵉⵏ"],
+                correctAnswer: "ⴰⵎⴰⵣⵉⵖ"
+            },
+            {
+                subject: "Tamazight",
+                title: "ⴰⵎⴰⵣⵉⵖ ⵉⵙⵉ ⴰⵎⴰⵣⵉⵖⵜ",
+                choices: ["ⴰⵎⴰⵣⵉⵖ", "ⴰⵎⴷⴰⵏ", "ⴰⵎⴰⵣⵏ", "ⴰⵙⵉⵏ"],
+                correctAnswer: "ⴰⵎⴰⵣⵉⵖ"
+            },
+            {
+                subject: "Tamazight",
+                title: "ⴰⵎⴰⵣⵉⵖ ⵉⵙⵉ ⴰⵎⴰⵣⵉⵖⵜ",
+                choices: ["ⴰⵎⴰⵣⵉⵖ", "ⴰⵎⴷⴰⵏ", "ⴰⵎⴰⵣⵏ", "ⴰⵙⵉⵏ"],
+                correctAnswer: "ⴰⵎⴰⵣⵉⵖ"
+            },
+            {
+                subject: "Tamazight",
+                title: "ⴰⵎⴰⵣⵉⵖ ⵉⵙⵉ ⴰⵎⴰⵣⵉⵖⵜ",
+                choices: ["ⴰⵎⴰⵣⵉⵖ", "ⴰⵎⴷⴰⵏ", "ⴰⵎⴰⵣⵏ", "ⴰⵙⵉⵏ"],
+                correctAnswer: "ⴰⵎⴰⵣⵉⵖ"
+            },
+            {
+                subject: "Tamazight",
+                title: "ⴰⵎⴰⵣⵉⵖ ⵉⵙⵉ ⴰⵎⴰⵣⵉⵖⵜ",
+                choices: ["ⴰⵎⴰⵣⵉⵖ", "ⴰⵎⴷⴰⵏ", "ⴰⵎⴰⵣⵏ", "ⴰⵙⵉⵏ"],
+                correctAnswer: "ⴰⵎⴰⵣⵉⵖ"
+            },
+            {
+                subject: "Tamazight",
+                title: "ⴰⵎⴰⵣⵉⵖ ⵉⵙⵉ ⴰⵎⴰⵣⵉⵖⵜ",
+                choices: ["ⴰⵎⴰⵣⵉⵖ", "ⴰⵎⴷⴰⵏ", "ⴰⵎⴰⵣⵏ", "ⴰⵙⵉⵏ"],
+                correctAnswer: "ⴰⵎⴰⵣⵉⵖ"
+            },
+            {
+                subject: "English",
+                title: "What is the capital city of the United Kingdom?",
+                choices: ["Paris", "Berlin", "London", "Madrid"],
+                correctAnswer: "London"
+            },
+            {
+                subject: "English",
+                title: "What is the past tense of 'go'?",
+                choices: ["Going", "Gone", "Goes", "Went"],
+                correctAnswer: "Went"
+            },
+            {
+                subject: "English",
+                title: "Which of the following is a synonym for 'happy'?",
+                choices: ["Sad", "Joyful", "Angry", "Tired"],
+                correctAnswer: "Joyful"
+            },
+            {
+                subject: "English",
+                title: "What is the plural form of 'child'?",
+                choices: ["Childs", "Childer", "Children", "Childrens"],
+                correctAnswer: "Children"
+            },
+            {
+                subject: "English",
+                title: "Which verb means 'to obtain something'?",
+                choices: ["Give", "Take", "Bring", "Receive"],
+                correctAnswer: "Receive"
+            },
+            {
+                subject: "English",
+                title: "Which of the following sentences is grammatically correct?",
+                choices: ["She don't like ice cream.", "She didn't likes ice cream.", "She doesn't like ice cream.", "She doesn't likes ice cream."],
+                correctAnswer: "She doesn't like ice cream."
+            },
+            {
+                subject: "English",
+                title: "What is the comparative form of 'good'?",
+                choices: ["Gooder", "Best", "Well", "Better"],
+                correctAnswer: "Better"
+            },
+            {
+                subject: "English",
+                title: "Which punctuation mark is used to show possession?",
+                choices: ["Comma", "Period", "Question Mark", "Apostrophe"],
+                correctAnswer: "Apostrophe"
+            },
+            {
+                subject: "English",
+                title: "What is the opposite of 'difficult'?",
+                choices: ["Hard", "Challenging", "Complex", "Easy"],
+                correctAnswer: "Easy"
+            },
+            {
+                subject: "English",
+                title: "Which of the following is an adverb?",
+                choices: ["Quick", "Quickness", "Quicker", "Quickly"],
+                correctAnswer: "Quickly"
+            },
+            {
+                subject: "English",
+                title: "What is the term for a word that has the same meaning as another word?",
+                choices: ["Antonym", "Homonym", "Synonym", "Prefix"],
+                correctAnswer: "Synonym"
+            },
+            {
+                subject: "English",
+                title: "What is the past participle of 'eat'?",
+                choices: ["Ate", "Eats", "Eating", "Eaten"],
+                correctAnswer: "Eaten"
+            },
+            {
+                subject: "English",
+                title: "Which of the following is a compound word?",
+                choices: ["Flower", "Sunny", "Sun", "Sunflower"],
+                correctAnswer: "Sunflower"
+            },
+            {
+                subject: "English",
+                title: "What is the term for the beginning of a story?",
+                choices: ["Conclusion", "Climax", "Resolution", "Introduction"],
+                correctAnswer: "Introduction"
+            },
+            {
+                subject: "English",
+                title: "Which of the following words is a noun?",
+                choices: ["Run", "Jump", "Quickly", "Happiness"],
+                correctAnswer: "Happiness"
+            },
+            {
+                subject: "English",
+                title: "What is the term for a word that sounds like another word but has a different meaning?",
+                choices: ["Antonym", "Homonym", "Homophone", "Synonym"],
+                correctAnswer: "Homophone"
+            },
+            {
+                subject: "English",
+                title: "What is the correct form of the verb 'to be' in the sentence 'She ___ happy.'?",
+                choices: ["am", "are", "be", "is"],
+                correctAnswer: "is"
+            },
+            {
+                subject: "English",
+                title: "Which of the following sentences is in the passive voice?",
+                choices: ["The children ate the cake.", "The cake is eating by the children.", "The children were eating the cake.", "The cake was eaten by the children."],
+                correctAnswer: "The cake was eaten by the children."
+            },
+            {
+                subject: "English",
+                title: "What is the term for a word that modifies a noun?",
+                choices: ["Adverb", "Verb", "Pronoun", "Adjective"],
+                correctAnswer: "Adjective"
+            },
+            {
+                subject: "English",
+                title: "What is the past tense of 'write'?",
+                choices: ["Written", "Write", "Writes", "Wrote"],
+                correctAnswer: "Wrote"
+            },
+            {
+                subject: "English",
+                title: "Which of the following sentences uses a preposition?",
+                choices: ["She store went.", "She went to the store.", "She went the store.", "She were eating the cake."],
+                correctAnswer: "She went to the store."
+            },
+            {
+                subject: "English",
+                title: "What is the term for a story's central idea or message?",
+                choices: ["Plot", "Setting", "Character", "Theme"],
+                correctAnswer: "Theme"
+            },
+            {
+                subject: "Python",
+                title: "What is the keyword used to define a function in Python?",
+                choices: ["function", "def", "func", "define"],
+                correctAnswer: "def"
+            },
+            {
+                subject: "Python",
+                title: "How do you create a list in Python?",
+                choices: ["list = ()", "list = {}", "list = []", "list = <>"],
+                correctAnswer: "list = []"
+            },
+            {
+                subject: "Python",
+                title: "Which method is used to add an item to the end of a list?",
+                choices: ["append()", "add()", "insert()", "extend()"],
+                correctAnswer: "append()"
+            },
+            {
+                subject: "Python",
+                title: "How do you comment a single line in Python?",
+                choices: ["//", "#", "/*", "--"],
+                correctAnswer: "#"
+            },
+            {
+                subject: "Python",
+                title: "What is the output of `print(2 ** 3)`?",
+                choices: ["6", "8", "9", "16"],
+                correctAnswer: "8"
+            },
+            {
+                subject: "Python",
+                title: "Which of the following is not a valid data type in Python?",
+                choices: ["list", "dictionary", "integer", "array"],
+                correctAnswer: "array"
+            },
+            {
+                subject: "Python",
+                title: "How do you create a tuple in Python?",
+                choices: ["tuple = []", "tuple = {}", "tuple = ()", "tuple = <>"],
+                correctAnswer: "tuple = ()"
+            },
+            {
+                subject: "Python",
+                title: "What does the `len()` function do?",
+                choices: ["Returns the length of an object", "Converts a string to a list", "Adds two numbers", "Creates a new list"],
+                correctAnswer: "Returns the length of an object"
+            },
+            {
+                subject: "Python",
+                title: "How do you start a `for` loop in Python?",
+                choices: ["for item in iterable:", "for item of iterable:", "loop item in iterable:", "foreach item in iterable:"],
+                correctAnswer: "for item in iterable:"
+            },
+            {
+                subject: "Python",
+                title: "Which keyword is used to handle exceptions in Python?",
+                choices: ["catch", "try", "handle", "except"],
+                correctAnswer: "try"
+            },
+            {
+                subject: "Python",
+                title: "How do you define a class in Python?",
+                choices: ["class ClassName:", "define ClassName:", "create ClassName:", "class ClassName{}:"],
+                correctAnswer: "class ClassName:"
+            },
+            {
+                subject: "Python",
+                title: "What is the output of `print(5 // 2)`?",
+                choices: ["2.5", "2", "3", "4"],
+                correctAnswer: "2"
+            },
+            {
+                subject: "Python",
+                title: "Which function is used to read input from the user?",
+                choices: ["input()", "read()", "get()", "scan()"],
+                correctAnswer: "input()"
+            },
+            {
+                subject: "Python",
+                title: "How do you check if a key exists in a dictionary?",
+                choices: ["key in dictionary", "dictionary.has_key(key)", "key.exists(dictionary)", "dictionary.contains(key)"],
+                correctAnswer: "key in dictionary"
+            },
+            {
+                subject: "Python",
+                title: "What is the correct way to import a module in Python?",
+                choices: ["import module", "include module", "require module", "using module"],
+                correctAnswer: "import module"
+            },
+            {
+                subject: "Python",
+                title: "What will `print(0.1 + 0.2 == 0.3)` output?",
+                choices: ["True", "False", "Error", "None"],
+                correctAnswer: "False"
+            },
+            {
+                subject: "Python",
+                title: "What is the output of `print(type([]))`?",
+                choices: ["<class 'list'>", "<class 'tuple'>", "<class 'dict'>", "<class 'set'>"],
+                correctAnswer: "<class 'list'>"
+            },
+            {
+                subject: "Python",
+                title: "How do you remove an item from a list by index?",
+                choices: ["list.remove(index)", "list.pop(index)", "list.delete(index)", "list.erase(index)"],
+                correctAnswer: "list.pop(index)"
+            },
+            {
+                subject: "Python",
+                title: "Which method is used to convert a string to uppercase?",
+                choices: ["upper()", "uppercase()", "to_upper()", "capitalize()"],
+                correctAnswer: "upper()"
+            },
+            {
+                subject: "Python",
+                title: "What does the `range()` function return?",
+                choices: ["A list", "A dictionary", "An iterable", "A set"],
+                correctAnswer: "An iterable"
+            },
+            {
+                subject: "Python",
+                title: "How do you concatenate two strings in Python?",
+                choices: ["str1 + str2", "str1.concat(str2)", "str1.append(str2)", "str1.extend(str2)"],
+                correctAnswer: "str1 + str2"
+            },
+            {
+                subject: "Python",
+                title: "What will `print(1 == True)` output?",
+                choices: ["True", "False", "Error", "None"],
+                correctAnswer: "True"
+            }, {
+                subject: "الإسلام",
+                title: "ما هو اسم النبي الذي تلقى الوحي في غار حراء?",
+                choices: ["عيسى", "موسى", "محمد", "إبراهيم"],
+                correctAnswer: "محمد"
+            },
+            {
+                subject: "الإسلام",
+                title: "ما هي الصلاة التي تُصلى في الصباح?",
+                choices: ["العصر", "الظهر", "المغرب", "الفجر"],
+                correctAnswer: "الفجر"
+            },
+            {
+                subject: "الإسلام",
+                title: "ما هي أركان الإسلام?",
+                choices: ["الصلاة، الصيام، الزكاة، الحج، الشهادة", "الصلاة، الزكاة، الصوم، الإيمان، الحج", "الشهادة، الصلاة، الصيام، الزكاة، التوحيد", "الصلاة، الصوم، الزكاة، الإيمان، الجهاد"],
+                correctAnswer: "الصلاة، الصيام، الزكاة، الحج، الشهادة"
+            },
+            {
+                subject: "الإسلام",
+                title: "ما هو الكتاب المقدس في الإسلام?",
+                choices: ["التوراة", "الإنجيل", "القرآن", "الزبور"],
+                correctAnswer: "القرآن"
+            },
+            {
+                subject: "الإسلام",
+                title: "من هو أول من أسلم من الصحابة?",
+                choices: ["أبو بكر الصديق", "عمر بن الخطاب", "علي بن أبي طالب", "عثمان بن عفان"],
+                correctAnswer: "أبو بكر الصديق"
+            },
+            {
+                subject: "الإسلام",
+                title: "ما هي الشهادتان في الإسلام?",
+                choices: ["لا إله إلا الله، محمد رسول الله", "سبحان الله، الحمد لله", "الله أكبر، لا إله إلا الله", "محمد رسول الله، الله أكبر"],
+                correctAnswer: "لا إله إلا الله، محمد رسول الله"
+            },
+            {
+                subject: "الإسلام",
+                title: "ما هو شهر الصيام في الإسلام?",
+                choices: ["رمضان", "شوال", "ذو الحجة", "محرم"],
+                correctAnswer: "رمضان"
+            },
+            {
+                subject: "الإسلام",
+                title: "ما هي الصلاة التي تُصلى بعد المغرب?",
+                choices: ["العشاء", "الظهر", "الفجر", "القيام"],
+                correctAnswer: "العشاء"
+            },
+            {
+                subject: "الإسلام",
+                title: "ما هو المكان الذي وُلد فيه النبي محمد صلى الله عليه وسلم?",
+                choices: ["مكة", "المدينة", "بدر", "الكعبة"],
+                correctAnswer: "مكة"
+            },
+            {
+                subject: "الإسلام",
+                title: "ما هي الزكاة في الإسلام?",
+                choices: ["تقديم المال للفقراء", "الصلاة في المساجد", "الصوم في رمضان", "الحج إلى مكة"],
+                correctAnswer: "تقديم المال للفقراء"
+            },
+            {
+                subject: "الإسلام",
+                title: "ما هو فرض الصلاة في الإسلام?",
+                choices: ["الصلاة خمس مرات في اليوم", "الصلاة ثلاث مرات في اليوم", "الصلاة مرة واحدة في اليوم", "الصلاة سبع مرات في اليوم"],
+                correctAnswer: "الصلاة خمس مرات في اليوم"
+            },
+            {
+                subject: "الإسلام",
+                title: "من هو الصحابي الذي شهد غزوة بدر وأحد؟",
+                choices: ["خالد بن الوليد", "سلمان الفارسي", "عبد الله بن مسعود", "سيدنا أبو بكر الصديق"],
+                correctAnswer: "سيدنا أبو بكر الصديق"
+            },
+            {
+                subject: "الإسلام",
+                title: "ما هو اسم المسجد الذي أسسه النبي محمد صلى الله عليه وسلم في المدينة المنورة?",
+                choices: ["مسجد الحرام", "مسجد قباء", "مسجد النبوي", "مسجد الأقصى"],
+                correctAnswer: "مسجد النبوي"
+            },
+            {
+                subject: "الإسلام",
+                title: "ما هو اسم السورة التي تُقرأ في صلاة الفجر?",
+                choices: ["سورة الفاتحة", "سورة الإخلاص", "سورة البقرة", "سورة الكافرون"],
+                correctAnswer: "سورة الفاتحة"
+            },
+            {
+                subject: "الإسلام",
+                title: "ما هي الحج في الإسلام?",
+                choices: ["زيارة المسجد النبوي", "زيارة مكة لأداء مناسك محددة", "العمرة في رمضان", "الصلاة في المسجد"],
+                correctAnswer: "زيارة مكة لأداء مناسك محددة"
+            },
+            {
+                subject: "الإسلام",
+                title: "ما هي السنة النبوية?",
+                choices: ["أقوال النبي محمد صلى الله عليه وسلم", "القرآن الكريم", "مواقف الصحابة", "أقوال الخلفاء"],
+                correctAnswer: "أقوال النبي محمد صلى الله عليه وسلم"
+            },
+            {
+                subject: "الإسلام",
+                title: "ما هو اسم الصحابي الذي كان يلقب بـ 'أمين الأمة'?",
+                choices: ["عمر بن الخطاب", "عثمان بن عفان", "أبو بكر الصديق", "عبد الله بن عباس"],
+                correctAnswer: "عثمان بن عفان"
+            },
+            {
+                subject: "الإسلام",
+                title: "ما هو اسم كتاب فقه الإمام الشافعي?",
+                choices: ["الجامع", "الموطأ", "الأم", "الكتاب"],
+                correctAnswer: "الأم"
+            },
+            {
+                subject: "الإسلام",
+                title: "ما هو اسم الصلاة التي تُصلى بعد الظهر?",
+                choices: ["العصر", "المغرب", "القيام", "النفل"],
+                correctAnswer: "النفل"
+            },
+            {
+                subject: "الإسلام",
+                title: "ما هي السورة التي تبدأ بـ 'بسم الله الرحمن الرحيم' في القرآن الكريم?",
+                choices: ["سورة الفاتحة", "سورة الكهف", "سورة النساء", "سورة الحشر"],
+                correctAnswer: "سورة الفاتحة"
+            },
+            {
+                subject: "الإسلام",
+                title: "ما هو اسم القبلة التي يتوجه إليها المسلمون أثناء الصلاة?",
+                choices: ["الكعبة", "القدس", "المدينة", "المسجد الأقصى"],
+                correctAnswer: "الكعبة"
+            },
+            {
+                subject: "الإسلام",
+                title: "ما هو اسم سورة التوحيد?",
+                choices: ["سورة الإخلاص", "سورة الكافرون", "سورة الفلق", "سورة الناس"],
+                correctAnswer: "سورة الإخلاص"
+            },
+            {
+                subject: "الإسلام",
+                title: "ما هو الاسم الذي يُطلق على الزكاة التي تُعطى للفقراء والمساكين?",
+                choices: ["الصدقة", "الزكاة", "الأوقاف", "الفدية"],
+                correctAnswer: "الزكاة"
+            },
+            {
+                subject: "الإسلام",
+                title: "ما هو اسم النبي الذي رُسل إلى بني إسرائيل?",
+                choices: ["محمد", "موسى", "عيسى", "إبراهيم"],
+                correctAnswer: "موسى"
+            },
+            {
+                subject: "الإسلام",
+                title: "ما هي الأركان الأساسية للإيمان في الإسلام?",
+                choices: ["الإيمان بالله، الملائكة، الكتب، الرسل، اليوم الآخر، القدر", "الإيمان بالله، الرسل، الكتب، الحج، الصوم", "الإيمان بالله، الصلاة، الزكاة، الصوم، الحج", "الإيمان بالله، الإيمان بالملائكة، الإيمان بالصلاة، الإيمان بالزكاة"],
+                correctAnswer: "الإيمان بالله، الملائكة، الكتب، الرسل، اليوم الآخر، القدر"
+            }, {
+                subject: "Physics",
+                title: "What is the SI unit of force?",
+                choices: ["Newton", "Joule", "Watt", "Pascal"],
+                correctAnswer: "Newton"
+            },
+            {
+                subject: "Physics",
+                title: "Who is known as the father of modern physics?",
+                choices: ["Isaac Newton", "Albert Einstein", "Niels Bohr", "Galileo Galilei"],
+                correctAnswer: "Albert Einstein"
+            },
+            {
+                subject: "Physics",
+                title: "What is the speed of light in a vacuum?",
+                choices: ["3 x 10^8 m/s", "3 x 10^6 m/s", "3 x 10^9 m/s", "3 x 10^7 m/s"],
+                correctAnswer: "3 x 10^8 m/s"
+            },
+            {
+                subject: "Physics",
+                title: "What law states that for every action there is an equal and opposite reaction?",
+                choices: ["Newton's First Law", "Newton's Second Law", "Newton's Third Law", "Law of Universal Gravitation"],
+                correctAnswer: "Newton's Third Law"
+            },
+            {
+                subject: "Physics",
+                title: "What is the formula for calculating kinetic energy?",
+                choices: ["KE = 1/2 mv^2", "KE = mgh", "KE = mv", "KE = 1/2 mgh"],
+                correctAnswer: "KE = 1/2 mv^2"
+            },
+            {
+                subject: "Physics",
+                title: "What is the unit of electrical resistance?",
+                choices: ["Ohm", "Volt", "Ampere", "Watt"],
+                correctAnswer: "Ohm"
+            },
+            {
+                subject: "Physics",
+                title: "What is the principle behind a lever?",
+                choices: ["Conservation of Energy", "Archimedes' Principle", "Law of Moments", "Hooke's Law"],
+                correctAnswer: "Law of Moments"
+            },
+            {
+                subject: "Physics",
+                title: "What phenomenon explains the bending of light as it passes from one medium to another?",
+                choices: ["Reflection", "Refraction", "Diffraction", "Interference"],
+                correctAnswer: "Refraction"
+            },
+            {
+                subject: "Physics",
+                title: "What is the measure of the amount of matter in an object?",
+                choices: ["Weight", "Mass", "Volume", "Density"],
+                correctAnswer: "Mass"
+            },
+            {
+                subject: "Physics",
+                title: "What is the law of conservation of energy?",
+                choices: ["Energy cannot be created or destroyed", "Energy can be transformed into matter", "Energy increases over time", "Energy is proportional to mass"],
+                correctAnswer: "Energy cannot be created or destroyed"
+            },
+            {
+                subject: "Physics",
+                title: "What does the term 'frequency' refer to in physics?",
+                choices: ["The number of waves per unit time", "The speed of a wave", "The height of a wave", "The direction of a wave"],
+                correctAnswer: "The number of waves per unit time"
+            },
+            {
+                subject: "Physics",
+                title: "What is the name of the force that opposes the relative motion of solid surfaces in contact?",
+                choices: ["Friction", "Gravity", "Tension", "Normal Force"],
+                correctAnswer: "Friction"
+            },
+            {
+                subject: "Physics",
+                title: "What is the unit of power in the International System of Units (SI)?",
+                choices: ["Joule", "Newton", "Watt", "Volt"],
+                correctAnswer: "Watt"
+            },
+            {
+                subject: "Physics",
+                title: "What type of wave is a sound wave?",
+                choices: ["Transverse Wave", "Longitudinal Wave", "Electromagnetic Wave", "Surface Wave"],
+                correctAnswer: "Longitudinal Wave"
+            },
+            {
+                subject: "Physics",
+                title: "What is the equation for calculating force?",
+                choices: ["F = ma", "F = mv", "F = mgh", "F = 1/2 mv^2"],
+                correctAnswer: "F = ma"
+            },
+            {
+                subject: "Physics",
+                title: "What is the term for the change in velocity over time?",
+                choices: ["Acceleration", "Speed", "Displacement", "Velocity"],
+                correctAnswer: "Acceleration"
+            },
+            {
+                subject: "Physics",
+                title: "What is the gravitational constant (G) in Newton-meters squared per kilogram squared?",
+                choices: ["9.8", "6.674 x 10^-11", "3 x 10^8", "1.6 x 10^-19"],
+                correctAnswer: "6.674 x 10^-11"
+            },
+            {
+                subject: "Physics",
+                title: "What is the measure of the energy needed to raise the temperature of a substance?",
+                choices: ["Specific Heat Capacity", "Heat of Vaporization", "Latent Heat", "Thermal Conductivity"],
+                correctAnswer: "Specific Heat Capacity"
+            },
+            {
+                subject: "Physics",
+                title: "What type of energy is stored in a compressed spring?",
+                choices: ["Kinetic Energy", "Gravitational Potential Energy", "Elastic Potential Energy", "Chemical Energy"],
+                correctAnswer: "Elastic Potential Energy"
+            },
+            {
+                subject: "Physics",
+                title: "What is the name of the effect where light waves spread out when passing through a narrow slit?",
+                choices: ["Refraction", "Reflection", "Diffraction", "Dispersion"],
+                correctAnswer: "Diffraction"
+            },
+            {
+                subject: "Physics",
+                title: "What is the unit of electric charge?",
+                choices: ["Coulomb", "Joule", "Ampere", "Volt"],
+                correctAnswer: "Coulomb"
+            },
+            {
+                subject: "Physics",
+                title: "What is the term for the rate of doing work or transferring energy?",
+                choices: ["Power", "Energy", "Work", "Force"],
+                correctAnswer: "Power"
+            },
+            {
+                subject: "Physics",
+                title: "What does the term 'momentum' refer to in physics?",
+                choices: ["Mass times velocity", "Force times distance", "Energy divided by time", "Work divided by time"],
+                correctAnswer: "Mass times velocity"
+            },
+            {
+                subject: "Artificial Intelligence",
+                title: "What is the primary goal of artificial intelligence?",
+                choices: ["To simulate human intelligence", "To create physical robots", "To automate repetitive tasks", "To improve computer hardware"],
+                correctAnswer: "To simulate human intelligence"
+            },
+            {
+                subject: "Artificial Intelligence",
+                title: "What does 'machine learning' refer to in the context of AI?",
+                choices: ["A method for programming machines", "Algorithms that improve with experience", "Hardware that learns tasks", "Manual data input processes"],
+                correctAnswer: "Algorithms that improve with experience"
+            },
+            {
+                subject: "Artificial Intelligence",
+                title: "Which of the following is a type of supervised learning algorithm?",
+                choices: ["K-means clustering", "Principal Component Analysis", "Linear Regression", "Reinforcement Learning"],
+                correctAnswer: "Linear Regression"
+            },
+            {
+                subject: "Artificial Intelligence",
+                title: "What is the main purpose of natural language processing (NLP)?",
+                choices: ["Understanding and generating human language", "Processing images and videos", "Analyzing numerical data", "Controlling robotic systems"],
+                correctAnswer: "Understanding and generating human language"
+            },
+            {
+                subject: "Artificial Intelligence",
+                title: "What is a neural network in AI?",
+                choices: ["A network of interconnected nodes inspired by the human brain", "A system for processing numerical data", "A method for storing large datasets", "A type of machine learning model with decision trees"],
+                correctAnswer: "A network of interconnected nodes inspired by the human brain"
+            },
+            {
+                subject: "Artificial Intelligence",
+                title: "What is the purpose of reinforcement learning?",
+                choices: ["To learn from rewards and punishments", "To classify data into categories", "To cluster data points", "To reduce dimensionality of data"],
+                correctAnswer: "To learn from rewards and punishments"
+            },
+            {
+                subject: "Artificial Intelligence",
+                title: "Which AI technique is used for pattern recognition and data classification?",
+                choices: ["Decision Trees", "K-means Clustering", "Principal Component Analysis", "Reinforcement Learning"],
+                correctAnswer: "Decision Trees"
+            },
+            {
+                subject: "Artificial Intelligence",
+                title: "What does the term 'deep learning' refer to?",
+                choices: ["A subset of machine learning involving multiple layers of neural networks", "The process of learning by reading large amounts of data", "A method for programming computers with minimal human intervention", "A type of unsupervised learning technique"],
+                correctAnswer: "A subset of machine learning involving multiple layers of neural networks"
+            },
+            {
+                subject: "Artificial Intelligence",
+                title: "What is the Turing Test designed to evaluate?",
+                choices: ["The ability of a machine to exhibit intelligent behavior indistinguishable from a human", "The speed of a computer processor", "The accuracy of a machine learning model", "The efficiency of data storage solutions"],
+                correctAnswer: "The ability of a machine to exhibit intelligent behavior indistinguishable from a human"
+            },
+            {
+                subject: "Artificial Intelligence",
+                title: "Which of the following is a commonly used framework for deep learning?",
+                choices: ["TensorFlow", "Apache Hadoop", "MySQL", "Docker"],
+                correctAnswer: "TensorFlow"
+            },
+            {
+                subject: "Artificial Intelligence",
+                title: "What is an artificial neural network's 'layer'?",
+                choices: ["A collection of nodes that process inputs", "A method of optimizing data storage", "A hardware component of the computer", "A type of data encryption technique"],
+                correctAnswer: "A collection of nodes that process inputs"
+            },
+            {
+                subject: "Artificial Intelligence",
+                title: "What does 'overfitting' mean in machine learning?",
+                choices: ["A model that performs well on training data but poorly on new data", "A model that learns too quickly", "A model that has too few parameters", "A model that generalizes well to all data"],
+                correctAnswer: "A model that performs well on training data but poorly on new data"
+            },
+            {
+                subject: "Artificial Intelligence",
+                title: "What is a common application of computer vision in AI?",
+                choices: ["Object recognition in images", "Generating human-like text", "Playing games", "Predicting future events"],
+                correctAnswer: "Object recognition in images"
+            },
+            {
+                subject: "Artificial Intelligence",
+                title: "What is 'transfer learning'?",
+                choices: ["Using a pre-trained model on a new but similar task", "Learning new data from scratch", "Transferring data between databases", "Changing the architecture of a neural network"],
+                correctAnswer: "Using a pre-trained model on a new but similar task"
+            },
+            {
+                subject: "Artificial Intelligence",
+                title: "What is the primary focus of unsupervised learning?",
+                choices: ["Finding patterns or groupings in data without predefined labels", "Classifying data into known categories", "Predicting future values based on past data", "Optimizing model parameters"],
+                correctAnswer: "Finding patterns or groupings in data without predefined labels"
+            },
+            {
+                subject: "Artificial Intelligence",
+                title: "What does 'feature engineering' involve?",
+                choices: ["Creating and selecting relevant features from raw data", "Designing the architecture of neural networks", "Training machine learning models", "Testing model performance"],
+                correctAnswer: "Creating and selecting relevant features from raw data"
+            },
+            {
+                subject: "Artificial Intelligence",
+                title: "What is an 'AI chatbot'?",
+                choices: ["A program that simulates conversation with users", "A device that provides physical assistance", "A tool for managing databases", "A software for processing large datasets"],
+                correctAnswer: "A program that simulates conversation with users"
+            },
+            {
+                subject: "Artificial Intelligence",
+                title: "Which term describes the ability of AI systems to understand and generate human language?",
+                choices: ["Natural Language Processing (NLP)", "Computer Vision", "Reinforcement Learning", "Machine Translation"],
+                correctAnswer: "Natural Language Processing (NLP)"
+            },
+            {
+                subject: "Artificial Intelligence",
+                title: "What is 'gradient descent' used for in machine learning?",
+                choices: ["Optimizing the parameters of a model", "Selecting features for a model", "Preparing data for analysis", "Evaluating model performance"],
+                correctAnswer: "Optimizing the parameters of a model"
+            },
+            {
+                subject: "Artificial Intelligence",
+                title: "What does 'AI ethics' refer to?",
+                choices: ["The study of moral implications and responsibilities of AI systems", "The technical details of AI algorithms", "The development of AI hardware", "The efficiency of AI systems"],
+                correctAnswer: "The study of moral implications and responsibilities of AI systems"
+            },
+            {
+                subject: "Artificial Intelligence",
+                title: "Which concept refers to the ability of AI to perform tasks that were previously considered exclusive to human intelligence?",
+                choices: ["Artificial General Intelligence (AGI)", "Artificial Narrow Intelligence (ANI)", "Machine Learning", "Deep Learning"],
+                correctAnswer: "Artificial General Intelligence (AGI)"
+            },
+            {
+                subject: "Artificial Intelligence",
+                title: "What is the purpose of a confusion matrix in machine learning?",
+                choices: ["To evaluate the performance of classification models", "To optimize model parameters", "To preprocess data", "To visualize data patterns"],
+                correctAnswer: "To evaluate the performance of classification models"
+            },
+            {
+                subject: "Artificial Intelligence",
+                title: "What does 'AI bias' refer to?",
+                choices: ["Prejudices in AI algorithms due to biased training data", "Errors in AI model predictions", "Hardware limitations in AI systems", "Complexity of AI models"],
+                correctAnswer: "Prejudices in AI algorithms due to biased training data"
+            },
+            {
+                subject: "Artificial Intelligence",
+                title: "What is 'self-supervised learning'?",
+                choices: ["A type of learning where the system creates its own labels from the data", "Learning from a large number of labeled examples", "Learning from minimal data with human supervision", "A type of reinforcement learning"],
+                correctAnswer: "A type of learning where the system creates its own labels from the data"
+            },
+            {
+                subject: "Machine Learning",
+                title: "What is the primary goal of machine learning?",
+                choices: ["To program computers with fixed instructions", "To manually input data for analysis", "To create physical robots", "To enable computers to learn from data and improve over time"],
+                correctAnswer: "To enable computers to learn from data and improve over time"
+            },
+            {
+                subject: "Machine Learning",
+                title: "What is a 'feature' in machine learning?",
+                choices: ["The final output of a model", "A type of machine learning algorithm", "The process of training a model", "An individual measurable property of a phenomenon being observed"],
+                correctAnswer: "An individual measurable property of a phenomenon being observed"
+            },
+            {
+                subject: "Machine Learning",
+                title: "What is 'supervised learning'?",
+                choices: ["A technique for clustering data", "A method for supervised regression", "An algorithm used for reinforcement learning", "A type of machine learning where the model is trained on labeled data"],
+                correctAnswer: "A type of machine learning where the model is trained on labeled data"
+            },
+            {
+                subject: "Machine Learning",
+                title: "What is a 'decision tree'?",
+                choices: ["An optimization algorithm", "A type of neural network", "A clustering algorithm", "A model that makes decisions based on a series of questions"],
+                correctAnswer: "A model that makes decisions based on a series of questions"
+            },
+            {
+                subject: "Machine Learning",
+                title: "What does 'cross-validation' help with in machine learning?",
+                choices: ["Training the model", "Selecting features for the model", "Processing raw data", "Evaluating the performance of a model"],
+                correctAnswer: "Evaluating the performance of a model"
+            },
+            {
+                subject: "Machine Learning",
+                title: "What is the 'bias-variance tradeoff'?",
+                choices: ["The balance between supervised and unsupervised learning", "The difference between accuracy and precision", "The tradeoff between training and testing data", "The balance between model complexity and training error"],
+                correctAnswer: "The balance between model complexity and training error"
+            },
+            {
+                subject: "Machine Learning",
+                title: "What is 'unsupervised learning'?",
+                choices: ["A technique for supervised classification", "A method for supervised regression", "An optimization algorithm", "A type of machine learning where the model is trained on unlabeled data"],
+                correctAnswer: "A type of machine learning where the model is trained on unlabeled data"
+            },
+            {
+                subject: "Machine Learning",
+                title: "Which algorithm is commonly used for classification tasks?",
+                choices: ["K-means Clustering", "Principal Component Analysis (PCA)", "Support Vector Machines (SVM)", "Decision Trees"],
+                correctAnswer: "Support Vector Machines (SVM)"
+            },
+            {
+                subject: "Machine Learning",
+                title: "What is 'overfitting'?",
+                choices: ["When a model performs poorly on training data", "When a model generalizes well to new data", "When a model is too simple", "When a model performs well on training data but poorly on new data"],
+                correctAnswer: "When a model performs well on training data but poorly on new data"
+            },
+            {
+                subject: "Machine Learning",
+                title: "What is 'regularization' used for in machine learning?",
+                choices: ["To improve model accuracy", "To speed up the training process", "To increase the size of the dataset", "To prevent overfitting by adding a penalty for complexity"],
+                correctAnswer: "To prevent overfitting by adding a penalty for complexity"
+            },
+            {
+                subject: "Machine Learning",
+                title: "What is a 'confusion matrix' used for?",
+                choices: ["To optimize model parameters", "To preprocess data", "To visualize the data distribution", "To evaluate the performance of a classification model"],
+                correctAnswer: "To evaluate the performance of a classification model"
+            },
+            {
+                subject: "Machine Learning",
+                title: "What does 'gradient descent' do?",
+                choices: ["It increases the accuracy of the model", "It evaluates the model's performance", "It prepares the data for training", "It optimizes the parameters of a model by minimizing the loss function"],
+                correctAnswer: "It optimizes the parameters of a model by minimizing the loss function"
+            },
+            {
+                subject: "Machine Learning",
+                title: "What is a 'neural network'?",
+                choices: ["A method for unsupervised learning", "A clustering algorithm", "A way to process large datasets", "A series of algorithms modeled after the human brain"],
+                correctAnswer: "A series of algorithms modeled after the human brain"
+            },
+            {
+                subject: "Machine Learning",
+                title: "What does 'feature scaling' involve?",
+                choices: ["Creating new features from existing ones", "Reducing the dimensionality of the data", "Normalizing or standardizing feature values to a common scale", "Selecting important features from the dataset"],
+                correctAnswer: "Normalizing or standardizing feature values to a common scale"
+            },
+            {
+                subject: "Machine Learning",
+                title: "What is 'dimensionality reduction'?",
+                choices: ["The process of increasing the number of features", "The process of aggregating data", "The process of normalizing data", "The process of reducing the number of features in a dataset"],
+                correctAnswer: "The process of reducing the number of features in a dataset"
+            },
+            {
+                subject: "Machine Learning",
+                title: "What is 'ensemble learning'?",
+                choices: ["Using a single model for all predictions", "Reducing the size of the training dataset", "Training models on different datasets", "Combining multiple models to improve performance"],
+                correctAnswer: "Combining multiple models to improve performance"
+            },
+            {
+                subject: "Machine Learning",
+                title: "Which technique is used for dimensionality reduction?",
+                choices: ["K-means Clustering", "Support Vector Machines (SVM)", "Principal Component Analysis (PCA)", "Decision Trees"],
+                correctAnswer: "Principal Component Analysis (PCA)"
+            },
+            {
+                subject: "Machine Learning",
+                title: "What is the purpose of 'cross-validation'?",
+                choices: ["To train the model on a large dataset", "To select features for the model", "To preprocess the data", "To assess how the results of a statistical analysis will generalize to an independent data set"],
+                correctAnswer: "To assess how the results of a statistical analysis will generalize to an independent data set"
+            },
+            {
+                subject: "Machine Learning",
+                title: "What is 'clustering'?",
+                choices: ["Classifying data into predefined categories", "Regressing data to predict values", "Reducing dimensionality of data", "Grouping similar data points together"],
+                correctAnswer: "Grouping similar data points together"
+            },
+            {
+                subject: "Machine Learning",
+                title: "What is 'bagging'?",
+                choices: ["A method for preprocessing data", "A type of reinforcement learning", "A technique for feature selection", "A technique that combines the predictions of multiple models to improve accuracy"],
+                correctAnswer: "A technique that combines the predictions of multiple models to improve accuracy"
+            },
+            {
+                subject: "Machine Learning",
+                title: "What does 'hyperparameter tuning' refer to?",
+                choices: ["The process of training a model", "The process of evaluating model performance", "The process of scaling features", "The process of adjusting the parameters of a learning algorithm to optimize performance"],
+                correctAnswer: "The process of adjusting the parameters of a learning algorithm to optimize performance"
+            },
+            {
+                subject: "Machine Learning",
+                title: "What is the 'ROC curve' used for?",
+                choices: ["Optimizing model parameters", "Processing data", "Training the model", "Evaluating the performance of a classification model"],
+                correctAnswer: "Evaluating the performance of a classification model"
+            },
+            {
+                subject: "Machine Learning",
+                title: "What is 'recurrent neural network' (RNN) used for?",
+                choices: ["Performing unsupervised learning", "Optimizing model parameters", "Reducing dimensionality", "Handling sequential data and time series"],
+                correctAnswer: "Handling sequential data and time series"
             }
-
         ]
     });
 }

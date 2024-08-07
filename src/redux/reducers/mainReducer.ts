@@ -1,9 +1,10 @@
-import { GETQUESTIONS } from "../action/types";
-import { Question } from "../action/actionCreator"
+import { INITIALISED } from "../action/types";
+import { Question, Answer } from "../action/actionCreator"
 const initialState = {
     example: "is working",
     questions: [],
     subjects: [],
+    answers: []
 }
 type Action = {
     type: string;
@@ -11,14 +12,15 @@ type Action = {
 };
 type State = {
     questions: Question[]
-    subjects: String[]
+    subjects: String[],
+    answers: Answer[]
 }
 export const mainReducer = (state: State = initialState, action: Action) => {
 
     switch (action.type) {
-        case GETQUESTIONS:
-            const sbj = new Set(action.payload.map((item: Question) => item.subject))
-            return { ...state, questions: action.payload, subjects: Array.from(sbj).map(((item: any) => { return { name: item, questionsCount: action.payload.filter((elem: Question) => elem.subject == item).length } })) }
+        case INITIALISED:
+            const sbj = new Set(action.payload.questions.map((item: Question) => item.subject))
+            return { ...state, questions: action.payload.questions, answers: action.payload.answers, subjects: Array.from(sbj).map(((item: any) => { return { name: item, questionsCount: action.payload.questions.filter((elem: Question) => elem.subject == item).length } })) }
     }
 
     return state

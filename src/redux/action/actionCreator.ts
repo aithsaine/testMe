@@ -1,16 +1,27 @@
-import { GETQUESTIONS } from "./types"
+import { INITIALISED } from "./types"
 
 export type Question = {
     id: String
     subject: String
     title: String
     choices: String[]
-    answer: String[]
+    correctAnswer: String
 }
+export type Answer = {
+    id: String
+    userId: String
+    subject: String
+    questions: any[]
 
-export const getAllQuestions = (questions: Question[]) => {
+}
+export const getAllQuestions = (questions: Question[], answers: Answer[]) => {
     return {
-        type: GETQUESTIONS,
-        payload: questions
+        type: INITIALISED,
+        payload: {
+
+            questions,
+            answers
+        }
+
     }
 }

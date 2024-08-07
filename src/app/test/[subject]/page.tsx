@@ -76,7 +76,6 @@ export default function page({ params }: { params: { subject: String } }) {
             /* Read more about isConfirmed, isDenied below */
             if (result.isConfirmed) {
                 saveHandler()
-                router.push("/dashboard/tests")
             }
 
         });

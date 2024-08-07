@@ -1,2 +1,2 @@
-export const GETQUESTIONS = 'GETQUESTIONS';
+export const INITIALISED = 'INITIALISED';
 export const GETANSWERS = 'GETANSWERS';

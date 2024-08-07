@@ -1,10 +1,18 @@
 import { NextRequest, NextResponse } from "next/server";
 import prisma from "../../../../prisma/client";
+import { getToken } from "next-auth/jwt";
 
 export async function GET(req: NextRequest) {
     try {
+        const secret = process.env.JWT_SECRET;
+        const token = await getToken({ req, secret });
+
         const questions = await prisma.question.findMany()
-        return NextResponse.json({ questions }, { status: 201 })
+        console.log(token?.id)
+        const answers = await prisma.answer.findMany({
+            where: { userId: token?.id }
+        })
+        return NextResponse.json({ questions, answers }, { status: 201 })
 
     } catch (error: any) {
 
