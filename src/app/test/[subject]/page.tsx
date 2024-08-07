@@ -8,15 +8,17 @@ import { CountdownCircleTimer } from 'react-countdown-circle-timer'
 import Swal from 'sweetalert2'
 import { useRouter } from 'next/navigation'
 import { useDispatch } from 'react-redux'
+import Bars from 'react-loading-icons/dist/esm/components/bars'
 export default function page({ params }: { params: { subject: String } }) {
     const [questions, setQuestions] = useState<Question[]>()
     const router = useRouter()
     const dispatch = useDispatch()
     const [loading, setLoading] = useState(true)
-    let [counter, setCounter] = useState<number>(60)//seconds
-    let [currentQst, setCurrentQst] = useState<number>(1)//this will know the number of question
+    const [counter, setCounter] = useState<number>(60)//seconds
+    const [currentQst, setCurrentQst] = useState<number>(1)//this will know the number of question
     const { data } = useSession()
-    let [isPlaying, setIsPlaying] = useState(true)
+    const [isPlaying, setIsPlaying] = useState(true)
+    const [wait, setWait] = useState(false)
 
 
 
@@ -34,6 +36,7 @@ export default function page({ params }: { params: { subject: String } }) {
     })
 
     const saveHandler = async () => {
+        setWait(true)
         try {
             const save = await axios.post('/api/answer/save', { answer: result })
             if (save?.data.success) {
@@ -44,6 +47,8 @@ export default function page({ params }: { params: { subject: String } }) {
 
         } catch (e) {
 
+        } finally {
+            setWait(false)
         }
     }
     const NextHandler = () => {
@@ -164,10 +169,14 @@ export default function page({ params }: { params: { subject: String } }) {
                 </div>
                 <div className=' fixed bottom-4  right-4 space-x-2 space-y-2'>
 
-                    <button onClick={leaveHandler} className="bg-red-600 text-lg text-white font-bold py-2 rounded border-white shadow-sm w-24 shadow-white">Leave</button>
+                    <button onClick={leaveHandler} className="bg-red-600 text-lg text-white font-bold py-2 rounded border-white shadow-sm w-24 shadow-white">
+                        {wait ? <Bars className='h-full w-6 text-white' /> : "Leave"}
+
+                    </button>
                     < button className="bg-green-600 text-lg text-white font-bold py-2 rounded border-white shadow-sm w-24 shadow-white"
-                        onClick={NextHandler}
-                    > {currentQst == questions.length ? "finished" : "Continue"}</button>
+                        onClick={NextHandler}>
+                        {wait ? <Bars className='h-full w-6 text-white' /> : currentQst == questions.length ? "finished" : "Continue"}
+                    </button>
                 </div>
             </div>
 
