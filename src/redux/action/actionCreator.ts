@@ -1,4 +1,4 @@
-import { INITIALISED } from "./types"
+import { INITIALISED, PASSEDTEST } from "./types"
 
 export type Question = {
     id: String
@@ -23,5 +23,12 @@ export const getAllQuestions = (questions: Question[], answers: Answer[]) => {
             answers
         }
 
+    }
+}
+
+export const passedTest = (answer: Answer) => {
+    return {
+        type: PASSEDTEST,
+        payload: answer
     }
 }

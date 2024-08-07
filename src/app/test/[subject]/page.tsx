@@ -1,15 +1,17 @@
 "use client"
 import Loader from '@/components/Loader'
-import { Question } from '@/redux/action/actionCreator'
+import { Question, passedTest } from '@/redux/action/actionCreator'
 import axios from 'axios'
 import { useSession } from 'next-auth/react'
 import React, { useEffect, useState } from 'react'
 import { CountdownCircleTimer } from 'react-countdown-circle-timer'
 import Swal from 'sweetalert2'
 import { useRouter } from 'next/navigation'
+import { useDispatch } from 'react-redux'
 export default function page({ params }: { params: { subject: String } }) {
     const [questions, setQuestions] = useState<Question[]>()
     const router = useRouter()
+    const dispatch = useDispatch()
     const [loading, setLoading] = useState(true)
     let [counter, setCounter] = useState<number>(60)//seconds
     let [currentQst, setCurrentQst] = useState<number>(1)//this will know the number of question
@@ -35,8 +37,8 @@ export default function page({ params }: { params: { subject: String } }) {
         try {
             const save = await axios.post('/api/answer/save', { answer: result })
             if (save?.data.success) {
+                dispatch(passedTest(save.data.answer))
                 Swal.fire("Saved!", "", "success");
-
                 router.push("/dashboard/tests")
             }
 

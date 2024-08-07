@@ -1,4 +1,4 @@
-import { INITIALISED } from "../action/types";
+import { INITIALISED, PASSEDTEST } from "../action/types";
 import { Question, Answer } from "../action/actionCreator"
 const initialState = {
     example: "is working",
@@ -21,6 +21,8 @@ export const mainReducer = (state: State = initialState, action: Action) => {
         case INITIALISED:
             const sbj = new Set(action.payload.questions.map((item: Question) => item.subject))
             return { ...state, questions: action.payload.questions, answers: action.payload.answers, subjects: Array.from(sbj).map(((item: any) => { return { name: item, questionsCount: action.payload.questions.filter((elem: Question) => elem.subject == item).length } })) }
+        case PASSEDTEST:
+            return { ...state, answers: [...state.answers, action.payload] }
     }
 
     return state

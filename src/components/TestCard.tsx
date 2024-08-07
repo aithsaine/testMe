@@ -22,7 +22,7 @@ const TestCard = ({ name, duration, isPassed, QuestionsCount, result = 0 }: { na
             <div className="footer-Card text-sm text-inherit flex justify-between flex-col">
                 <span>Duration: {fancyTimeFormat(duration)} min</span>
                 <span>Questions: {String(QuestionsCount)}</span>
-                <span>{isPassed ? <ProgressBar className='m-0.5 text-xs ' height='10px' bgColor={result > 50 ? 'green' : "red"} completed={isNaN(result) ? 0 : result} /> : "Passe exam"}</span>
+                <span>{isPassed ? <ProgressBar className='m-0.5 text-xs ' height='10px' bgColor={result > 50 ? 'green' : "red"} completed={isNaN(result) ? 0 : Math.trunc(result)} /> : "Passe exam"}</span>
 
             </div>
             <motion.button

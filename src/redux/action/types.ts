@@ -1,2 +1,3 @@
 export const INITIALISED = 'INITIALISED';
 export const GETANSWERS = 'GETANSWERS';
+export const PASSEDTEST = 'PASSEDTEST';

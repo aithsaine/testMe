@@ -13,7 +13,7 @@ export async function POST(request: NextRequest) {
         await prisma.$connect()
         await prisma.answer.create({ data: { ...answer, userId: token?.id } })
 
-        return NextResponse.json({ answer, success: true })
+        return NextResponse.json({ answer: { ...answer, userId: token?.id }, success: true })
 
     } catch (error) {
         console.log(error)
