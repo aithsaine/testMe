@@ -9,6 +9,7 @@ import Swal from 'sweetalert2'
 import { useRouter } from 'next/navigation'
 import { useDispatch } from 'react-redux'
 import Bars from 'react-loading-icons/dist/esm/components/bars'
+import { toast } from 'sonner'
 export default function page({ params }: { params: { subject: String } }) {
     const [questions, setQuestions] = useState<Question[]>()
     const router = useRouter()
@@ -87,7 +88,25 @@ export default function page({ params }: { params: { subject: String } }) {
 
         });
     }
+    useEffect(() => {
+        const getIfExists = async () => {
+            setWait(true)
+            try {
+                const resp = await axios.get("/api/answer/get", { params: { subject: params.subject } })
+                if (resp.data.success) {
+                    toast.error("You Already have answered this test")
+                    return router.push("/dashboard/tests")
 
+                }
+                return setLoading(false)
+
+            } catch (error) {
+                console.log(error)
+
+            }
+        }
+        getIfExists()
+    }, [])
 
     const getQuestions = async () => {
 
@@ -133,7 +152,7 @@ export default function page({ params }: { params: { subject: String } }) {
                     <div className='lg:w-5/6 w-full flex items-center justify-center min-h-16  bg-white text-black rounded-2xl text-2xl text-center '>{questions[(currentQst) - 1].title}</div>{/*title of question*/}
                     <div className='lg:w-1/6 w-full  flex justify-end'>
 
-                        <div className=' w-full lg:w-auto ' >
+                        <div className=' w-full items-center justify-center lg:w-auto ' >
                             <CountdownCircleTimer
                                 isPlaying={isPlaying}
                                 key={Number(currentQst)}
@@ -165,7 +184,7 @@ export default function page({ params }: { params: { subject: String } }) {
                                     : elem2
                             ),
                         }));
-                    }} key={index} className={`w-full rounded-2xl ${result.questions.find((elem) => elem.questionId == questions[currentQst - 1].id && elem.answer == item) ? "bg-sky-600" : "bg-fuchsia-600"}  min-h-20 text-white text-2xl m-2`}>{item}</button>)}
+                    }} key={index} className={`w-full rounded-2xl ${result.questions.find((elem) => elem.questionId == questions[currentQst - 1].id && elem.answer == item) ? "bg-sky-600" : "bg-fuchsia-600"}   min-h-10 lg:min-h-20 text-white  lg:text-2xl m-2`}>{item}</button>)}
                 </div>
                 <div className=' fixed bottom-4  right-4 space-x-2 space-y-2'>
 

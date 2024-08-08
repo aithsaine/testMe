@@ -18,8 +18,8 @@ const TestCard = ({ name, duration, isPassed, QuestionsCount, result = 0 }: { na
             <div className="header-Card text-center ">
                 {name}
             </div>
-            <hr className='w-full text-white my-2' />
-            <div className="footer-Card text-sm text-inherit flex justify-between flex-col">
+            <hr className='w-full text-gray-600 my-2' />
+            <div className="footer-Card text-sm text-slate-400 flex justify-between flex-col">
                 <span>Duration: {fancyTimeFormat(duration)} min</span>
                 <span>Questions: {String(QuestionsCount)}</span>
                 <span>{isPassed ? <ProgressBar className='m-0.5 text-xs ' height='10px' bgColor={result > 50 ? 'green' : "red"} completed={isNaN(result) ? 0 : Math.trunc(result)} /> : "Passe exam"}</span>
@@ -42,7 +42,7 @@ const TestCard = ({ name, duration, isPassed, QuestionsCount, result = 0 }: { na
                 }
                 }
                 whileTap={{ scale: isPassed ? 1 : 0.9 }}
-                className={`bg-gradient-to-r  w-full ${isPassed ? "bg-zinc-600 disabled cursor-not-allowed text-gray-400 " : "from-white cursor-pointer to-blue-700"} flex justify-center py-1 px-8 rounded  `}>{isPassed ? "was Passed" : "Pass test"}</motion.button>
+                className={`bg-gradient-to-r  w-full ${isPassed ? "bg-zinc-600 disabled cursor-not-allowed text-gray-400 " : "from-fuchsia-800 cursor-pointer "} flex justify-center py-1 px-8 rounded  `}>{isPassed ? "was Passed" : "Pass test"}</motion.button>
 
         </div>
     )

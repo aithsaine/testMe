@@ -47,7 +47,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
                     }}
                     className='relative flex items-center '>
 
-                    <LuLayoutDashboard className='w-full text-fuchsia-600' />
+                    <LuLayoutDashboard className='w-full text-white' />
                     <span className='-right-24 hidden z-auto fixed font-bold text-sm'>Dashboard</span>
                 </Link>
                 <Link href={"/"} onMouseEnter={(e) => {
@@ -66,7 +66,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
                     }}
                     className='relative flex items-center '>
 
-                    <LuHome className='w-full text-fuchsia-600' />
+                    <LuHome className='w-full text-white' />
                     <span className='-right-14 hidden z-50 fixed font-bold text-sm'>Home</span>
                 </Link>
                 <Link href={"/dashboard/tests"} onMouseEnter={(e) => {
@@ -85,7 +85,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
                     }}
                     className='relative flex items-center '>
 
-                    <LuFlaskRound className='w-full text-fuchsia-600' />
+                    <LuFlaskRound className='w-full text-white' />
                     <span className='-right-14 hidden z-50 fixed font-bold text-sm'>Tests</span>
                 </Link>
                 <div onMouseEnter={(e) => {
@@ -104,7 +104,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
                     }}
                     className='relative flex items-center '>
 
-                    <LuUserCircle className='w-full text-fuchsia-600' />
+                    <LuUserCircle className='w-full text-white' />
                     <span className='-right-14 hidden z-50 fixed font-bold text-sm'>Profile</span>
                 </div>
                 <div onMouseEnter={(e) => {
@@ -123,7 +123,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
                     }}
                     className='relative flex items-center '>
 
-                    <LuActivity className='w-full text-fuchsia-600' />
+                    <LuActivity className='w-full text-white' />
                     <span className='-right-14 hidden z-50 fixed font-bold text-sm'>Tests</span>
                 </div>
                 <div
@@ -145,13 +145,13 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
                     }}
                     className='relative cursor-pointer flex items-center '>
 
-                    <LuLogOut className='w-full text-fuchsia-600' />
+                    <LuLogOut className='w-full text-white' />
                     <span className='-right-14 hidden z-50 fixed font-bold text-sm'>LogOut</span>
                 </div>
 
             </div>
             <div style={{ backdropFilter: "blur(60px)", boxShadow: "0px 0px 4px rgba(227,228,237)" }} className="w-full overflow-auto p-2 h-full rounded-xl  ">
-                <div className=' text-2xl text-fuchsia-500 justify-center flex w-full '>Hello <FaHandHoldingHeart className='w-10' /> {data?.user?.firstname} {data?.user.lastname}</div>
+                <div className=' text-2xl text-gray-400 justify-center flex w-full '>Hello <FaHandHoldingHeart className='w-10' /> {data?.user?.firstname} {data?.user.lastname}</div>
 
                 {children}
             </div>
