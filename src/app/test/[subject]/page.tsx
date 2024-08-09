@@ -88,35 +88,25 @@ export default function page({ params }: { params: { subject: String } }) {
 
         });
     }
-    useEffect(() => {
-        const getIfExists = async () => {
-            setWait(true)
-            try {
-                const resp = await axios.get("/api/answer/get", { params: { subject: params.subject } })
-                if (resp.data.success) {
-                    toast.error("You Already have answered this test")
-                    return router.push("/dashboard/tests")
 
-                }
-                return setLoading(false)
-
-            } catch (error) {
-                console.log(error)
-
-            }
-        }
-        getIfExists()
-    }, [])
 
     const getQuestions = async () => {
 
         try {
+            const resp = await axios.get("/api/answer/get", { params: { subject: params.subject } })
+            if (resp.data.success) {
+                toast.error("You Already have answered this test")
+                return router.push("/dashboard/tests")
+
+            }
+
+        } catch (error) {
             const response = await axios.get("/api/question", { params: { subject: decodeURIComponent(params.subject as string) } });
+
             if (response.data.success)
                 setQuestions(response.data.questions)
             setResult({ ...result, questions: response.data.questions.map((item: Question) => { return { questionId: item.id, answer: "" } }) })
 
-        } catch (error) {
             console.log(error)
 
         } finally {
