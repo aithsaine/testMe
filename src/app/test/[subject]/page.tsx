@@ -126,23 +126,23 @@ export default function page({ params }: { params: { subject: String } }) {
     }
 
     return (questions?.length &&
-        <div className='flex space-x-2 items-start space-y-2'>
-            <div className=" flex flex-wrap justify-between items-center  w-3/12 rounded-lg border border-sky-200 space-x-2 space-y-2 px-1 shadow-sky-500  shadow-lg min-h-screen">
+        <div className='flex  items-start h-screen '>
+            <div className=" flex flex-wrap justify-between items-center  w-1/12 lg:w-3/12 rounded-lg border border-sky-200   px-1 shadow-sky-500  shadow-lg min-h-screen">
                 {questions && Array.from({ length: questions.length }, (_, idx) => <div
                     style={{ backdropFilter: "blur(60px)", boxShadow: "0px 0px 10pxrgba(192, 38, 211, 1,0.37)", border: "2px solid rgba(192, 38, 211, 1,0.18)" }}
 
-                    className={`w-10 lg:w-20 h-10 lg:h-20 flex flex-col rounded items-center justify-center ${Number(idx) <= Number(currentQst) - 1 ? "bg-gray-600" : ""}  border-2 border-collapse`} key={idx}>
-                    <h1 className='text-xs hidden md:inline-block'>Question N°</h1>
+                    className={`w-full lg:w-20 h-max lg:h-20 flex flex-col rounded items-center lg:m-2 justify-center ${Number(idx) <= Number(currentQst) - 1 ? "bg-gray-600" : ""}  border-2 border-collapse`} key={idx}>
+                    <h1 className='text-xs hidden lg:inline-block'>Question N°</h1>
                     <span>{idx + 1}</span>
                 </div >)}
             </div>
-            <div className="w-9/12 p-4 rounded-xl border border-sky-200  shadow-sky-500 shadow-lg min-h-screen">
+            <div className="w-11/12 lg:w-9/12 p-4  rounded-xl border border-sky-200  shadow-sky-500 shadow-lg min-h-screen">
                 <div className="w-full flex flex-col-reverse items-center  lg:flex-row min-h-20 justify-center lg:justify-between ">
 
-                    <div className='lg:w-5/6 w-full flex items-center justify-center min-h-16  bg-white text-black rounded-2xl text-2xl text-center '>{questions[(currentQst) - 1].title}</div>{/*title of question*/}
+                    <div className='lg:w-5/6 w-full flex items-center justify-center min-h-16  bg-white text-black rounded-2xl lg:text-2xl text-center '>{questions[(currentQst) - 1].title}</div>{/*title of question*/}
                     <div className='lg:w-1/6 w-full  flex justify-end'>
 
-                        <div className=' w-full items-center justify-center lg:w-auto ' >
+                        <div className=' lg:w-auto ' >
                             <CountdownCircleTimer
                                 isPlaying={isPlaying}
                                 key={Number(currentQst)}
@@ -178,11 +178,11 @@ export default function page({ params }: { params: { subject: String } }) {
                 </div>
                 <div className=' fixed bottom-4  right-4 space-x-2 space-y-2'>
 
-                    <button onClick={leaveHandler} className="bg-red-600 text-lg text-white font-bold py-2 rounded border-white shadow-sm w-24 shadow-white">
+                    <button onClick={leaveHandler} className="bg-red-600 lg:text-lg text-white font-bold py-1 lg:py-2 rounded border-white shadow-sm w-20 lg:w-24 shadow-white">
                         {wait ? <Bars className='h-full w-6 text-white' /> : "Leave"}
 
                     </button>
-                    < button className="bg-green-600 text-lg text-white font-bold py-2 rounded border-white shadow-sm w-24 shadow-white"
+                    < button className="bg-green-600 lg:text-lg text-white font-bold py-1 lg:py-2 rounded border-white shadow-sm  w-20 lg:w-24 shadow-white"
                         onClick={NextHandler}>
                         {wait ? <Bars className='h-full w-6 text-white' /> : currentQst == questions.length ? "finished" : "Continue"}
                     </button>
