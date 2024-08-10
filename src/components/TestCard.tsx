@@ -28,7 +28,8 @@ const TestCard = ({ name, duration, isPassed, QuestionsCount, result = 0 }: { na
             <motion.button
 
                 onClick={() => {
-                    if (!isPassed)
+                    if (!isPassed) {
+
                         Swal.fire({
                             timerProgressBar: true,
                             title: "If You Start this test you cannot leave until terminate?",
@@ -39,6 +40,9 @@ const TestCard = ({ name, duration, isPassed, QuestionsCount, result = 0 }: { na
                                 router.push(`/test/${name}`)
                             }
                         });
+                    }
+                    router.push(`/test/${name}`)
+
                 }
                 }
                 whileTap={{ scale: isPassed ? 1 : 0.9 }}
