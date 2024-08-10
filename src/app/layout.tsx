@@ -26,7 +26,7 @@ export default function RootLayout({
         <AuthProvider>
 
           <Toaster richColors />
-          <main className="overflow-hidden">
+          <main className="bg-scroll">
 
             {children}
           </main>
