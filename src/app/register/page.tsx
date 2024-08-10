@@ -6,6 +6,7 @@ import axios from "axios"
 import { toast } from 'sonner'
 import { useRouter } from 'next/navigation'
 import Nav from '@/components/Nav'
+import { FcGoogle } from 'react-icons/fc'
 
 export default function page() {
     const navigate = useRouter()
@@ -76,6 +77,10 @@ export default function page() {
                     whileTap={{ scale: 0.9 }}
                     className={"bg-gradient-to-r font-sans font-bold items-center md:w-1/4 w-2/3 from-sky-800 flex justify-center via-blue-300 px-1 py-2 rounded to-red-700"}
                 >Register</motion.button>
+                <motion.button
+                    whileTap={{ scale: 0.9 }}
+                    className={"bg-gradient-to-r  items-center space-x-2 md:w-1/4 w-2/3 from-sky-800 flex justify-center via-blue-300 px-1 py-2 rounded to-red-700"}><FcGoogle className='h-full' /><span className='font-sans font-bold'>Google Authentication</span> </motion.button>
+
                 <Link href={"/login"}
                     className={"bg-gradient-to-r font-sans font-bold items-center md:w-1/4 w-2/3 from-sky-800 flex justify-center via-blue-300 px-1 py-2 rounded to-red-700"}
 

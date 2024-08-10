@@ -18,7 +18,7 @@ export async function GET(req: NextRequest) {
         })
         console.log(answer)
         if (answer) {
-            return NextResponse.json({ success: true })
+            return NextResponse.json({ success: true, answer })
         }
         return NextResponse.json({ success: false }, { status: 401 })
 
