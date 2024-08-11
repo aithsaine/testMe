@@ -5,7 +5,6 @@ import Link from 'next/link'
 import axios from "axios"
 import { toast } from 'sonner'
 import { useRouter } from 'next/navigation'
-import Nav from '@/components/Nav'
 import { FcGoogle } from 'react-icons/fc'
 
 export default function page() {
@@ -37,35 +36,33 @@ export default function page() {
             <div className='flex min-h-screen space-y-4 flex-col items-center justify-center'>
                 <h1 className='text-white text-2xl uppercase'>Register</h1>
 
-                <div className="flex md:w-1/4 w-1/2 text-white font-sans space-y-1 flex-col">
+                <div className="flex  md:w-1/4 w-2/3 text-white font-sans space-y-1 flex-col">
                     {/* <label htmlFor="first name">First Name</label> */}
                     <input onChange={(e: any) => setFirstName(e.target.value)} type="text" placeholder='first name...'
                         className='rounded bg-opacity-90	 px-1 py-2  backdrop-blur-3xl border-2 border-white bg-transparent'
 
                     />
                 </div>
-                <div className="flex md:w-1/4 w-1/2 text-white font-sans space-y-1 flex-col">
+                <div className="flex md:w-1/4 w-2/3 text-white font-sans space-y-1 flex-col">
                     {/* <label htmlFor="last name">Lasr Name</label> */}
                     <input onChange={(e: any) => setLastName(e.target.value)} type="text" placeholder='last name...'
                         className='rounded bg-opacity-90	 px-1 py-2  backdrop-blur-3xl border-2 border-white bg-transparent'
 
                     />
                 </div>
-                <div className="flex md:w-1/4 w-1/2 text-white font-sans space-y-1 flex-col">
+                <div className="flex md:w-1/4 w-2/3 text-white font-sans space-y-1 flex-col">
                     {/* <label htmlFor="last name">Lasr Name</label> */}
                     <input onChange={(e: any) => setEmail(e.target.value)} type="email" placeholder='email...'
                         className='rounded bg-opacity-90	 px-1 py-2  backdrop-blur-3xl border-2 border-white bg-transparent'
-
                     />
                 </div>
-                <div className="flex md:w-1/4 w-1/2 text-white font-sans space-y-1 flex-col">
+                <div className="flex md:w-1/4 w-2/3 text-white font-sans space-y-1 flex-col">
                     {/* <label htmlFor="last name">Lasr Name</label> */}
                     <input onChange={(e: any) => setPassword(e.target.value)} type="password" placeholder='password...'
                         className='rounded bg-opacity-90	 px-1 py-2  backdrop-blur-3xl border-2 border-white bg-transparent'
-
                     />
                 </div>
-                <div className="flex md:w-1/4 w-1/2 text-white font-sans space-y-1 flex-col">
+                <div className="flex md:w-1/4 w-2/3 text-white font-sans space-y-1 flex-col">
                     {/* <label htmlFor="last name">Lasr Name</label> */}
                     <input onChange={(e: any) => setConfirmPsd(e.target.value)} type="password" placeholder='confirm password...'
                         className='rounded bg-opacity-90	 px-1 py-2  backdrop-blur-3xl border-2 border-white bg-transparent'

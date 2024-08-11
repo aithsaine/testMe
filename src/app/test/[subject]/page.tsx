@@ -150,7 +150,7 @@ export default function page({ params }: { params: { subject: String } }) {
                         if (isAnswerd)
                             setCurrentQst(idx + 1)
                     }}
-                    className={`w-full lg:w-20 h-max ${isAnswerd ? questions[idx].correctAnswer == oldAnswer.questions.find(elem => elem.questionId == questions[idx].id).answer ? "cursor-pointer bg-green-800" : "cursor-pointer bg-red-700" : ''} lg:h-20 flex flex-col rounded items-center lg:m-2 justify-center ${Number(idx) == Number(currentQst) - 1 ? "border-sky-600" : ""}  border-2 border-collapse`} key={idx}>
+                    className={`w-full lg:w-20 h-max ${isAnswerd ? questions[idx].correctAnswer == oldAnswer.questions.find(elem => elem.questionId == questions[idx].id).answer ? "cursor-pointer bg-green-800" : "cursor-pointer bg-red-700" : ''} lg:h-20 flex flex-col rounded items-center lg:m-2 justify-center ${Number(idx) == Number(currentQst) - 1 ? "border-sky-600" : ""}  border-4 border-collapse`} key={idx}>
                     <h1 className='text-xs hidden lg:inline-block'>Question N°</h1>
                     <span>{idx + 1}</span>
                 </div >)}
@@ -158,7 +158,7 @@ export default function page({ params }: { params: { subject: String } }) {
             <div className="w-11/12 lg:w-9/12 p-4  rounded-xl border border-sky-200  shadow-sky-500 shadow-lg min-h-screen">
                 <div className="w-full flex flex-col-reverse items-center  lg:flex-row min-h-20 justify-center lg:justify-between ">
 
-                    <div className={`${isAnswerd ? "w-full" : "lg:w-5/6"} w-full flex items-center justify-center min-h-16  bg-white text-black rounded-2xl lg:text-2xl text-center `}>{questions[(currentQst) - 1].title}</div>{/*title of question*/}
+                    <div className={`${isAnswerd ? "w-full" : "lg:w-5/6"} w-full flex items-center justify-center min-h-24 lg:min-h-16  bg-white text-black rounded-2xl lg:text-2xl text-center `}>{questions[(currentQst) - 1].title}</div>{/*title of question*/}
                     {!isAnswerd && <div className='lg:w-1/6 w-full  flex justify-end'>
 
                         <div className=' lg:w-auto ' >
@@ -195,7 +195,7 @@ export default function page({ params }: { params: { subject: String } }) {
                                             : elem2
                                     ),
                                 }));
-                        }} key={index} className={`w-full ${isAnswerd && questions[currentQst - 1].correctAnswer == item ? "bg-green-600" : oldAnswer.questions.find(elem => elem.questionId == questions[currentQst - 1].id).answer == item && questions[currentQst - 1].correctAnswer != item ? "bg-red-700" : "bg-fuchsia-700"} rounded-2xl ${!isAnswerd ? (result.questions.find((elem) => elem.questionId == questions[currentQst - 1].id && elem.answer == item) ? "bg-sky-600" : "bg-fuchsia-700") : ""}   min-h-10 lg:min-h-20 text-white  lg:text-2xl m-2`}>{item}
+                        }} key={index} className={`w-full ${isAnswerd && oldAnswer.questions.find(elem => elem.questionId == questions[currentQst - 1].id).answer !== "" && questions[currentQst - 1].correctAnswer == item ? "bg-green-600" : oldAnswer.questions.find(elem => elem.questionId == questions[currentQst - 1].id).answer == item && questions[currentQst - 1].correctAnswer != item ? "bg-red-700" : "bg-fuchsia-700"} rounded-2xl ${!isAnswerd ? (result.questions.find((elem) => elem.questionId == questions[currentQst - 1].id && elem.answer == item) ? "bg - sky - 600" : "bg - fuchsia - 700") : ""}   min-h-10 lg:min-h-20 text-white  lg:text-2xl m-2`}>{item}
                         </button>)}
                 </div>
                 <div className=' fixed bottom-4  right-4 space-x-2 space-y-2'>

@@ -29,7 +29,9 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
         return <Loader />
     }
     return (
-        <div className='flex py-4 items-start mt-2 px-6 overflow-hidden h-screen space-x-2 justify-center text-white '>
+        <div
+            className='flex py-4 items-start mt-2 px-6 overflow-auto h-screen space-x-2 justify-center text-white '>
+
             <div style={{ width: "60px", backdropFilter: "blur(60px)", boxShadow: "0px 0px 10px rgba(227,228,237,0.37)", border: "2px solid rgba(255,255,255,0.18)" }} className=" flex text-4xl flex-col rounded-xl h-full py-4 space-y-6 bg-00">
                 <Link href={"/dashboard"} onMouseEnter={(e) => {
                     const elem: any = e.currentTarget
@@ -150,7 +152,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
                 </div>
 
             </div>
-            <div style={{ backdropFilter: "blur(60px)", boxShadow: "0px 0px 4px rgba(227,228,237)" }} className="w-full overflow-auto p-2 h-full rounded-xl  ">
+            <div style={{ backdropFilter: "blur(60px)", boxShadow: "0px 0px 4px rgba(227,228,237)" }} className="w-full overflow-hidden p-2 h-full rounded-xl  ">
                 <div className=' text-2xl text-gray-400 justify-center flex w-full '>Hello <FaHandHoldingHeart className='w-10' /> {data?.user?.firstname} {data?.user.lastname}</div>
 
                 {children}

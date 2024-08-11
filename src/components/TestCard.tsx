@@ -11,44 +11,66 @@ const TestCard = ({ name, duration, isPassed, QuestionsCount, result = 0 }: { na
     const router = useRouter()
     return (
         <div
-            onMouseEnter={e => console.log(result)}
-            style={{ minWidth: "200px", backdropFilter: "blur(60px)", boxShadow: "0px 0px 10px rgba(227,228,237,0.37)", border: "2px solid rgba(255,255,255,0.18)" }}
-
-            className='flex  flex-col hover:scale-105 w-1/6 justify-between border-2 p-2  rounded   m-2 '>
-            <div className="header-Card text-center ">
+            style={{
+                minWidth: "220px", // Slightly wider for better content accommodation
+                backdropFilter: "blur(60px)",
+                boxShadow: "0px 4px 15px rgba(0, 0, 0, 0.15)", // Softer shadow for a more elegant look
+                border: "2px solid rgba(255, 255, 255, 0.25)", // Slightly more visible border
+                borderRadius: "12px", // Softer rounded corners
+                background: "linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05))" // Subtle gradient background
+            }}
+            className='flex flex-col hover:scale-105 transition-transform duration-300 w-1/5 justify-between border p-4 rounded-lg m-3'
+        >
+            {/* Header */}
+            <div className="header-Card text-center text-lg font-semibold text-white">
                 {name}
             </div>
-            <hr className='w-full text-gray-600 my-2' />
-            <div className="footer-Card text-sm text-slate-400 flex justify-between flex-col">
+
+            <hr className='w-full text-gray-500 my-3' />
+
+            {/* Footer */}
+            <div className="footer-Card text-sm text-gray-300 flex justify-between flex-col space-y-2">
                 <span>Duration: {fancyTimeFormat(duration)} min</span>
                 <span>Questions: {String(QuestionsCount)}</span>
-                <span>{isPassed ? <ProgressBar className='m-0.5 text-xs ' height='10px' bgColor={result > 50 ? 'green' : "red"} completed={isNaN(result) ? 0 : Math.trunc(result)} /> : "Passe exam"}</span>
-
+                <span>
+                    {isPassed ? (
+                        <ProgressBar
+                            className='m-0.5 text-xs rounded-full overflow-hidden'
+                            height='18px'
+                            bgColor={result > 50 ? 'green' : 'red'}
+                            completed={isNaN(result) ? 0 : Math.trunc(result)}
+                        />
+                    ) : (
+                        <span className="text-blue-400 cursor-pointer hover:underline">Pass exam</span>
+                    )}
+                </span>
             </div>
-            <motion.button
 
+            {/* Button */}
+            <motion.button
                 onClick={() => {
                     if (!isPassed) {
-
                         Swal.fire({
                             timerProgressBar: true,
-                            title: "If You Start this test you cannot leave until terminate?",
+                            title: "If you start this test, you cannot leave until it is finished.",
                             showCancelButton: true,
                             confirmButtonText: "Start",
-                        }).then((result) => {
+                        }).then(result => {
                             if (result.isConfirmed) {
-                                router.push(`/test/${name}`)
+                                router.push(`/test/${name}`);
                             }
                         });
+                    } else {
+                        router.push(`/test/${name}`);
                     }
-                    router.push(`/test/${name}`)
-
-                }
-                }
-                whileTap={{ scale: isPassed ? 1 : 0.9 }}
-                className={`bg-gradient-to-r  w-full ${isPassed ? "underline  text-gray-400 " : "from-sky-800 via-blue-300 to-blue-700 text-gray-800  cursor-pointer "} flex justify-center py-1 px-8 rounded  `}>{isPassed ? "Your Answers" : "Pass test"}</motion.button>
-
+                }}
+                whileTap={{ scale: isPassed ? 1 : 0.95 }}
+                className={`bg-gradient-to-r w-full py-2 px-6 rounded-lg text-center mt-4 transition-all duration-300 ${isPassed ? "underline text-gray-400 cursor-pointer" : "from-blue-600 to-blue-400 text-white cursor-pointer hover:from-blue-700 hover:to-blue-500"}`}
+            >
+                {isPassed ? "Your Answers" : "Pass Test"}
+            </motion.button>
         </div>
+
 
     )
 }
