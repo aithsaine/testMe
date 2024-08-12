@@ -3,6 +3,7 @@ import Nav from "@/components/Nav";
 
 import Section from "@/components/Section";
 import Services from "@/components/Services";
+import SponsorsTicker from "@/components/Sponsors";
 import { useSession } from "next-auth/react";
 import { useEffect } from "react";
 
@@ -17,6 +18,7 @@ export default function Home() {
       <Nav />
       <Section />
       <Services />
+      <SponsorsTicker />
     </main>
   );
 }
