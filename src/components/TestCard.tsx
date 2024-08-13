@@ -19,7 +19,7 @@ const TestCard = ({ name, duration, isPassed, QuestionsCount, result = 0 }: { na
                 borderRadius: "10px",
                 background: "linear-gradient(135deg, rgba(0, 0, 0, 0.6), rgba(20, 20, 20, 0.4))"
             }}
-            className='flex flex-col hover:scale-105 transition-transform duration-200 w-1/6 justify-between p-3 rounded-lg m-2'
+            className='flex flex-col hover:scale-105 transition-transform duration-200 justify-between p-3 rounded-lg m-2'
         >
             {/* Header */}
             <div className="text-center text-sm font-medium text-teal-300">
@@ -29,7 +29,7 @@ const TestCard = ({ name, duration, isPassed, QuestionsCount, result = 0 }: { na
             <hr className='w-full text-teal-400 my-2' />
 
             {/* Footer */}
-            <div className="text-xs text-gray-300 space-y-1">
+            <div className="text-xs flex flex-col justify-start text-gray-300 space-y-1">
                 <span>Duration: {fancyTimeFormat(duration)} min</span>
                 <span>Questions: {QuestionsCount}</span>
                 <span>

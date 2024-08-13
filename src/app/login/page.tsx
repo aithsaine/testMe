@@ -6,18 +6,13 @@ import { toast } from 'sonner'
 import axios from 'axios'
 import { useRouter } from 'next/navigation'
 import { signIn } from 'next-auth/react'
-import Nav from '@/components/Nav'
 import { FcGoogle } from 'react-icons/fc'
 import { Bars } from "react-loading-icons"
 
-
-
-
-
-export default function page() {
+export default function Page() {
     const [wait, setWait] = useState(false)
-    const [email, setEmail] = useState()
-    const [password, setPassword] = useState()
+    const [email, setEmail] = useState<string>("")
+    const [password, setPassword] = useState<string>("")
     const router = useRouter()
 
     const handleSubmit = async (e: React.FormEvent) => {
@@ -38,44 +33,63 @@ export default function page() {
             }
         } catch (error) {
             console.log(error)
+        } finally {
+            setWait(false)
         }
-        finally {
-            setWait(true)
-        }
-
     };
-    return (<>
-        <div className='flex min-h-screen space-y-4 flex-col items-center justify-center'>
-            <h1 className='font-sans line-clamp-5 text-white text-2xl uppercase'>Login</h1>
 
-            <div className="flex md:w-1/4 w-2/3 text-white font-sans space-y-1 flex-col">
-                {/* <label htmlFor="last name">Lasr Name</label> */}
-                <input type="email" name='email' id='email' onChange={(e: any) => setEmail(e.target.value)} autoComplete='OFF' placeholder='Email...'
-                    className='rounded bg-opacity-90	 px-1 py-2  backdrop-blur-3xl border-2 border-white bg-transparent'
-                />
+    return (
+        <div className='flex min-h-screen items-center justify-center bg-gradient-to-r from-gray-900 via-black to-gray-900'>
+            <div className='w-full max-w-md p-8 space-y-6 bg-black bg-opacity-50 backdrop-blur-lg rounded-lg shadow-lg'>
+                <h1 className='text-3xl font-bold text-center text-white uppercase'>Login</h1>
+
+                <form onSubmit={handleSubmit} className="space-y-4">
+                    <input
+                        type="email"
+                        name='email'
+                        id='email'
+                        onChange={(e) => setEmail(e.target.value)}
+                        placeholder='Email'
+                        autoComplete='off'
+                        className='w-full px-4 py-2 text-sm text-white bg-transparent border border-gray-700 rounded-md focus:ring-2 focus:ring-sky-500 outline-none'
+                    />
+                    <input
+                        type="password"
+                        name='password'
+                        id='password'
+                        onChange={(e) => setPassword(e.target.value)}
+                        placeholder='Password'
+                        className='w-full px-4 py-2 text-sm text-white bg-transparent border border-gray-700 rounded-md focus:ring-2 focus:ring-sky-500 outline-none'
+                    />
+
+                    <motion.button
+                        type="submit"
+                        whileTap={{ scale: 0.95 }}
+                        className="w-full py-2 items-center justify-center text-center flex text-white bg-gradient-to-r from-blue-600 to-blue-400 rounded-md shadow-md hover:from-blue-700 hover:to-blue-500 focus:ring-2 focus:ring-sky-500 transition-all duration-200"
+                    >
+                        {wait ? <Bars className='h-full w-6 text-green-500' /> : 'Login with Credentials'}
+                    </motion.button>
+                </form>
+
+                <div className="flex items-center justify-center space-x-2 mt-6">
+                    <div className="w-1/3 h-px bg-gray-600"></div>
+                    <span className="text-sm text-gray-400">or</span>
+                    <div className="w-1/3 h-px bg-gray-600"></div>
+                </div>
+
+                <motion.button
+                    onClick={() => signIn('google')}
+                    whileTap={{ scale: 0.95 }}
+                    className="flex items-center justify-center w-full py-2 mt-2 space-x-2 text-white bg-gray-800 rounded-md shadow-md hover:bg-gray-700 focus:ring-2 focus:ring-sky-500 transition-all duration-200"
+                >
+                    <FcGoogle className='w-5 h-5' />
+                    <span className="font-semibold">Sign in with Google</span>
+                </motion.button>
+
+                <Link href="/register" className="block mt-4 text-sm font-semibold text-center text-blue-400 hover:underline">
+                    Don’t have an account? Sign Up
+                </Link>
             </div>
-            <div className="flex md:w-1/4 w-2/3 text-white font-sans space-y-1 flex-col">
-                {/* <label htmlFor="last name">Lasr Name</label> */}
-                <input type="password" name='password' id='password' onChange={(e: any) => setPassword(e.target.value)} placeholder='Password...'
-                    className='rounded bg-opacity-90	 px-1 py-2  backdrop-blur-3xl border-2 border-white bg-transparent'
-
-                />
-            </div>
-
-            <motion.button
-                onClick={handleSubmit}
-                whileTap={{ scale: 0.9 }}
-                className={"bg-gradient-to-r font-sans font-bold items-center md:w-1/4 w-2/3 from-sky-800 flex justify-center via-blue-300 px-1 py-2 rounded to-red-700"}
-            >{wait ? <Bars className='h-full w-6 text-green-900' /> : 'Login with credentials'}</motion.button>
-
-            <motion.button
-                whileTap={{ scale: 0.9 }}
-                className={"bg-gradient-to-r  items-center space-x-2 md:w-1/4 w-2/3 from-sky-800 flex justify-center via-blue-300 px-1 py-2 rounded to-red-700"}><FcGoogle className='h-full' /><span className='font-sans font-bold'>Google Authentication</span> </motion.button>
-            <Link href={"/register"}
-                className={"bg-gradient-to-r font-sans font-bold items-center md:w-1/4 w-2/3 from-sky-800 flex justify-center via-blue-300 px-1 py-2 rounded to-red-700"}
-            >SignUp</Link >
-
         </div>
-    </>
     )
 }

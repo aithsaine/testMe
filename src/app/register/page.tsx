@@ -7,87 +7,91 @@ import { toast } from 'sonner'
 import { useRouter } from 'next/navigation'
 import { FcGoogle } from 'react-icons/fc'
 
-export default function page() {
+export default function Page() {
     const navigate = useRouter()
-    const [firstname, setFirstName] = useState();
-    const [lastname, setLastName] = useState()
-    const [email, setEmail] = useState();
-    const [password, setPassword] = useState();
-    const [confirmPsd, setConfirmPsd] = useState();
+    const [firstname, setFirstName] = useState<string>("");
+    const [lastname, setLastName] = useState<string>("");
+    const [email, setEmail] = useState<string>("");
+    const [password, setPassword] = useState<string>("");
+    const [confirmPsd, setConfirmPsd] = useState<string>("");
 
     const registerHandler = async () => {
         try {
             const response = await axios.post("/api/register", { firstname, lastname, email, password, confirmPsd })
-
             toast.success(response.data.message)
-            return navigate.push("/login")
-
-
-
+            navigate.push("/login")
         } catch (error: any) {
             if (error.response.status == 422)
-                return toast.error(error.response.data.message)
-
-            return toast.error("somethink wrong");
+                toast.error(error.response.data.message)
+            else
+                toast.error("Something went wrong");
         }
     }
+
     return (
-        <>
-            <div className='flex min-h-screen space-y-4 flex-col items-center justify-center'>
-                <h1 className='text-white text-2xl uppercase'>Register</h1>
+        <div className='flex min-h-screen items-center justify-center bg-gradient-to-r from-gray-900 via-black to-gray-900'>
+            <div className='w-full max-w-md p-8 space-y-6 bg-black bg-opacity-50 backdrop-blur-lg rounded-lg shadow-lg'>
+                <h1 className='text-3xl font-bold text-center text-white uppercase'>Register</h1>
 
-                <div className="flex  md:w-1/4 w-2/3 text-white font-sans space-y-1 flex-col">
-                    {/* <label htmlFor="first name">First Name</label> */}
-                    <input onChange={(e: any) => setFirstName(e.target.value)} type="text" placeholder='first name...'
-                        className='rounded bg-opacity-90	 px-1 py-2  backdrop-blur-3xl border-2 border-white bg-transparent'
+                <div className="space-y-4">
+                    <input
+                        onChange={(e) => setFirstName(e.target.value)}
+                        type="text"
+                        placeholder='First Name'
+                        className='w-full px-4 py-2 text-sm text-white bg-transparent border border-gray-700 rounded-md focus:ring-2 focus:ring-sky-500 outline-none'
+                    />
+                    <input
+                        onChange={(e) => setLastName(e.target.value)}
+                        type="text"
+                        placeholder='Last Name'
+                        className='w-full px-4 py-2 text-sm text-white bg-transparent border border-gray-700 rounded-md focus:ring-2 focus:ring-sky-500 outline-none'
+                    />
+                    <input
+                        onChange={(e) => setEmail(e.target.value)}
+                        type="email"
+                        placeholder='Email'
+                        className='w-full px-4 py-2 text-sm text-white bg-transparent border border-gray-700 rounded-md focus:ring-2 focus:ring-sky-500 outline-none'
+                    />
+                    <input
+                        onChange={(e) => setPassword(e.target.value)}
+                        type="password"
+                        placeholder='Password'
+                        className='w-full px-4 py-2 text-sm text-white bg-transparent border border-gray-700 rounded-md focus:ring-2 focus:ring-sky-500 outline-none'
+                    />
+                    <input
+                        onChange={(e) => setConfirmPsd(e.target.value)}
+                        type="password"
+                        placeholder='Confirm Password'
+                        className='w-full px-4 py-2 text-sm text-white bg-transparent border border-gray-700 rounded-md focus:ring-2 focus:ring-sky-500 outline-none'
+                    />
+                </div>
 
-                    />
-                </div>
-                <div className="flex md:w-1/4 w-2/3 text-white font-sans space-y-1 flex-col">
-                    {/* <label htmlFor="last name">Lasr Name</label> */}
-                    <input onChange={(e: any) => setLastName(e.target.value)} type="text" placeholder='last name...'
-                        className='rounded bg-opacity-90	 px-1 py-2  backdrop-blur-3xl border-2 border-white bg-transparent'
-
-                    />
-                </div>
-                <div className="flex md:w-1/4 w-2/3 text-white font-sans space-y-1 flex-col">
-                    {/* <label htmlFor="last name">Lasr Name</label> */}
-                    <input onChange={(e: any) => setEmail(e.target.value)} type="email" placeholder='email...'
-                        className='rounded bg-opacity-90	 px-1 py-2  backdrop-blur-3xl border-2 border-white bg-transparent'
-                    />
-                </div>
-                <div className="flex md:w-1/4 w-2/3 text-white font-sans space-y-1 flex-col">
-                    {/* <label htmlFor="last name">Lasr Name</label> */}
-                    <input onChange={(e: any) => setPassword(e.target.value)} type="password" placeholder='password...'
-                        className='rounded bg-opacity-90	 px-1 py-2  backdrop-blur-3xl border-2 border-white bg-transparent'
-                    />
-                </div>
-                <div className="flex md:w-1/4 w-2/3 text-white font-sans space-y-1 flex-col">
-                    {/* <label htmlFor="last name">Lasr Name</label> */}
-                    <input onChange={(e: any) => setConfirmPsd(e.target.value)} type="password" placeholder='confirm password...'
-                        className='rounded bg-opacity-90	 px-1 py-2  backdrop-blur-3xl border-2 border-white bg-transparent'
-
-                    />
-                </div>
                 <motion.button
                     onClick={registerHandler}
-                    whileTap={{ scale: 0.9 }}
-                    className={"bg-gradient-to-r font-sans font-bold items-center md:w-1/4 w-2/3 from-sky-800 flex justify-center via-blue-300 px-1 py-2 rounded to-red-700"}
-                >Register</motion.button>
-                <motion.button
-                    whileTap={{ scale: 0.9 }}
-                    className={"bg-gradient-to-r  items-center space-x-2 md:w-1/4 w-2/3 from-sky-800 flex justify-center via-blue-300 px-1 py-2 rounded to-red-700"}><FcGoogle className='h-full' /><span className='font-sans font-bold'>Google Authentication</span> </motion.button>
+                    whileTap={{ scale: 0.95 }}
+                    className="w-full py-2 text-white bg-gradient-to-r from-blue-600 to-blue-400 rounded-md shadow-md hover:from-blue-700 hover:to-blue-500 focus:ring-2 focus:ring-sky-500 transition-all duration-200"
+                >
+                    Register
+                </motion.button>
 
-                <Link href={"/login"}
-                    className={"bg-gradient-to-r font-sans font-bold items-center md:w-1/4 w-2/3 from-sky-800 flex justify-center via-blue-300 px-1 py-2 rounded to-red-700"}
-
-                >Already has an account</Link >
-
-                <div className="flex md:w-1/4 w-1/2 text-white font-sans space-y-1 flex-col">
-                    {/* <label htmlFor="last name">Lasr Name</label> */}
-
+                <div className="flex items-center justify-center space-x-2">
+                    <div className="w-1/3 h-px bg-gray-600"></div>
+                    <span className="text-sm text-gray-400">or</span>
+                    <div className="w-1/3 h-px bg-gray-600"></div>
                 </div>
+
+                <motion.button
+                    whileTap={{ scale: 0.95 }}
+                    className="flex items-center justify-center w-full py-2 mt-2 space-x-2 text-white bg-gray-800 rounded-md shadow-md hover:bg-gray-700 focus:ring-2 focus:ring-sky-500 transition-all duration-200"
+                >
+                    <FcGoogle className='w-5 h-5' />
+                    <span className="font-semibold">Sign in with Google</span>
+                </motion.button>
+
+                <Link href="/login" className="block mt-4 text-sm font-semibold text-center text-blue-400 hover:underline">
+                    Already have an account? Sign in
+                </Link>
             </div>
-        </>
+        </div>
     )
 }
