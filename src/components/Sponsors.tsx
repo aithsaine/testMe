@@ -11,6 +11,7 @@ export default function Sponsors() {
 
     return (
         <div className="w-full overflow-hidden  py-6">
+            <h1 className="text-3xl text-teal-300 text-center mb-8">Our Sponsors</h1>
             <motion.div
                 className="flex space-x-8"
                 initial={{ x: '100%' }}

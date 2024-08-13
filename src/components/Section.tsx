@@ -1,34 +1,16 @@
 "use client"
-import { useSession } from "next-auth/react"
-import React from 'react'
-import { motion } from "framer-motion"
-import Lottie from 'react-lottie'
-import animationdata from "../assets/lottiefiles/studied.json"
-import { useRouter } from 'next/navigation'
-
-const containerVariants = {
-    hidden: { opacity: 0 },
-    show: {
-        opacity: 1,
-        transition: {
-            staggerChildren: 0.8, // Delay between each child animation
-            delayChildren: 0.3,  // Initial delay before children animations start
-        },
-    },
-};
-
-const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    show: { opacity: 1, y: 0 },
-};
+import { useSession } from "next-auth/react";
+import React from 'react';
+import Lottie from 'react-lottie';
+import animationdata from "../assets/lottiefiles/studied.json";
+import { useRouter } from 'next/navigation';
 
 export default function Section() {
-    const { data } = useSession()
-    const router = useRouter()
+    const { data } = useSession();
+    const router = useRouter();
     const handleClick = () => {
-        data?.user ? router.push("/dashboard") : router.push('/register'); // Replace '/destination' with your desired route
+        data?.user ? router.push("/dashboard") : router.push('/register');
     };
-
 
     const defaultOptions = {
         loop: true,
@@ -40,29 +22,26 @@ export default function Section() {
     };
 
     return (
-        <motion.section
-            variants={containerVariants}
-            initial="hidden"
-            animate="show"
-            whileInView="show"
-            viewport={{ once: true }}
-            className='flex md:flex-row flex-col text-white'
-        >
-            <motion.div variants={itemVariants} className="md:w-1/2">
-                <Lottie options={defaultOptions} />
-            </motion.div>
-            <motion.div variants={itemVariants} className="flex flex-col items-center justify-center md:w-1/2">
-                <h1 className="text-center text-2xl">
-                    Welcome to <span className='bg-gradient-to-r from-sky-600 via-red-500 my-6 to-sky-800 inline-block text-transparent bg-clip-text'>testMe</span>
+        <section className='flex flex-col md:flex-row text-white font-bold p-8'>
+            <div className="md:w-1/2 flex items-center justify-center">
+                <div className="w-full max-w-md">
+                    <Lottie options={defaultOptions} />
+                </div>
+            </div>
+            <div className="md:w-1/2 flex flex-col items-center justify-center text-center md:text-left mt-8 md:mt-0">
+                <h1 className="text-4xl font-bold mb-4">
+                    Welcome to <span className='bg-gradient-to-r from-sky-600 via-red-500 to-sky-800 text-transparent bg-clip-text'>testMe</span>
                 </h1>
-                <p className="mb-3 font-bold leading-9 text-white w-4/5 first-line:uppercase first-line:tracking-widest first-letter:text-7xl first-letter:font-bold first-letter:text-gray-100 first-letter:me-3 first-letter:float-start">
-                    At testme, we are dedicated to helping you master programming languages, improve your linguistic skills, and excel in math. Our online testing platform offers a wide range of practice tests designed to assess your knowledge and boost your confidence in these critical areas.
+                <p className="mb-6 text-lg font-bold text-gray-300">
+                    At testMe, we are dedicated to helping you master programming languages, improve your linguistic skills, and excel in math. Our online testing platform offers a wide range of practice tests designed to assess your knowledge and boost your confidence in these critical areas.
                 </p>
-                <motion.button
+                <button
                     onClick={handleClick}
-                    whileTap={{ scale: 0.9 }}
-                    className={"bg-gradient-to-r w-4/5 from-orange-100 text-lg py-1 px-8 rounded to-orange-700"}>{data?.user ? "Go To Dashboard" : "Join Now"}</motion.button>
-            </motion.div>
-        </motion.section>
+                    className="bg-gradient-to-r from-orange-500 to-orange-700 hover:from-orange-400 hover:to-orange-600 text-lg py-3 px-12 rounded-full font-semibold transition-all duration-300"
+                >
+                    {data?.user ? "Go To Dashboard" : "Join Now"}
+                </button>
+            </div>
+        </section>
     );
 }

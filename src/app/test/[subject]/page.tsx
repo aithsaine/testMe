@@ -106,11 +106,10 @@ export default function page({ params }: { params: { subject: String } }) {
     const getQuestions = async () => {
 
         try {
-            const resp = await axios.get("/api/answer/get", { params: { subject: params.subject } })
+            const resp = await axios.get("/api/answer/get", { params: { subject: encodeURIComponent(params.subject as string) } })
             if (resp.data.success) {
                 setIsAnswerd(true)
                 setOldAnswer(resp.data.answer)
-
             }
 
         } catch (error) {
@@ -195,7 +194,7 @@ export default function page({ params }: { params: { subject: String } }) {
                                             : elem2
                                     ),
                                 }));
-                        }} key={index} className={`w-full ${isAnswerd && oldAnswer.questions.find(elem => elem.questionId == questions[currentQst - 1].id).answer !== "" && questions[currentQst - 1].correctAnswer == item ? "bg-green-600" : oldAnswer.questions.find(elem => elem.questionId == questions[currentQst - 1].id).answer == item && questions[currentQst - 1].correctAnswer != item ? "bg-red-700" : "bg-fuchsia-700"} rounded-2xl ${!isAnswerd ? (result.questions.find((elem) => elem.questionId == questions[currentQst - 1].id && elem.answer == item) ? "bg - sky - 600" : "bg - fuchsia - 700") : ""}   min-h-10 lg:min-h-20 text-white  lg:text-2xl m-2`}>{item}
+                        }} key={index} className={`w-full ${(isAnswerd && oldAnswer) ? (oldAnswer.questions.find(elem => elem.questionId == questions[currentQst - 1].id).answer !== "" && questions[currentQst - 1].correctAnswer == item ? "bg-green-600" : oldAnswer.questions.find(elem => elem.questionId == questions[currentQst - 1].id).answer == item && questions[currentQst - 1].correctAnswer != item ? "bg-red-700" : "bg-fuchsia-700") : 'bg-fuchsia-700'} rounded-2xl ${!isAnswerd ? (result.questions.find((elem) => elem.questionId == questions[currentQst - 1].id && elem.answer == item) ? "bg-sky-600" : "bg-fuchsia-700") : ""}   min-h-10 lg:min-h-20 text-white  lg:text-2xl m-2`}>{item}
                         </button>)}
                 </div>
                 <div className=' fixed bottom-4  right-4 space-x-2 space-y-2'>

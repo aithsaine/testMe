@@ -1,47 +1,47 @@
 "use client"
-import React, { useState } from 'react'
+import React from 'react'
 import { motion } from "framer-motion"
 import { fancyTimeFormat } from '../../helpers/secondsToTime'
 import { useRouter } from 'next/navigation'
 import Swal from 'sweetalert2'
-import { FcApproval, FcApprove } from 'react-icons/fc'
-import ProgressBar from "@ramonak/react-progress-bar";
-const TestCard = ({ name, duration, isPassed, QuestionsCount, result = 0 }: { name: String, duration: Number, isPassed: Boolean, QuestionsCount: Number, result: number }) => {
+import ProgressBar from "@ramonak/react-progress-bar"
 
+const TestCard = ({ name, duration, isPassed, QuestionsCount, result = 0 }: { name: String, duration: Number, isPassed: Boolean, QuestionsCount: Number, result: number }) => {
     const router = useRouter()
+
     return (
         <div
             style={{
-                minWidth: "220px", // Slightly wider for better content accommodation
-                backdropFilter: "blur(60px)",
-                boxShadow: "0px 4px 15px rgba(0, 0, 0, 0.15)", // Softer shadow for a more elegant look
-                border: "2px solid rgba(255, 255, 255, 0.25)", // Slightly more visible border
-                borderRadius: "12px", // Softer rounded corners
-                background: "linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05))" // Subtle gradient background
+                minWidth: "180px",
+                backdropFilter: "blur(40px)",
+                boxShadow: "0px 2px 10px rgba(0, 0, 0, 0.2)",
+                border: "1px solid rgba(255, 255, 255, 0.2)",
+                borderRadius: "10px",
+                background: "linear-gradient(135deg, rgba(0, 0, 0, 0.6), rgba(20, 20, 20, 0.4))"
             }}
-            className='flex flex-col hover:scale-105 transition-transform duration-300 w-1/5 justify-between border p-4 rounded-lg m-3'
+            className='flex flex-col hover:scale-105 transition-transform duration-200 w-1/6 justify-between p-3 rounded-lg m-2'
         >
             {/* Header */}
-            <div className="header-Card text-center text-lg font-semibold text-white">
+            <div className="text-center text-sm font-medium text-teal-300">
                 {name}
             </div>
 
-            <hr className='w-full text-gray-500 my-3' />
+            <hr className='w-full text-teal-400 my-2' />
 
             {/* Footer */}
-            <div className="footer-Card text-sm text-gray-300 flex justify-between flex-col space-y-2">
+            <div className="text-xs text-gray-300 space-y-1">
                 <span>Duration: {fancyTimeFormat(duration)} min</span>
-                <span>Questions: {String(QuestionsCount)}</span>
+                <span>Questions: {QuestionsCount}</span>
                 <span>
                     {isPassed ? (
                         <ProgressBar
                             className='m-0.5 text-xs rounded-full overflow-hidden'
-                            height='18px'
-                            bgColor={result > 50 ? 'green' : 'red'}
+                            height='14px'
+                            bgColor={result > 50 ? 'limegreen' : 'crimson'}
                             completed={isNaN(result) ? 0 : Math.trunc(result)}
                         />
                     ) : (
-                        <span className="text-blue-400 cursor-pointer hover:underline">Pass exam</span>
+                        <span className="text-teal-400 cursor-pointer hover:underline">Pass exam</span>
                     )}
                 </span>
             </div>
@@ -65,13 +65,11 @@ const TestCard = ({ name, duration, isPassed, QuestionsCount, result = 0 }: { na
                     }
                 }}
                 whileTap={{ scale: isPassed ? 1 : 0.95 }}
-                className={`bg-gradient-to-r w-full py-2 px-6 rounded-lg text-center mt-4 transition-all duration-300 ${isPassed ? "underline text-gray-400 cursor-pointer" : "from-blue-600 to-blue-400 text-white cursor-pointer hover:from-blue-700 hover:to-blue-500"}`}
+                className={`bg-gradient-to-r w-full py-1.5 px-4 rounded text-center mt-3 transition-all duration-200 ${isPassed ? "underline text-teal-400 cursor-pointer" : "from-purple-600 to-indigo-500 text-white cursor-pointer hover:from-purple-700 hover:to-indigo-600"}`}
             >
                 {isPassed ? "Your Answers" : "Pass Test"}
             </motion.button>
         </div>
-
-
     )
 }
 

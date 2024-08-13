@@ -17,8 +17,8 @@ export default function Home() {
     <main >
       <Nav />
       <Section />
-      <Services />
       <SponsorsTicker />
+      <Services />
     </main>
   );
 }
