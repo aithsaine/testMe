@@ -1,4 +1,5 @@
 "use client"
+import Footer from "@/components/footer";
 import Nav from "@/components/Nav";
 
 import Section from "@/components/Section";
@@ -19,6 +20,7 @@ export default function Home() {
       <Section />
       <SponsorsTicker />
       <Services />
+      <Footer />
     </main>
   );
 }
