@@ -12,6 +12,8 @@ import {
 } from "recharts";
 import { useSelector } from "react-redux";
 import { Answer, Question } from "@/redux/action/actionCreator";
+import { Bars } from "react-loading-icons"
+import Loader from "@/components/Loader";
 
 
 
@@ -33,6 +35,7 @@ export default function Dashboard() {
     useEffect(() => {
         res && setTestPerformanceData(res.map(item => { return { name: item.subject, percentage: item.percentage } }))
     }, [res])
+
     return (
         <div className="container mx-auto p-8 space-y-12">
             <motion.h1
@@ -64,7 +67,7 @@ export default function Dashboard() {
                     color: "text-green-400",
                 }, {
                     title: "Average Score",
-                    value: res && Math.trunc(res.reduce((prev, next) => prev + Number(next.percentage), 0) / res.length),
+                    value: res && (res.length > 0 ? Math.trunc(res.reduce((prev, next) => prev + Number(next.percentage), 0) / res.length) : 0),
                     color: "text-yellow-400",
                 }, {
                     title: "Failed Tests",
@@ -77,7 +80,7 @@ export default function Dashboard() {
                         whileHover={{ scale: 1.05 }}
                     >
                         <h3 className="text-2xl font-semibold text-white mb-4">{card.title}</h3>
-                        <p className={`text-3xl ${card.color}`}>{card.value}</p>
+                        <p className={`text-3xl ${card.color}`}>{card.value ?? <Bars className="w-5" />}</p>
                     </motion.div>
                 ))}
             </motion.div>

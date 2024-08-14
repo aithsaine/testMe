@@ -116,12 +116,20 @@ export default function page({ params }: { params: { subject: String } }) {
 
 
         } finally {
-            const response = await axios.get("/api/question", { params: { subject: decodeURIComponent(params.subject as string) } });
+            try {
+                const response = await axios.get("/api/question", { params: { subject: decodeURIComponent(params.subject as string) } });
+                if (response.data.success) {
 
-            if (response.data.success)
-                setQuestions(response.data.questions)
-            setResult({ ...result, questions: response.data.questions.map((item: Question) => { return { questionId: item.id, answer: "" } }) })
-            setLoading(false)
+                    setQuestions(response.data.questions)
+                    setResult({ ...result, questions: response.data.questions.map((item: Question) => { return { questionId: item.id, answer: "" } }) })
+                    return setLoading(false)
+                }
+            } catch (error) {
+                toast.error("Server Error")
+                return router.push("/dashboard/tests")
+
+            }
+
 
 
 
