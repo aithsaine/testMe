@@ -66,7 +66,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
                 }}
                 className="w-full overflow-scroll p-4 h-full rounded-xl bg-gradient-to-r from-gray-900 to-black"
             >
-                <div className="text-2xl text-gray-300 flex justify-center items-center mb-6">
+                <div className="text-2xl text-start text-gray-300 flex justify-start items-center mb-6">
                     Hello <FaHandHoldingHeart className="w-6 mx-2 text-pink-400" />{" "}
                     {data?.user?.firstname} {data?.user?.lastname}
                 </div>

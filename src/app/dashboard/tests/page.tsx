@@ -47,7 +47,8 @@ export default function Page() {
     return (
         <div className='flex flex-col min-h-screen'>
             {/* Filter Buttons */}
-            <div className='flex justify-center space-x-4 py-4'>
+
+            <div className='flex justify-start space-x-4 py-4'>
                 <button
                     onClick={() => setFilter('all')}
                     className={`px-4 py-2 rounded-lg ${filter === 'all' ? 'bg-blue-500 text-white' : 'bg-gray-200 text-black'}`}>
