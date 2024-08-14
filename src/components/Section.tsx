@@ -4,6 +4,7 @@ import React from 'react';
 import Lottie from 'react-lottie';
 import animationdata from "../assets/lottiefiles/studied.json";
 import { useRouter } from 'next/navigation';
+import Link from "next/link";
 
 export default function Section() {
     const { data } = useSession();
@@ -35,12 +36,17 @@ export default function Section() {
                 <p className="mb-6 text-lg font-bold text-gray-300">
                     At testMe, we are dedicated to helping you master programming languages, improve your linguistic skills, and excel in math. Our online testing platform offers a wide range of practice tests designed to assess your knowledge and boost your confidence in these critical areas.
                 </p>
-                <button
-                    onClick={handleClick}
+                {data?.user ? <Link href={"/dashboard"}
                     className="bg-gradient-to-r from-orange-500 to-orange-700 hover:from-orange-400 hover:to-orange-600 text-lg py-3 px-12 rounded-full font-semibold transition-all duration-300"
                 >
-                    {data?.user ? "Go To Dashboard" : "Join Now"}
-                </button>
+                    {"Go To Dashboard"}
+                </Link> :
+                    <Link href={"/register"}
+                        className="bg-gradient-to-r from-orange-500 to-orange-700 hover:from-orange-400 hover:to-orange-600 text-lg py-3 px-12 rounded-full font-semibold transition-all duration-300"
+                    >
+                        {"Join Now"}
+                    </Link>
+                }
             </div>
         </section>
     );

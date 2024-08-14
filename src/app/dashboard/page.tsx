@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import {
     BarChart,
@@ -10,25 +10,29 @@ import {
     Tooltip,
     ResponsiveContainer,
 } from "recharts";
+import { useSelector } from "react-redux";
+import { Answer, Question } from "@/redux/action/actionCreator";
 
-// Sample Data
-const lastTests = [
-    { name: "Math Test", date: "2024-08-01", score: 85, status: "Passed" },
-    { name: "English Test", date: "2024-08-02", score: 78, status: "Passed" },
-    { name: "Science Test", date: "2024-08-03", score: 92, status: "Passed" },
-    { name: "History Test", date: "2024-08-05", score: 67, status: "Failed" },
-    { name: "Geography Test", date: "2024-08-07", score: 74, status: "Passed" },
-];
 
-const testPerformanceData = [
-    { name: "Math Test", percentage: 85 },
-    { name: "English Test", percentage: 78 },
-    { name: "Science Test", percentage: 92 },
-    { name: "History Test", percentage: 67 },
-    { name: "Geography Test", percentage: 74 },
-];
+
+
 
 export default function Dashboard() {
+    const [testPerformanceData, setTestPerformanceData] = useState([])
+    const [res, setRes] = useState<any>()
+    const { answers, questions, subjects }: { answers: Answer[], questions: Question[] } = useSelector(state => state)
+    useEffect(() => {
+        setRes(answers.map(answer => {
+            return {
+                subject: decodeURIComponent(answer.subject as string),
+                percentage: Math.trunc(answer.questions.filter(qst => qst.answer == questions.find(item => item.id == qst.questionId)?.correctAnswer).length / answer.questions.length * 100),
+                date: answer.createdAt
+            }
+        }))
+    }, [answers, questions])
+    useEffect(() => {
+        res && setTestPerformanceData(res.map(item => { return { name: item.subject, percentage: item.percentage } }))
+    }, [res])
     return (
         <div className="container mx-auto p-8 space-y-12">
             <motion.h1
@@ -52,19 +56,19 @@ export default function Dashboard() {
             >
                 {[{
                     title: "Total Tests",
-                    value: 25,
+                    value: subjects && subjects.length,
                     color: "text-teal-400",
                 }, {
                     title: "Tests Passed",
-                    value: 20,
+                    value: answers && answers.length,
                     color: "text-green-400",
                 }, {
                     title: "Average Score",
-                    value: "76%",
+                    value: res && Math.trunc(res.reduce((prev, next) => prev + Number(next.percentage), 0) / res.length),
                     color: "text-yellow-400",
                 }, {
                     title: "Failed Tests",
-                    value: 5,
+                    value: res && res.filter(item => item.percentage < 50).length,
                     color: "text-red-400",
                 }].map((card, index) => (
                     <motion.div
@@ -97,15 +101,15 @@ export default function Dashboard() {
                             </tr>
                         </thead>
                         <tbody>
-                            {lastTests.map((test, index) => (
+                            {res && res.map((test, index) => (
                                 <tr key={index} className="border-t border-gray-700 hover:bg-gray-700 transition-colors duration-200">
-                                    <td className="px-6 py-4 whitespace-nowrap">{test.name}</td>
+                                    <td className="px-6 py-4 whitespace-nowrap">{test.subject}</td>
                                     <td className="px-6 py-4 whitespace-nowrap">{test.date}</td>
-                                    <td className={`px-6 py-4 whitespace-nowrap ${test.score >= 75 ? "text-green-400" : "text-red-400"}`}>
-                                        {test.score}%
+                                    <td className={`px-6 py-4 whitespace-nowrap ${test.percentage >= 50 ? "text-green-400" : "text-red-400"}`}>
+                                        {test.percentage}%
                                     </td>
-                                    <td className={`px-6 py-4 whitespace-nowrap ${test.status === "Passed" ? "text-green-400" : "text-red-400"}`}>
-                                        {test.status}
+                                    <td className={`px-6 py-4 whitespace-nowrap ${test.percentage >= 50 ? "text-green-400" : "text-red-400"}`}>
+                                        {test.percentage >= 50 ? "Passed" : "Failed"}
                                     </td>
                                 </tr>
                             ))}
@@ -123,7 +127,7 @@ export default function Dashboard() {
             >
                 <h2 className="text-3xl font-bold text-white mb-6">Test Performance Overview</h2>
                 <div className="h-96 bg-gray-800 rounded-lg flex items-center justify-center">
-                    <ResponsiveContainer width="100%" height="100%">
+                    {testPerformanceData && <ResponsiveContainer width="100%" height="100%">
                         <BarChart
                             data={testPerformanceData}
                             margin={{ top: 20, right: 30, left: 20, bottom: 20 }}
@@ -134,7 +138,7 @@ export default function Dashboard() {
                             <Tooltip contentStyle={{ backgroundColor: "#333", borderColor: "#666" }} />
                             <Bar dataKey="percentage" fill="#4fd1c5" />
                         </BarChart>
-                    </ResponsiveContainer>
+                    </ResponsiveContainer>}
                 </div>
             </motion.div>
         </div>
