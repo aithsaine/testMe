@@ -51,7 +51,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
                 <NavItem href="/" icon={<LuHome />} label="Home" />
                 <NavItem href="/dashboard/tests" icon={<LuFlaskRound />} label="Tests" />
                 <NavItem icon={<LuUserCircle />} label="Profile" />
-                <NavItem icon={<LuActivity />} label="Activities" />
+                <NavItem href="/dashboard/statistics" icon={<LuActivity />} label="Activities" />
                 <NavItem
                     onClick={() => signOut({ callbackUrl: "/" })}
                     icon={<LuLogOut />}

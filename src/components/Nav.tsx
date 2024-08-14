@@ -10,7 +10,6 @@ export default function Nav() {
     const currentPath = usePathname();
     const links = [
         { name: "Home", href: "/" },
-        { name: "Tests", href: "/tests" },
         { name: "About Us", href: "/about" },
         { name: "Contact", href: "/contact" },
     ];

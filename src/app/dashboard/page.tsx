@@ -1,28 +1,36 @@
 "use client";
+import { Answer, Question } from "@prisma/client";
 import React, { useEffect, useState } from "react";
-import { motion } from "framer-motion";
+import { useSelector } from "react-redux";
 import {
-    BarChart,
-    Bar,
+    LineChart,
+    Line,
     XAxis,
     YAxis,
     CartesianGrid,
     Tooltip,
     ResponsiveContainer,
 } from "recharts";
-import { useSelector } from "react-redux";
-import { Answer, Question } from "@/redux/action/actionCreator";
-import { Bars } from "react-loading-icons"
-import Loader from "@/components/Loader";
 
+// Sample Data
+const totalTests = 120;
+const activeUsers = 45;
+const averageScore = 78;
+const passRate = 85;
 
+const topScorers = [
+    { name: "John Doe", score: 95 },
+    { name: "Jane Smith", score: 88 },
+    { name: "Alice Brown", score: 70 },
+];
 
 
 
 export default function Dashboard() {
-    const [testPerformanceData, setTestPerformanceData] = useState([])
     const [res, setRes] = useState<any>()
-    const { answers, questions, subjects }: { answers: Answer[], questions: Question[] } = useSelector(state => state)
+    const [recentTests, setResentTests] = useState()
+    const [topScores, setTopScores] = useState()
+    const { answers, questions, subjects }: { answers: Answer[], questions: Question[], subjects: String[] } = useSelector(state => state)
     useEffect(() => {
         setRes(answers.map(answer => {
             return {
@@ -31,119 +39,112 @@ export default function Dashboard() {
                 date: answer.createdAt
             }
         }))
+        res && setResentTests(
+            res
+        );
+        res && setTopScores(res.sort((a: any, b: any) => a.percentage < b.percentage)
+        )
     }, [answers, questions])
-    useEffect(() => {
-        res && setTestPerformanceData(res.map(item => { return { name: item.subject, percentage: item.percentage } }))
-    }, [res])
-
     return (
-        <div className="container mx-auto p-8 space-y-12">
-            <motion.h1
-                className="text-5xl font-extrabold text-white text-center mb-10"
-                initial={{ opacity: 0, y: -50 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, ease: "easeOut" }}
-            >
-                Dashboard
-            </motion.h1>
-
-            {/* Cards Section */}
-            <motion.div
-                className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6"
-                initial="hidden"
-                animate="visible"
-                variants={{
-                    hidden: { opacity: 0, scale: 0.8 },
-                    visible: { opacity: 1, scale: 1, transition: { staggerChildren: 0.2 } }
-                }}
-            >
-                {[{
-                    title: "Total Tests",
-                    value: subjects && subjects.length,
-                    color: "text-teal-400",
-                }, {
-                    title: "Tests Passed",
-                    value: answers && answers.length,
-                    color: "text-green-400",
-                }, {
-                    title: "Average Score",
-                    value: res && (res.length > 0 ? Math.trunc(res.reduce((prev, next) => prev + Number(next.percentage), 0) / res.length) : 0),
-                    color: "text-yellow-400",
-                }, {
-                    title: "Failed Tests",
-                    value: res && res.filter(item => item.percentage < 50).length,
-                    color: "text-red-400",
-                }].map((card, index) => (
-                    <motion.div
-                        key={index}
-                        className={`bg-gray-900 p-6 rounded-lg shadow-lg text-center hover:scale-105 transform transition-transform duration-200`}
-                        whileHover={{ scale: 1.05 }}
-                    >
-                        <h3 className="text-2xl font-semibold text-white mb-4">{card.title}</h3>
-                        <p className={`text-3xl ${card.color}`}>{card.value ?? <Bars className="w-5" />}</p>
-                    </motion.div>
-                ))}
-            </motion.div>
-
-            {/* Latest Tests */}
-            <motion.div
-                className="bg-gray-900 p-8 rounded-lg shadow-lg"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.5, delay: 0.5 }}
-            >
-                <h2 className="text-3xl font-bold text-white mb-6">Latest Test Attempts</h2>
-                <div className="overflow-x-auto">
-                    <table className="min-w-full bg-gray-800 text-white">
-                        <thead>
-                            <tr className="w-full bg-gray-700">
-                                <th className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">Test Name</th>
-                                <th className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">Date</th>
-                                <th className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">Score</th>
-                                <th className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">Status</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {res && res.map((test, index) => (
-                                <tr key={index} className="border-t border-gray-700 hover:bg-gray-700 transition-colors duration-200">
-                                    <td className="px-6 py-4 whitespace-nowrap">{test.subject}</td>
-                                    <td className="px-6 py-4 whitespace-nowrap">{test.date}</td>
-                                    <td className={`px-6 py-4 whitespace-nowrap ${test.percentage >= 50 ? "text-green-400" : "text-red-400"}`}>
-                                        {test.percentage}%
-                                    </td>
-                                    <td className={`px-6 py-4 whitespace-nowrap ${test.percentage >= 50 ? "text-green-400" : "text-red-400"}`}>
-                                        {test.percentage >= 50 ? "Passed" : "Failed"}
-                                    </td>
-                                </tr>
-                            ))}
-                        </tbody>
-                    </table>
+        <div className="container mx-auto p-4 space-y-8">
+            {/* Key Metrics */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div className="bg-gray-800 text-white p-6 rounded-lg shadow-lg">
+                    <h2 className="text-lg font-semibold mb-2">Total Tests Conducted</h2>
+                    <p className="text-3xl font-bold">{subjects && subjects.length}</p>
                 </div>
-            </motion.div>
+                <div className="bg-gray-800 text-white p-6 rounded-lg shadow-lg">
+                    <h2 className="text-lg font-semibold mb-2">Passed Tests</h2>
+                    <p className="text-3xl font-bold">{answers && answers.length}</p>
+                </div>
+                <div className="bg-gray-800 text-white p-6 rounded-lg shadow-lg">
+                    <h2 className="text-lg font-semibold mb-2">Average Test Score</h2>
+                    <p className="text-3xl font-bold">{res && (res.length > 0 ? Math.trunc(res.reduce((prev, next) => prev + Number(next.percentage), 0) / res.length) : 0)}%</p>
+                </div>
+                <div className="bg-gray-800 text-white p-6 rounded-lg shadow-lg">
+                    <h2 className="text-lg font-semibold mb-2">Failed Tests</h2>
+                    <p className="text-3xl font-bold">{res && res.filter(item => item.percentage < 50).length}</p>
+                </div>
+            </div>
 
-            {/* Test Performance Chart */}
-            <motion.div
-                className="bg-gray-900 p-8 rounded-lg shadow-lg"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.5, delay: 1 }}
-            >
-                <h2 className="text-3xl font-bold text-white mb-6">Test Performance Overview</h2>
-                <div className="h-96 bg-gray-800 rounded-lg flex items-center justify-center">
-                    {testPerformanceData && <ResponsiveContainer width="100%" height="100%">
-                        <BarChart
-                            data={testPerformanceData}
-                            margin={{ top: 20, right: 30, left: 20, bottom: 20 }}
+            {/* Recent Activity */}
+            <div className="bg-gray-900 p-6 rounded-lg shadow-lg">
+                <h2 className="text-2xl font-semibold text-white mb-4">Recent Test Attempts</h2>
+                <div className="space-y-4">
+                    {res && res[res.length - 1] &&
+                        <div
+                            key={res[res.length - 1].percentage}
+                            className="flex justify-between items-center p-4 bg-gray-800 rounded-lg text-white"
                         >
-                            <CartesianGrid strokeDasharray="3 3" stroke="#444" />
-                            <XAxis dataKey="name" stroke="#ddd" />
-                            <YAxis stroke="#ddd" />
-                            <Tooltip contentStyle={{ backgroundColor: "#333", borderColor: "#666" }} />
-                            <Bar dataKey="percentage" fill="#4fd1c5" />
-                        </BarChart>
-                    </ResponsiveContainer>}
+                            <div>
+                                <p className="font-bold">{res[res.length - 1].subject}</p>
+                                <p className="text-sm text-gray-400">{(new Date(res[res.length - 1].date).toLocaleString())}</p>
+                            </div>
+                            <p className="text-xl font-bold">{res[res.length - 1].percentage}%</p>
+                        </div>
+                    }
+                    {res && res[res.length - 2] &&
+                        <div
+                            key={res[res.length - 2].percentage}
+                            className="flex justify-between items-center p-4 bg-gray-800 rounded-lg text-white"
+                        >
+                            <div>
+                                <p className="font-bold">{res[res.length - 2].subject}</p>
+                                <p className="text-sm text-gray-400">{(new Date(res[res.length - 2].date).toLocaleString())}</p>
+                            </div>
+                            <p className="text-xl font-bold">{res[res.length - 2].percentage}%</p>
+                        </div>
+                    }
+                    {res && res[res.length - 3] &&
+                        <div
+                            key={res[res.length - 3].percentage}
+                            className="flex justify-between items-center p-4 bg-gray-800 rounded-lg text-white"
+                        >
+                            <div>
+                                <p className="font-bold">{res[res.length - 3].subject}</p>
+                                <p className="text-sm text-gray-400">{(new Date(res[res.length - 3].date).toLocaleString())}</p>
+                            </div>
+                            <p className="text-xl font-bold">{res[res.length - 3].percentage}%</p>
+                        </div>
+                    }
                 </div>
-            </motion.div>
+            </div>
+
+            {/* Top Scorers */}
+            <div className="bg-gray-900 p-6 rounded-lg shadow-lg">
+                <h2 className="text-2xl font-semibold text-white mb-4">Top Scorers</h2>
+                <div className="space-y-4">
+                    {topScores && topScores[0] && (
+                        <div
+                            key={topScores[0].percentage}
+                            className="flex justify-between items-center p-4 bg-gray-800 rounded-lg text-white"
+                        >
+                            <p className="font-bold">{topScores[0].subject}</p>
+                            <p className="text-xl font-bold">{topScores[0].percentage}%</p>
+                        </div>
+                    )}
+                    {topScores && topScores[1] && (
+                        <div
+                            key={topScores[1].percentage}
+                            className="flex justify-between items-center p-4 bg-gray-800 rounded-lg text-white"
+                        >
+                            <p className="font-bold">{topScores[1].subject}</p>
+                            <p className="text-xl font-bold">{topScores[1].percentage}%</p>
+                        </div>
+                    )}
+                    {topScores && topScores[2] && (
+                        <div
+                            key={topScores[2].percentage}
+                            className="flex justify-between items-center p-4 bg-gray-800 rounded-lg text-white"
+                        >
+                            <p className="font-bold">{topScores[2].subject}</p>
+                            <p className="text-xl font-bold">{topScores[2].percentage}%</p>
+                        </div>
+                    )}
+                </div>
+            </div>
+
+
         </div>
     );
 }
