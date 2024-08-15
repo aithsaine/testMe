@@ -21,7 +21,7 @@ export default function Nav() {
     return (
         <nav className='flex items-center justify-between py-4 px-8 bg-black bg-opacity-80 backdrop-blur-md shadow-md sticky top-0 z-50'>
             <div className='flex items-center'>
-                <Image src={logo} width={100} alt='logo' />
+                <Link href={"/"}>  <Image src={logo} width={100} alt='logo' /></Link>
             </div>
             <div className='hidden md:flex items-center space-x-6'>
                 {links.map(link => (

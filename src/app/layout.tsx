@@ -5,12 +5,13 @@ import { Toaster } from "sonner";
 import AuthProvider from "@/components/authProvider";
 import { Provider } from "react-redux";
 import { store } from "@/redux/store";
-import { useEffect } from "react";
+import Head from "next/head";
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "TestMe Platform",
-  description: "test you level and know your skills",
+  description: "Test your level and know your skills",
 };
 
 export default function RootLayout({
@@ -18,20 +19,18 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-
-
   return (
     <html lang="en">
-      <body className={inter.className + "  relative "}>
+      <Head>
+        {/* Link to the favicon */}
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+        {/* You can also add other favicon sizes if needed */}
 
-
+      </Head>
+      <body className={`${inter.className} relative`}>
         <AuthProvider>
-
           <Toaster richColors />
-          <main className="">
-
-            {children}
-          </main>
+          <main>{children}</main>
         </AuthProvider>
       </body>
     </html>

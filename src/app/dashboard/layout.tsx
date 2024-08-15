@@ -7,10 +7,9 @@ import { FaHandHoldingHeart } from "react-icons/fa";
 import {
     LuActivity,
     LuFlaskRound,
-    LuHome,
     LuLayoutDashboard,
     LuLogOut,
-    LuUserCircle,
+    LuCornerUpLeft,
 } from "react-icons/lu";
 import axios from "axios";
 import { getAllQuestions } from "@/redux/action/actionCreator";
@@ -51,7 +50,6 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
                 className="flex flex-col justify-around rounded-xl h-full py-4 space-y-6 bg-gradient-to-b from-gray-800 to-black"
             >
                 <NavItem title="" href="/dashboard" icon={<LuLayoutDashboard />} label="Dashboard" />
-                <NavItem title="" href="/" icon={<LuHome />} label="Home" />
                 <NavItem title="" href="/dashboard/tests" icon={<LuFlaskRound />} label="Tests" />
                 <NavItem title="" href="/dashboard/statistics" icon={<LuActivity />} label="Activities" />
                 <NavItem title=""
@@ -59,6 +57,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
                     icon={<LuLogOut />}
                     label="Log Out"
                 />
+                <NavItem title="" href="/" icon={<LuCornerUpLeft />} label="Home" />
             </aside>
 
             <main

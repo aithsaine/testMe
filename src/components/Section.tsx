@@ -23,7 +23,7 @@ export default function Section() {
     };
 
     return (
-        <section className='flex flex-col md:flex-row text-white font-bold p-8'>
+        <section className='flex flex-col md:flex-row my-10 text-white font-bold p-8'>
             <div className="md:w-1/2 flex items-center justify-center">
                 <div className="w-full max-w-md">
                     <Lottie options={defaultOptions} />
