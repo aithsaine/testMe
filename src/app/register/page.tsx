@@ -6,6 +6,7 @@ import axios from "axios"
 import { toast } from 'sonner'
 import { useRouter } from 'next/navigation'
 import { FcGoogle } from 'react-icons/fc'
+import { signIn } from 'next-auth/react'
 
 export default function Page() {
     const navigate = useRouter()
@@ -81,6 +82,7 @@ export default function Page() {
                 </div>
 
                 <motion.button
+                    onClick={() => signIn('google')}
                     whileTap={{ scale: 0.95 }}
                     className="flex items-center justify-center w-full py-2 mt-2 space-x-2 text-white bg-gray-800 rounded-md shadow-md hover:bg-gray-700 focus:ring-2 focus:ring-sky-500 transition-all duration-200"
                 >

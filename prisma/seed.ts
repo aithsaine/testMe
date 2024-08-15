@@ -280,7 +280,7 @@ async function main() {
             {
                 subject: "HTML",
                 title: "Which attribute is used to provide alternative text for an image in HTML?",
-                choices: ["alt", "src", "title", "href"],
+                choices: ["alt", "src", title, "href"],
                 correctAnswer: "alt"
             },
             {
@@ -2157,6 +2157,2403 @@ async function main() {
                 title: "What is 'recurrent neural network' (RNN) used for?",
                 choices: ["Performing unsupervised learning", "Optimizing model parameters", "Reducing dimensionality", "Handling sequential data and time series"],
                 correctAnswer: "Handling sequential data and time series"
+            },
+            {
+                subject: "Oracle",
+                title: "What is Oracle Database?",
+                choices: [
+                    "A relational database management system",
+                    "A web development framework",
+                    "A programming language",
+                    "A cloud storage service"
+                ],
+                correctAnswer: "A relational database management system"
+            },
+            {
+                subject: "Oracle",
+                title: "What does SQL stand for in Oracle?",
+                choices: [
+                    "Structured Query Language",
+                    "Simple Query Language",
+                    "Standard Query Language",
+                    "Server Query Language"
+                ],
+                correctAnswer: "Structured Query Language"
+            },
+            {
+                subject: "Oracle",
+                title: "What is a primary key in Oracle?",
+                choices: [
+                    "A unique identifier for a database record",
+                    "A command to select all data",
+                    "A method to store data",
+                    "A type of database index"
+                ],
+                correctAnswer: "A unique identifier for a database record"
+            },
+            {
+                subject: "Oracle",
+                title: "Which tool is commonly used for managing Oracle Databases?",
+                choices: [
+                    "Oracle SQL Developer",
+                    "Microsoft Visual Studio",
+                    "Eclipse IDE",
+                    "Apache Maven"
+                ],
+                correctAnswer: "Oracle SQL Developer"
+            },
+            {
+                subject: "Oracle",
+                title: "What is the purpose of an Oracle Tablespace?",
+                choices: [
+                    "To allocate storage for Oracle Database objects",
+                    "To connect to remote databases",
+                    "To run stored procedures",
+                    "To manage database users"
+                ],
+                correctAnswer: "To allocate storage for Oracle Database objects"
+            },
+            {
+                subject: "Oracle",
+                title: "What is PL/SQL in Oracle?",
+                choices: [
+                    "A procedural extension to SQL",
+                    "A web server",
+                    "A data visualization tool",
+                    "A database monitoring tool"
+                ],
+                correctAnswer: "A procedural extension to SQL"
+            },
+            {
+                subject: "Oracle",
+                title: "Which Oracle tool is used for database backup and recovery?",
+                choices: [
+                    "RMAN (Recovery Manager)",
+                    "Oracle Forms",
+                    "Oracle Reports",
+                    "Oracle GoldenGate"
+                ],
+                correctAnswer: "RMAN (Recovery Manager)"
+            },
+            {
+                subject: "Oracle",
+                title: "What is an Oracle Schema?",
+                choices: [
+                    "A collection of database objects associated with a particular user",
+                    "A type of database transaction",
+                    "A method for backing up data",
+                    "A network protocol"
+                ],
+                correctAnswer: "A collection of database objects associated with a particular user"
+            },
+            {
+                subject: "Oracle",
+                title: "What is the function of an Oracle Index?",
+                choices: [
+                    "To speed up the retrieval of rows from a table",
+                    "To delete data from a table",
+                    "To create new tables",
+                    "To manage database security"
+                ],
+                correctAnswer: "To speed up the retrieval of rows from a table"
+            },
+            {
+                subject: "Oracle",
+                title: "What is the role of Oracle Listener?",
+                choices: [
+                    "To enable database connections from remote users",
+                    "To manage database tables",
+                    "To perform data backups",
+                    "To monitor database performance"
+                ],
+                correctAnswer: "To enable database connections from remote users"
+            },
+            {
+                subject: "Oracle",
+                title: "Which of the following is an Oracle data type?",
+                choices: [
+                    "VARCHAR2",
+                    "HTML",
+                    "CSS",
+                    "JSON"
+                ],
+                correctAnswer: "VARCHAR2"
+            },
+            {
+                subject: "Oracle",
+                title: "What is an Oracle View?",
+                choices: [
+                    "A virtual table based on the result of a SQL query",
+                    "A backup of the database",
+                    "A user account",
+                    "A physical table in the database"
+                ],
+                correctAnswer: "A virtual table based on the result of a SQL query"
+            },
+            {
+                subject: "Oracle",
+                title: "What is Oracle RAC?",
+                choices: [
+                    "A clustering technology to provide high availability",
+                    "A reporting tool",
+                    "A data visualization platform",
+                    "A cloud service for storage"
+                ],
+                correctAnswer: "A clustering technology to provide high availability"
+            },
+            {
+                subject: "Oracle",
+                title: "Which language is primarily used for querying Oracle databases?",
+                choices: [
+                    "SQL",
+                    "JavaScript",
+                    "Python",
+                    "C#"
+                ],
+                correctAnswer: "SQL"
+            },
+            {
+                subject: "Oracle",
+                title: "What is an Oracle Sequence?",
+                choices: [
+                    "A database object that generates unique numeric values",
+                    "A series of SQL commands",
+                    "A data type",
+                    "A form of database encryption"
+                ],
+                correctAnswer: "A database object that generates unique numeric values"
+            },
+            {
+                subject: "Oracle",
+                title: "What is the role of Oracle Data Pump?",
+                choices: [
+                    "To import and export data between Oracle databases",
+                    "To monitor database performance",
+                    "To backup the entire database",
+                    "To create user accounts"
+                ],
+                correctAnswer: "To import and export data between Oracle databases"
+            },
+            {
+                subject: "Oracle",
+                title: "What is Oracle Exadata?",
+                choices: [
+                    "A high-performance database machine",
+                    "A programming language",
+                    "A web development framework",
+                    "A cloud storage service"
+                ],
+                correctAnswer: "A high-performance database machine"
+            },
+            {
+                subject: "Oracle",
+                title: "What is the Oracle ASM (Automatic Storage Management)?",
+                choices: [
+                    "A storage management solution for Oracle databases",
+                    "A method for writing SQL queries",
+                    "A type of database user account",
+                    "A cloud service"
+                ],
+                correctAnswer: "A storage management solution for Oracle databases"
+            },
+            {
+                subject: "Oracle",
+                title: "Which Oracle feature is used for data replication?",
+                choices: [
+                    "Oracle GoldenGate",
+                    "Oracle Data Pump",
+                    "Oracle SQL*Plus",
+                    "Oracle Forms"
+                ],
+                correctAnswer: "Oracle GoldenGate"
+            },
+            {
+                subject: "Oracle",
+                title: "What is Oracle Enterprise Manager?",
+                choices: [
+                    "A management tool for monitoring and administering Oracle databases",
+                    "A programming IDE",
+                    "A data visualization tool",
+                    "A cloud storage service"
+                ],
+                correctAnswer: "A management tool for monitoring and administering Oracle databases"
+            }, {
+                subject: "PostgreSQL",
+                title: "What is PostgreSQL?",
+                choices: [
+                    "A programming language",
+                    "A web development framework",
+                    "An open-source relational database management system",
+                    "A cloud storage service"
+                ],
+                correctAnswer: "An open-source relational database management system"
+            },
+            {
+                subject: "PostgreSQL",
+                title: "Which command is used to create a new database in PostgreSQL?",
+                choices: [
+                    "NEW DATABASE",
+                    "CREATE DATABASE",
+                    "INIT DATABASE",
+                    "START DATABASE"
+                ],
+                correctAnswer: "CREATE DATABASE"
+            },
+            {
+                subject: "PostgreSQL",
+                title: "What is a table in PostgreSQL?",
+                choices: [
+                    "A collection of data organized into rows and columns",
+                    "A method for querying data",
+                    "A type of index",
+                    "A user account"
+                ],
+                correctAnswer: "A collection of data organized into rows and columns"
+            },
+            {
+                subject: "PostgreSQL",
+                title: "Which of the following is a valid data type in PostgreSQL?",
+                choices: [
+                    "INTEGER",
+                    "HTML",
+                    "CSS",
+                    "XML"
+                ],
+                correctAnswer: "INTEGER"
+            },
+            {
+                subject: "PostgreSQL",
+                title: "What does the 'PRIMARY KEY' constraint do in PostgreSQL?",
+                choices: [
+                    "Indexes all columns of the table",
+                    "Automatically deletes duplicate rows",
+                    "Ensures each record in a table is unique and not null",
+                    "Allows duplicate values in a column"
+                ],
+                correctAnswer: "Ensures each record in a table is unique and not null"
+            },
+            {
+                subject: "PostgreSQL",
+                title: "Which of the following is a PostgreSQL command to add a new row to a table?",
+                choices: [
+                    "NEW ROW",
+                    "UPDATE INTO",
+                    "INSERT INTO",
+                    "ADD ROW"
+                ],
+                correctAnswer: "INSERT INTO"
+            },
+            {
+                subject: "PostgreSQL",
+                title: "What is the purpose of the 'JOIN' clause in PostgreSQL?",
+                choices: [
+                    "To update multiple rows in a table",
+                    "To delete data from multiple tables",
+                    "To combine rows from two or more tables based on a related column",
+                    "To create a new table"
+                ],
+                correctAnswer: "To combine rows from two or more tables based on a related column"
+            },
+            {
+                subject: "PostgreSQL",
+                title: "Which tool is commonly used to manage PostgreSQL databases?",
+                choices: [
+                    "MySQL Workbench",
+                    "pgAdmin",
+                    "Eclipse",
+                    "Oracle SQL Developer"
+                ],
+                correctAnswer: "pgAdmin"
+            },
+            {
+                subject: "PostgreSQL",
+                title: "What does the 'VACUUM' command do in PostgreSQL?",
+                choices: [
+                    "Creates a new user account",
+                    "Deletes data from the database",
+                    "Increases the size of the database",
+                    "Reclaims storage occupied by dead tuples"
+                ],
+                correctAnswer: "Reclaims storage occupied by dead tuples"
+            },
+            {
+                subject: "PostgreSQL",
+                title: "What is the role of the 'EXPLAIN' command in PostgreSQL?",
+                choices: [
+                    "Creates a new database",
+                    "Displays the execution plan of a SQL query",
+                    "Imports data into a table",
+                    "Deletes a table"
+                ],
+                correctAnswer: "Displays the execution plan of a SQL query"
+            },
+            {
+                subject: "PostgreSQL",
+                title: "What is a sequence in PostgreSQL?",
+                choices: [
+                    "A function that deletes rows",
+                    "A database object that generates a series of unique numeric values",
+                    "A method to join multiple tables",
+                    "A command to update rows"
+                ],
+                correctAnswer: "A database object that generates a series of unique numeric values"
+            },
+            {
+                subject: "PostgreSQL",
+                title: "What does the 'SERIAL' data type do in PostgreSQL?",
+                choices: [
+                    "Creates a new table",
+                    "Updates multiple rows",
+                    "Deletes all rows in a table",
+                    "Automatically generates a unique identifier for a column"
+                ],
+                correctAnswer: "Automatically generates a unique identifier for a column"
+            },
+            {
+                subject: "PostgreSQL",
+                title: "Which command is used to delete a database in PostgreSQL?",
+                choices: [
+                    "CANCEL DATABASE",
+                    "REMOVE DATABASE",
+                    "DROP DATABASE",
+                    "DELETE DATABASE"
+                ],
+                correctAnswer: "DROP DATABASE"
+            },
+            {
+                subject: "PostgreSQL",
+                title: "What is the purpose of the 'ALTER TABLE' command in PostgreSQL?",
+                choices: [
+                    "To update data in a table",
+                    "To create a new table",
+                    "To delete a table",
+                    "To modify an existing table"
+                ],
+                correctAnswer: "To modify an existing table"
+            },
+            {
+                subject: "PostgreSQL",
+                title: "Which function is used to calculate the average value of a numeric column in PostgreSQL?",
+                choices: [
+                    "COUNT()",
+                    "AVG()",
+                    "SUM()",
+                    "MAX()"
+                ],
+                correctAnswer: "AVG()"
+            },
+            {
+                subject: "PostgreSQL",
+                title: "What does the 'pg_hba.conf' file do in PostgreSQL?",
+                choices: [
+                    "Monitors database performance",
+                    "Controls client authentication",
+                    "Stores database backups",
+                    "Configures the database schema"
+                ],
+                correctAnswer: "Controls client authentication"
+            },
+            {
+                subject: "PostgreSQL",
+                title: "Which PostgreSQL feature allows for point-in-time recovery?",
+                choices: [
+                    "pg_basebackup",
+                    "Foreign Data Wrapper",
+                    "Write-Ahead Logging (WAL)",
+                    "pg_stat_statements"
+                ],
+                correctAnswer: "Write-Ahead Logging (WAL)"
+            },
+            {
+                subject: "PostgreSQL",
+                title: "What is the function of the 'ANALYZE' command in PostgreSQL?",
+                choices: [
+                    "Deletes all rows in a table",
+                    "Creates a new index",
+                    "Exports data to a CSV file",
+                    "Collects statistics about the contents of tables for the query planner"
+                ],
+                correctAnswer: "Collects statistics about the contents of tables for the query planner"
+            },
+            {
+                subject: "PostgreSQL",
+                title: "Which of the following is a method for partitioning tables in PostgreSQL?",
+                choices: [
+                    "Row-level locking",
+                    "Subqueries",
+                    "Range partitioning",
+                    "Indexing"
+                ],
+                correctAnswer: "Range partitioning"
+            },
+            {
+                subject: "PostgreSQL",
+                title: "What does the 'pg_dump' utility do in PostgreSQL?",
+                choices: [
+                    "Creates a backup of the PostgreSQL database",
+                    "Restores data from a backup",
+                    "Generates a report on database performance",
+                    "Deletes all data from the database"
+                ],
+                correctAnswer: "Creates a backup of the PostgreSQL database"
+            },
+            {
+                subject: "Java",
+                title: "What is Java?",
+                choices: [
+                    "A web development framework",
+                    "A programming language",
+                    "A database management system",
+                    "An operating system"
+                ],
+                correctAnswer: "A programming language"
+            },
+            {
+                subject: "Java",
+                title: "Which of the following is a valid Java identifier?",
+                choices: [
+                    "2ndVariable",
+                    "my_variable",
+                    "variable-name",
+                    "myVariable"
+                ],
+                correctAnswer: "myVariable"
+            },
+            {
+                subject: "Java",
+                title: "What is the purpose of the 'main' method in a Java program?",
+                choices: [
+                    "To define the entry point of the program",
+                    "To create objects",
+                    "To handle exceptions",
+                    "To import packages"
+                ],
+                correctAnswer: "To define the entry point of the program"
+            },
+            {
+                subject: "Java",
+                title: "Which keyword is used to define a class in Java?",
+                choices: [
+                    "class",
+                    "define",
+                    "create",
+                    "new"
+                ],
+                correctAnswer: "class"
+            },
+            {
+                subject: "Java",
+                title: "What is the default value of a boolean variable in Java?",
+                choices: [
+                    "0",
+                    "null",
+                    "false",
+                    "true"
+                ],
+                correctAnswer: "false"
+            },
+            {
+                subject: "Java",
+                title: "Which of the following is not a Java access modifier?",
+                choices: [
+                    "private",
+                    "protected",
+                    "public",
+                    "internal"
+                ],
+                correctAnswer: "internal"
+            },
+            {
+                subject: "Java",
+                title: "What is an abstract class in Java?",
+                choices: [
+                    "A class that cannot be instantiated and may contain abstract methods",
+                    "A class with only static methods",
+                    "A class with private members",
+                    "A class that implements interfaces"
+                ],
+                correctAnswer: "A class that cannot be instantiated and may contain abstract methods"
+            },
+            {
+                subject: "Java",
+                title: "How do you declare a constant in Java?",
+                choices: [
+                    "const",
+                    "constant",
+                    "final",
+                    "static"
+                ],
+                correctAnswer: "final"
+            },
+            {
+                subject: "Java",
+                title: "Which method is used to start a thread in Java?",
+                choices: [
+                    "run()",
+                    "start()",
+                    "execute()",
+                    "init()"
+                ],
+                correctAnswer: "start()"
+            },
+            {
+                subject: "Java",
+                title: "What is the purpose of the 'super' keyword in Java?",
+                choices: [
+                    "To refer to the superclass of the current object",
+                    "To define a static method",
+                    "To create a new instance of the class",
+                    "To call a private method"
+                ],
+                correctAnswer: "To refer to the superclass of the current object"
+            },
+            {
+                subject: "Java",
+                title: "Which collection class in Java implements a list?",
+                choices: [
+                    "HashSet",
+                    "ArrayList",
+                    "HashMap",
+                    "TreeSet"
+                ],
+                correctAnswer: "ArrayList"
+            },
+            {
+                subject: "Java",
+                title: "What is the purpose of the 'this' keyword in Java?",
+                choices: [
+                    "To refer to the current instance of the class",
+                    "To call a static method",
+                    "To access private members",
+                    "To create a new object"
+                ],
+                correctAnswer: "To refer to the current instance of the class"
+            },
+            {
+                subject: "Java",
+                title: "What does JVM stand for?",
+                choices: [
+                    "Java Virtual Machine",
+                    "Java Variable Machine",
+                    "Java Version Manager",
+                    "Java Verified Model"
+                ],
+                correctAnswer: "Java Virtual Machine"
+            },
+            {
+                subject: "Java",
+                title: "What is method overloading in Java?",
+                choices: [
+                    "Defining multiple methods with the same name but different parameters",
+                    "Overriding a method in the superclass",
+                    "Changing the return type of a method",
+                    "Using the same method name in different classes"
+                ],
+                correctAnswer: "Defining multiple methods with the same name but different parameters"
+            },
+            {
+                subject: "Java",
+                title: "Which keyword is used to inherit a class in Java?",
+                choices: [
+                    "extend",
+                    "inherit",
+                    "implements",
+                    "extends"
+                ],
+                correctAnswer: "extends"
+            },
+            {
+                subject: "Java",
+                title: "What does the 'try-catch' block do in Java?",
+                choices: [
+                    "Handles exceptions",
+                    "Defines a method",
+                    "Creates a new thread",
+                    "Calls a superclass method"
+                ],
+                correctAnswer: "Handles exceptions"
+            },
+            {
+                subject: "Java",
+                title: "What is a package in Java?",
+                choices: [
+                    "A collection of related classes and interfaces",
+                    "A method to create objects",
+                    "A class with static methods",
+                    "A way to define constants"
+                ],
+                correctAnswer: "A collection of related classes and interfaces"
+            },
+            {
+                subject: "Java",
+                title: "What is the purpose of the 'import' statement in Java?",
+                choices: [
+                    "To include external classes and packages",
+                    "To define a new class",
+                    "To declare a constant",
+                    "To start a new thread"
+                ],
+                correctAnswer: "To include external classes and packages"
+            },
+            {
+                subject: "Java",
+                title: "Which of the following is a primitive data type in Java?",
+                choices: [
+                    "String",
+                    "ArrayList",
+                    "int",
+                    "HashMap"
+                ],
+                correctAnswer: "int"
+            },
+            {
+                subject: "Java",
+                title: "What does the 'return' statement do in Java?",
+                choices: [
+                    "Ends the current method and optionally returns a value",
+                    "Starts a new thread",
+                    "Creates a new object",
+                    "Imports a package"
+                ],
+                correctAnswer: "Ends the current method and optionally returns a value"
+            },
+            {
+                subject: "Java",
+                title: "What is encapsulation in Java?",
+                choices: [
+                    "The practice of wrapping data and methods into a single unit",
+                    "The process of inheritance",
+                    "The ability to create multiple instances of a class",
+                    "The process of overloading methods"
+                ],
+                correctAnswer: "The practice of wrapping data and methods into a single unit"
+            },
+            {
+                subject: "Java",
+                title: "What is the default value of an integer variable in Java?",
+                choices: [
+                    "0",
+                    "null",
+                    "false",
+                    "empty string"
+                ],
+                correctAnswer: "0"
+            },
+            {
+                subject: "Java",
+                title: "What is an interface in Java?",
+                choices: [
+                    "A class with only abstract methods",
+                    "A way to define a method implementation",
+                    "A class that cannot be instantiated",
+                    "A way to define a constant"
+                ],
+                correctAnswer: "A class with only abstract methods"
+            },
+            {
+                subject: "Tailwind CSS",
+                title: "What is Tailwind CSS?",
+                choices: [
+                    "A JavaScript framework",
+                    "A CSS preprocessor",
+                    "A utility-first CSS framework",
+                    "A database management system"
+                ],
+                correctAnswer: "A utility-first CSS framework"
+            },
+            {
+                subject: "Tailwind CSS",
+                title: "How do you apply a background color in Tailwind CSS?",
+                choices: [
+                    "bg-color",
+                    "background-color",
+                    "bg-color-name",
+                    "bg-{color}"
+                ],
+                correctAnswer: "bg-{color}"
+            },
+            {
+                subject: "Tailwind CSS",
+                title: "What is the purpose of 'flex' in Tailwind CSS?",
+                choices: [
+                    "To apply Flexbox layout",
+                    "To set margin and padding",
+                    "To handle animations",
+                    "To adjust font size"
+                ],
+                correctAnswer: "To apply Flexbox layout"
+            },
+            {
+                subject: "Tailwind CSS",
+                title: "Which class is used to center text in Tailwind CSS?",
+                choices: [
+                    "text-center",
+                    "text-align-center",
+                    "center-text",
+                    "align-text-center"
+                ],
+                correctAnswer: "text-center"
+            },
+            {
+                subject: "Tailwind CSS",
+                title: "What does the 'p-{size}' class do in Tailwind CSS?",
+                choices: [
+                    "Sets padding",
+                    "Sets margin",
+                    "Sets border width",
+                    "Sets font size"
+                ],
+                correctAnswer: "Sets padding"
+            },
+            {
+                subject: "Tailwind CSS",
+                title: "How do you create a responsive design in Tailwind CSS?",
+                choices: [
+                    "Using media queries",
+                    "With responsive classes like 'sm:', 'md:', 'lg:', 'xl:'",
+                    "By applying fixed widths",
+                    "Using JavaScript"
+                ],
+                correctAnswer: "With responsive classes like 'sm:', 'md:', 'lg:', 'xl:'"
+            },
+            {
+                subject: "Tailwind CSS",
+                title: "Which class in Tailwind CSS is used to hide an element?",
+                choices: [
+                    "hidden",
+                    "no-display",
+                    "invisible",
+                    "display-none"
+                ],
+                correctAnswer: "hidden"
+            },
+            {
+                subject: "Tailwind CSS",
+                title: "What does 'border-{color}' class do in Tailwind CSS?",
+                choices: [
+                    "Sets the border color",
+                    "Sets the border width",
+                    "Sets the border radius",
+                    "Sets the border style"
+                ],
+                correctAnswer: "Sets the border color"
+            },
+            {
+                subject: "Tailwind CSS",
+                title: "Which class applies a shadow effect to an element in Tailwind CSS?",
+                choices: [
+                    "shadow",
+                    "box-shadow",
+                    "shadow-effect",
+                    "shadow-box"
+                ],
+                correctAnswer: "shadow"
+            },
+            {
+                subject: "Tailwind CSS",
+                title: "How can you customize the default theme in Tailwind CSS?",
+                choices: [
+                    "By modifying the 'tailwind.config.js' file",
+                    "By changing the CSS directly",
+                    "Using inline styles",
+                    "By creating a new CSS file"
+                ],
+                correctAnswer: "By modifying the 'tailwind.config.js' file"
+            },
+            {
+                subject: "Tailwind CSS",
+                title: "What is the 'container' class used for in Tailwind CSS?",
+                choices: [
+                    "To center and constrain content width",
+                    "To create a flex container",
+                    "To set a maximum width",
+                    "To apply padding"
+                ],
+                correctAnswer: "To center and constrain content width"
+            },
+            {
+                subject: "Tailwind CSS",
+                title: "Which utility class in Tailwind CSS adds rounded corners?",
+                choices: [
+                    "rounded",
+                    "border-radius",
+                    "corner-radius",
+                    "radius"
+                ],
+                correctAnswer: "rounded"
+            },
+            {
+                subject: "Tailwind CSS",
+                title: "What is the purpose of the 'text-{size}' class in Tailwind CSS?",
+                choices: [
+                    "Sets the text color",
+                    "Sets the text alignment",
+                    "Sets the text size",
+                    "Sets the text decoration"
+                ],
+                correctAnswer: "Sets the text size"
+            },
+            {
+                subject: "Tailwind CSS",
+                title: "How do you apply a margin to an element in Tailwind CSS?",
+                choices: [
+                    "margin-{size}",
+                    "m-{size}",
+                    "margin-{value}",
+                    "m-value"
+                ],
+                correctAnswer: "m-{size}"
+            },
+            {
+                subject: "Tailwind CSS",
+                title: "Which class is used to set the display property to 'flex' in Tailwind CSS?",
+                choices: [
+                    "flex",
+                    "display-flex",
+                    "flex-display",
+                    "display-flexbox"
+                ],
+                correctAnswer: "flex"
+            },
+            {
+                subject: "Tailwind CSS",
+                title: "What does 'w-{size}' class do in Tailwind CSS?",
+                choices: [
+                    "Sets the width of an element",
+                    "Sets the height of an element",
+                    "Sets the maximum width",
+                    "Sets the minimum width"
+                ],
+                correctAnswer: "Sets the width of an element"
+            },
+            {
+                subject: "Tailwind CSS",
+                title: "How do you set a fixed width for an element in Tailwind CSS?",
+                choices: [
+                    "w-fixed",
+                    "fixed-width",
+                    "w-{size}",
+                    "width-{size}"
+                ],
+                correctAnswer: "w-{size}"
+            },
+            {
+                subject: "Tailwind CSS",
+                title: "Which class is used to apply a hover effect in Tailwind CSS?",
+                choices: [
+                    "hover:{utility}",
+                    "on-hover:{utility}",
+                    "hover-effect:{utility}",
+                    "hover-{utility}"
+                ],
+                correctAnswer: "hover-{utility}"
+            },
+            {
+                subject: "Tailwind CSS",
+                title: "What does the 'space-x-{size}' class do in Tailwind CSS?",
+                choices: [
+                    "Sets the horizontal spacing between elements",
+                    "Sets the vertical spacing between elements",
+                    "Sets the padding inside an element",
+                    "Sets the margin inside an element"
+                ],
+                correctAnswer: "Sets the horizontal spacing between elements"
+            },
+            {
+                subject: "Tailwind CSS",
+                title: "What does the 'z-{index}' class do in Tailwind CSS?",
+                choices: [
+                    "Sets the z-index of an element",
+                    "Sets the opacity of an element",
+                    "Sets the size of an element",
+                    "Sets the border radius"
+                ],
+                correctAnswer: "Sets the z-index of an element"
+            },
+            {
+                subject: "Tailwind CSS",
+                title: "Which class is used to set an element's opacity in Tailwind CSS?",
+                choices: [
+                    "opacity-{value}",
+                    "transparency-{value}",
+                    "alpha-{value}",
+                    "opacity-{size}"
+                ],
+                correctAnswer: "opacity-{value}"
+            },
+            {
+                subject: "Tailwind CSS",
+                title: "How can you add a border radius to an element in Tailwind CSS?",
+                choices: [
+                    "border-radius-{size}",
+                    "rounded-{size}",
+                    "radius-{size}",
+                    "corner-{size}"
+                ],
+                correctAnswer: "rounded-{size}"
+            },
+            {
+                subject: "Tailwind CSS",
+                title: "Which class applies a grid layout in Tailwind CSS?",
+                choices: [
+                    "grid",
+                    "display-grid",
+                    "layout-grid",
+                    "grid-layout"
+                ],
+                correctAnswer: "grid"
+            },
+            {
+                subject: "Bootstrap",
+                title: "What is Bootstrap?",
+                choices: [
+                    "A JavaScript library",
+                    "A CSS framework",
+                    "A database management system",
+                    "A version control system"
+                ],
+                correctAnswer: "A CSS framework"
+            },
+            {
+                subject: "Bootstrap",
+                title: "Which class is used to make a button primary in Bootstrap?",
+                choices: [
+                    "btn-primary",
+                    "btn-main",
+                    "primary-btn",
+                    "btn-default"
+                ],
+                correctAnswer: "btn-primary"
+            },
+            {
+                subject: "Bootstrap",
+                title: "How do you create a responsive grid system in Bootstrap?",
+                choices: [
+                    "Using flexbox utilities",
+                    "By applying media queries",
+                    "By using container and row classes",
+                    "By using JavaScript"
+                ],
+                correctAnswer: "By using container and row classes"
+            },
+            {
+                subject: "Bootstrap",
+                title: "Which class in Bootstrap provides a fixed-width container?",
+                choices: [
+                    "container-fluid",
+                    "container",
+                    "fixed-container",
+                    "wrapper"
+                ],
+                correctAnswer: "container"
+            },
+            {
+                subject: "Bootstrap",
+                title: "How do you apply a custom style to a form control in Bootstrap?",
+                choices: [
+                    "By adding a 'form-control-custom' class",
+                    "By overriding styles with custom CSS",
+                    "By adding 'form-custom' class",
+                    "By using 'custom-form' class"
+                ],
+                correctAnswer: "By overriding styles with custom CSS"
+            },
+            {
+                subject: "Bootstrap",
+                title: "Which class in Bootstrap is used for adding a margin to an element?",
+                choices: [
+                    "m-{size}",
+                    "margin-{size}",
+                    "mt-{size}",
+                    "margins-{size}"
+                ],
+                correctAnswer: "m-{size}"
+            },
+            {
+                subject: "Bootstrap",
+                title: "How do you center align text in Bootstrap?",
+                choices: [
+                    "text-center",
+                    "align-text-center",
+                    "center-text",
+                    "text-align-center"
+                ],
+                correctAnswer: "text-center"
+            },
+            {
+                subject: "Bootstrap",
+                title: "What is the purpose of the 'col-{breakpoint}-{size}' class in Bootstrap?",
+                choices: [
+                    "To define column width based on screen size",
+                    "To set the height of columns",
+                    "To add padding to columns",
+                    "To hide columns on small screens"
+                ],
+                correctAnswer: "To define column width based on screen size"
+            },
+            {
+                subject: "Bootstrap",
+                title: "Which Bootstrap class is used to create a modal?",
+                choices: [
+                    "modal",
+                    "popup",
+                    "dialog",
+                    "modal-dialog"
+                ],
+                correctAnswer: "modal"
+            },
+            {
+                subject: "Bootstrap",
+                title: "What class is used for creating a responsive image in Bootstrap?",
+                choices: [
+                    "img-responsive",
+                    "responsive-img",
+                    "img-fluid",
+                    "img-scale"
+                ],
+                correctAnswer: "img-fluid"
+            },
+            {
+                subject: "Bootstrap",
+                title: "How do you apply a background color in Bootstrap?",
+                choices: [
+                    "bg-{color}",
+                    "background-{color}",
+                    "color-{color}",
+                    "background-color-{color}"
+                ],
+                correctAnswer: "bg-{color}"
+            },
+            {
+                subject: "Bootstrap",
+                title: "Which class is used to create a card component in Bootstrap?",
+                choices: [
+                    "card",
+                    "card-component",
+                    "box",
+                    "panel"
+                ],
+                correctAnswer: "card"
+            },
+            {
+                subject: "Bootstrap",
+                title: "What does the 'btn-outline-{color}' class do in Bootstrap?",
+                choices: [
+                    "Creates a button with a border color and transparent background",
+                    "Creates a button with a solid background color",
+                    "Removes the button border",
+                    "Creates a button with a gradient color"
+                ],
+                correctAnswer: "Creates a button with a border color and transparent background"
+            },
+            {
+                subject: "Bootstrap",
+                title: "Which class is used to create a dropdown menu in Bootstrap?",
+                choices: [
+                    "dropdown-menu",
+                    "menu-dropdown",
+                    "dropdown",
+                    "dropdown-list"
+                ],
+                correctAnswer: "dropdown-menu"
+            },
+            {
+                subject: "Bootstrap",
+                title: "What does the 'd-{display}' class do in Bootstrap?",
+                choices: [
+                    "Sets the display property of an element",
+                    "Sets the margin of an element",
+                    "Sets the padding of an element",
+                    "Sets the text color of an element"
+                ],
+                correctAnswer: "Sets the display property of an element"
+            },
+            {
+                subject: "Bootstrap",
+                title: "How do you create a form group in Bootstrap?",
+                choices: [
+                    "By wrapping form controls in a 'form-group' class",
+                    "By using 'group-form' class",
+                    "By applying 'form-group' to individual form elements",
+                    "By using 'form-control' class"
+                ],
+                correctAnswer: "By wrapping form controls in a 'form-group' class"
+            },
+            {
+                subject: "Bootstrap",
+                title: "Which class in Bootstrap is used to create a pagination component?",
+                choices: [
+                    "pagination",
+                    "pager",
+                    "page-links",
+                    "pagination-links"
+                ],
+                correctAnswer: "pagination"
+            },
+            {
+                subject: "Bootstrap",
+                title: "What is the purpose of the 'container-fluid' class in Bootstrap?",
+                choices: [
+                    "To create a full-width container that spans the entire width of the viewport",
+                    "To create a fixed-width container",
+                    "To center align content",
+                    "To apply margin and padding"
+                ],
+                correctAnswer: "To create a full-width container that spans the entire width of the viewport"
+            },
+            {
+                subject: "Bootstrap",
+                title: "Which class is used to make a button large in Bootstrap?",
+                choices: [
+                    "btn-lg",
+                    "btn-large",
+                    "btn-big",
+                    "btn-xxl"
+                ],
+                correctAnswer: "btn-lg"
+            },
+            {
+                subject: "Bootstrap",
+                title: "How do you create a responsive table in Bootstrap?",
+                choices: [
+                    "By adding the 'table-responsive' class to the table",
+                    "By using 'responsive-table' class",
+                    "By wrapping the table in a div with 'table-wrapper' class",
+                    "By adding 'table-fluid' class"
+                ],
+                correctAnswer: "By adding the 'table-responsive' class to the table"
+            },
+            {
+                subject: "Bootstrap",
+                title: "What class is used to hide elements on small screens in Bootstrap?",
+                choices: [
+                    "d-none d-sm-block",
+                    "hide-sm",
+                    "hidden-sm",
+                    "d-sm-hidden"
+                ],
+                correctAnswer: "d-none d-sm-block"
+            },
+            {
+                subject: "C++",
+                title: "What is C++?",
+                choices: [
+                    "A high-level programming language",
+                    "A low-level programming language",
+                    "A markup language",
+                    "A database management system"
+                ],
+                correctAnswer: "A high-level programming language"
+            },
+            {
+                subject: "C++",
+                title: "Which operator is used for member access in C++?",
+                choices: [
+                    ".",
+                    "->",
+                    "&",
+                    "#"
+                ],
+                correctAnswer: "->"
+            },
+            {
+                subject: "C++",
+                title: "How do you declare a variable in C++?",
+                choices: [
+                    "type variableName;",
+                    "variableName: type;",
+                    "var type variableName;",
+                    "declare variableName as type;"
+                ],
+                correctAnswer: "type variableName;"
+            },
+            {
+                subject: "C++",
+                title: "What is the purpose of the 'public' keyword in C++?",
+                choices: [
+                    "To define public access to class members",
+                    "To define private access to class members",
+                    "To declare a method",
+                    "To create an object"
+                ],
+                correctAnswer: "To define public access to class members"
+            },
+            {
+                subject: "C++",
+                title: "Which class is used for input and output in C++?",
+                choices: [
+                    "iostream",
+                    "input-output",
+                    "stream",
+                    "fileio"
+                ],
+                correctAnswer: "iostream"
+            },
+            {
+                subject: "C++",
+                title: "What does the 'new' keyword do in C++?",
+                choices: [
+                    "Allocates memory dynamically",
+                    "Deletes an object",
+                    "Creates a constant",
+                    "Declares a variable"
+                ],
+                correctAnswer: "Allocates memory dynamically"
+            },
+            {
+                subject: "C++",
+                title: "Which of the following is a valid C++ function prototype?",
+                choices: [
+                    "int functionName();",
+                    "functionName(int);",
+                    "void functionName[];",
+                    "functionName: int;"
+                ],
+                correctAnswer: "int functionName();"
+            },
+            {
+                subject: "C++",
+                title: "How do you comment a single line in C++?",
+                choices: [
+                    "// comment",
+                    "/* comment */",
+                    "# comment",
+                    "++ comment"
+                ],
+                correctAnswer: "// comment"
+            },
+            {
+                subject: "C++",
+                title: "What does the 'return' statement do in C++?",
+                choices: [
+                    "Exits a function and optionally returns a value",
+                    "Starts a new loop",
+                    "Creates a new object",
+                    "Calls a method"
+                ],
+                correctAnswer: "Exits a function and optionally returns a value"
+            },
+            {
+                subject: "C++",
+                title: "Which operator is used for comparison in C++?",
+                choices: [
+                    "=",
+                    "==",
+                    "!=",
+                    ">"
+                ],
+                correctAnswer: "=="
+            },
+            {
+                subject: "C++",
+                title: "What is an 'inline' function in C++?",
+                choices: [
+                    "A function whose code is directly inserted into the calling code",
+                    "A function that cannot be called",
+                    "A function that uses recursion",
+                    "A function that returns multiple values"
+                ],
+                correctAnswer: "A function whose code is directly inserted into the calling code"
+            },
+            {
+                subject: "C++",
+                title: "How do you declare a constant in C++?",
+                choices: [
+                    "const type name = value;",
+                    "constant type name = value;",
+                    "define type name value;",
+                    "static type name = value;"
+                ],
+                correctAnswer: "const type name = value;"
+            },
+            {
+                subject: "C++",
+                title: "What is a destructor in C++?",
+                choices: [
+                    "A method that is called when an object is destroyed",
+                    "A method that initializes an object",
+                    "A method that allocates memory",
+                    "A method that creates a new object"
+                ],
+                correctAnswer: "A method that is called when an object is destroyed"
+            },
+            {
+                subject: "C++",
+                title: "Which keyword is used to create a class in C++?",
+                choices: [
+                    "class",
+                    "object",
+                    "struct",
+                    "create"
+                ],
+                correctAnswer: "class"
+            },
+            {
+                subject: "C++",
+                title: "What is operator overloading in C++?",
+                choices: [
+                    "Defining new behavior for existing operators",
+                    "Creating new operators",
+                    "Changing the function names",
+                    "Modifying the access specifiers"
+                ],
+                correctAnswer: "Defining new behavior for existing operators"
+            },
+            {
+                subject: "C++",
+                title: "Which access specifier allows access from outside the class in C++?",
+                choices: [
+                    "public",
+                    "private",
+                    "protected",
+                    "restricted"
+                ],
+                correctAnswer: "public"
+            },
+            {
+                subject: "C++",
+                title: "What does the 'sizeof' operator do in C++?",
+                choices: [
+                    "Returns the size of a data type or object",
+                    "Allocates memory",
+                    "Creates a new object",
+                    "Deletes an object"
+                ],
+                correctAnswer: "Returns the size of a data type or object"
+            },
+            {
+                subject: "C++",
+                title: "What is the difference between 'struct' and 'class' in C++?",
+                choices: [
+                    "Struct members are public by default, class members are private",
+                    "Struct members are private by default, class members are public",
+                    "Struct is used for functions, class for data",
+                    "Struct and class are identical"
+                ],
+                correctAnswer: "Struct members are public by default, class members are private"
+            },
+            {
+                subject: "C++",
+                title: "Which header file is required for input and output operations in C++?",
+                choices: [
+                    "iostream",
+                    "inputoutput",
+                    "fileio",
+                    "stream"
+                ],
+                correctAnswer: "iostream"
+            },
+            {
+                subject: "C++",
+                title: "How do you declare a pointer in C++?",
+                choices: [
+                    "type* pointerName;",
+                    "type pointerName*;",
+                    "pointerName:type;",
+                    "type& pointerName;"
+                ],
+                correctAnswer: "type* pointerName;"
+            },
+            {
+                subject: "C++",
+                title: "What is the purpose of the 'static' keyword in C++?",
+                choices: [
+                    "Defines a variable or method that retains its value between function calls",
+                    "Creates a new class",
+                    "Defines a constant variable",
+                    "Allocates dynamic memory"
+                ],
+                correctAnswer: "Defines a variable or method that retains its value between function calls"
+            },
+            {
+                subject: "Kotlin",
+                title: "What is Kotlin?",
+                choices: [
+                    "A statically-typed programming language",
+                    "A dynamic scripting language",
+                    "A markup language",
+                    "A database management system"
+                ],
+                correctAnswer: "A statically-typed programming language"
+            },
+            {
+                subject: "Kotlin",
+                title: "Which keyword is used to declare a variable in Kotlin?",
+                choices: [
+                    "val or var",
+                    "let",
+                    "const",
+                    "define"
+                ],
+                correctAnswer: "val or var"
+            },
+            {
+                subject: "Kotlin",
+                title: "What does the 'fun' keyword represent in Kotlin?",
+                choices: [
+                    "A function",
+                    "A class",
+                    "A variable",
+                    "A property"
+                ],
+                correctAnswer: "A function"
+            },
+            {
+                subject: "Kotlin",
+                title: "How do you define a data class in Kotlin?",
+                choices: [
+                    "data class ClassName(val property: Type)",
+                    "class ClassName(val property: Type)",
+                    "data ClassName(val property: Type)",
+                    "class ClassName(property: Type)"
+                ],
+                correctAnswer: "data class ClassName(val property: Type)"
+            },
+            {
+                subject: "Kotlin",
+                title: "Which keyword is used to create an immutable variable in Kotlin?",
+                choices: [
+                    "val",
+                    "var",
+                    "const",
+                    "immutable"
+                ],
+                correctAnswer: "val"
+            },
+            {
+                subject: "Kotlin",
+                title: "What is a 'companion object' in Kotlin?",
+                choices: [
+                    "An object declared inside a class that can hold static members",
+                    "A singleton object",
+                    "A special type of class",
+                    "A type of function"
+                ],
+                correctAnswer: "An object declared inside a class that can hold static members"
+            },
+            {
+                subject: "Kotlin",
+                title: "How do you handle nullability in Kotlin?",
+                choices: [
+                    "By using nullable types",
+                    "By using optional types",
+                    "By using null-check functions",
+                    "By using default values"
+                ],
+                correctAnswer: "By using nullable types"
+            },
+            {
+                subject: "Kotlin",
+                title: "What is the purpose of the 'when' expression in Kotlin?",
+                choices: [
+                    "To replace the switch statement",
+                    "To handle exceptions",
+                    "To iterate over collections",
+                    "To define variables"
+                ],
+                correctAnswer: "To replace the switch statement"
+            },
+            {
+                subject: "Kotlin",
+                title: "How do you declare a function with a default parameter in Kotlin?",
+                choices: [
+                    "fun functionName(param: Type = defaultValue)",
+                    "fun functionName(param: Type, defaultValue)",
+                    "fun functionName(param: Type) = defaultValue",
+                    "function functionName(param: Type, defaultValue)"
+                ],
+                correctAnswer: "fun functionName(param: Type = defaultValue)"
+            },
+            {
+                subject: "Kotlin",
+                title: "What does the 'lateinit' keyword do in Kotlin?",
+                choices: [
+                    "Allows a variable to be initialized later",
+                    "Initializes a variable at declaration",
+                    "Creates a constant variable",
+                    "Defines an immutable property"
+                ],
+                correctAnswer: "Allows a variable to be initialized later"
+            },
+            {
+                subject: "Kotlin",
+                title: "What is the purpose of the 'apply' function in Kotlin?",
+                choices: [
+                    "To execute a block of code on an object and return the object",
+                    "To apply transformations to a list",
+                    "To create a new object",
+                    "To handle exceptions"
+                ],
+                correctAnswer: "To execute a block of code on an object and return the object"
+            },
+            {
+                subject: "Kotlin",
+                title: "Which keyword is used to create an abstract class in Kotlin?",
+                choices: [
+                    "abstract",
+                    "class",
+                    "interface",
+                    "open"
+                ],
+                correctAnswer: "abstract"
+            },
+            {
+                subject: "Kotlin",
+                title: "How do you define an extension function in Kotlin?",
+                choices: [
+                    "fun String.extensionFunction() { }",
+                    "fun extensionFunction(String) { }",
+                    "extension fun String.function() { }",
+                    "fun String.function() { }"
+                ],
+                correctAnswer: "fun String.extensionFunction() { }"
+            },
+            {
+                subject: "Kotlin",
+                title: "What is a 'sealed class' in Kotlin?",
+                choices: [
+                    "A class that can have a restricted set of subclasses",
+                    "A class that cannot be inherited",
+                    "A class with a fixed number of instances",
+                    "A class that is always immutable"
+                ],
+                correctAnswer: "A class that can have a restricted set of subclasses"
+            },
+            {
+                subject: "Kotlin",
+                title: "Which function is used to check if a collection is empty in Kotlin?",
+                choices: [
+                    "isEmpty()",
+                    "empty()",
+                    "hasNoItems()",
+                    "size == 0"
+                ],
+                correctAnswer: "isEmpty()"
+            },
+            {
+                subject: "Kotlin",
+                title: "What does the 'with' function do in Kotlin?",
+                choices: [
+                    "Executes a block of code on an object and returns a result",
+                    "Creates a new instance of an object",
+                    "Adds a property to an object",
+                    "Performs an operation on two objects"
+                ],
+                correctAnswer: "Executes a block of code on an object and returns a result"
+            },
+            {
+                subject: "Kotlin",
+                title: "How do you define a primary constructor in Kotlin?",
+                choices: [
+                    "class ClassName(val param: Type)",
+                    "class ClassName(param: Type) { }",
+                    "class ClassName { constructor(param: Type) { } }",
+                    "class ClassName { val param: Type }"
+                ],
+                correctAnswer: "class ClassName(val param: Type)"
+            },
+            {
+                subject: "Kotlin",
+                title: "What is the purpose of the 'infix' keyword in Kotlin?",
+                choices: [
+                    "To define an infix function",
+                    "To create a private function",
+                    "To override a function",
+                    "To mark a function as deprecated"
+                ],
+                correctAnswer: "To define an infix function"
+            },
+            {
+                subject: "Kotlin",
+                title: "Which of the following is a valid way to create a list in Kotlin?",
+                choices: [
+                    "listOf()",
+                    "arrayListOf()",
+                    "createList()",
+                    "new List()"
+                ],
+                correctAnswer: "listOf()"
+            },
+            {
+                subject: "Kotlin",
+                title: "What is a 'data class' used for in Kotlin?",
+                choices: [
+                    "To hold data and provide automatic implementations of equals(), hashCode(), and toString()",
+                    "To define a class with methods only",
+                    "To create a constant class",
+                    "To provide a class with default values"
+                ],
+                correctAnswer: "To hold data and provide automatic implementations of equals(), hashCode(), and toString()"
+            },
+            {
+                subject: "Kotlin",
+                title: "Which function is used to transform a list in Kotlin?",
+                choices: [
+                    "map()",
+                    "transform()",
+                    "convert()",
+                    "change()"
+                ],
+                correctAnswer: "map()"
+            },
+            {
+                subject: "Git",
+                title: "What is the purpose of the 'git init' command?",
+                choices: [
+                    "To initialize a new Git repository",
+                    "To create a new branch",
+                    "To add files to the staging area",
+                    "To commit changes"
+                ],
+                correctAnswer: "To initialize a new Git repository"
+            },
+            {
+                subject: "Git",
+                title: "How do you check the current status of your Git repository?",
+                choices: [
+                    "git status",
+                    "git info",
+                    "git check",
+                    "git state"
+                ],
+                correctAnswer: "git status"
+            },
+            {
+                subject: "Git",
+                title: "Which command is used to stage changes for a commit?",
+                choices: [
+                    "git add",
+                    "git stage",
+                    "git commit",
+                    "git push"
+                ],
+                correctAnswer: "git add"
+            },
+            {
+                subject: "Git",
+                title: "How do you view the commit history in Git?",
+                choices: [
+                    "git log",
+                    "git history",
+                    "git commits",
+                    "git view"
+                ],
+                correctAnswer: "git log"
+            },
+            {
+                subject: "Git",
+                title: "What does the 'git clone' command do?",
+                choices: [
+                    "Creates a copy of a remote repository",
+                    "Initializes a new Git repository",
+                    "Commits changes to the local repository",
+                    "Pushes changes to a remote repository"
+                ],
+                correctAnswer: "Creates a copy of a remote repository"
+            },
+            {
+                subject: "Git",
+                title: "How do you create a new branch in Git?",
+                choices: [
+                    "git branch",
+                    "git create branch",
+                    "git new branch",
+                    "git checkout -b"
+                ],
+                correctAnswer: "git branch"
+            },
+            {
+                subject: "Git",
+                title: "What is the purpose of the 'git merge' command?",
+                choices: [
+                    "To combine changes from different branches",
+                    "To discard changes",
+                    "To push changes to a remote repository",
+                    "To create a new branch"
+                ],
+                correctAnswer: "To combine changes from different branches"
+            },
+            {
+                subject: "Git",
+                title: "Which command is used to remove untracked files from your working directory?",
+                choices: [
+                    "git clean",
+                    "git remove",
+                    "git delete",
+                    "git discard"
+                ],
+                correctAnswer: "git clean"
+            },
+            {
+                subject: "Git",
+                title: "How do you discard changes in the working directory?",
+                choices: [
+                    "git checkout -- <file>",
+                    "git undo <file>",
+                    "git remove <file>",
+                    "git reset <file>"
+                ],
+                correctAnswer: "git checkout -- <file>"
+            },
+            {
+                subject: "Git",
+                title: "What does the 'git push' command do?",
+                choices: [
+                    "Sends commits from the local repository to the remote repository",
+                    "Fetches changes from the remote repository",
+                    "Commits changes to the local repository",
+                    "Creates a new branch"
+                ],
+                correctAnswer: "Sends commits from the local repository to the remote repository"
+            },
+            {
+                subject: "Git",
+                title: "How do you switch to an existing branch in Git?",
+                choices: [
+                    "git checkout <branch>",
+                    "git switch <branch>",
+                    "git use <branch>",
+                    "git change <branch>"
+                ],
+                correctAnswer: "git checkout <branch>"
+            },
+            {
+                subject: "Git",
+                title: "What is the purpose of the 'git revert' command?",
+                choices: [
+                    "To create a new commit that undoes changes from a previous commit",
+                    "To permanently remove a commit from the history",
+                    "To reset the working directory to a specific commit",
+                    "To discard all local changes"
+                ],
+                correctAnswer: "To create a new commit that undoes changes from a previous commit"
+            },
+            {
+                subject: "Git",
+                title: "Which command is used to stage all changes for the next commit?",
+                choices: [
+                    "git add .",
+                    "git stage all",
+                    "git commit -a",
+                    "git push all"
+                ],
+                correctAnswer: "git add ."
+            },
+            {
+                subject: "Git",
+                title: "How do you see differences between the working directory and the staging area?",
+                choices: [
+                    "git diff",
+                    "git status",
+                    "git log",
+                    "git changes"
+                ],
+                correctAnswer: "git diff"
+            },
+            {
+                subject: "Git",
+                title: "What is the purpose of the 'git reset' command?",
+                choices: [
+                    "To reset the staging area and the working directory to a specific commit",
+                    "To remove untracked files",
+                    "To create a new branch",
+                    "To fetch changes from a remote repository"
+                ],
+                correctAnswer: "To reset the staging area and the working directory to a specific commit"
+            },
+            {
+                subject: "Git",
+                title: "Which command is used to show remote repository URLs?",
+                choices: [
+                    "git remote -v",
+                    "git remote show",
+                    "git remote list",
+                    "git remote urls"
+                ],
+                correctAnswer: "git remote -v"
+            },
+            {
+                subject: "Git",
+                title: "How do you remove a file from the staging area in Git?",
+                choices: [
+                    "git reset <file>",
+                    "git remove <file>",
+                    "git discard <file>",
+                    "git unstage <file>"
+                ],
+                correctAnswer: "git reset <file>"
+            },
+            {
+                subject: "Git",
+                title: "What does the 'git fetch' command do?",
+                choices: [
+                    "Downloads changes from a remote repository but does not merge them",
+                    "Pushes local changes to the remote repository",
+                    "Displays the commit history",
+                    "Resets the local repository to match the remote"
+                ],
+                correctAnswer: "Downloads changes from a remote repository but does not merge them"
+            },
+            {
+                subject: "Git",
+                title: "How do you delete a branch in Git?",
+                choices: [
+                    "git branch -d <branch>",
+                    "git remove branch <branch>",
+                    "git delete branch <branch>",
+                    "git branch -r <branch>"
+                ],
+                correctAnswer: "git branch -d <branch>"
+            },
+            {
+                subject: "Git",
+                title: "What is the purpose of the 'git tag' command?",
+                choices: [
+                    "To create a tag that marks a specific commit",
+                    "To create a new branch",
+                    "To remove a commit",
+                    "To list all branches"
+                ],
+                correctAnswer: "To create a tag that marks a specific commit"
+            },
+            {
+                subject: "Git",
+                title: "How do you merge changes from a branch into the current branch?",
+                choices: [
+                    "git merge <branch>",
+                    "git join <branch>",
+                    "git combine <branch>",
+                    "git integrate <branch>"
+                ],
+                correctAnswer: "git merge <branch>"
+            },
+            {
+                subject: "Git",
+                title: "What does the 'git stash' command do?",
+                choices: [
+                    "Temporarily saves changes that are not yet ready to be committed",
+                    "Discards all local changes",
+                    "Fetches updates from the remote repository",
+                    "Creates a new branch"
+                ],
+                correctAnswer: "Temporarily saves changes that are not yet ready to be committed"
+            },
+            {
+                subject: "Git",
+                title: "How do you apply stashed changes in Git?",
+                choices: [
+                    "git stash apply",
+                    "git apply stash",
+                    "git stash pop",
+                    "git recover stash"
+                ],
+                correctAnswer: "git stash apply"
+            },
+            {
+                subject: "Git",
+                title: "Which command is used to create a new tag in Git?",
+                choices: [
+                    "git tag <tagname>",
+                    "git create tag <tagname>",
+                    "git new tag <tagname>",
+                    "git add tag <tagname>"
+                ],
+                correctAnswer: "git tag <tagname>"
+            },
+            {
+                subject: "القرآن الكريم",
+                title: "ما هو أول سورة نزلت في القرآن الكريم؟",
+                choices: [
+                    "سورة الفاتحة",
+                    "سورة العلق",
+                    "سورة البقرة",
+                    "سورة الإخلاص"
+                ],
+                correctAnswer: "سورة العلق"
+            },
+            {
+                subject: "القرآن الكريم",
+                title: "ما هي أطول سورة في القرآن الكريم؟",
+                choices: [
+                    "سورة آل عمران",
+                    "سورة البقرة",
+                    "سورة النساء",
+                    "سورة الأنعام"
+                ],
+                correctAnswer: "سورة البقرة"
+            },
+            {
+                subject: "القرآن الكريم",
+                title: "كم عدد سور القرآن الكريم؟",
+                choices: [
+                    "120",
+                    "110",
+                    "114",
+                    "100"
+                ],
+                correctAnswer: "114"
+            },
+            {
+                subject: "القرآن الكريم",
+                title: "ما هي السورة التي تُسمى بقلب القرآن؟",
+                choices: [
+                    "سورة الفاتحة",
+                    "سورة الكوثر",
+                    "سورة الإخلاص",
+                    "سورة يس"
+                ],
+                correctAnswer: "سورة يس"
+            },
+            {
+                subject: "القرآن الكريم",
+                title: "ما هي السورة التي تحتوي على أطول آية في القرآن الكريم؟",
+                choices: [
+                    "سورة آل عمران",
+                    "سورة النساء",
+                    "سورة البقرة",
+                    "سورة الكهف"
+                ],
+                correctAnswer: "سورة البقرة"
+            },
+            {
+                subject: "القرآن الكريم",
+                title: "ما هو عدد أحزاب القرآن الكريم؟",
+                choices: [
+                    "20",
+                    "30",
+                    "40",
+                    "60"
+                ],
+                correctAnswer: "30"
+            },
+            {
+                subject: "القرآن الكريم",
+                title: "ما هي السورة التي يُذكر فيها حديث البقرة؟",
+                choices: [
+                    "سورة النحل",
+                    "سورة الحشر",
+                    "سورة البقرة",
+                    "سورة الفتح"
+                ],
+                correctAnswer: "سورة البقرة"
+            },
+            {
+                subject: "القرآن الكريم",
+                title: "ما هي السورة التي تُسمى بسورة التوحيد؟",
+                choices: [
+                    "سورة الكافرون",
+                    "سورة الفلق",
+                    "سورة الإخلاص",
+                    "سورة الفاتحة"
+                ],
+                correctAnswer: "سورة الإخلاص"
+            },
+            {
+                subject: "القرآن الكريم",
+                title: "من هو الصحابي الذي جمع القرآن الكريم في عهد أبو بكر الصديق؟",
+                choices: [
+                    "عبد الله بن عمر",
+                    "عبد الله بن عباس",
+                    "زيد بن ثابت",
+                    "أبو هريرة"
+                ],
+                correctAnswer: "زيد بن ثابت"
+            },
+            {
+                subject: "القرآن الكريم",
+                title: "ما هي السورة التي يُطلق عليها اسم السورة المدنية؟",
+                choices: [
+                    "سورة الكهف",
+                    "سورة البقرة",
+                    "سورة آل عمران",
+                    "سورة الحشر"
+                ],
+                correctAnswer: "سورة البقرة"
+            },
+            {
+                subject: "القرآن الكريم",
+                title: "ما هي السورة التي يُذكر فيها حديث الكعبة؟",
+                choices: [
+                    "سورة النبأ",
+                    "سورة الفتح",
+                    "سورة الأنعام",
+                    "سورة الحج"
+                ],
+                correctAnswer: "سورة الحج"
+            },
+            {
+                subject: "القرآن الكريم",
+                title: "ما هي السورة التي تُعرف بسورة المحرقة؟",
+                choices: [
+                    "سورة الإخلاص",
+                    "سورة القارعة",
+                    "سورة الفلق",
+                    "سورة الكافرون"
+                ],
+                correctAnswer: "سورة القارعة"
+            },
+            {
+                subject: "القرآن الكريم",
+                title: "ما هو عدد الأجزاء في القرآن الكريم؟",
+                choices: [
+                    "40",
+                    "20",
+                    "30",
+                    "60"
+                ],
+                correctAnswer: "30"
+            },
+            {
+                subject: "القرآن الكريم",
+                title: "ما هي السورة التي تتحدث عن معركة بدر؟",
+                choices: [
+                    "سورة الأحزاب",
+                    "سورة البقرة",
+                    "سورة آل عمران",
+                    "سورة الأنفال"
+                ],
+                correctAnswer: "سورة الأنفال"
+            },
+            {
+                subject: "القرآن الكريم",
+                title: "ما هي السورة التي تحتوي على حديث الطلاق؟",
+                choices: [
+                    "سورة الأحزاب",
+                    "سورة الطلاق",
+                    "سورة النساء",
+                    "سورة البقرة"
+                ],
+                correctAnswer: "سورة الطلاق"
+            },
+            {
+                subject: "القرآن الكريم",
+                title: "ما هي السورة التي تتحدث عن قصة يوسف؟",
+                choices: [
+                    "سورة الأنبياء",
+                    "سورة يوسف",
+                    "سورة القصص",
+                    "سورة الشعراء"
+                ],
+                correctAnswer: "سورة يوسف"
+            },
+            {
+                subject: "القرآن الكريم",
+                title: "ما هي السورة التي تُسمى بسورة المنافقون؟",
+                choices: [
+                    "سورة المجادلة",
+                    "سورة المنافقون",
+                    "سورة الحشر",
+                    "سورة الإنسان"
+                ],
+                correctAnswer: "سورة المنافقون"
+            },
+            {
+                subject: "القرآن الكريم",
+                title: "ما هي السورة التي تتحدث عن معركة أحد؟",
+                choices: [
+                    "سورة الفتح",
+                    "سورة الأحزاب",
+                    "سورة آل عمران",
+                    "سورة الكهف"
+                ],
+                correctAnswer: "سورة آل عمران"
+            },
+            {
+                subject: "القرآن الكريم",
+                title: "ما هي السورة التي تتحدث عن قصة فرعون؟",
+                choices: [
+                    "سورة القصص",
+                    "سورة الفرقان",
+                    "سورة النمل",
+                    "سورة المؤمنون"
+                ],
+                correctAnswer: "سورة القصص"
+            },
+            {
+                subject: "القرآن الكريم",
+                title: "ما هي السورة التي تتحدث عن السحر؟",
+                choices: [
+                    "سورة الفلق",
+                    "سورة الإخلاص",
+                    "سورة الناس",
+                    "سورة البقرة"
+                ],
+                correctAnswer: "سورة البقرة"
+            },
+            {
+                subject: "القرآن الكريم",
+                title: "ما هي السورة التي يُسمى فيها بمكة؟",
+                choices: [
+                    "سورة الأنعام",
+                    "سورة الحج",
+                    "سورة النبأ",
+                    "سورة المطففين"
+                ],
+                correctAnswer: "سورة الأنعام"
+            },
+            {
+                subject: "القرآن الكريم",
+                title: "ما هي السورة التي يذكر فيها التوحيد بصورة واضحة؟",
+                choices: [
+                    "سورة الكافرون",
+                    "سورة الفاتحة",
+                    "سورة الإخلاص",
+                    "سورة الفلق"
+                ],
+                correctAnswer: "سورة الإخلاص"
+            },
+            {
+                subject: "القرآن الكريم",
+                title: "ما هي السورة التي تتحدث عن حلال الطلاق؟",
+                choices: [
+                    "سورة الطلاق",
+                    "سورة النحل",
+                    "سورة البقرة",
+                    "سورة الأحزاب"
+                ],
+                correctAnswer: "سورة الطلاق"
+            },
+            {
+                subject: "القرآن الكريم",
+                title: "ما هي السورة التي تتحدث عن غزارة المطر؟",
+                choices: [
+                    "سورة النبأ",
+                    "سورة الكهف",
+                    "سورة المؤمنون",
+                    "سورة الذاريات"
+                ],
+                correctAnswer: "سورة الذاريات"
+            },
+            {
+                subject: "السيرة النبوية",
+                title: "ما هو اسم والد النبي محمد صلى الله عليه وسلم؟",
+                choices: [
+                    "عبد الله",
+                    "أبو طالب",
+                    "عبد المطلب",
+                    "العباس"
+                ],
+                correctAnswer: "عبد الله"
+            },
+            {
+                subject: "السيرة النبوية",
+                title: "في أي عام وُلد النبي محمد صلى الله عليه وسلم؟",
+                choices: [
+                    "عام الفيل",
+                    "عام الهجرة",
+                    "عام الأحزاب",
+                    "عام الخندق"
+                ],
+                correctAnswer: "عام الفيل"
+            },
+            {
+                subject: "السيرة النبوية",
+                title: "من كان الملقب بوالد النبي محمد صلى الله عليه وسلم؟",
+                choices: [
+                    "العباس",
+                    "أبو طالب",
+                    "عبد المطلب",
+                    "عبد الله"
+                ],
+                correctAnswer: "عبد المطلب"
+            },
+            {
+                subject: "السيرة النبوية",
+                title: "ما هي أولى المعجزات التي حدثت للنبي محمد صلى الله عليه وسلم؟",
+                choices: [
+                    "الإسراء والمعراج",
+                    "شق الصدر",
+                    "التحويل إلى قبلة",
+                    "الشفاء"
+                ],
+                correctAnswer: "شق الصدر"
+            },
+            {
+                subject: "السيرة النبوية",
+                title: "من كانت أول زوجة للنبي محمد صلى الله عليه وسلم؟",
+                choices: [
+                    "عائشة",
+                    "خديجة",
+                    "حفصة",
+                    "أم سلمة"
+                ],
+                correctAnswer: "خديجة"
+            },
+            {
+                subject: "السيرة النبوية",
+                title: "كم عدد سنوات الدعوة السرية في مكة؟",
+                choices: [
+                    "10",
+                    "13",
+                    "5",
+                    "7"
+                ],
+                correctAnswer: "3"
+            },
+            {
+                subject: "السيرة النبوية",
+                title: "ما هو اسم الغار الذي اختبأ فيه النبي محمد صلى الله عليه وسلم أثناء الهجرة؟",
+                choices: [
+                    "غار حراء",
+                    "غار ثور",
+                    "غار عرفة",
+                    "غار جبل"
+                ],
+                correctAnswer: "غار ثور"
+            },
+            {
+                subject: "السيرة النبوية",
+                title: "ما هي المدينة التي هاجر إليها النبي محمد صلى الله عليه وسلم؟",
+                choices: [
+                    "مكة",
+                    "المدينة",
+                    "الطائف",
+                    "بدر"
+                ],
+                correctAnswer: "المدينة"
+            },
+            {
+                subject: "السيرة النبوية",
+                title: "ما هي غزوة النصر التي انتصر فيها المسلمون على قريش؟",
+                choices: [
+                    "غزوة أحد",
+                    "غزوة بدر",
+                    "غزوة خيبر",
+                    "غزوة حنين"
+                ],
+                correctAnswer: "غزوة بدر"
+            },
+            {
+                subject: "السيرة النبوية",
+                title: "من هو الصحابي الذي خدم النبي محمد صلى الله عليه وسلم في غزوة بدر؟",
+                choices: [
+                    "أبو بكر الصديق",
+                    "عمر بن الخطاب",
+                    "علي بن أبي طالب",
+                    "العباس بن عبد المطلب"
+                ],
+                correctAnswer: "العباس بن عبد المطلب"
+            },
+            {
+                subject: "السيرة النبوية",
+                title: "ما هي السورة التي أنزلت في غزوة أحد؟",
+                choices: [
+                    "سورة الفتح",
+                    "سورة آل عمران",
+                    "سورة الأنفال",
+                    "سورة النحل"
+                ],
+                correctAnswer: "سورة آل عمران"
+            },
+            {
+                subject: "السيرة النبوية",
+                title: "من هو الذي قام بإعلان الشهادة في مكة قبل الهجرة؟",
+                choices: [
+                    "علي بن أبي طالب",
+                    "أبو بكر الصديق",
+                    "حمزة بن عبد المطلب",
+                    "عمر بن الخطاب"
+                ],
+                correctAnswer: "حمزة بن عبد المطلب"
+            },
+            {
+                subject: "السيرة النبوية",
+                title: "ما هي السنة التي توفي فيها النبي محمد صلى الله عليه وسلم؟",
+                choices: [
+                    "11 هـ",
+                    "10 هـ",
+                    "13 هـ",
+                    "12 هـ"
+                ],
+                correctAnswer: "11 هـ"
+            },
+            {
+                subject: "السيرة النبوية",
+                title: "كم عدد السرايا التي قادها النبي محمد صلى الله عليه وسلم؟",
+                choices: [
+                    "20",
+                    "25",
+                    "30",
+                    "35"
+                ],
+                correctAnswer: "30"
+            },
+            {
+                subject: "السيرة النبوية",
+                title: "ما هي أول غزوة قادها النبي محمد صلى الله عليه وسلم؟",
+                choices: [
+                    "غزوة بدر",
+                    "غزوة أحد",
+                    "غزوة الخندق",
+                    "غزوة مؤتة"
+                ],
+                correctAnswer: "غزوة بدر"
+            },
+            {
+                subject: "السيرة النبوية",
+                title: "ما هو اسم المعركة التي حدثت بين المسلمين وقريش بعد غزوة بدر؟",
+                choices: [
+                    "غزوة الخندق",
+                    "غزوة أحد",
+                    "غزوة بدر",
+                    "غزوة مؤتة"
+                ],
+                correctAnswer: "غزوة أحد"
+            },
+            {
+                subject: "السيرة النبوية",
+                title: "ما هي السورة التي تتحدث عن حادثة الإفك؟",
+                choices: [
+                    "سورة النور",
+                    "سورة المائدة",
+                    "سورة الفتح",
+                    "سورة التوبة"
+                ],
+                correctAnswer: "سورة النور"
+            },
+            {
+                subject: "السيرة النبوية",
+                title: "ما هو اسم المعركة التي كانت بين المسلمين واليهود في المدينة؟",
+                choices: [
+                    "غزوة أحد",
+                    "غزوة بدر",
+                    "غزوة الخندق",
+                    "غزوة مؤتة"
+                ],
+                correctAnswer: "غزوة الخندق"
+            },
+            {
+                subject: "السيرة النبوية",
+                title: "من هو الصحابي الذي دعا النبي محمد صلى الله عليه وسلم إلى الإسلام في مكة؟",
+                choices: [
+                    "أبو بكر الصديق",
+                    "علي بن أبي طالب",
+                    "عمر بن الخطاب",
+                    "العباس بن عبد المطلب"
+                ],
+                correctAnswer: "أبو بكر الصديق"
+            },
+            {
+                subject: "السيرة النبوية",
+                title: "ما هي السورة التي نزلت بعد الهجرة مباشرة؟",
+                choices: [
+                    "سورة الفتح",
+                    "سورة المرسلات",
+                    "سورة الأنعام",
+                    "سورة البقرة"
+                ],
+                correctAnswer: "سورة البقرة"
+            },
+            {
+                subject: "السيرة النبوية",
+                title: "ما هو اسم المدينة التي شهدت معركة مؤتة؟",
+                choices: [
+                    "المدينة",
+                    "مكة",
+                    "بدر",
+                    "مؤتة"
+                ],
+                correctAnswer: "مؤتة"
             }
         ]
     });

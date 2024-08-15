@@ -30,11 +30,7 @@ export default function Nav() {
                     </Link>
                 ))}
             </div>
-            <div className='hidden md:flex items-center'>
-                <Link href="/register" className="text-lg bg-gradient-to-r from-cyan-400 to-blue-500 text-black py-2 px-6 rounded-full font-mono hover:from-cyan-300 hover:to-blue-400 transition-colors duration-300">
-                    Register
-                </Link>
-            </div>
+
             <div className='md:hidden flex items-center'>
                 <button onClick={toggleMenu} className="text-white text-2xl">☰</button>
             </div>
@@ -45,9 +41,7 @@ export default function Nav() {
                             {link.name}
                         </Link>
                     ))}
-                    <Link href="/register" className="block py-2 text-lg bg-gradient-to-r from-cyan-400 to-blue-500 text-black py-2 px-6 rounded-full font-mono hover:from-cyan-300 hover:to-blue-400 transition-colors duration-300">
-                        Register
-                    </Link>
+
                 </div>
             )}
         </nav>

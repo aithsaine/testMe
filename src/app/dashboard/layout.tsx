@@ -17,6 +17,9 @@ import { getAllQuestions } from "@/redux/action/actionCreator";
 import Loader from "@/components/Loader";
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
+    useEffect(() => {
+        document.title = "Welcome to your account"
+    }, [])
     const { data } = useSession();
     const dispatch = useDispatch();
 
@@ -45,14 +48,13 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
                     boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.25)",
                     border: "2px solid rgba(255, 255, 255, 0.15)",
                 }}
-                className="flex flex-col rounded-xl h-full py-4 space-y-6 bg-gradient-to-b from-gray-800 to-black"
+                className="flex flex-col justify-around rounded-xl h-full py-4 space-y-6 bg-gradient-to-b from-gray-800 to-black"
             >
-                <NavItem href="/dashboard" icon={<LuLayoutDashboard />} label="Dashboard" />
-                <NavItem href="/" icon={<LuHome />} label="Home" />
-                <NavItem href="/dashboard/tests" icon={<LuFlaskRound />} label="Tests" />
-                <NavItem icon={<LuUserCircle />} label="Profile" />
-                <NavItem href="/dashboard/statistics" icon={<LuActivity />} label="Activities" />
-                <NavItem
+                <NavItem title="" href="/dashboard" icon={<LuLayoutDashboard />} label="Dashboard" />
+                <NavItem title="" href="/" icon={<LuHome />} label="Home" />
+                <NavItem title="" href="/dashboard/tests" icon={<LuFlaskRound />} label="Tests" />
+                <NavItem title="" href="/dashboard/statistics" icon={<LuActivity />} label="Activities" />
+                <NavItem title=""
                     onClick={() => signOut({ callbackUrl: "/" })}
                     icon={<LuLogOut />}
                     label="Log Out"
@@ -79,15 +81,18 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
 const NavItem = ({
     href,
     icon,
+    title,
     label,
     onClick,
 }: {
     href?: string;
     icon: React.ReactNode;
     label: string;
+    title: string,
     onClick?: () => void;
 }) => (
     <Link
+        title={title || label}
         href={href || "#"}
         onClick={onClick}
         className="relative flex items-center justify-center group cursor-pointer"
