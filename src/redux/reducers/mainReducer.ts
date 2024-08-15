@@ -1,5 +1,6 @@
 import { INITIALISED, PASSEDTEST } from "../action/types";
 import { Question, Answer } from "../action/actionCreator"
+import { Reducer } from "redux";
 const initialState = {
     example: "is working",
     questions: [],
@@ -15,7 +16,7 @@ type State = {
     subjects: String[],
     answers: Answer[]
 }
-export const mainReducer = (state: State = initialState, action: Action) => {
+export const mainReducer: Reducer = (state: State = initialState, action: Action) => {
 
     switch (action.type) {
         case INITIALISED:
