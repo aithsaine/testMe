@@ -31,7 +31,7 @@ const TestCard = ({ name, duration, isPassed, QuestionsCount, result = 0 }: { na
             {/* Footer */}
             <div className="text-xs flex flex-col justify-start text-gray-300 space-y-1">
                 <span>Duration: {fancyTimeFormat(duration)} min</span>
-                <span>Questions: {QuestionsCount}</span>
+                <span>Questions: {String(QuestionsCount)}</span>
                 <span>
                     {isPassed ? (
                         <ProgressBar
