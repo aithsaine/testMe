@@ -1,7 +1,7 @@
-"use strict"
 import NextAuth, { NextAuthOptions } from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
 import GoogleProvider from "next-auth/providers/google";
+import { NextApiRequest, NextApiResponse } from "next";
 import prisma from "../../../../../prisma/client";
 import bcrypt from "bcryptjs";
 
@@ -12,20 +12,27 @@ export const authOptions: NextAuthOptions = {
             clientSecret: process.env.GOOGLE_CLIENT_SECRET!,
         }),
         CredentialsProvider({
-            name: "credentials",
+            name: "Credentials",
             credentials: {
-                email: { label: "Email", placeholder: "Email ..." },
-                password: { label: "Password", placeholder: "Password..." },
+                email: { label: "Email", type: "email", placeholder: "Email..." },
+                password: { label: "Password", type: "password", placeholder: "Password..." },
             },
             async authorize(credentials) {
-                if (!credentials || !credentials.email || !credentials.password) return null;
+                if (!credentials?.email || !credentials.password) {
+                    return null;
+                }
 
                 const user = await prisma.user.findFirst({
                     where: { email: credentials.email },
                 });
 
                 if (user && (await bcrypt.compare(credentials.password, user.password))) {
-                    return { id: user.id, email: user.email, firstname: user.firstname, lastname: user.lastname };
+                    return {
+                        id: user.id,
+                        email: user.email,
+                        firstname: user.firstname,
+                        lastname: user.lastname,
+                    };
                 }
 
                 return null;
@@ -39,9 +46,9 @@ export const authOptions: NextAuthOptions = {
     callbacks: {
         async signIn({ user, account, profile }: any) {
             if (account.provider === "google") {
-                const email = user.email;
-                const firstname = profile.given_name || user.name?.split(" ")[0] || "";
-                const lastname = profile.family_name || user.name?.split(" ")[1] || "";
+                const email = user.email!;
+                const firstname = profile?.given_name || user.name?.split(" ")[0] || "";
+                const lastname = profile?.family_name || user.name?.split(" ")[1] || "";
 
                 const existingUser = await prisma.user.findFirst({ where: { email } });
 
@@ -78,7 +85,9 @@ export const authOptions: NextAuthOptions = {
     },
 };
 
-const handler = NextAuth(authOptions);
+// Next.js API Route for App Router
+const handler = (req: NextApiRequest, res: NextApiResponse) =>
+    NextAuth(req, res, authOptions);
 
 export { handler as GET, handler as POST };
-
+export default handler;
