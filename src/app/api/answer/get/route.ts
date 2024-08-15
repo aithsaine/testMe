@@ -17,7 +17,7 @@ export async function GET(req: NextRequest) {
         }
 
         // Check if token.id is a valid ObjectId
-        let userId: string | ObjectId = token.id;
+        let userId: string | ObjectId | any = token.id;
 
         if (ObjectId.isValid(userId)) {
             userId = new ObjectId(userId);

@@ -18,18 +18,18 @@ export default function Page() {
 
     const [testPerformanceData, setTestPerformanceData] = useState([])
     const [res, setRes] = useState<any>()
-    const { answers, questions, subjects }: { answers: Answer[], questions: Question[], subjects: String[] } = useSelector(state => state)
+    const { answers, questions, subjects }: any = useSelector(state => state)
     useEffect(() => {
-        setRes(answers.map(answer => {
+        setRes(answers.map((answer: any) => {
             return {
                 subject: decodeURIComponent(answer.subject as string),
-                percentage: Math.trunc(answer.questions.filter(qst => qst.answer == questions.find(item => item.id == qst.questionId)?.correctAnswer).length / answer.questions.length * 100),
-                date: answer.createdAt
+                percentage: Math.trunc(answer.questions.filter((qst: any) => qst.answer == questions.find((item: any) => item.id == qst.questionId)?.correctAnswer).length / answer.questions.length * 100),
+                date: answer?.createdAt
             }
         }))
     }, [answers, questions])
     useEffect(() => {
-        res && setTestPerformanceData(res.map(item => { return { name: item.subject, percentage: item.percentage } }))
+        res && setTestPerformanceData(res.map((item: any) => { return { name: item.subject, percentage: item.percentage } }))
     }, [res])
 
 
@@ -76,7 +76,7 @@ export default function Page() {
                             </tr>
                         </thead>
                         <tbody>
-                            {res && res.map((test, index) => (
+                            {res && res.map((test: any, index: number) => (
                                 <tr key={index} className="border-t border-gray-700 hover:bg-gray-700 transition-colors duration-200">
                                     <td className="px-6 py-4 whitespace-nowrap">{test.subject}</td>
                                     <td className="px-6 py-4 whitespace-nowrap">{test.date}</td>

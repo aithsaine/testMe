@@ -15,7 +15,7 @@ export async function POST(request: NextRequest) {
         }
 
         // Check if token.id is a valid ObjectId
-        let userId: string | ObjectId = token.id;
+        let userId: string | ObjectId | any = token.id;
 
         if (ObjectId.isValid(userId)) {
             userId = new ObjectId(userId);
@@ -37,9 +37,8 @@ export async function POST(request: NextRequest) {
 
         return NextResponse.json({ answer: { ...answer, userId }, success: true })
 
-    } catch (error) {
-        console.log(error)
-        return NextResponse.json({ success: false, error: error.message }, { status: 500 });
+    } catch (error: any) {
+        return NextResponse.json({ success: false, error: error?.message }, { status: 500 });
 
     } finally {
         await prisma.$disconnect()

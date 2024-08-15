@@ -29,13 +29,13 @@ const topScorers = [
 export default function Dashboard() {
     const [res, setRes] = useState<any>()
     const [recentTests, setResentTests] = useState()
-    const [topScores, setTopScores] = useState()
-    const { answers, questions, subjects }: { answers: Answer[], questions: Question[], subjects: String[] } = useSelector(state => state)
+    const [topScores, setTopScores]: any = useState()
+    const { answers, questions, subjects }: any = useSelector(state => state)
     useEffect(() => {
-        setRes(answers.map(answer => {
+        setRes(answers.map((answer: any) => {
             return {
                 subject: decodeURIComponent(answer.subject as string),
-                percentage: Math.trunc(answer.questions.filter(qst => qst.answer == questions.find(item => item.id == qst.questionId)?.correctAnswer).length / answer.questions.length * 100),
+                percentage: Math.trunc(answer.questions.filter((qst: any) => qst.answer == questions.find((item: any) => item.id == qst.questionId)?.correctAnswer).length / answer.questions.length * 100),
                 date: answer.createdAt
             }
         }))
@@ -59,11 +59,11 @@ export default function Dashboard() {
                 </div>
                 <div className="bg-gray-800 text-white p-6 rounded-lg shadow-lg">
                     <h2 className="text-lg font-semibold mb-2">Average Test Score</h2>
-                    <p className="text-3xl font-bold">{res && (res.length > 0 ? Math.trunc(res.reduce((prev, next) => prev + Number(next.percentage), 0) / res.length) : 0)}%</p>
+                    <p className="text-3xl font-bold">{res && (res.length > 0 ? Math.trunc(res.reduce((prev: any, next: any) => prev + Number(next.percentage), 0) / res.length) : 0)}%</p>
                 </div>
                 <div className="bg-gray-800 text-white p-6 rounded-lg shadow-lg">
                     <h2 className="text-lg font-semibold mb-2">Failed Tests</h2>
-                    <p className="text-3xl font-bold">{res && res.filter(item => item.percentage < 50).length}</p>
+                    <p className="text-3xl font-bold">{res && res.filter((item: any) => item.percentage < 50).length}</p>
                 </div>
             </div>
 
@@ -116,7 +116,7 @@ export default function Dashboard() {
                 <div className="space-y-4">
                     {topScores && topScores[0] && (
                         <div
-                            key={topScores[0].percentage}
+                            key={topScores[0]?.percentage}
                             className="flex justify-between items-center p-4 bg-gray-800 rounded-lg text-white"
                         >
                             <p className="font-bold">{topScores[0].subject}</p>

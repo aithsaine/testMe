@@ -19,7 +19,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
     useEffect(() => {
         document.title = "Welcome to your account"
     }, [])
-    const { data } = useSession();
+    const { data }: any = useSession();
     const dispatch = useDispatch();
 
     useEffect(() => {

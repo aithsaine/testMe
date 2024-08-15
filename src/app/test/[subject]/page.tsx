@@ -2,7 +2,6 @@
 import Loader from '@/components/Loader'
 import { Question, passedTest } from '@/redux/action/actionCreator'
 import axios from 'axios'
-import { useSession } from 'next-auth/react'
 import React, { useEffect, useState } from 'react'
 import { CountdownCircleTimer } from 'react-countdown-circle-timer'
 import Swal from 'sweetalert2'
@@ -157,7 +156,7 @@ export default function Page({ params }: { params: { subject: String } }) {
                         if (isAnswerd)
                             setCurrentQst(idx + 1)
                     }}
-                    className={`w-full lg:w-20 h-max ${isAnswerd ? questions[idx].correctAnswer == oldAnswer.questions.find(elem => elem.questionId == questions[idx].id).answer ? "cursor-pointer bg-green-800" : "cursor-pointer bg-red-700" : ''} lg:h-20 flex flex-col rounded items-center lg:m-2 justify-center ${Number(idx) == Number(currentQst) - 1 ? "border-sky-600" : ""}  border-4 border-collapse`} key={idx}>
+                    className={`w-full lg:w-20 h-max ${isAnswerd ? questions[idx].correctAnswer == oldAnswer.questions.find((elem: any) => elem.questionId == questions[idx].id).answer ? "cursor-pointer bg-green-800" : "cursor-pointer bg-red-700" : ''} lg:h-20 flex flex-col rounded items-center lg:m-2 justify-center ${Number(idx) == Number(currentQst) - 1 ? "border-sky-600" : ""}  border-4 border-collapse`} key={idx}>
                     <h1 className='text-xs hidden lg:inline-block'>Question N°</h1>
                     <span>{idx + 1}</span>
                 </div >)}
@@ -202,7 +201,7 @@ export default function Page({ params }: { params: { subject: String } }) {
                                             : elem2
                                     ),
                                 }));
-                        }} key={index} className={`w-full ${(isAnswerd && oldAnswer) ? (oldAnswer.questions.find(elem => elem.questionId == questions[currentQst - 1].id).answer !== "" && questions[currentQst - 1].correctAnswer == item ? "bg-green-600" : oldAnswer.questions.find(elem => elem.questionId == questions[currentQst - 1].id).answer == item && questions[currentQst - 1].correctAnswer != item ? "bg-red-700" : "bg-fuchsia-700") : 'bg-fuchsia-700'} rounded-2xl ${!isAnswerd ? (result.questions.find((elem) => elem.questionId == questions[currentQst - 1].id && elem.answer == item) ? "bg-sky-600" : "bg-fuchsia-700") : ""}   min-h-10 lg:min-h-20 text-white  lg:text-2xl m-2`}>{item}
+                        }} key={index} className={`w-full ${(isAnswerd && oldAnswer) ? (oldAnswer.questions.find((elem: any) => elem.questionId == questions[currentQst - 1].id).answer !== "" && questions[currentQst - 1].correctAnswer == item ? "bg-green-600" : oldAnswer.questions.find((elem: any) => elem.questionId == questions[currentQst - 1].id).answer == item && questions[currentQst - 1].correctAnswer != item ? "bg-red-700" : "bg-fuchsia-700") : 'bg-fuchsia-700'} rounded-2xl ${!isAnswerd ? (result.questions.find((elem) => elem.questionId == questions[currentQst - 1].id && elem.answer == item) ? "bg-sky-600" : "bg-fuchsia-700") : ""}   min-h-10 lg:min-h-20 text-white  lg:text-2xl m-2`}>{item}
                         </button>)}
                 </div>
                 <div className=' fixed bottom-4  right-4 space-x-2 space-y-2'>

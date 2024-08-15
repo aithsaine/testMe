@@ -1,3 +1,4 @@
+"use strict"
 import NextAuth, { NextAuthOptions } from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
 import GoogleProvider from "next-auth/providers/google";
@@ -36,21 +37,21 @@ export const authOptions: NextAuthOptions = {
         signIn: "/login", // Custom login page
     },
     callbacks: {
-        async signIn({ user, account, profile }) {
+        async signIn({ user, account, profile }: any) {
             if (account.provider === "google") {
                 const email = user.email;
-                const firstname = profile.given_name || user.name?.split(" ")[0];
-                const lastname = profile.family_name || user.name?.split(" ")[1];
+                const firstname = profile.given_name || user.name?.split(" ")[0] || "";
+                const lastname = profile.family_name || user.name?.split(" ")[1] || "";
 
                 const existingUser = await prisma.user.findFirst({ where: { email } });
 
                 if (!existingUser) {
                     await prisma.user.create({
                         data: {
-                            firstname: String(firstname),
-                            lastname: String(lastname),
-                            email: String(email),
-                            password: process.env.JWT_SECRET, // No password needed for Google accounts
+                            firstname,
+                            lastname,
+                            email,
+                            password: "google-oauth", // No password needed for Google accounts
                         },
                     });
                 }
@@ -65,7 +66,7 @@ export const authOptions: NextAuthOptions = {
             }
             return session;
         },
-        async jwt({ token, user }) {
+        async jwt({ token, user }: any) {
             if (user) {
                 token.id = user.id;
                 token.firstname = user.firstname;
@@ -80,3 +81,4 @@ export const authOptions: NextAuthOptions = {
 const handler = NextAuth(authOptions);
 
 export { handler as GET, handler as POST };
+
