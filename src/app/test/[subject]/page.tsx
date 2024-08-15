@@ -10,7 +10,7 @@ import { useRouter } from 'next/navigation'
 import { useDispatch } from 'react-redux'
 import Bars from 'react-loading-icons/dist/esm/components/bars'
 import { toast } from 'sonner'
-export default function page({ params }: { params: { subject: String } }) {
+export default function Page({ params }: { params: { subject: String } }) {
     const [questions, setQuestions] = useState<Question[]>()
     const router = useRouter()
     const dispatch = useDispatch()

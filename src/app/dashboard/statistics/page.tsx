@@ -14,7 +14,7 @@ import { useSelector } from "react-redux";
 import { Answer, Question } from "@/redux/action/actionCreator";
 import { Bars } from "react-loading-icons"
 
-export default function page() {
+export default function Page() {
 
     const [testPerformanceData, setTestPerformanceData] = useState([])
     const [res, setRes] = useState<any>()

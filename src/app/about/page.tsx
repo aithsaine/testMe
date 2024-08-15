@@ -47,7 +47,7 @@ const AboutUs: React.FC = () => {
                     animate={{ opacity: 1 }}
                     transition={{ duration: 1, delay: 2 }}
                 >
-                    Thank you for choosing our platform. If you have any questions or feedback, please don't hesitate
+                    Thank you for choosing our platform. If you have any questions or feedback, please don&lsquo;t hesitate
                     to reach out to us. Happy learning!
                 </motion.p>
             </motion.div>

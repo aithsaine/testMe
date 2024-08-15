@@ -51,7 +51,7 @@ const ContactMe = () => {
             <section className="bg-gray-900 text-white py-16 px-4">
                 <div className="max-w-2xl mx-auto text-center">
                     <h2 className="text-4xl font-bold mb-8">Contact Me</h2>
-                    <p className="text-lg mb-8">Have any questions or feedback? I'd love to hear from you!</p>
+                    <p className="text-lg mb-8">Have any questions or feedback? I&lsquo;d love to hear from you!</p>
                     <form onSubmit={handleSubmit} className="space-y-6">
                         <div className="relative">
                             <FaUser className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
