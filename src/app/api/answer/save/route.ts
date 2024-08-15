@@ -21,7 +21,7 @@ export async function POST(request: NextRequest) {
             userId = new ObjectId(userId);
         } else if (token.email) {
             // If token.id is not a valid ObjectId, fallback to email or another unique identifier
-            const user = await prisma.user.findUnique({
+            const user = await prisma.user.findFirst({
                 where: { email: token.email },
             });
 
