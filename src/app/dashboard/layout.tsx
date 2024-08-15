@@ -68,7 +68,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
             >
                 <div className="text-2xl text-start text-gray-300 flex justify-start items-center mb-6">
                     Hello <FaHandHoldingHeart className="w-6 mx-2 text-pink-400" />{" "}
-                    {data?.user?.firstname} {data?.user?.lastname}
+                    {data.user.name ?? data?.user?.firstname + " " + data?.user?.lastname}
                 </div>
                 {children}
             </main>

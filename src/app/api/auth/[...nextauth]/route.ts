@@ -27,7 +27,6 @@ export const authOptions: NextAuthOptions = {
                     return { id: user.id, email: user.email, firstname: user.firstname, lastname: user.lastname };
                 }
 
-                prisma.$disconnect();
                 return null;
             },
         }),
@@ -37,51 +36,41 @@ export const authOptions: NextAuthOptions = {
         signIn: "/login", // Custom login page
     },
     callbacks: {
-        async signIn({ user, account, profile }: any) {
+        async signIn({ user, account, profile }) {
             if (account.provider === "google") {
-                try {
-                    const email = user.email;
-                    const firstname = profile.given_name || user.name?.split(" ")[0];
-                    const lastname = profile.family_name || user.name?.split(" ")[1];
+                const email = user.email;
+                const firstname = profile.given_name || user.name?.split(" ")[0];
+                const lastname = profile.family_name || user.name?.split(" ")[1];
 
-                    // Check if the user exists in the database
-                    const existingUser = await prisma.user.findFirst({
-                        where: { email: String(email) },
+                const existingUser = await prisma.user.findFirst({ where: { email } });
+
+                if (!existingUser) {
+                    await prisma.user.create({
+                        data: {
+                            firstname: String(firstname),
+                            lastname: String(lastname),
+                            email: String(email),
+                            password: process.env.JWT_SECRET, // No password needed for Google accounts
+                        },
                     });
-
-                    if (!existingUser) {
-                        // If the user doesn't exist, create a new user
-                        await prisma.user.create({
-                            data: {
-                                firstname: String(firstname),
-                                lastname: String(lastname),
-                                email: String(email),
-                                password: "", // No password needed for Google accounts
-                            },
-                        });
-                    }
-
-                    return true; // Proceed with the sign-in
-                } catch (error) {
-                    return false; // Fail sign-in on error
                 }
             }
-            return true; // Continue sign-in process for other providers
+            return true;
         },
         async session({ session, token }: any) {
-            // Attach user details to the session
             if (token) {
-                session.user.id = token.id as string;
-                session.user.firstname = token.firstname as string;
-                session.user.lastname = token.lastname as string;
+                session.user.id = token.id;
+                session.user.firstname = token.firstname;
+                session.user.lastname = token.lastname;
             }
             return session;
         },
-        async jwt({ token, user }: any) {
+        async jwt({ token, user }) {
             if (user) {
                 token.id = user.id;
                 token.firstname = user.firstname;
                 token.lastname = user.lastname;
+                token.email = user.email;
             }
             return token;
         },
