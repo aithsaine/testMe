@@ -30,6 +30,7 @@ export async function POST(request: Request) {
         if (newUser) {
             return NextResponse.json({ success: true, message: 'Account created successfully' });
         }
+        return NextResponse.json({ success: false, message: 'Sorry! Something went wrong!!' }, { status: 400 });
 
     } catch (error) {
         return NextResponse.json({ success: false, message: 'Sorry! Something went wrong!!', error }, { status: 400 });
