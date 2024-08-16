@@ -40,7 +40,6 @@ export async function GET(req: NextRequest) {
 
         return NextResponse.json({ questions, answers }, { status: 200 });
     } catch (error: any) {
-        console.error("Error fetching data:", error);
         return NextResponse.json({ error: "An unexpected error occurred" }, { status: 500 });
     } finally {
         await prisma.$disconnect(); // Ensure database connection is closed
