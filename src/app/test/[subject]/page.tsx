@@ -204,13 +204,13 @@ export default function Page({ params }: { params: { subject: String } }) {
                         }} key={index} className={`w-full ${(isAnswerd && oldAnswer) ? (oldAnswer.questions.find((elem: any) => elem.questionId == questions[currentQst - 1].id).answer !== "" && questions[currentQst - 1].correctAnswer == item ? "bg-green-600" : oldAnswer.questions.find((elem: any) => elem.questionId == questions[currentQst - 1].id).answer == item && questions[currentQst - 1].correctAnswer != item ? "bg-red-700" : "bg-fuchsia-700") : 'bg-fuchsia-700'} rounded-2xl ${!isAnswerd ? (result.questions.find((elem) => elem.questionId == questions[currentQst - 1].id && elem.answer == item) ? "bg-sky-600" : "bg-fuchsia-700") : ""}   min-h-10 lg:min-h-20 text-white  lg:text-2xl m-2`}>{item}
                         </button>)}
                 </div>
-                <div className=' fixed bottom-4  right-4 space-x-2 space-y-2'>
+                <div className=' fixed bottom-6  right-8 space-x-2 space-y-2'>
 
-                    {!isAnswerd && <button onClick={leaveHandler} className="bg-red-600 lg:text-lg text-white font-bold py-1 lg:py-2 rounded border-white shadow-sm w-20 lg:w-24 shadow-white">
+                    {!isAnswerd && <button onClick={leaveHandler} className="bg-red-600 lg:text-lg text-white font-bold py-1 lg:py-2 rounded border-white shadow-sm w-20 flex items-center lg:w-24 shadow-white">
                         {wait ? <Bars className='h-full w-6 text-white' /> : "Leave"}
 
                     </button>}
-                    < button className="bg-green-600 lg:text-lg text-white font-bold py-1 lg:py-2 rounded border-white shadow-sm  w-20 lg:w-24 shadow-white"
+                    < button className="bg-green-600 lg:text-lg text-white font-bold py-1 lg:py-2 rounded border-white shadow-sm  w-20 lg:w-24 flex items-center shadow-white"
                         onClick={NextHandler}>
                         {wait ? <Bars className='h-full w-6 text-white' /> : currentQst != questions.length ? "Continue" : isAnswerd ? "Exit" : "Finished"}
                     </button>

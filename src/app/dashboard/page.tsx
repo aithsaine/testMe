@@ -1,34 +1,12 @@
 "use client";
-import { Answer, Question } from "@prisma/client";
 import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
-import {
-    LineChart,
-    Line,
-    XAxis,
-    YAxis,
-    CartesianGrid,
-    Tooltip,
-    ResponsiveContainer,
-} from "recharts";
 
-// Sample Data
-const totalTests = 120;
-const activeUsers = 45;
-const averageScore = 78;
-const passRate = 85;
-
-const topScorers = [
-    { name: "John Doe", score: 95 },
-    { name: "Jane Smith", score: 88 },
-    { name: "Alice Brown", score: 70 },
-];
 
 
 
 export default function Dashboard() {
     const [res, setRes] = useState<any>()
-    const [recentTests, setResentTests] = useState()
     const [topScores, setTopScores]: any = useState()
     const { answers, questions, subjects }: any = useSelector(state => state)
     useEffect(() => {
@@ -39,10 +17,18 @@ export default function Dashboard() {
                 date: answer.createdAt
             }
         }))
-        res && setResentTests(
-            res
-        );
-        res && setTopScores(res.sort((a: any, b: any) => a.percentage < b.percentage)
+        res && setTopScores(res.sort((a: any, b: any) => b.percentage - a.percentage)
+        )
+    }, [])
+    useEffect(() => {
+        setRes(answers.map((answer: any) => {
+            return {
+                subject: decodeURIComponent(answer.subject as string),
+                percentage: Math.trunc(answer.questions.filter((qst: any) => qst.answer == questions.find((item: any) => item.id == qst.questionId)?.correctAnswer).length / answer.questions.length * 100),
+                date: answer.createdAt
+            }
+        }))
+        res && setTopScores(res.sort((a: any, b: any) => b.percentage - a.percentage)
         )
     }, [answers, questions])
     return (
@@ -88,6 +74,7 @@ export default function Dashboard() {
                             key={res[res.length - 2].percentage}
                             className="flex justify-between items-center p-4 bg-gray-800 rounded-lg text-white"
                         >
+
                             <div>
                                 <p className="font-bold">{res[res.length - 2].subject}</p>
                                 <p className="text-sm text-gray-400">{(new Date(res[res.length - 2].date).toLocaleString())}</p>

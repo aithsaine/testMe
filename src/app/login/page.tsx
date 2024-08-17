@@ -11,8 +11,8 @@ import { Bars } from "react-loading-icons"
 
 export default function Page() {
     const [wait, setWait] = useState(false)
-    const [email, setEmail] = useState<string>("")
-    const [password, setPassword] = useState<string>("")
+    const [email, setEmail] = useState<string>("demo@mail.com")
+    const [password, setPassword] = useState<string>("demodemo")
     const router = useRouter()
 
     const handleSubmit = async (e: React.FormEvent) => {
@@ -47,6 +47,7 @@ export default function Page() {
                     <input
                         type="email"
                         name='email'
+                        defaultValue={email}
                         id='email'
                         onChange={(e) => setEmail(e.target.value)}
                         placeholder='Email'
@@ -55,6 +56,7 @@ export default function Page() {
                     />
                     <input
                         type="password"
+                        defaultValue={password}
                         name='password'
                         id='password'
                         onChange={(e) => setPassword(e.target.value)}
