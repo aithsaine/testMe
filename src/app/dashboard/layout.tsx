@@ -47,7 +47,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
                     boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.25)",
                     border: "2px solid rgba(255, 255, 255, 0.15)",
                 }}
-                className="flex flex-col justify-around rounded-xl h-full py-4 space-y-6 bg-gradient-to-b from-gray-800 to-black"
+                className="flex flex-col md:justify-around rounded-xl h-full py-4 space-y-6 bg-gradient-to-b from-gray-800 to-black"
             >
                 <NavItem title="" href="/dashboard" icon={<LuLayoutDashboard />} label="Dashboard" />
                 <NavItem title="" href="/dashboard/tests" icon={<LuFlaskRound />} label="Tests" />
