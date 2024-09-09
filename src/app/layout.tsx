@@ -11,9 +11,8 @@ export const metadata: Metadata = {
   title: "TestMe Platform",
   description: "Test your level and know your skills",
   keywords: "online test, skill assessment, TestMe, online quiz, evaluate skills, testing platform",
-  author: "Ismail Ait Hsaine",
+  creator: "Ismail Ait Hsaine",
   viewport: "width=device-width, initial-scale=1.0",
-  charset: "UTF-8",
   robots: "index, follow",
   "google-adsense-account": "ca-pub-8061884677342984",
   og: {
