@@ -14,13 +14,11 @@ export const metadata: Metadata = {
   creator: "Ismail Ait Hsaine",
   viewport: "width=device-width, initial-scale=1.0",
   robots: "index, follow",
-  "google-adsense-account": "ca-pub-8061884677342984",
-  og: {
+  openGraph: {
     title: "TestMe Platform",
     description: "Test your level and know your skills on the TestMe platform.",
     type: "website",
-    url: "https://testmeplatform.com",
-    image: "https://testmeplatform.com/preview.jpg", // Example image URL
+    url: "https://onlinetestme.com",
   }
 };
 
