@@ -21,7 +21,8 @@ export default function RootLayout({
     <html lang="en">
       <Head>
         <link rel="icon" href="./favicon.ico" />
-
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8061884677342984"
+          crossOrigin="anonymous"></script>
       </Head>
       <body className={`${inter.className} relative`}>
         <AuthProvider>
