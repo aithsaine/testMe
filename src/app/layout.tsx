@@ -20,6 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <Head>
+        <meta name="google-adsense-account" content="ca-pub-8061884677342984" />
         <link rel="icon" href="./favicon.ico" />
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8061884677342984"
           crossOrigin="anonymous"></script>
